@@ -1,0 +1,31 @@
+<div id="bloque"></div>
+<div *ngIf="show" class="main-content" id="foco">
+  	<div class="container-fluid">
+  		<div class="card">
+  			<div class="card-body text-center">
+  				<div class="mb-2">
+  					<ng-adsense
+						[display]="'block'"
+						[adFormat]="'auto'"
+						data-full-width-responsive="true"
+					></ng-adsense>
+  				</div>
+  				<div class="col-md-12">
+  					<h4>{{title}}</h4>
+  				</div>
+  				<div class="col-md-12">
+					<button mat-flat-button color="warn" type="button" class="btn-count">
+
+					</button>
+				</div>
+				<div class="mb-2">
+					<ng-adsense
+						[display]="'block'"
+						[adFormat]="'auto'"
+						data-full-width-responsive="true"
+					></ng-adsense>
+  				</div>
+			</div>
+		</div>
+	</div>
+</div>

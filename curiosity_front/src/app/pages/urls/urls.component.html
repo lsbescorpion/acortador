@@ -1,0 +1,57 @@
+<div class="main-content" id="foco">
+  	<div class="container-fluid">
+  		<div class="card">
+            <div class="card-header card-header-danger">
+                <h4 class="card-title">Urls</h4>
+                <p class="card-category">Listado de urls acortadas</p>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="urlsForm">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <mat-form-field>
+                                <input matInput placeholder="Url de la noticia" id="url" formControlName="url" required>
+                                <mat-icon matSuffix>http</mat-icon>
+                                <mat-hint>Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/</mat-hint>
+                                <mat-error *ngIf="f.url.hasError('required')">Por favor, escriba el nombre y los apellidos</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field>
+                                <mat-select id="categoria" formControlName="categoria">
+                                    <mat-option value="1">Salud</mat-option>
+                                    <mat-option value="2">Gracioso</mat-option>
+                                    <mat-option value="3">Curiosidades</mat-option>
+                                    <mat-option value="4">Videos</mat-option>
+                                    <mat-option value="5">Tecnología</mat-option>
+                                    <mat-option value="6">Manualidades</mat-option>
+                                </mat-select>
+                                <mat-hint>Escoja la categoría</mat-hint>
+                                <mat-error *ngIf="f.categoria.hasError('required')">Por favor, escoja la categoria</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-12">
+                            <mat-form-field>
+						      	<textarea matInput placeholder="Llamada de acción" id="accion" formControlName="accion" required></textarea>
+                                <mat-error *ngIf="f.accion.hasError('required')">Por favor, escriba la llamada de acción</mat-error>
+						    </mat-form-field>
+                        </div>
+                    </div>
+                    <button mat-raised-button type="submit" class="btn btn-danger pull-right btn-addp" (click)="Acortar();">Acortar</button>
+                    <div class="clearfix"></div>
+                    <mat-chip-list>
+                    </mat-chip-list>
+                </form>
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped table-sm" id="data-table">
+                        <thead class="text-danger">
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="loader-section" [hidden]="!loading">
+	<mat-progress-spinner color="warn" mode="indeterminate"></mat-progress-spinner>
+</div>

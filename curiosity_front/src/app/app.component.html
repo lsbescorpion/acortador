@@ -1,0 +1,19 @@
+<div *ngIf="globals.isLogued; else login" class="main" class="wrapper">
+    <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+        <app-sidebar></app-sidebar>
+        <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+    </div>
+    <div class="main-panel">
+        <app-navbar></app-navbar>
+        <div [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+            <router-outlet #o="outlet"></router-outlet>
+        </div>
+        <div *ngIf="isMaps('maps')">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
+
+<ng-template #login>
+    <router-outlet></router-outlet>
+</ng-template>

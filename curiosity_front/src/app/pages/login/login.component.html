@@ -1,0 +1,80 @@
+<div *ngIf="show == false" class="container" style="margin-top: 10%;">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
+            <form class="form" [formGroup]="loginForm">
+              	<div class="card card-login card-hidden">
+                	<div class="card-header card-header-rose text-center">
+                  		<h4 class="card-title">Login</h4>
+                  		<div class="social-line">
+		                   	<a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+		                      <i class="fa fa-facebook-square"></i>
+		                    </a>
+		                    <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+		                      <i class="fa fa-twitter"></i>
+		                    </a>
+		                    <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+		                      <i class="fa fa-google-plus"></i>
+		                    </a>
+		                </div>
+                	</div>
+                	<div class="card-body">
+		                <p class="card-description text-center">O Clasico</p>
+		                <span class="bmd-form-group">
+			                <div class="input-group mb-5">
+			                    <div class="input-group-prepend">
+			                        <span class="input-group-text">
+			                          	<i class="material-icons">email</i>
+			                        </span>
+			                    </div>
+			                    <input type="email" id="correo" class="form-control" placeholder="Correo..." formControlName="correo" [ngClass]="{ 'is-invalid': submitted && f.correo.errors }" required="true">
+			                    <div *ngIf="submitted && f.correo.errors" class="invalid-feedback">
+				            		<div *ngIf="f.correo.errors.required">El correo es requerido</div>
+				            		<div *ngIf="f.correo.errors.email">Correo invalido</div>
+				        		</div>
+			                </div>
+		                </span>
+		                <span class="bmd-form-group">
+		                    <div class="input-group">
+			                    <div class="input-group-prepend">
+			                        <span class="input-group-text">
+			                          	<i class="material-icons">lock_outline</i>
+			                        </span>
+			                    </div>
+			                    <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Contraseña...">
+			                    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+				            		<div *ngIf="f.password.errors.required">La contraseña es requerida</div>
+				        		</div>
+			                </div>
+		                </span>
+		            </div>
+	                <div class="card-footer justify-content-center">
+	                  	<a [routerLink]="" (click)="onSubmit()" class="btn btn-rose btn-link btn-lg">Acceder</a>
+	                </div>
+              	</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="show == true" class="main-content" id="foco">
+  	<div class="container-fluid">
+  		<div class="card">
+  			<div class="card-body text-center">
+  				<div class="mb-2">
+  					
+  				</div>
+  				<div class="col-md-12">
+  					<h4>{{title}}</h4>
+  				</div>
+  				<div class="col-md-12 mb-3">
+					<button mat-flat-button color="warn" type="button" class="btn-count">
+						<div id="clock"></div>
+					</button>
+				</div>
+				<div class="mb-2">
+
+  				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,133 @@
+<div class="main-content">
+  	<div class="container-fluid">
+      	<div class="row">
+          	<div class="col-md-8">
+              	<div class="card">
+                  	<div class="card-header card-header-tabs card-header-danger">
+                      	<nav>
+                      		<ul class="nav nav-tabs" data-tabs="tabs">
+                      			<li class="nav-item">
+						  			<a class="nav-link active" data-toggle="tab" href="#profile"><mat-icon matSuffix>account_box</mat-icon> Información de Usuario</a>
+						  		</li>
+						  		<li class="nav-item">
+						  			<a class="nav-link" data-toggle="tab" href="#tarjeta"><mat-icon matSuffix>card_membership</mat-icon> Información de Pago</a>
+						  		</li>
+						  	</ul>						  	
+						</nav>
+                  	</div>
+                  	<div class="card-body">
+                  		<form [formGroup]="userForm">
+	                  		<div class="tab-content">
+	                  			<div class="tab-pane active" id="profile">                  				
+				                    <div class="row">
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="Nombre y Apellidos" id="nombre_apellidos" formControlName="nombre_apellidos" required>
+				                                <mat-icon matSuffix>account_box</mat-icon>
+				                                <mat-error *ngIf="f.nombre_apellidos.hasError('required')">Por favor, escriba el nombre y los apellidos</mat-error>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="Correo" id="correo" formControlName="correo" readonly>
+				                                <mat-icon matSuffix>contact_mail</mat-icon>
+				                                <mat-error *ngIf="f.correo.hasError('required')">Por favor, escriba correo</mat-error>
+				                                <mat-error *ngIf="f.correo.hasError('email')">Correo invalido</mat-error>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="Perfil de Facebook" id="perfil_fb" formControlName="perfil_fb" required>
+				                                <mat-hint>Url de facebook completa.</mat-hint>
+				                                <mat-icon matSuffix>face</mat-icon>
+				                                <mat-error *ngIf="f.perfil_fb.hasError('required')">Por favor, escriba el perfil de facebook</mat-error>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="Contraseña" id="password" formControlName="password" [type]="hide ? 'password' : 'text'">
+				                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+				                                <mat-error *ngIf="f.password.hasError('required')">Por favor, escriba la contraseña</mat-error>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12 mb-3">
+				                            <label for="foto">Foto</label>
+				                            <div class="dropzone" id="photo">
+				                                <div class="dz-message" id="message" data-dz-message><span>Arrastre la imagen aqui</span></div>
+				                            </div>
+				                        </div>
+				                    </div>
+				                    <button mat-raised-button type="submit" class="btn btn-danger pull-right btn-addp" (click)="Registrar();">Actualizar</button>
+				                    <div class="clearfix"></div>
+	                  			</div>
+	                  			
+		                  		<div class="tab-pane" id="tarjeta">
+		                  			<div class="row">
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="Nombre y Apellidos" id="nombre_apellidosp" formControlName="nombre_apellidos" readonly>
+				                                <mat-icon matSuffix>account_box</mat-icon>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="CI" id="ci" formControlName="ci" required>
+				                                <mat-icon matSuffix>vpn_key</mat-icon>
+				                                <mat-error *ngIf="f.ci.hasError('required')">Por favor, escriba el CI</mat-error>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="Dirección" id="direccion" formControlName="direccion">
+				                                <mat-icon matSuffix>location_on</mat-icon>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <mat-select placeholder="Banco y tipo de Moneda..." id="metodo" formControlName="metodo">
+				                                    <mat-option value="1">Tarjeta BPA CUC</mat-option>
+				                                    <mat-option value="2">Tarjeta BPA CUP</mat-option>
+				                                    <mat-option value="3">Tarjeta BANDEC CUC</mat-option>
+				                                    <mat-option value="4">Tarjeta BANDEC CUP</mat-option>
+				                                </mat-select>
+				                            </mat-form-field>
+				                        </div>
+				                        <div class="col-md-12">
+				                            <mat-form-field>
+				                                <input matInput placeholder="No Tarjeta" id="tarjeta" formControlName="tarjeta">
+				                                <mat-icon matSuffix>credit_card</mat-icon>
+				                            </mat-form-field>
+				                        </div>
+				                    </div>
+				                    <button mat-raised-button type="submit" class="btn btn-danger pull-right btn-addp" (click)="Registrar();">Actualizar</button>
+				                    <div class="clearfix"></div>
+		                  		</div>
+		                  	</div>
+	                  	</form>
+                  	</div>
+              	</div>
+          	</div>
+          	<div class="col-md-4">
+              	<div class="card card-profile">
+                  	<div class="card-avatar">
+                      	<a [routerLink]="">
+                          	<img class="img" src="{{foto}}" />
+                      	</a>
+                  	</div>
+                  	<div class="card-body">
+                      	<h6 class="card-category text-gray">{{us.role}}</h6>
+                      	<h4 class="card-title">{{us.user.nombre_apellidos}}</h4>
+                      	<div class="row col-md-12 text-left">
+                      		<div class="col-md-4 mb-3 text-danger">Inscrito desde: </div>
+                      		<div class="col-md-8"><i class="zmdi zmdi-calendar"></i> {{us.user.created_at | date:'MM/dd/yyyy hh:mm' }}</div>
+                      		<div class="col-md-4 mb-3 text-danger">Urls: </div>
+                      		<div class="col-md-8"><i class="zmdi zmdi-cast-connected"></i> {{urls}}</div>
+                      		<div class="col-md-4 mb-3 text-danger">Visitas: </div>
+                      		<div class="col-md-8"><i class="zmdi zmdi-chart"></i> {{visitas}}</div>
+                      	</div>
+                  	</div>
+              	</div>
+          	</div>
+      	</div>
+  	</div>
+</div>
