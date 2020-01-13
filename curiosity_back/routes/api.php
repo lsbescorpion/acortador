@@ -32,3 +32,12 @@ Route::get('url/byid/{url}', 'API\UrlsController@getUrlbyId')->name('getUrlbyId'
 Route::delete('urls/delete/{url}', 'API\UrlsController@deleteUrl')->name('deleteUrl');
 Route::get('urls/estadisticas', 'API\UrlsController@getEstadisticas')->name('getestadisticas');
 Route::get('urls/analytic', 'API\UrlsController@getAnalytic')->name('getAnalytic');
+Route::get('urls/monthdata', 'API\UrlsController@getMonthData')->name('getMonthData');
+
+Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
+Route::post('blog/photob', 'API\BlogController@photob')->name('photob');
+Route::get('blog/removephotob', 'API\BlogController@removePhotob')->name('removephotob');
+Route::post('blogs/create', 'API\BlogController@createBlog')->name('createBlog');
+Route::put('blogs/update/{blog}', 'API\BlogController@updateBlog')->name('updateBlog');
+Route::get('blog/{blog}', 'API\BlogController@getBlog')->name('getBlog');
+Route::get('blogs/lastnoti3', 'API\BlogController@lastNoti3')->name('lastNoti3');

@@ -40,4 +40,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(GananciasDiarias::class, 'url_id');
     }
+
+    public function blog()
+    {
+        return $this->hasMany(Blog::class, 'user_id');
+    }
 }
