@@ -1860,10 +1860,10 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'http://127.0.0.1:8000/api';
-        this.urlPhoto = 'http://127.0.0.1:8000/';
-        this.globalUrl = 'http://localhost:4200';
-        this.urlShared = 'http://localhost:4200/categoria';
+        this.apiUrl = 'https://back.cropersviral.com/api';
+        this.urlPhoto = 'https://back.cropersviral.com/';
+        this.globalUrl = 'https://www.cropersviral.com';
+        this.urlShared = 'https://www.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
