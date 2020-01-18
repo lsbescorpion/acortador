@@ -27,7 +27,67 @@ class BlogController extends Controller
 
     public function lastNoti3()
     {
-        $blog = Blog::with(['categoria','users'])->orderby('id', 'ASC')->limit(3)->offset(0)->get();
+        $blog = Blog::with(['categoria','users'])->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function Popular()
+    {
+        $blog = Blog::with(['categoria','users'])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function LastSalud()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 1])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function LastCuriosidades()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 3])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function LastManualidades()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 6])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function AllSalud()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 1])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
+        return response()->json($blog);
+    }
+
+    public function AllGracioso()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 2])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
+        return response()->json($blog);
+    }
+
+    public function AllCurio()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 3])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
+        return response()->json($blog);
+    }
+
+    public function AllVideo()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 4])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
+        return response()->json($blog);
+    }
+
+    public function AllTecno()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 5])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
+        return response()->json($blog);
+    }
+
+    public function AllManual()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 6])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
         return response()->json($blog);
     }
 
@@ -144,6 +204,15 @@ class BlogController extends Controller
         $blog->save();
 
         return response()->json('Noticia Actualizada', 200 );
+    }
+
+    public function deleteBlog($id)
+    {
+        $blog = Blog::find($id);
+        if(file_exists($blog->foto)) 
+            unlink($blog->foto);
+        $blog->delete();
+        return response()->json('Noticia Eliminada', 200 );
     }
 
     public function remPhotosb(Request $request) {

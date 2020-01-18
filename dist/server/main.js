@@ -937,68 +937,82 @@ var i11 = __webpack_require__(/*! ./pages/urls/urls.component.ngfactory */ "./sr
 var i12 = __webpack_require__(/*! ./pages/showurl/showurl.component.ngfactory */ "./src/app/pages/showurl/showurl.component.ngfactory.js");
 var i13 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component.ngfactory */ "./src/app/pages/blog/addnotice/addnotice.component.ngfactory.js");
 var i14 = __webpack_require__(/*! ./pages/temporal/temporal.component.ngfactory */ "./src/app/pages/temporal/temporal.component.ngfactory.js");
-var i15 = __webpack_require__(/*! ./pages/error/error.component.ngfactory */ "./src/app/pages/error/error.component.ngfactory.js");
-var i16 = __webpack_require__(/*! ./pages/alertcopy/alertcopy.component.ngfactory */ "./src/app/pages/alertcopy/alertcopy.component.ngfactory.js");
-var i17 = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
-var i18 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i19 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
-var i20 = __webpack_require__(/*! @angular/material/core */ "@angular/material/core");
-var i21 = __webpack_require__(/*! @angular/platform-server */ "@angular/platform-server");
-var i22 = __webpack_require__(/*! @angular/animations/browser */ "@angular/animations/browser");
-var i23 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i24 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
-var i25 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
-var i26 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
-var i27 = __webpack_require__(/*! ./help/jwt.interceptor */ "./src/app/help/jwt.interceptor.ts");
-var i28 = __webpack_require__(/*! ./help/error.interceptor */ "./src/app/help/error.interceptor.ts");
-var i29 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i30 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i31 = __webpack_require__(/*! @angular/cdk/observers */ "@angular/cdk/observers");
-var i32 = __webpack_require__(/*! @angular/cdk/overlay */ "@angular/cdk/overlay");
-var i33 = __webpack_require__(/*! @angular/cdk/bidi */ "@angular/cdk/bidi");
-var i34 = __webpack_require__(/*! @angular/material/select */ "@angular/material/select");
-var i35 = __webpack_require__(/*! @angular/material/tooltip */ "@angular/material/tooltip");
-var i36 = __webpack_require__(/*! @agm/core/utils/browser-globals */ "@agm/core/utils/browser-globals");
-var i37 = __webpack_require__(/*! @agm/core/services/maps-api-loader/maps-api-loader */ "@agm/core/services/maps-api-loader/maps-api-loader");
-var i38 = __webpack_require__(/*! @agm/core/services/maps-api-loader/lazy-maps-api-loader */ "@agm/core/services/maps-api-loader/lazy-maps-api-loader");
-var i39 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
-var i40 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
-var i41 = __webpack_require__(/*! ./globals */ "./src/app/globals.ts");
-var i42 = __webpack_require__(/*! @angular/http */ "@angular/http");
-var i43 = __webpack_require__(/*! ng2-adsense */ "ng2-adsense");
-var i44 = __webpack_require__(/*! @nguniversal/module-map-ngfactory-loader */ "@nguniversal/module-map-ngfactory-loader");
-var i45 = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-var i46 = __webpack_require__(/*! ./pages/blog/home/home.component */ "./src/app/pages/blog/home/home.component.ts");
-var i47 = __webpack_require__(/*! ./pages/estadisticas/estadisticas.component */ "./src/app/pages/estadisticas/estadisticas.component.ts");
-var i48 = __webpack_require__(/*! ./guard/auth.guard */ "./src/app/guard/auth.guard.ts");
-var i49 = __webpack_require__(/*! ./routes/app.routing */ "./src/app/routes/app.routing.ts");
-var i50 = __webpack_require__(/*! ./pages/usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
-var i51 = __webpack_require__(/*! ./pages/perfil/perfil.component */ "./src/app/pages/perfil/perfil.component.ts");
-var i52 = __webpack_require__(/*! ./pages/urls/urls.component */ "./src/app/pages/urls/urls.component.ts");
-var i53 = __webpack_require__(/*! ./pages/showurl/showurl.component */ "./src/app/pages/showurl/showurl.component.ts");
-var i54 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
-var i55 = __webpack_require__(/*! ./pages/temporal/temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
-var i56 = __webpack_require__(/*! ./pages/error/error.component */ "./src/app/pages/error/error.component.ts");
-var i57 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i58 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i59 = __webpack_require__(/*! @angular/material/form-field */ "@angular/material/form-field");
-var i60 = __webpack_require__(/*! @angular/cdk/text-field */ "@angular/cdk/text-field");
-var i61 = __webpack_require__(/*! @angular/material/input */ "@angular/material/input");
-var i62 = __webpack_require__(/*! @angular/cdk/portal */ "@angular/cdk/portal");
-var i63 = __webpack_require__(/*! @angular/cdk/scrolling */ "@angular/cdk/scrolling");
-var i64 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i65 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
-var i66 = __webpack_require__(/*! @angular/material/slide-toggle */ "@angular/material/slide-toggle");
-var i67 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
-var i68 = __webpack_require__(/*! @angular/material/badge */ "@angular/material/badge");
-var i69 = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
-var i70 = __webpack_require__(/*! @agm/core/core.module */ "@agm/core/core.module");
-var i71 = __webpack_require__(/*! @angular/material/tabs */ "@angular/material/tabs");
-var i72 = __webpack_require__(/*! @angular/material/progress-bar */ "@angular/material/progress-bar");
-var i73 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
-var i74 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
-var i75 = __webpack_require__(/*! @angular/cdk/keycodes */ "@angular/cdk/keycodes");
-var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.TooltipComponentNgFactory, i5.MatSnackBarContainerNgFactory, i5.SimpleSnackBarNgFactory, i6.LoginComponentNgFactory, i7.HomeComponentNgFactory, i8.EstadisticasComponentNgFactory, i9.UsuariosComponentNgFactory, i10.PerfilComponentNgFactory, i11.UrlsComponentNgFactory, i12.ShowurlComponentNgFactory, i13.AddnoticeComponentNgFactory, i14.TemporalComponentNgFactory, i15.ErrorComponentNgFactory, i16.AlertcopyComponentNgFactory, i17.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_s, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i18.NgLocalization, i18.NgLocaleLocalization, [i0.LOCALE_ID, [2, i18.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_q, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_r, []), i0.ɵmpd(4608, i19.DomSanitizer, i19.ɵDomSanitizerImpl, [i18.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i19.DomSanitizer]), i0.ɵmpd(4608, i19.HAMMER_GESTURE_CONFIG, i20.GestureConfig, [[2, i20.MAT_HAMMER_OPTIONS], [2, i20.MatCommonModule]]), i0.ɵmpd(5120, i19.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i19.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i19.ɵKeyEventsPlugin(p1_0), new i19.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i21.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i18.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i18.DOCUMENT, i18.DOCUMENT, i19.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i19.HAMMER_LOADER], i19.DOCUMENT]), i0.ɵmpd(4608, i19.EventManager, i19.EventManager, [i19.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i19.ɵDomSharedStylesHost, i19.ɵDomSharedStylesHost, [i18.DOCUMENT]), i0.ɵmpd(4608, i19.ɵDomRendererFactory2, i19.ɵDomRendererFactory2, [i19.EventManager, i19.ɵDomSharedStylesHost, i0.APP_ID]), i0.ɵmpd(4608, i21.ɵangular_packages_platform_server_platform_server_c, i21.ɵangular_packages_platform_server_platform_server_c, [i19.DOCUMENT, [2, i19.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i19.ɵSharedStylesHost, null, [i21.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i21.ɵServerRendererFactory2, i21.ɵServerRendererFactory2, [i19.EventManager, i0.NgZone, i19.DOCUMENT, i19.ɵSharedStylesHost]), i0.ɵmpd(4608, i22.AnimationDriver, i22.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i22.ɵAnimationStyleNormalizer, i23.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(4608, i22.ɵAnimationEngine, i23.ɵInjectableAnimationEngine, [i18.DOCUMENT, i22.AnimationDriver, i22.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i21.ɵangular_packages_platform_server_platform_server_a, [i21.ɵServerRendererFactory2, i22.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i24.AnimationBuilder, i23.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i19.DOCUMENT]), i0.ɵmpd(4608, i25.ɵangular_packages_forms_forms_j, i25.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(4608, i25.FormBuilder, i25.FormBuilder, []), i0.ɵmpd(4608, i26.HttpXsrfTokenExtractor, i26.ɵangular_packages_common_http_http_g, [i18.DOCUMENT, i0.PLATFORM_ID, i26.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i26.ɵangular_packages_common_http_http_h, i26.ɵangular_packages_common_http_http_h, [i26.HttpXsrfTokenExtractor, i26.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i26.HTTP_INTERCEPTORS, function (p0_0, p2_0, p2_1) { return [p0_0, new i27.JwtInterceptor(), new i28.ErrorInterceptor(p2_0, p2_1)]; }, [i26.ɵangular_packages_common_http_http_h, i29.AuthenticationService, i30.Router]), i0.ɵmpd(4608, i26.XhrFactory, i21.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i26.HttpXhrBackend, i26.HttpXhrBackend, [i26.XhrFactory]), i0.ɵmpd(6144, i26.HttpBackend, null, [i26.HttpXhrBackend]), i0.ɵmpd(5120, i26.HttpHandler, i21.ɵangular_packages_platform_server_platform_server_h, [i26.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i26.HttpClient, i26.HttpClient, [i26.HttpHandler]), i0.ɵmpd(4608, i26.ɵangular_packages_common_http_http_d, i26.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i31.MutationObserverFactory, i31.MutationObserverFactory, []), i0.ɵmpd(4608, i20.ErrorStateMatcher, i20.ErrorStateMatcher, []), i0.ɵmpd(4608, i32.Overlay, i32.Overlay, [i32.ScrollStrategyOptions, i32.OverlayContainer, i0.ComponentFactoryResolver, i32.OverlayPositionBuilder, i32.OverlayKeyboardDispatcher, i0.Injector, i0.NgZone, i18.DOCUMENT, i33.Directionality, [2, i18.Location]]), i0.ɵmpd(5120, i32.ɵc, i32.ɵd, [i32.Overlay]), i0.ɵmpd(5120, i34.MAT_SELECT_SCROLL_STRATEGY, i34.MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY, [i32.Overlay]), i0.ɵmpd(5120, i35.MAT_TOOLTIP_SCROLL_STRATEGY, i35.MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, [i32.Overlay]), i0.ɵmpd(5120, i30.ActivatedRoute, i30.ɵangular_packages_router_router_g, [i30.Router]), i0.ɵmpd(4608, i30.NoPreloading, i30.NoPreloading, []), i0.ɵmpd(6144, i30.PreloadingStrategy, null, [i30.NoPreloading]), i0.ɵmpd(135680, i30.RouterPreloader, i30.RouterPreloader, [i30.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i30.PreloadingStrategy]), i0.ɵmpd(4608, i30.PreloadAllModules, i30.PreloadAllModules, []), i0.ɵmpd(4608, i18.ViewportScroller, i18.ɵNullViewportScroller, []), i0.ɵmpd(5120, i30.ɵangular_packages_router_router_n, i30.ɵangular_packages_router_router_c, [i30.Router, i18.ViewportScroller, i30.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i30.ROUTER_INITIALIZER, i30.ɵangular_packages_router_router_j, [i30.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i30.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i36.WindowRef, i36.WindowRef, []), i0.ɵmpd(4608, i36.DocumentRef, i36.DocumentRef, []), i0.ɵmpd(4608, i37.MapsAPILoader, i38.LazyMapsAPILoader, [[2, i38.LAZY_MAPS_API_CONFIG], i36.WindowRef, i36.DocumentRef]), i0.ɵmpd(5120, i39.MetaLoader, i40.ɵ0, []), i0.ɵmpd(4608, i39.MetaService, i39.MetaService, [i39.MetaLoader, i19.Title, i19.Meta]), i0.ɵmpd(4608, i39.MetaGuard, i39.MetaGuard, [i39.MetaService]), i0.ɵmpd(4608, i41.Globals, i41.Globals, []), i0.ɵmpd(4608, i42.BrowserXhr, i21.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i42.ResponseOptions, i42.BaseResponseOptions, []), i0.ɵmpd(4608, i42.XSRFStrategy, i21.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i42.XHRBackend, i42.XHRBackend, [i42.BrowserXhr, i42.ResponseOptions, i42.XSRFStrategy]), i0.ɵmpd(4608, i42.RequestOptions, i42.BaseRequestOptions, []), i0.ɵmpd(5120, i42.Http, i21.ɵangular_packages_platform_server_platform_server_g, [i42.XHRBackend, i42.RequestOptions]), i0.ɵmpd(1073742336, i18.CommonModule, i18.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i19.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i30.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(256, i0.APP_ID, "curiositylol", []), i0.ɵmpd(2048, i19.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(512, i30.ɵangular_packages_router_router_h, i30.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p1_1, p1_2, p2_0) { return [i19.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i19.ɵangular_packages_platform_browser_platform_browser_h(p1_0, p1_1, p1_2), i30.ɵangular_packages_router_router_i(p2_0)]; }, [[2, i0.NgProbeToken], i19.ɵTRANSITION_ID, i18.DOCUMENT, i0.Injector, i30.ɵangular_packages_router_router_h]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i19.BrowserModule, i19.BrowserModule, [[3, i19.BrowserModule]]), i0.ɵmpd(1073742336, i23.BrowserAnimationsModule, i23.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i43.AdsenseModule, i43.AdsenseModule, []), i0.ɵmpd(1073742336, i25.ɵangular_packages_forms_forms_bc, i25.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i25.FormsModule, i25.FormsModule, []), i0.ɵmpd(1073742336, i25.ReactiveFormsModule, i25.ReactiveFormsModule, []), i0.ɵmpd(1073742336, i26.HttpClientXsrfModule, i26.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i26.HttpClientModule, i26.HttpClientModule, []), i0.ɵmpd(1024, i30.ɵangular_packages_router_router_a, i30.ɵangular_packages_router_router_e, [[3, i30.Router]]), i0.ɵmpd(512, i30.UrlSerializer, i30.DefaultUrlSerializer, []), i0.ɵmpd(512, i30.ChildrenOutletContexts, i30.ChildrenOutletContexts, []), i0.ɵmpd(256, i30.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i18.LocationStrategy, i30.ɵangular_packages_router_router_d, [i18.PlatformLocation, [2, i18.APP_BASE_HREF], i30.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i18.Location, i18.Location, [i18.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i44.ModuleMapNgFactoryLoader, [i0.Compiler, i44.MODULE_MAP]), i0.ɵmpd(1024, i30.ROUTES, function () { return [[{ path: "login", component: i45.LoginComponent }, { path: "", redirectTo: "home", pathMatch: "full" }, { path: "home", component: i46.HomeComponent }, { path: "estadisticas", component: i47.EstadisticasComponent, canActivate: [i48.AuthGuards], data: i49.ɵ0 }, { path: "usuarios", component: i50.UsuariosComponent, canActivate: [i48.AuthGuards], data: i49.ɵ1 }, { path: "perfil", component: i51.PerfilComponent, canActivate: [i48.AuthGuards], data: i49.ɵ2 }, { path: "urls", component: i52.UrlsComponent, canActivate: [i48.AuthGuards], data: i49.ɵ3 }, { path: "showurl/:id", component: i53.ShowurlComponent, canActivate: [i48.AuthGuards], data: i49.ɵ4 }, { path: "addnotice", component: i54.AddnoticeComponent, canActivate: [i48.AuthGuards], data: i49.ɵ5 }, { path: "categoria/salud/:id", component: i55.TemporalComponent }, { path: "categoria/gracioso/:id", component: i55.TemporalComponent }, { path: "categoria/curiosidades/:id", component: i55.TemporalComponent }, { path: "categoria/videos/:id", component: i55.TemporalComponent }, { path: "categoria/tecnologia/:id", component: i55.TemporalComponent }, { path: "categoria/manualidades/:id", component: i55.TemporalComponent }, { path: "404", component: i56.ErrorComponent }, { path: "**", redirectTo: "404" }]]; }, []), i0.ɵmpd(1024, i30.Router, i30.ɵangular_packages_router_router_f, [i0.ApplicationRef, i30.UrlSerializer, i30.ChildrenOutletContexts, i18.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i30.ROUTES, i30.ROUTER_CONFIGURATION, [2, i30.UrlHandlingStrategy], [2, i30.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i30.RouterModule, i30.RouterModule, [[2, i30.ɵangular_packages_router_router_a], [2, i30.Router]]), i0.ɵmpd(1073742336, i33.BidiModule, i33.BidiModule, []), i0.ɵmpd(1073742336, i20.MatCommonModule, i20.MatCommonModule, [[2, i20.MATERIAL_SANITY_CHECKS], [2, i19.HAMMER_LOADER]]), i0.ɵmpd(1073742336, i57.PlatformModule, i57.PlatformModule, []), i0.ɵmpd(1073742336, i20.MatRippleModule, i20.MatRippleModule, []), i0.ɵmpd(1073742336, i58.MatButtonModule, i58.MatButtonModule, []), i0.ɵmpd(1073742336, i31.ObserversModule, i31.ObserversModule, []), i0.ɵmpd(1073742336, i59.MatFormFieldModule, i59.MatFormFieldModule, []), i0.ɵmpd(1073742336, i60.TextFieldModule, i60.TextFieldModule, []), i0.ɵmpd(1073742336, i61.MatInputModule, i61.MatInputModule, []), i0.ɵmpd(1073742336, i62.PortalModule, i62.PortalModule, []), i0.ɵmpd(1073742336, i63.ScrollingModule, i63.ScrollingModule, []), i0.ɵmpd(1073742336, i32.OverlayModule, i32.OverlayModule, []), i0.ɵmpd(1073742336, i20.MatPseudoCheckboxModule, i20.MatPseudoCheckboxModule, []), i0.ɵmpd(1073742336, i20.MatOptionModule, i20.MatOptionModule, []), i0.ɵmpd(1073742336, i34.MatSelectModule, i34.MatSelectModule, []), i0.ɵmpd(1073742336, i64.A11yModule, i64.A11yModule, []), i0.ɵmpd(1073742336, i35.MatTooltipModule, i35.MatTooltipModule, []), i0.ɵmpd(1073742336, i65.MatIconModule, i65.MatIconModule, []), i0.ɵmpd(1073742336, i66.MatSlideToggleModule, i66.MatSlideToggleModule, []), i0.ɵmpd(1073742336, i67.MatChipsModule, i67.MatChipsModule, []), i0.ɵmpd(1073742336, i68.MatBadgeModule, i68.MatBadgeModule, []), i0.ɵmpd(1073742336, i69.ComponentsModule, i69.ComponentsModule, []), i0.ɵmpd(1073742336, i70.AgmCoreModule, i70.AgmCoreModule, []), i0.ɵmpd(1073742336, i71.MatTabsModule, i71.MatTabsModule, []), i0.ɵmpd(1073742336, i72.MatProgressBarModule, i72.MatProgressBarModule, []), i0.ɵmpd(1073742336, i73.MatProgressSpinnerModule, i73.MatProgressSpinnerModule, []), i0.ɵmpd(1073742336, i74.MatSnackBarModule, i74.MatSnackBarModule, []), i0.ɵmpd(1073742336, i39.MetaModule, i39.MetaModule, [[3, i39.MetaModule]]), i0.ɵmpd(1073742336, i40.AppModule, i40.AppModule, [i0.PLATFORM_ID, i0.APP_ID]), i0.ɵmpd(1073742336, i42.HttpModule, i42.HttpModule, []), i0.ɵmpd(1073742336, i23.NoopAnimationsModule, i23.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i21.ServerModule, i21.ServerModule, []), i0.ɵmpd(1073742336, i44.ModuleMapLoaderModule, i44.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i23.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i26.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i26.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i67.MAT_CHIPS_DEFAULT_OPTIONS, { separatorKeyCodes: [i75.ENTER] }, []), i0.ɵmpd(256, i43.ADSENSE_TOKEN, { adClient: "ca-pub-4796086993295761", adSlot: 1390700653 }, []), i0.ɵmpd(256, i38.LAZY_MAPS_API_CONFIG, { apiKey: "YOUR_GOOGLE_MAPS_API_KEY" }, [])]); });
+var i15 = __webpack_require__(/*! ./pages/blog/noticia/noticia.component.ngfactory */ "./src/app/pages/blog/noticia/noticia.component.ngfactory.js");
+var i16 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component.ngfactory */ "./src/app/pages/blog/catsalud/catsalud.component.ngfactory.js");
+var i17 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component.ngfactory */ "./src/app/pages/blog/catgracioso/catgracioso.component.ngfactory.js");
+var i18 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component.ngfactory */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ngfactory.js");
+var i19 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component.ngfactory */ "./src/app/pages/blog/catvideo/catvideo.component.ngfactory.js");
+var i20 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component.ngfactory */ "./src/app/pages/blog/cattecno/cattecno.component.ngfactory.js");
+var i21 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component.ngfactory */ "./src/app/pages/blog/catmanual/catmanual.component.ngfactory.js");
+var i22 = __webpack_require__(/*! ./pages/error/error.component.ngfactory */ "./src/app/pages/error/error.component.ngfactory.js");
+var i23 = __webpack_require__(/*! ./pages/alertcopy/alertcopy.component.ngfactory */ "./src/app/pages/alertcopy/alertcopy.component.ngfactory.js");
+var i24 = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
+var i25 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i26 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i27 = __webpack_require__(/*! @angular/material/core */ "@angular/material/core");
+var i28 = __webpack_require__(/*! @angular/platform-server */ "@angular/platform-server");
+var i29 = __webpack_require__(/*! @angular/animations/browser */ "@angular/animations/browser");
+var i30 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i31 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
+var i32 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var i33 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var i34 = __webpack_require__(/*! ./help/jwt.interceptor */ "./src/app/help/jwt.interceptor.ts");
+var i35 = __webpack_require__(/*! ./help/error.interceptor */ "./src/app/help/error.interceptor.ts");
+var i36 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i37 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i38 = __webpack_require__(/*! @angular/cdk/observers */ "@angular/cdk/observers");
+var i39 = __webpack_require__(/*! @angular/cdk/overlay */ "@angular/cdk/overlay");
+var i40 = __webpack_require__(/*! @angular/cdk/bidi */ "@angular/cdk/bidi");
+var i41 = __webpack_require__(/*! @angular/material/select */ "@angular/material/select");
+var i42 = __webpack_require__(/*! @angular/material/tooltip */ "@angular/material/tooltip");
+var i43 = __webpack_require__(/*! @agm/core/utils/browser-globals */ "@agm/core/utils/browser-globals");
+var i44 = __webpack_require__(/*! @agm/core/services/maps-api-loader/maps-api-loader */ "@agm/core/services/maps-api-loader/maps-api-loader");
+var i45 = __webpack_require__(/*! @agm/core/services/maps-api-loader/lazy-maps-api-loader */ "@agm/core/services/maps-api-loader/lazy-maps-api-loader");
+var i46 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
+var i47 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
+var i48 = __webpack_require__(/*! ./globals */ "./src/app/globals.ts");
+var i49 = __webpack_require__(/*! @angular/http */ "@angular/http");
+var i50 = __webpack_require__(/*! ng2-adsense */ "ng2-adsense");
+var i51 = __webpack_require__(/*! @nguniversal/module-map-ngfactory-loader */ "@nguniversal/module-map-ngfactory-loader");
+var i52 = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+var i53 = __webpack_require__(/*! ./pages/blog/home/home.component */ "./src/app/pages/blog/home/home.component.ts");
+var i54 = __webpack_require__(/*! ./pages/estadisticas/estadisticas.component */ "./src/app/pages/estadisticas/estadisticas.component.ts");
+var i55 = __webpack_require__(/*! ./guard/auth.guard */ "./src/app/guard/auth.guard.ts");
+var i56 = __webpack_require__(/*! ./routes/app.routing */ "./src/app/routes/app.routing.ts");
+var i57 = __webpack_require__(/*! ./pages/usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
+var i58 = __webpack_require__(/*! ./pages/perfil/perfil.component */ "./src/app/pages/perfil/perfil.component.ts");
+var i59 = __webpack_require__(/*! ./pages/urls/urls.component */ "./src/app/pages/urls/urls.component.ts");
+var i60 = __webpack_require__(/*! ./pages/showurl/showurl.component */ "./src/app/pages/showurl/showurl.component.ts");
+var i61 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
+var i62 = __webpack_require__(/*! ./pages/temporal/temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
+var i63 = __webpack_require__(/*! ./pages/blog/noticia/noticia.component */ "./src/app/pages/blog/noticia/noticia.component.ts");
+var i64 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
+var i65 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
+var i66 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
+var i67 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
+var i68 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
+var i69 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
+var i70 = __webpack_require__(/*! ./pages/error/error.component */ "./src/app/pages/error/error.component.ts");
+var i71 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i72 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i73 = __webpack_require__(/*! @angular/material/form-field */ "@angular/material/form-field");
+var i74 = __webpack_require__(/*! @angular/cdk/text-field */ "@angular/cdk/text-field");
+var i75 = __webpack_require__(/*! @angular/material/input */ "@angular/material/input");
+var i76 = __webpack_require__(/*! @angular/cdk/portal */ "@angular/cdk/portal");
+var i77 = __webpack_require__(/*! @angular/cdk/scrolling */ "@angular/cdk/scrolling");
+var i78 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i79 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
+var i80 = __webpack_require__(/*! @angular/material/slide-toggle */ "@angular/material/slide-toggle");
+var i81 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
+var i82 = __webpack_require__(/*! @angular/material/badge */ "@angular/material/badge");
+var i83 = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
+var i84 = __webpack_require__(/*! @agm/core/core.module */ "@agm/core/core.module");
+var i85 = __webpack_require__(/*! @angular/material/tabs */ "@angular/material/tabs");
+var i86 = __webpack_require__(/*! @angular/material/progress-bar */ "@angular/material/progress-bar");
+var i87 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
+var i88 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
+var i89 = __webpack_require__(/*! @angular/cdk/keycodes */ "@angular/cdk/keycodes");
+var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.TooltipComponentNgFactory, i5.MatSnackBarContainerNgFactory, i5.SimpleSnackBarNgFactory, i6.LoginComponentNgFactory, i7.HomeComponentNgFactory, i8.EstadisticasComponentNgFactory, i9.UsuariosComponentNgFactory, i10.PerfilComponentNgFactory, i11.UrlsComponentNgFactory, i12.ShowurlComponentNgFactory, i13.AddnoticeComponentNgFactory, i14.TemporalComponentNgFactory, i15.NoticiaComponentNgFactory, i16.CatsaludComponentNgFactory, i17.CatgraciosoComponentNgFactory, i18.CatcuriosiComponentNgFactory, i19.CatvideoComponentNgFactory, i20.CattecnoComponentNgFactory, i21.CatmanualComponentNgFactory, i22.ErrorComponentNgFactory, i23.AlertcopyComponentNgFactory, i24.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_s, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i25.NgLocalization, i25.NgLocaleLocalization, [i0.LOCALE_ID, [2, i25.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_q, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_r, []), i0.ɵmpd(4608, i26.DomSanitizer, i26.ɵDomSanitizerImpl, [i25.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i26.DomSanitizer]), i0.ɵmpd(4608, i26.HAMMER_GESTURE_CONFIG, i27.GestureConfig, [[2, i27.MAT_HAMMER_OPTIONS], [2, i27.MatCommonModule]]), i0.ɵmpd(5120, i26.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i26.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i26.ɵKeyEventsPlugin(p1_0), new i26.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i28.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i25.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i25.DOCUMENT, i25.DOCUMENT, i26.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i26.HAMMER_LOADER], i26.DOCUMENT]), i0.ɵmpd(4608, i26.EventManager, i26.EventManager, [i26.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i26.ɵDomSharedStylesHost, i26.ɵDomSharedStylesHost, [i25.DOCUMENT]), i0.ɵmpd(4608, i26.ɵDomRendererFactory2, i26.ɵDomRendererFactory2, [i26.EventManager, i26.ɵDomSharedStylesHost, i0.APP_ID]), i0.ɵmpd(4608, i28.ɵangular_packages_platform_server_platform_server_c, i28.ɵangular_packages_platform_server_platform_server_c, [i26.DOCUMENT, [2, i26.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i26.ɵSharedStylesHost, null, [i28.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i28.ɵServerRendererFactory2, i28.ɵServerRendererFactory2, [i26.EventManager, i0.NgZone, i26.DOCUMENT, i26.ɵSharedStylesHost]), i0.ɵmpd(4608, i29.AnimationDriver, i29.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i29.ɵAnimationStyleNormalizer, i30.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(4608, i29.ɵAnimationEngine, i30.ɵInjectableAnimationEngine, [i25.DOCUMENT, i29.AnimationDriver, i29.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i28.ɵangular_packages_platform_server_platform_server_a, [i28.ɵServerRendererFactory2, i29.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i31.AnimationBuilder, i30.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i26.DOCUMENT]), i0.ɵmpd(4608, i32.ɵangular_packages_forms_forms_j, i32.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(4608, i32.FormBuilder, i32.FormBuilder, []), i0.ɵmpd(4608, i33.HttpXsrfTokenExtractor, i33.ɵangular_packages_common_http_http_g, [i25.DOCUMENT, i0.PLATFORM_ID, i33.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i33.ɵangular_packages_common_http_http_h, i33.ɵangular_packages_common_http_http_h, [i33.HttpXsrfTokenExtractor, i33.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i33.HTTP_INTERCEPTORS, function (p0_0, p2_0, p2_1) { return [p0_0, new i34.JwtInterceptor(), new i35.ErrorInterceptor(p2_0, p2_1)]; }, [i33.ɵangular_packages_common_http_http_h, i36.AuthenticationService, i37.Router]), i0.ɵmpd(4608, i33.XhrFactory, i28.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i33.HttpXhrBackend, i33.HttpXhrBackend, [i33.XhrFactory]), i0.ɵmpd(6144, i33.HttpBackend, null, [i33.HttpXhrBackend]), i0.ɵmpd(5120, i33.HttpHandler, i28.ɵangular_packages_platform_server_platform_server_h, [i33.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i33.HttpClient, i33.HttpClient, [i33.HttpHandler]), i0.ɵmpd(4608, i33.ɵangular_packages_common_http_http_d, i33.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i38.MutationObserverFactory, i38.MutationObserverFactory, []), i0.ɵmpd(4608, i27.ErrorStateMatcher, i27.ErrorStateMatcher, []), i0.ɵmpd(4608, i39.Overlay, i39.Overlay, [i39.ScrollStrategyOptions, i39.OverlayContainer, i0.ComponentFactoryResolver, i39.OverlayPositionBuilder, i39.OverlayKeyboardDispatcher, i0.Injector, i0.NgZone, i25.DOCUMENT, i40.Directionality, [2, i25.Location]]), i0.ɵmpd(5120, i39.ɵc, i39.ɵd, [i39.Overlay]), i0.ɵmpd(5120, i41.MAT_SELECT_SCROLL_STRATEGY, i41.MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY, [i39.Overlay]), i0.ɵmpd(5120, i42.MAT_TOOLTIP_SCROLL_STRATEGY, i42.MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, [i39.Overlay]), i0.ɵmpd(5120, i37.ActivatedRoute, i37.ɵangular_packages_router_router_g, [i37.Router]), i0.ɵmpd(4608, i37.NoPreloading, i37.NoPreloading, []), i0.ɵmpd(6144, i37.PreloadingStrategy, null, [i37.NoPreloading]), i0.ɵmpd(135680, i37.RouterPreloader, i37.RouterPreloader, [i37.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i37.PreloadingStrategy]), i0.ɵmpd(4608, i37.PreloadAllModules, i37.PreloadAllModules, []), i0.ɵmpd(4608, i25.ViewportScroller, i25.ɵNullViewportScroller, []), i0.ɵmpd(5120, i37.ɵangular_packages_router_router_n, i37.ɵangular_packages_router_router_c, [i37.Router, i25.ViewportScroller, i37.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i37.ROUTER_INITIALIZER, i37.ɵangular_packages_router_router_j, [i37.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i37.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i43.WindowRef, i43.WindowRef, []), i0.ɵmpd(4608, i43.DocumentRef, i43.DocumentRef, []), i0.ɵmpd(4608, i44.MapsAPILoader, i45.LazyMapsAPILoader, [[2, i45.LAZY_MAPS_API_CONFIG], i43.WindowRef, i43.DocumentRef]), i0.ɵmpd(5120, i46.MetaLoader, i47.ɵ0, []), i0.ɵmpd(4608, i46.MetaService, i46.MetaService, [i46.MetaLoader, i26.Title, i26.Meta]), i0.ɵmpd(4608, i46.MetaGuard, i46.MetaGuard, [i46.MetaService]), i0.ɵmpd(4608, i48.Globals, i48.Globals, []), i0.ɵmpd(4608, i49.BrowserXhr, i28.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i49.ResponseOptions, i49.BaseResponseOptions, []), i0.ɵmpd(4608, i49.XSRFStrategy, i28.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i49.XHRBackend, i49.XHRBackend, [i49.BrowserXhr, i49.ResponseOptions, i49.XSRFStrategy]), i0.ɵmpd(4608, i49.RequestOptions, i49.BaseRequestOptions, []), i0.ɵmpd(5120, i49.Http, i28.ɵangular_packages_platform_server_platform_server_g, [i49.XHRBackend, i49.RequestOptions]), i0.ɵmpd(1073742336, i25.CommonModule, i25.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i26.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i37.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(256, i0.APP_ID, "curiositylol", []), i0.ɵmpd(2048, i26.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(512, i37.ɵangular_packages_router_router_h, i37.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p1_1, p1_2, p2_0) { return [i26.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i26.ɵangular_packages_platform_browser_platform_browser_h(p1_0, p1_1, p1_2), i37.ɵangular_packages_router_router_i(p2_0)]; }, [[2, i0.NgProbeToken], i26.ɵTRANSITION_ID, i25.DOCUMENT, i0.Injector, i37.ɵangular_packages_router_router_h]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i26.BrowserModule, i26.BrowserModule, [[3, i26.BrowserModule]]), i0.ɵmpd(1073742336, i30.BrowserAnimationsModule, i30.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i50.AdsenseModule, i50.AdsenseModule, []), i0.ɵmpd(1073742336, i32.ɵangular_packages_forms_forms_bc, i32.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i32.FormsModule, i32.FormsModule, []), i0.ɵmpd(1073742336, i32.ReactiveFormsModule, i32.ReactiveFormsModule, []), i0.ɵmpd(1073742336, i33.HttpClientXsrfModule, i33.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i33.HttpClientModule, i33.HttpClientModule, []), i0.ɵmpd(1024, i37.ɵangular_packages_router_router_a, i37.ɵangular_packages_router_router_e, [[3, i37.Router]]), i0.ɵmpd(512, i37.UrlSerializer, i37.DefaultUrlSerializer, []), i0.ɵmpd(512, i37.ChildrenOutletContexts, i37.ChildrenOutletContexts, []), i0.ɵmpd(256, i37.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i25.LocationStrategy, i37.ɵangular_packages_router_router_d, [i25.PlatformLocation, [2, i25.APP_BASE_HREF], i37.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i25.Location, i25.Location, [i25.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i51.ModuleMapNgFactoryLoader, [i0.Compiler, i51.MODULE_MAP]), i0.ɵmpd(1024, i37.ROUTES, function () { return [[{ path: "login", component: i52.LoginComponent }, { path: "", redirectTo: "home", pathMatch: "full" }, { path: "home", component: i53.HomeComponent }, { path: "estadisticas", component: i54.EstadisticasComponent, canActivate: [i55.AuthGuards], data: i56.ɵ0 }, { path: "usuarios", component: i57.UsuariosComponent, canActivate: [i55.AuthGuards], data: i56.ɵ1 }, { path: "perfil", component: i58.PerfilComponent, canActivate: [i55.AuthGuards], data: i56.ɵ2 }, { path: "urls", component: i59.UrlsComponent, canActivate: [i55.AuthGuards], data: i56.ɵ3 }, { path: "showurl/:id", component: i60.ShowurlComponent, canActivate: [i55.AuthGuards], data: i56.ɵ4 }, { path: "addnotice", component: i61.AddnoticeComponent, canActivate: [i55.AuthGuards], data: i56.ɵ5 }, { path: "categoria/salud/:id", component: i62.TemporalComponent }, { path: "categoria/gracioso/:id", component: i62.TemporalComponent }, { path: "categoria/curiosidades/:id", component: i62.TemporalComponent }, { path: "categoria/videos/:id", component: i62.TemporalComponent }, { path: "categoria/tecnologia/:id", component: i62.TemporalComponent }, { path: "categoria/manualidades/:id", component: i62.TemporalComponent }, { path: "salud/:id", component: i63.NoticiaComponent }, { path: "gracioso/:id", component: i63.NoticiaComponent }, { path: "curiosidades/:id", component: i63.NoticiaComponent }, { path: "videos/:id", component: i63.NoticiaComponent }, { path: "tecnologia/:id", component: i63.NoticiaComponent }, { path: "manualidades/:id", component: i63.NoticiaComponent }, { path: "salud", component: i64.CatsaludComponent }, { path: "gracioso", component: i65.CatgraciosoComponent }, { path: "curiosidades", component: i66.CatcuriosiComponent }, { path: "videos", component: i67.CatvideoComponent }, { path: "tecnologia", component: i68.CattecnoComponent }, { path: "manualidades", component: i69.CatmanualComponent }, { path: "404", component: i70.ErrorComponent }, { path: "**", redirectTo: "404" }]]; }, []), i0.ɵmpd(1024, i37.Router, i37.ɵangular_packages_router_router_f, [i0.ApplicationRef, i37.UrlSerializer, i37.ChildrenOutletContexts, i25.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i37.ROUTES, i37.ROUTER_CONFIGURATION, [2, i37.UrlHandlingStrategy], [2, i37.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i37.RouterModule, i37.RouterModule, [[2, i37.ɵangular_packages_router_router_a], [2, i37.Router]]), i0.ɵmpd(1073742336, i40.BidiModule, i40.BidiModule, []), i0.ɵmpd(1073742336, i27.MatCommonModule, i27.MatCommonModule, [[2, i27.MATERIAL_SANITY_CHECKS], [2, i26.HAMMER_LOADER]]), i0.ɵmpd(1073742336, i71.PlatformModule, i71.PlatformModule, []), i0.ɵmpd(1073742336, i27.MatRippleModule, i27.MatRippleModule, []), i0.ɵmpd(1073742336, i72.MatButtonModule, i72.MatButtonModule, []), i0.ɵmpd(1073742336, i38.ObserversModule, i38.ObserversModule, []), i0.ɵmpd(1073742336, i73.MatFormFieldModule, i73.MatFormFieldModule, []), i0.ɵmpd(1073742336, i74.TextFieldModule, i74.TextFieldModule, []), i0.ɵmpd(1073742336, i75.MatInputModule, i75.MatInputModule, []), i0.ɵmpd(1073742336, i76.PortalModule, i76.PortalModule, []), i0.ɵmpd(1073742336, i77.ScrollingModule, i77.ScrollingModule, []), i0.ɵmpd(1073742336, i39.OverlayModule, i39.OverlayModule, []), i0.ɵmpd(1073742336, i27.MatPseudoCheckboxModule, i27.MatPseudoCheckboxModule, []), i0.ɵmpd(1073742336, i27.MatOptionModule, i27.MatOptionModule, []), i0.ɵmpd(1073742336, i41.MatSelectModule, i41.MatSelectModule, []), i0.ɵmpd(1073742336, i78.A11yModule, i78.A11yModule, []), i0.ɵmpd(1073742336, i42.MatTooltipModule, i42.MatTooltipModule, []), i0.ɵmpd(1073742336, i79.MatIconModule, i79.MatIconModule, []), i0.ɵmpd(1073742336, i80.MatSlideToggleModule, i80.MatSlideToggleModule, []), i0.ɵmpd(1073742336, i81.MatChipsModule, i81.MatChipsModule, []), i0.ɵmpd(1073742336, i82.MatBadgeModule, i82.MatBadgeModule, []), i0.ɵmpd(1073742336, i83.ComponentsModule, i83.ComponentsModule, []), i0.ɵmpd(1073742336, i84.AgmCoreModule, i84.AgmCoreModule, []), i0.ɵmpd(1073742336, i85.MatTabsModule, i85.MatTabsModule, []), i0.ɵmpd(1073742336, i86.MatProgressBarModule, i86.MatProgressBarModule, []), i0.ɵmpd(1073742336, i87.MatProgressSpinnerModule, i87.MatProgressSpinnerModule, []), i0.ɵmpd(1073742336, i88.MatSnackBarModule, i88.MatSnackBarModule, []), i0.ɵmpd(1073742336, i46.MetaModule, i46.MetaModule, [[3, i46.MetaModule]]), i0.ɵmpd(1073742336, i47.AppModule, i47.AppModule, [i0.PLATFORM_ID, i0.APP_ID]), i0.ɵmpd(1073742336, i49.HttpModule, i49.HttpModule, []), i0.ɵmpd(1073742336, i30.NoopAnimationsModule, i30.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i28.ServerModule, i28.ServerModule, []), i0.ɵmpd(1073742336, i51.ModuleMapLoaderModule, i51.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i30.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i33.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i33.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i81.MAT_CHIPS_DEFAULT_OPTIONS, { separatorKeyCodes: [i89.ENTER] }, []), i0.ɵmpd(256, i50.ADSENSE_TOKEN, { adClient: "ca-pub-4796086993295761", adSlot: 1390700653 }, []), i0.ɵmpd(256, i45.LAZY_MAPS_API_CONFIG, { apiKey: "YOUR_GOOGLE_MAPS_API_KEY" }, [])]); });
 exports.AppServerModuleNgFactory = AppServerModuleNgFactory;
 
 
@@ -1863,7 +1877,7 @@ var Globals = /** @class */ (function () {
         this.apiUrl = 'https://back.cropersviral.com/api';
         this.urlPhoto = 'https://back.cropersviral.com/';
         this.globalUrl = 'https://www.cropersviral.com';
-        this.urlShared = 'https://www.cropersviral.com/categoria';
+        this.urlShared = 'https://wwww.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
@@ -2703,7 +2717,7 @@ function View_AddnoticeComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0
     } if (("input" === en)) {
         var pd_6 = (i1.ɵnov(_v, 103)._onInput() !== false);
         ad = (pd_6 && ad);
-    } return ad; }, null, null)), i1.ɵdid(98, 16384, null, 0, i3.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i3.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i3.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i3.DefaultValueAccessor]), i1.ɵdid(100, 671744, null, 0, i3.FormControlName, [[3, i3.ControlContainer], [8, null], [8, null], [6, i3.NG_VALUE_ACCESSOR], [2, i3.ɵangular_packages_forms_forms_k]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i3.NgControl, null, [i3.FormControlName]), i1.ɵdid(102, 16384, null, 0, i3.NgControlStatus, [[4, i3.NgControl]], null, null), i1.ɵdid(103, 999424, null, 0, i9.MatInput, [i1.ElementRef, i7.Platform, [6, i3.NgControl], [2, i3.NgForm], [2, i3.FormGroupDirective], i5.ErrorStateMatcher, [8, null], i10.AutofillMonitor, i1.NgZone], { id: [0, "id"], placeholder: [1, "placeholder"] }, null), i1.ɵprd(2048, [[18, 4]], i2.MatFormFieldControl, null, [i9.MatInput]), (_l()(), i1.ɵeld(105, 0, null, 4, 3, "mat-icon", [["class", "mat-icon notranslate"], ["matSuffix", ""], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], null, null, i11.View_MatIcon_0, i11.RenderType_MatIcon)), i1.ɵdid(106, 16384, [[24, 4]], 0, i2.MatSuffix, [], null, null), i1.ɵdid(107, 9158656, null, 0, i12.MatIcon, [i1.ElementRef, i12.MatIconRegistry, [8, null], [2, i12.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(-1, 0, ["http"])), (_l()(), i1.ɵeld(109, 0, null, 6, 2, "mat-hint", [["class", "mat-hint"]], [[2, "mat-right", null], [1, "id", 0], [1, "align", 0]], null, null, null, null)), i1.ɵdid(110, 16384, [[22, 4]], 0, i2.MatHint, [], null, null), (_l()(), i1.ɵted(-1, null, ["Url del video si posee alguno"])), (_l()(), i1.ɵeld(112, 0, null, null, 8, "div", [["class", "col-md-6 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(113, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Bloque 1"])), (_l()(), i1.ɵeld(115, 0, null, null, 0, "div", [["class", "wysiwyg-editor"], ["id", "bloque1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(116, 0, null, null, 4, "mat-hint", [["class", "mat-hint"]], [[2, "mat-right", null], [1, "id", 0], [1, "align", 0]], null, null, null, null)), i1.ɵdid(117, 16384, null, 0, i2.MatHint, [], null, null), (_l()(), i1.ɵted(-1, null, ["M\u00EDnimo 100 palabras - M\u00E1ximo 250 palabras "])), (_l()(), i1.ɵeld(119, 0, null, null, 1, "span", [["id", "cont1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["(0 palabras)"])), (_l()(), i1.ɵeld(121, 0, null, null, 8, "div", [["class", "col-md-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(122, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Bloque 2"])), (_l()(), i1.ɵeld(124, 0, null, null, 0, "div", [["class", "wysiwyg-editor"], ["id", "bloque2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(125, 0, null, null, 4, "mat-hint", [["class", "mat-hint"]], [[2, "mat-right", null], [1, "id", 0], [1, "align", 0]], null, null, null, null)), i1.ɵdid(126, 16384, null, 0, i2.MatHint, [], null, null), (_l()(), i1.ɵted(-1, null, ["M\u00EDnimo 100 palabras - M\u00E1ximo 250 palabras "])), (_l()(), i1.ɵeld(128, 0, null, null, 1, "span", [["id", "cont2"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["(0 palabras)"])), (_l()(), i1.ɵeld(130, 0, null, null, 6, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(131, 0, null, null, 1, "label", [["for", "foto"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Foto Principal"])), (_l()(), i1.ɵeld(133, 0, null, null, 3, "div", [["class", "dropzone"], ["id", "photo"]], null, null, null, null, null)), (_l()(), i1.ɵeld(134, 0, null, null, 2, "div", [["class", "dz-message"], ["data-dz-message", ""], ["id", "message"]], null, null, null, null, null)), (_l()(), i1.ɵeld(135, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Arrastre la imagen aqui"])), (_l()(), i1.ɵeld(137, 0, null, null, 2, "button", [["class", "btn btn-danger pull-right btn-addp"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(98, 16384, null, 0, i3.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i3.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i3.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i3.DefaultValueAccessor]), i1.ɵdid(100, 671744, null, 0, i3.FormControlName, [[3, i3.ControlContainer], [8, null], [8, null], [6, i3.NG_VALUE_ACCESSOR], [2, i3.ɵangular_packages_forms_forms_k]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i3.NgControl, null, [i3.FormControlName]), i1.ɵdid(102, 16384, null, 0, i3.NgControlStatus, [[4, i3.NgControl]], null, null), i1.ɵdid(103, 999424, null, 0, i9.MatInput, [i1.ElementRef, i7.Platform, [6, i3.NgControl], [2, i3.NgForm], [2, i3.FormGroupDirective], i5.ErrorStateMatcher, [8, null], i10.AutofillMonitor, i1.NgZone], { id: [0, "id"], placeholder: [1, "placeholder"] }, null), i1.ɵprd(2048, [[18, 4]], i2.MatFormFieldControl, null, [i9.MatInput]), (_l()(), i1.ɵeld(105, 0, null, 4, 3, "mat-icon", [["class", "mat-icon notranslate"], ["matSuffix", ""], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], null, null, i11.View_MatIcon_0, i11.RenderType_MatIcon)), i1.ɵdid(106, 16384, [[24, 4]], 0, i2.MatSuffix, [], null, null), i1.ɵdid(107, 9158656, null, 0, i12.MatIcon, [i1.ElementRef, i12.MatIconRegistry, [8, null], [2, i12.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(-1, 0, ["http"])), (_l()(), i1.ɵeld(109, 0, null, 6, 2, "mat-hint", [["class", "mat-hint"]], [[2, "mat-right", null], [1, "id", 0], [1, "align", 0]], null, null, null, null)), i1.ɵdid(110, 16384, [[22, 4]], 0, i2.MatHint, [], null, null), (_l()(), i1.ɵted(-1, null, ["Url del video si posee alguno"])), (_l()(), i1.ɵeld(112, 0, null, null, 8, "div", [["class", "col-md-6 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(113, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Bloque 1"])), (_l()(), i1.ɵeld(115, 0, null, null, 0, "div", [["class", "wysiwyg-editor"], ["id", "bloque1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(116, 0, null, null, 4, "mat-hint", [["class", "mat-hint"]], [[2, "mat-right", null], [1, "id", 0], [1, "align", 0]], null, null, null, null)), i1.ɵdid(117, 16384, null, 0, i2.MatHint, [], null, null), (_l()(), i1.ɵted(-1, null, ["M\u00EDnimo 100 palabras "])), (_l()(), i1.ɵeld(119, 0, null, null, 1, "span", [["class", "text-danger"], ["id", "cont1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["(0 palabras)"])), (_l()(), i1.ɵeld(121, 0, null, null, 8, "div", [["class", "col-md-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(122, 0, null, null, 1, "label", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Bloque 2"])), (_l()(), i1.ɵeld(124, 0, null, null, 0, "div", [["class", "wysiwyg-editor"], ["id", "bloque2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(125, 0, null, null, 4, "mat-hint", [["class", "mat-hint"]], [[2, "mat-right", null], [1, "id", 0], [1, "align", 0]], null, null, null, null)), i1.ɵdid(126, 16384, null, 0, i2.MatHint, [], null, null), (_l()(), i1.ɵted(-1, null, ["M\u00EDnimo 100 palabras "])), (_l()(), i1.ɵeld(128, 0, null, null, 1, "span", [["class", "text-danger"], ["id", "cont2"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["(0 palabras)"])), (_l()(), i1.ɵeld(130, 0, null, null, 6, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(131, 0, null, null, 1, "label", [["for", "foto"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Foto Principal"])), (_l()(), i1.ɵeld(133, 0, null, null, 3, "div", [["class", "dropzone"], ["id", "photo"]], null, null, null, null, null)), (_l()(), i1.ɵeld(134, 0, null, null, 2, "div", [["class", "dz-message"], ["data-dz-message", ""], ["id", "message"]], null, null, null, null, null)), (_l()(), i1.ɵeld(135, 0, null, null, 1, "span", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Arrastre la imagen aqui"])), (_l()(), i1.ɵeld(137, 0, null, null, 2, "button", [["class", "btn btn-danger pull-right btn-addp"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.Registrar() !== false);
         ad = (pd_0 && ad);
     } return ad; }, i19.View_MatButton_0, i19.RenderType_MatButton)), i1.ɵdid(138, 180224, null, 0, i20.MatButton, [i1.ElementRef, i7.Platform, i17.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵted(-1, 0, ["Publicar"])), (_l()(), i1.ɵeld(140, 0, null, null, 0, "div", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(141, 0, null, null, 3, "mat-chip-list", [["class", "mat-chip-list"]], [[1, "tabindex", 0], [1, "aria-describedby", 0], [1, "aria-required", 0], [1, "aria-disabled", 0], [1, "aria-invalid", 0], [1, "aria-multiselectable", 0], [1, "role", 0], [2, "mat-chip-list-disabled", null], [2, "mat-chip-list-invalid", null], [2, "mat-chip-list-required", null], [1, "aria-orientation", 0], [8, "id", 0]], [[null, "focus"], [null, "blur"], [null, "keydown"]], function (_v, en, $event) { var ad = true; if (("focus" === en)) {
@@ -2754,10 +2768,12 @@ var AddnoticeComponent = /** @class */ (function () {
         this.drop = '';
         this.opt = '';
         this.hide = true;
+        this.us = '';
     }
     AddnoticeComponent.prototype.ngOnInit = function () {
         this.initForm();
         this.table = $('#data-table').DataTable(this.fillTable());
+        this.us = JSON.parse(localStorage.getItem('currentUser'));
     };
     AddnoticeComponent.prototype.initForm = function () {
         this.notiForm = this.formBuilder.group({
@@ -2773,9 +2789,9 @@ var AddnoticeComponent = /** @class */ (function () {
     AddnoticeComponent.prototype.ngAfterViewInit = function () {
         var that = this;
         this.UploadPhoto();
-        /*$('#data-table').on( 'click', '.btn-delete', function () {
+        $('#data-table').on('click', '.btn-delete', function () {
             that.deleteNoti($(this).attr('date'));
-        });*/
+        });
         $('#data-table').on('click', '.btn-edit', function () {
             that.fillNoti($(this).attr('date'));
         });
@@ -2783,28 +2799,35 @@ var AddnoticeComponent = /** @class */ (function () {
             svgPath: 'assets/plantilla/vendors/bower_components/trumbowyg/dist/ui/icons.svg'
         });
         $('#bloque1').on('input', function (e) {
-            if ($(this).text().split(/\b[\s,\.\-:;]*/).length < 250) {
-                var palabras = $(this).text().split(/\b[\s,\.\-:;]*/).length;
-                $('#cont1').text('(' + palabras + ' palabras)');
-                $('#cont1').removeClass("text-danger");
-            }
-            else {
+            if ($(this).text().split(/\b[\s,\.\-:;]*/).length < 100) {
                 var palabras = $(this).text().split(/\b[\s,\.\-:;]*/).length;
                 $('#cont1').text('(' + palabras + ' palabras)');
                 $('#cont1').addClass("text-danger");
             }
+            else {
+                var palabras = $(this).text().split(/\b[\s,\.\-:;]*/).length;
+                $('#cont1').text('(' + palabras + ' palabras)');
+                $('#cont1').removeClass("text-danger");
+            }
         });
         $('#bloque2').on('input', function (e) {
-            if ($(this).text().split(/\b[\s,\.\-:;]*/).length < 250) {
-                var palabras = $(this).text().split(/\b[\s,\.\-:;]*/).length;
-                $('#cont2').text('(' + palabras + ' palabras)');
-                $('#cont2').removeClass("text-danger");
-            }
-            else {
+            if ($(this).text().split(/\b[\s,\.\-:;]*/).length < 100) {
                 var palabras = $(this).text().split(/\b[\s,\.\-:;]*/).length;
                 $('#cont2').text('(' + palabras + ' palabras)');
                 $('#cont2').addClass("text-danger");
             }
+            else {
+                var palabras = $(this).text().split(/\b[\s,\.\-:;]*/).length;
+                $('#cont2').text('(' + palabras + ' palabras)');
+                $('#cont2').removeClass("text-danger");
+            }
+        });
+        $('[data-toggle="tooltip"]').tooltip('hide');
+        $('[data-toggle=tooltip]').tooltip('hide');
+        $("*").each(function () {
+            var popover = $.data(this, "bs.tooltip");
+            if (popover)
+                $(this).tooltip('hide');
         });
     };
     Object.defineProperty(AddnoticeComponent.prototype, "f", {
@@ -2817,12 +2840,12 @@ var AddnoticeComponent = /** @class */ (function () {
         if (this.notiForm.invalid) {
             return;
         }
-        if ($('#bloque1').text().split(/\b[\s,\.\-:;]*/).length < 100 || $('#bloque1').text().split(/\b[\s,\.\-:;]*/).length > 250) {
-            alert("Por favor, en la sección del bloque 1 minimo 100 palabras, máximo 250 palabras");
+        if ($('#bloque1').text().split(/\b[\s,\.\-:;]*/).length < 100) {
+            alert("Por favor, en la sección del bloque 1 minimo 100 palabras");
             return false;
         }
-        if ($('#bloque2').text().split(/\b[\s,\.\-:;]*/).length < 100 || $('#bloque2').text().split(/\b[\s,\.\-:;]*/).length > 250) {
-            alert("Por favor, en la sección del bloque 2 minimo 100 palabras, máximo 250 palabras");
+        if ($('#bloque2').text().split(/\b[\s,\.\-:;]*/).length < 100) {
+            alert("Por favor, en la sección del bloque 2 minimo 100 palabras");
             return false;
         }
         if (this.drop.files.length == 0) {
@@ -2916,10 +2939,10 @@ var AddnoticeComponent = /** @class */ (function () {
     AddnoticeComponent.prototype.deleteNoti = function (id) {
         var _this = this;
         if (confirm("Esta Seguro que desea eliminar la NOTICIA?")) {
-            this.userService.delUser(id)
+            this.blogService.delNoti(id)
                 .subscribe(function (data) {
                 _this.table = $('#data-table').DataTable(_this.fillTable());
-                _this.showMessage("Noticia eliminado");
+                _this.showMessage("Noticia eliminada");
                 _this.clearAll();
             });
         }
@@ -2943,6 +2966,13 @@ var AddnoticeComponent = /** @class */ (function () {
             drop.removeFile(file);
             drop.files.pop();
         }
+        $('[data-toggle="tooltip"]').tooltip('hide');
+        $('[data-toggle=tooltip]').tooltip('hide');
+        $("*").each(function () {
+            var popover = $.data(this, "bs.tooltip");
+            if (popover)
+                $(this).tooltip('hide');
+        });
     };
     AddnoticeComponent.prototype.fillTable = function () {
         var that = this;
@@ -2970,8 +3000,8 @@ var AddnoticeComponent = /** @class */ (function () {
                         return '<i class="zmdi zmdi-calendar-alt"></i> ' + moment(data).format('YYYY/MM/DD H:mm');
                     } },
                 { title: 'Acción', data: 'id', "render": function (data, type, row, meta) {
-                        var editar = '<button date="' + data + '" title="Editar usuario" data-toggle="tooltip" class="mat-icon-button mat-accent btn-edit"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">edit</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
-                        var eliminar = '<button date="' + data + '" title="Eliminar usuario" data-toggle="tooltip" class="mat-icon-button mat-accent btn-delete"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">delete_sweep</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
+                        var editar = '<button date="' + data + '" title="Editar noticia" data-toggle="tooltip" class="mat-icon-button mat-accent btn-edit"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">edit</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
+                        var eliminar = '<button date="' + data + '" title="Eliminar noticia" data-toggle="tooltip" class="mat-icon-button mat-accent btn-delete"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">delete_sweep</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
                         return editar + eliminar;
                     } }
             ],
@@ -3069,6 +3099,780 @@ exports.AddnoticeComponent = AddnoticeComponent;
 
 /***/ }),
 
+/***/ "./src/app/pages/blog/catcuriosi/catcuriosi.component.css.shim.ngstyle.js":
+/*!********************************************************************************!*\
+  !*** ./src/app/pages/blog/catcuriosi/catcuriosi.component.css.shim.ngstyle.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvY2F0Y3VyaW9zaS9jYXRjdXJpb3NpLmNvbXBvbmVudC5jc3MifQ== */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ngfactory.js":
+/*!*************************************************************************!*\
+  !*** ./src/app/pages/blog/catcuriosi/catcuriosi.component.ngfactory.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./catcuriosi.component.css.shim.ngstyle */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i5 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i8 = __webpack_require__(/*! ./catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var styles_CatcuriosiComponent = [i0.styles];
+var RenderType_CatcuriosiComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_CatcuriosiComponent, data: {} });
+exports.RenderType_CatcuriosiComponent = RenderType_CatcuriosiComponent;
+function View_CatcuriosiComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "col-md-10 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["class", "img img-raised"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 18, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 5, "p", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, [" ", "... "])), (_l()(), i1.ɵeld(16, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(20, 0, null, null, 4, "p", [["class", "author"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" por "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵted(24, null, [", ", " "]))], function (_ck, _v) { var currVal_5 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_5); var currVal_10 = _ck(_v, 18, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 17, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 5, 0, currVal_0); var currVal_1 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 8, 0, currVal_1); var currVal_2 = _v.context.$implicit.titulo; var currVal_3 = i1.ɵnov(_v, 11).target; var currVal_4 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4); var currVal_6 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 250); _ck(_v, 15, 0, currVal_7); var currVal_8 = i1.ɵnov(_v, 17).target; var currVal_9 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_8, currVal_9); var currVal_11 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 23, 0, currVal_11); var currVal_12 = _co.Momento(_v.context.$implicit.fecha); _ck(_v, 24, 0, currVal_12); }); }
+function View_CatcuriosiComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i4.View_MenuComponent_0, i4.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i5.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_CatcuriosiComponent_1)), i1.ɵdid(6, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 1, "app-footerblog", [], null, null, null, i6.View_FooterblogComponent_0, i6.RenderType_FooterblogComponent)), i1.ɵdid(8, 114688, null, 0, i7.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = _co.categoria; _ck(_v, 6, 0, currVal_0); _ck(_v, 8, 0); }, null); }
+exports.View_CatcuriosiComponent_0 = View_CatcuriosiComponent_0;
+function View_CatcuriosiComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-catcuriosi", [], null, null, null, View_CatcuriosiComponent_0, RenderType_CatcuriosiComponent)), i1.ɵdid(1, 4308992, null, 0, i8.CatcuriosiComponent, [i2.ActivatedRoute, i9.BlogService, i10.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_CatcuriosiComponent_Host_0 = View_CatcuriosiComponent_Host_0;
+var CatcuriosiComponentNgFactory = i1.ɵccf("app-catcuriosi", i8.CatcuriosiComponent, View_CatcuriosiComponent_Host_0, {}, {}, []);
+exports.CatcuriosiComponentNgFactory = CatcuriosiComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/blog/catcuriosi/catcuriosi.component.ts ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var CatcuriosiComponent = /** @class */ (function () {
+    function CatcuriosiComponent(route, blogService, globals) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this.categoria = '';
+        this.login = '';
+    }
+    CatcuriosiComponent.prototype.ngAfterViewInit = function () {
+    };
+    CatcuriosiComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.blogService.getAllCurio()
+            .subscribe(function (data) {
+            var da = data;
+            _this.categoria = da;
+        });
+    };
+    CatcuriosiComponent.prototype.Momento = function (fecha) {
+        return moment(fecha).locale('es').fromNow();
+    };
+    return CatcuriosiComponent;
+}());
+exports.CatcuriosiComponent = CatcuriosiComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catgracioso/catgracioso.component.css.shim.ngstyle.js":
+/*!**********************************************************************************!*\
+  !*** ./src/app/pages/blog/catgracioso/catgracioso.component.css.shim.ngstyle.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvY2F0Z3JhY2lvc28vY2F0Z3JhY2lvc28uY29tcG9uZW50LmNzcyJ9 */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catgracioso/catgracioso.component.ngfactory.js":
+/*!***************************************************************************!*\
+  !*** ./src/app/pages/blog/catgracioso/catgracioso.component.ngfactory.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./catgracioso.component.css.shim.ngstyle */ "./src/app/pages/blog/catgracioso/catgracioso.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i5 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i8 = __webpack_require__(/*! ./catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var styles_CatgraciosoComponent = [i0.styles];
+var RenderType_CatgraciosoComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_CatgraciosoComponent, data: {} });
+exports.RenderType_CatgraciosoComponent = RenderType_CatgraciosoComponent;
+function View_CatgraciosoComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "col-md-10 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["class", "img img-raised"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 18, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 5, "p", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, [" ", "... "])), (_l()(), i1.ɵeld(16, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(20, 0, null, null, 4, "p", [["class", "author"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" por "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵted(24, null, [", ", " "]))], function (_ck, _v) { var currVal_5 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_5); var currVal_10 = _ck(_v, 18, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 17, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 5, 0, currVal_0); var currVal_1 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 8, 0, currVal_1); var currVal_2 = _v.context.$implicit.titulo; var currVal_3 = i1.ɵnov(_v, 11).target; var currVal_4 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4); var currVal_6 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 250); _ck(_v, 15, 0, currVal_7); var currVal_8 = i1.ɵnov(_v, 17).target; var currVal_9 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_8, currVal_9); var currVal_11 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 23, 0, currVal_11); var currVal_12 = _co.Momento(_v.context.$implicit.fecha); _ck(_v, 24, 0, currVal_12); }); }
+function View_CatgraciosoComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i4.View_MenuComponent_0, i4.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i5.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_CatgraciosoComponent_1)), i1.ɵdid(6, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 1, "app-footerblog", [], null, null, null, i6.View_FooterblogComponent_0, i6.RenderType_FooterblogComponent)), i1.ɵdid(8, 114688, null, 0, i7.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = _co.categoria; _ck(_v, 6, 0, currVal_0); _ck(_v, 8, 0); }, null); }
+exports.View_CatgraciosoComponent_0 = View_CatgraciosoComponent_0;
+function View_CatgraciosoComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-catgracioso", [], null, null, null, View_CatgraciosoComponent_0, RenderType_CatgraciosoComponent)), i1.ɵdid(1, 4308992, null, 0, i8.CatgraciosoComponent, [i2.ActivatedRoute, i9.BlogService, i10.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_CatgraciosoComponent_Host_0 = View_CatgraciosoComponent_Host_0;
+var CatgraciosoComponentNgFactory = i1.ɵccf("app-catgracioso", i8.CatgraciosoComponent, View_CatgraciosoComponent_Host_0, {}, {}, []);
+exports.CatgraciosoComponentNgFactory = CatgraciosoComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catgracioso/catgracioso.component.ts":
+/*!*****************************************************************!*\
+  !*** ./src/app/pages/blog/catgracioso/catgracioso.component.ts ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var CatgraciosoComponent = /** @class */ (function () {
+    function CatgraciosoComponent(route, blogService, globals) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this.categoria = '';
+        this.login = '';
+    }
+    CatgraciosoComponent.prototype.ngAfterViewInit = function () {
+    };
+    CatgraciosoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.blogService.getAllGracioso()
+            .subscribe(function (data) {
+            var da = data;
+            _this.categoria = da;
+        });
+    };
+    CatgraciosoComponent.prototype.Momento = function (fecha) {
+        return moment(fecha).locale('es').fromNow();
+    };
+    return CatgraciosoComponent;
+}());
+exports.CatgraciosoComponent = CatgraciosoComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catmanual/catmanual.component.css.shim.ngstyle.js":
+/*!******************************************************************************!*\
+  !*** ./src/app/pages/blog/catmanual/catmanual.component.css.shim.ngstyle.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvY2F0bWFudWFsL2NhdG1hbnVhbC5jb21wb25lbnQuY3NzIn0= */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catmanual/catmanual.component.ngfactory.js":
+/*!***********************************************************************!*\
+  !*** ./src/app/pages/blog/catmanual/catmanual.component.ngfactory.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./catmanual.component.css.shim.ngstyle */ "./src/app/pages/blog/catmanual/catmanual.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i5 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i8 = __webpack_require__(/*! ./catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var styles_CatmanualComponent = [i0.styles];
+var RenderType_CatmanualComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_CatmanualComponent, data: {} });
+exports.RenderType_CatmanualComponent = RenderType_CatmanualComponent;
+function View_CatmanualComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "col-md-10 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["class", "img img-raised"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 18, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 5, "p", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, [" ", "... "])), (_l()(), i1.ɵeld(16, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(20, 0, null, null, 4, "p", [["class", "author"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" por "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵted(24, null, [", ", " "]))], function (_ck, _v) { var currVal_5 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_5); var currVal_10 = _ck(_v, 18, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 17, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 5, 0, currVal_0); var currVal_1 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 8, 0, currVal_1); var currVal_2 = _v.context.$implicit.titulo; var currVal_3 = i1.ɵnov(_v, 11).target; var currVal_4 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4); var currVal_6 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 250); _ck(_v, 15, 0, currVal_7); var currVal_8 = i1.ɵnov(_v, 17).target; var currVal_9 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_8, currVal_9); var currVal_11 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 23, 0, currVal_11); var currVal_12 = _co.Momento(_v.context.$implicit.fecha); _ck(_v, 24, 0, currVal_12); }); }
+function View_CatmanualComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i4.View_MenuComponent_0, i4.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i5.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_CatmanualComponent_1)), i1.ɵdid(6, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 1, "app-footerblog", [], null, null, null, i6.View_FooterblogComponent_0, i6.RenderType_FooterblogComponent)), i1.ɵdid(8, 114688, null, 0, i7.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = _co.categoria; _ck(_v, 6, 0, currVal_0); _ck(_v, 8, 0); }, null); }
+exports.View_CatmanualComponent_0 = View_CatmanualComponent_0;
+function View_CatmanualComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-catmanual", [], null, null, null, View_CatmanualComponent_0, RenderType_CatmanualComponent)), i1.ɵdid(1, 4308992, null, 0, i8.CatmanualComponent, [i2.ActivatedRoute, i9.BlogService, i10.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_CatmanualComponent_Host_0 = View_CatmanualComponent_Host_0;
+var CatmanualComponentNgFactory = i1.ɵccf("app-catmanual", i8.CatmanualComponent, View_CatmanualComponent_Host_0, {}, {}, []);
+exports.CatmanualComponentNgFactory = CatmanualComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catmanual/catmanual.component.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/pages/blog/catmanual/catmanual.component.ts ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var CatmanualComponent = /** @class */ (function () {
+    function CatmanualComponent(route, blogService, globals) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this.categoria = '';
+        this.login = '';
+    }
+    CatmanualComponent.prototype.ngAfterViewInit = function () {
+    };
+    CatmanualComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        console.log(1);
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.blogService.getAllManual()
+            .subscribe(function (data) {
+            var da = data;
+            _this.categoria = da;
+        });
+    };
+    CatmanualComponent.prototype.Momento = function (fecha) {
+        return moment(fecha).locale('es').fromNow();
+    };
+    return CatmanualComponent;
+}());
+exports.CatmanualComponent = CatmanualComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catsalud/catsalud.component.css.shim.ngstyle.js":
+/*!****************************************************************************!*\
+  !*** ./src/app/pages/blog/catsalud/catsalud.component.css.shim.ngstyle.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvY2F0c2FsdWQvY2F0c2FsdWQuY29tcG9uZW50LmNzcyJ9 */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catsalud/catsalud.component.ngfactory.js":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/blog/catsalud/catsalud.component.ngfactory.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./catsalud.component.css.shim.ngstyle */ "./src/app/pages/blog/catsalud/catsalud.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i5 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i8 = __webpack_require__(/*! ./catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var styles_CatsaludComponent = [i0.styles];
+var RenderType_CatsaludComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_CatsaludComponent, data: {} });
+exports.RenderType_CatsaludComponent = RenderType_CatsaludComponent;
+function View_CatsaludComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "col-md-10 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["class", "img img-raised"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 18, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 5, "p", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, [" ", "... "])), (_l()(), i1.ɵeld(16, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(20, 0, null, null, 4, "p", [["class", "author"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" por "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵted(24, null, [", ", " "]))], function (_ck, _v) { var currVal_5 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_5); var currVal_10 = _ck(_v, 18, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 17, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 5, 0, currVal_0); var currVal_1 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 8, 0, currVal_1); var currVal_2 = _v.context.$implicit.titulo; var currVal_3 = i1.ɵnov(_v, 11).target; var currVal_4 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4); var currVal_6 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 250); _ck(_v, 15, 0, currVal_7); var currVal_8 = i1.ɵnov(_v, 17).target; var currVal_9 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_8, currVal_9); var currVal_11 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 23, 0, currVal_11); var currVal_12 = _co.Momento(_v.context.$implicit.fecha); _ck(_v, 24, 0, currVal_12); }); }
+function View_CatsaludComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i4.View_MenuComponent_0, i4.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i5.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_CatsaludComponent_1)), i1.ɵdid(6, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 1, "app-footerblog", [], null, null, null, i6.View_FooterblogComponent_0, i6.RenderType_FooterblogComponent)), i1.ɵdid(8, 114688, null, 0, i7.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = _co.categoria; _ck(_v, 6, 0, currVal_0); _ck(_v, 8, 0); }, null); }
+exports.View_CatsaludComponent_0 = View_CatsaludComponent_0;
+function View_CatsaludComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-catsalud", [], null, null, null, View_CatsaludComponent_0, RenderType_CatsaludComponent)), i1.ɵdid(1, 4308992, null, 0, i8.CatsaludComponent, [i2.ActivatedRoute, i9.BlogService, i10.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_CatsaludComponent_Host_0 = View_CatsaludComponent_Host_0;
+var CatsaludComponentNgFactory = i1.ɵccf("app-catsalud", i8.CatsaludComponent, View_CatsaludComponent_Host_0, {}, {}, []);
+exports.CatsaludComponentNgFactory = CatsaludComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catsalud/catsalud.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/pages/blog/catsalud/catsalud.component.ts ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var CatsaludComponent = /** @class */ (function () {
+    function CatsaludComponent(route, blogService, globals) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this.categoria = '';
+        this.login = '';
+    }
+    CatsaludComponent.prototype.ngAfterViewInit = function () {
+    };
+    CatsaludComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.blogService.getAllSalud()
+            .subscribe(function (data) {
+            var da = data;
+            _this.categoria = da;
+        });
+    };
+    CatsaludComponent.prototype.Momento = function (fecha) {
+        return moment(fecha).locale('es').fromNow();
+    };
+    return CatsaludComponent;
+}());
+exports.CatsaludComponent = CatsaludComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/cattecno/cattecno.component.css.shim.ngstyle.js":
+/*!****************************************************************************!*\
+  !*** ./src/app/pages/blog/cattecno/cattecno.component.css.shim.ngstyle.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvY2F0dGVjbm8vY2F0dGVjbm8uY29tcG9uZW50LmNzcyJ9 */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/cattecno/cattecno.component.ngfactory.js":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/blog/cattecno/cattecno.component.ngfactory.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./cattecno.component.css.shim.ngstyle */ "./src/app/pages/blog/cattecno/cattecno.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i5 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i8 = __webpack_require__(/*! ./cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var styles_CattecnoComponent = [i0.styles];
+var RenderType_CattecnoComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_CattecnoComponent, data: {} });
+exports.RenderType_CattecnoComponent = RenderType_CattecnoComponent;
+function View_CattecnoComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "col-md-10 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["class", "img img-raised"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 18, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 5, "p", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, [" ", "... "])), (_l()(), i1.ɵeld(16, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(20, 0, null, null, 4, "p", [["class", "author"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" por "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵted(24, null, [", ", " "]))], function (_ck, _v) { var currVal_5 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_5); var currVal_10 = _ck(_v, 18, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 17, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 5, 0, currVal_0); var currVal_1 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 8, 0, currVal_1); var currVal_2 = _v.context.$implicit.titulo; var currVal_3 = i1.ɵnov(_v, 11).target; var currVal_4 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4); var currVal_6 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 250); _ck(_v, 15, 0, currVal_7); var currVal_8 = i1.ɵnov(_v, 17).target; var currVal_9 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_8, currVal_9); var currVal_11 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 23, 0, currVal_11); var currVal_12 = _co.Momento(_v.context.$implicit.fecha); _ck(_v, 24, 0, currVal_12); }); }
+function View_CattecnoComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i4.View_MenuComponent_0, i4.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i5.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_CattecnoComponent_1)), i1.ɵdid(6, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 1, "app-footerblog", [], null, null, null, i6.View_FooterblogComponent_0, i6.RenderType_FooterblogComponent)), i1.ɵdid(8, 114688, null, 0, i7.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = _co.categoria; _ck(_v, 6, 0, currVal_0); _ck(_v, 8, 0); }, null); }
+exports.View_CattecnoComponent_0 = View_CattecnoComponent_0;
+function View_CattecnoComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-cattecno", [], null, null, null, View_CattecnoComponent_0, RenderType_CattecnoComponent)), i1.ɵdid(1, 4308992, null, 0, i8.CattecnoComponent, [i2.ActivatedRoute, i9.BlogService, i10.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_CattecnoComponent_Host_0 = View_CattecnoComponent_Host_0;
+var CattecnoComponentNgFactory = i1.ɵccf("app-cattecno", i8.CattecnoComponent, View_CattecnoComponent_Host_0, {}, {}, []);
+exports.CattecnoComponentNgFactory = CattecnoComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/cattecno/cattecno.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/pages/blog/cattecno/cattecno.component.ts ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var CattecnoComponent = /** @class */ (function () {
+    function CattecnoComponent(route, blogService, globals) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this.categoria = '';
+        this.login = '';
+    }
+    CattecnoComponent.prototype.ngAfterViewInit = function () {
+    };
+    CattecnoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.blogService.getAllTecno()
+            .subscribe(function (data) {
+            var da = data;
+            _this.categoria = da;
+        });
+    };
+    CattecnoComponent.prototype.Momento = function (fecha) {
+        return moment(fecha).locale('es').fromNow();
+    };
+    return CattecnoComponent;
+}());
+exports.CattecnoComponent = CattecnoComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catvideo/catvideo.component.css.shim.ngstyle.js":
+/*!****************************************************************************!*\
+  !*** ./src/app/pages/blog/catvideo/catvideo.component.css.shim.ngstyle.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvY2F0dmlkZW8vY2F0dmlkZW8uY29tcG9uZW50LmNzcyJ9 */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catvideo/catvideo.component.ngfactory.js":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/blog/catvideo/catvideo.component.ngfactory.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./catvideo.component.css.shim.ngstyle */ "./src/app/pages/blog/catvideo/catvideo.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i5 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i7 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i8 = __webpack_require__(/*! ./catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var styles_CatvideoComponent = [i0.styles];
+var RenderType_CatvideoComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_CatvideoComponent, data: {} });
+exports.RenderType_CatvideoComponent = RenderType_CatvideoComponent;
+function View_CatvideoComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "col-md-10 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "img", [["class", "img img-raised"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 18, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 5, "p", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, [" ", "... "])), (_l()(), i1.ɵeld(16, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(20, 0, null, null, 4, "p", [["class", "author"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" por "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "b", [], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵted(24, null, [", ", " "]))], function (_ck, _v) { var currVal_5 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_5); var currVal_10 = _ck(_v, 18, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 17, 0, currVal_10); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 5, 0, currVal_0); var currVal_1 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 8, 0, currVal_1); var currVal_2 = _v.context.$implicit.titulo; var currVal_3 = i1.ɵnov(_v, 11).target; var currVal_4 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_2, currVal_3, currVal_4); var currVal_6 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 250); _ck(_v, 15, 0, currVal_7); var currVal_8 = i1.ɵnov(_v, 17).target; var currVal_9 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_8, currVal_9); var currVal_11 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 23, 0, currVal_11); var currVal_12 = _co.Momento(_v.context.$implicit.fecha); _ck(_v, 24, 0, currVal_12); }); }
+function View_CatvideoComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i4.View_MenuComponent_0, i4.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i5.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_CatvideoComponent_1)), i1.ɵdid(6, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(7, 0, null, null, 1, "app-footerblog", [], null, null, null, i6.View_FooterblogComponent_0, i6.RenderType_FooterblogComponent)), i1.ɵdid(8, 114688, null, 0, i7.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = _co.categoria; _ck(_v, 6, 0, currVal_0); _ck(_v, 8, 0); }, null); }
+exports.View_CatvideoComponent_0 = View_CatvideoComponent_0;
+function View_CatvideoComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-catvideo", [], null, null, null, View_CatvideoComponent_0, RenderType_CatvideoComponent)), i1.ɵdid(1, 4308992, null, 0, i8.CatvideoComponent, [i2.ActivatedRoute, i9.BlogService, i10.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_CatvideoComponent_Host_0 = View_CatvideoComponent_Host_0;
+var CatvideoComponentNgFactory = i1.ɵccf("app-catvideo", i8.CatvideoComponent, View_CatvideoComponent_Host_0, {}, {}, []);
+exports.CatvideoComponentNgFactory = CatvideoComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/catvideo/catvideo.component.ts":
+/*!***********************************************************!*\
+  !*** ./src/app/pages/blog/catvideo/catvideo.component.ts ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var CatvideoComponent = /** @class */ (function () {
+    function CatvideoComponent(route, blogService, globals) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this.categoria = '';
+        this.login = '';
+    }
+    CatvideoComponent.prototype.ngAfterViewInit = function () {
+    };
+    CatvideoComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.blogService.getAllVideo()
+            .subscribe(function (data) {
+            var da = data;
+            _this.categoria = da;
+        });
+    };
+    CatvideoComponent.prototype.Momento = function (fecha) {
+        return moment(fecha).locale('es').fromNow();
+    };
+    return CatvideoComponent;
+}());
+exports.CatvideoComponent = CatvideoComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/footerblog/footerblog.component.css.shim.ngstyle.js":
+/*!********************************************************************************!*\
+  !*** ./src/app/pages/blog/footerblog/footerblog.component.css.shim.ngstyle.js ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvZm9vdGVyYmxvZy9mb290ZXJibG9nLmNvbXBvbmVudC5jc3MifQ== */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js":
+/*!*************************************************************************!*\
+  !*** ./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js ***!
+  \*************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./footerblog.component.css.shim.ngstyle */ "./src/app/pages/blog/footerblog/footerblog.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! ./footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var styles_FooterblogComponent = [i0.styles];
+var RenderType_FooterblogComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_FooterblogComponent, data: {} });
+exports.RenderType_FooterblogComponent = RenderType_FooterblogComponent;
+function View_FooterblogComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 27, "footer", [["class", "footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 26, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 13, "nav", [["class", "float-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 12, "ul", [], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "a", [["href", "https://www.creative-tim.com"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Creative Tim "])), (_l()(), i1.ɵeld(7, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "a", [["href", "https://creative-tim.com/presentation"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" About Us "])), (_l()(), i1.ɵeld(10, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "a", [["href", "http://blog.creative-tim.com"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Blog "])), (_l()(), i1.ɵeld(13, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "a", [["href", "https://www.creative-tim.com/license"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Licenses "])), (_l()(), i1.ɵeld(16, 0, null, null, 11, "div", [["class", "copyright float-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" \u00A9 "])), (_l()(), i1.ɵted(-1, null, [", made with "])), (_l()(), i1.ɵeld(19, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["favorite"])), (_l()(), i1.ɵted(-1, null, [" by "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "a", [["href", "https://www.creative-tim.com"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Creative Tim"])), (_l()(), i1.ɵted(-1, null, [" and "])), (_l()(), i1.ɵeld(25, 0, null, null, 1, "a", [["href", "https://www.updivision.com"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["UPDIVISION"])), (_l()(), i1.ɵted(-1, null, [" for a better web. "]))], null, null); }
+exports.View_FooterblogComponent_0 = View_FooterblogComponent_0;
+function View_FooterblogComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-footerblog", [], null, null, null, View_FooterblogComponent_0, RenderType_FooterblogComponent)), i1.ɵdid(1, 114688, null, 0, i2.FooterblogComponent, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_FooterblogComponent_Host_0 = View_FooterblogComponent_Host_0;
+var FooterblogComponentNgFactory = i1.ɵccf("app-footerblog", i2.FooterblogComponent, View_FooterblogComponent_Host_0, {}, {}, []);
+exports.FooterblogComponentNgFactory = FooterblogComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/footerblog/footerblog.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/blog/footerblog/footerblog.component.ts ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var FooterblogComponent = /** @class */ (function () {
+    function FooterblogComponent() {
+    }
+    FooterblogComponent.prototype.ngOnInit = function () {
+    };
+    return FooterblogComponent;
+}());
+exports.FooterblogComponent = FooterblogComponent;
+
+
+/***/ }),
+
 /***/ "./src/app/pages/blog/home/home.component.css.shim.ngstyle.js":
 /*!********************************************************************!*\
   !*** ./src/app/pages/blog/home/home.component.css.shim.ngstyle.js ***!
@@ -3127,34 +3931,102 @@ var i16 = __webpack_require__(/*! @angular/material/button */ "@angular/material
 var i17 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
 var i18 = __webpack_require__(/*! ../../../../../node_modules/@angular/material/chips/typings/index.ngfactory */ "./node_modules/@angular/material/chips/typings/index.ngfactory.js");
 var i19 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
-var i20 = __webpack_require__(/*! ./home.component */ "./src/app/pages/blog/home/home.component.ts");
-var i21 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
-var i22 = __webpack_require__(/*! ../../../services/usuario.service */ "./src/app/services/usuario.service.ts");
-var i23 = __webpack_require__(/*! ../../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i24 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
-var styles_HomeComponent = ["#ofBar[_ngcontent-%COMP%] {\n          display:none;\n        }", i0.styles];
+var i20 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i21 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i22 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i23 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i24 = __webpack_require__(/*! ./home.component */ "./src/app/pages/blog/home/home.component.ts");
+var i25 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var i26 = __webpack_require__(/*! ../../../services/usuario.service */ "./src/app/services/usuario.service.ts");
+var i27 = __webpack_require__(/*! ../../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i28 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var styles_HomeComponent = [i0.styles];
 var RenderType_HomeComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_HomeComponent, data: {} });
 exports.RenderType_HomeComponent = RenderType_HomeComponent;
-function View_HomeComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+function View_HomeComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 27, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 26, "div", [["class", "card card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(2, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(3, 1), (_l()(), i1.ɵeld(4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["http"])), (_l()(), i1.ɵted(-1, null, ["Acortar "]))], function (_ck, _v) { var currVal_2 = _ck(_v, 3, 0, "/urls"); _ck(_v, 2, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
-function View_HomeComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "230"], ["width", "230"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(2, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(3, 1), (_l()(), i1.ɵeld(4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["fingerprint"])), (_l()(), i1.ɵted(-1, null, ["Entrar "]))], function (_ck, _v) { var currVal_2 = _ck(_v, 3, 0, "/login"); _ck(_v, 2, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
-function View_HomeComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 5, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 10, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 3, "a", [["class", "btn btn-primary"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 20).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } if (("click" === en)) {
-        var pd_1 = (_co.logout() !== false);
-        ad = (pd_1 && ad);
-    } return ad; }, null, null)), i1.ɵdid(2, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(3, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["directions_run"])), (_l()(), i1.ɵted(-1, null, ["Salir "]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
-function View_HomeComponent_4(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 21, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 20, "div", [["class", "card card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 1, "a", [], [[8, "href", 4], [8, "title", 0]], null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 0, "img", [["class", "img"], ["height", "230"], ["width", "230"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(7, null, ["", ""])), (_l()(), i1.ɵeld(8, 0, null, null, 2, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 1, "a", [], [[8, "href", 4], [8, "title", 0]], null, null, null, null)), (_l()(), i1.ɵted(10, null, ["", ".."])), (_l()(), i1.ɵeld(11, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(12, null, [" ", "... "])), (_l()(), i1.ɵeld(13, 0, null, null, 8, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 2, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "a", [["class", "btn btn-primary"]], [[8, "href", 4]], null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(17, 0, null, null, 4, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 3, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["contacts"])), (_l()(), i1.ɵted(21, null, [" ", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = ((((_co.globals.globalUrl + "/") + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id); var currVal_1 = _v.context.$implicit.titulo; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 4, 0, currVal_2); var currVal_3 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 7, 0, currVal_3); var currVal_4 = ((((_co.globals.globalUrl + "/") + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id); var currVal_5 = _v.context.$implicit.titulo; _ck(_v, 9, 0, currVal_4, currVal_5); var currVal_6 = _v.context.$implicit.titulo.substring(0, 30); _ck(_v, 10, 0, currVal_6); var currVal_7 = _v.context.$implicit.bloque_plano.substring(0, 171); _ck(_v, 12, 0, currVal_7); var currVal_8 = ((((_co.globals.globalUrl + "/") + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id); _ck(_v, 15, 0, currVal_8); var currVal_9 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 21, 0, currVal_9); }); }
-function View_HomeComponent_6(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "mat-error", [["class", "mat-error"], ["role", "alert"]], [[1, "id", 0]], null, null, null, null)), i1.ɵdid(1, 16384, [[4, 4]], 0, i4.MatError, [], null, null), (_l()(), i1.ɵted(-1, null, ["Por favor, escriba correo"]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1).id; _ck(_v, 0, 0, currVal_0); }); }
-function View_HomeComponent_7(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "mat-error", [["class", "mat-error"], ["role", "alert"]], [[1, "id", 0]], null, null, null, null)), i1.ɵdid(1, 16384, [[4, 4]], 0, i4.MatError, [], null, null), (_l()(), i1.ɵted(-1, null, ["Correo invalido"]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1).id; _ck(_v, 0, 0, currVal_0); }); }
-function View_HomeComponent_8(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "mat-error", [["class", "mat-error"], ["role", "alert"]], [[1, "id", 0]], null, null, null, null)), i1.ɵdid(1, 16384, [[11, 4]], 0, i4.MatError, [], null, null), (_l()(), i1.ɵted(-1, null, ["Por favor, escriba la contrase\u00F1a"]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1).id; _ck(_v, 0, 0, currVal_0); }); }
-function View_HomeComponent_5(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 69, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Acceder"])), (_l()(), i1.ɵeld(5, 0, null, null, 64, "div", [["class", ""]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 63, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(20, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(21, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(23, 0, null, null, 4, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 3, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["contacts"])), (_l()(), i1.ɵted(27, null, [" ", ""]))], function (_ck, _v) { var currVal_3 = _ck(_v, 5, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 4, 0, currVal_3); var currVal_9 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_9); var currVal_14 = _ck(_v, 21, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 20, 0, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 4).target; var currVal_2 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_4); var currVal_5 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 9, 0, currVal_5); var currVal_6 = _v.context.$implicit.titulo; var currVal_7 = i1.ɵnov(_v, 12).target; var currVal_8 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_6, currVal_7, currVal_8); var currVal_10 = _v.context.$implicit.titulo.substring(0, 30); _ck(_v, 14, 0, currVal_10); var currVal_11 = _v.context.$implicit.bloque_plano.substring(0, 171); _ck(_v, 16, 0, currVal_11); var currVal_12 = i1.ɵnov(_v, 20).target; var currVal_13 = i1.ɵnov(_v, 20).href; _ck(_v, 19, 0, currVal_12, currVal_13); var currVal_15 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 27, 0, currVal_15); }); }
+function View_HomeComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 22, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 21, "div", [["class", "card card-blog"], ["data-count", "13"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 5, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 20).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(20, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(21, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 5, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 4, 0, currVal_3); var currVal_9 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_9); var currVal_14 = _ck(_v, 21, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 20, 0, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 4).target; var currVal_2 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_4); var currVal_5 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 9, 0, currVal_5); var currVal_6 = _v.context.$implicit.titulo; var currVal_7 = i1.ɵnov(_v, 12).target; var currVal_8 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_6, currVal_7, currVal_8); var currVal_10 = _v.context.$implicit.titulo.substring(0, 25); _ck(_v, 14, 0, currVal_10); var currVal_11 = _v.context.$implicit.bloque_plano.substring(0, 171); _ck(_v, 16, 0, currVal_11); var currVal_12 = i1.ɵnov(_v, 20).target; var currVal_13 = i1.ɵnov(_v, 20).href; _ck(_v, 19, 0, currVal_12, currVal_13); }); }
+function View_HomeComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 20, "div", [["class", "col-md-12 ml-auto mr-auto"], ["style", "margin-bottom: -15px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 19, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 18, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(6, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(7, 1), (_l()(), i1.ɵeld(8, 0, null, null, 0, "img", [["class", "img"], ["height", "130"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 11, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 5, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 18).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(18, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 7, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 6, 0, currVal_3); var currVal_8 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_8); var currVal_13 = _ck(_v, 19, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 18, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 6).target; var currVal_2 = i1.ɵnov(_v, 6).href; _ck(_v, 5, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 8, 0, currVal_4); var currVal_5 = _v.context.$implicit.titulo; var currVal_6 = i1.ɵnov(_v, 12).target; var currVal_7 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_5, currVal_6, currVal_7); var currVal_9 = _v.context.$implicit.titulo.substring(0, 30); _ck(_v, 14, 0, currVal_9); var currVal_10 = _v.context.$implicit.bloque_plano.substring(0, 120); _ck(_v, 16, 0, currVal_10); var currVal_11 = i1.ɵnov(_v, 18).target; var currVal_12 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_11, currVal_12); }); }
+function View_HomeComponent_4(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 22, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 21, "div", [["class", "card card-blog"], ["data-count", "13"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 5, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 20).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(20, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(21, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 5, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 4, 0, currVal_3); var currVal_9 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_9); var currVal_14 = _ck(_v, 21, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 20, 0, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 4).target; var currVal_2 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_4); var currVal_5 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 9, 0, currVal_5); var currVal_6 = _v.context.$implicit.titulo; var currVal_7 = i1.ɵnov(_v, 12).target; var currVal_8 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_6, currVal_7, currVal_8); var currVal_10 = _v.context.$implicit.titulo.substring(0, 25); _ck(_v, 14, 0, currVal_10); var currVal_11 = _v.context.$implicit.bloque_plano.substring(0, 171); _ck(_v, 16, 0, currVal_11); var currVal_12 = i1.ɵnov(_v, 20).target; var currVal_13 = i1.ɵnov(_v, 20).href; _ck(_v, 19, 0, currVal_12, currVal_13); }); }
+function View_HomeComponent_5(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 20, "div", [["class", "col-md-12 ml-auto mr-auto"], ["style", "margin-bottom: -15px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 19, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 18, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(6, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(7, 1), (_l()(), i1.ɵeld(8, 0, null, null, 0, "img", [["class", "img"], ["height", "130"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 11, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 5, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 18).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(18, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 7, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 6, 0, currVal_3); var currVal_8 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_8); var currVal_13 = _ck(_v, 19, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 18, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 6).target; var currVal_2 = i1.ɵnov(_v, 6).href; _ck(_v, 5, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 8, 0, currVal_4); var currVal_5 = _v.context.$implicit.titulo; var currVal_6 = i1.ɵnov(_v, 12).target; var currVal_7 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_5, currVal_6, currVal_7); var currVal_9 = _v.context.$implicit.titulo.substring(0, 30); _ck(_v, 14, 0, currVal_9); var currVal_10 = _v.context.$implicit.bloque_plano.substring(0, 120); _ck(_v, 16, 0, currVal_10); var currVal_11 = i1.ɵnov(_v, 18).target; var currVal_12 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_11, currVal_12); }); }
+function View_HomeComponent_6(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 22, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 21, "div", [["class", "card card-blog"], ["data-count", "13"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 5, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 20).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(20, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(21, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 5, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 4, 0, currVal_3); var currVal_9 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_9); var currVal_14 = _ck(_v, 21, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 20, 0, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 4).target; var currVal_2 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_4); var currVal_5 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 9, 0, currVal_5); var currVal_6 = _v.context.$implicit.titulo; var currVal_7 = i1.ɵnov(_v, 12).target; var currVal_8 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_6, currVal_7, currVal_8); var currVal_10 = _v.context.$implicit.titulo.substring(0, 25); _ck(_v, 14, 0, currVal_10); var currVal_11 = _v.context.$implicit.bloque_plano.substring(0, 171); _ck(_v, 16, 0, currVal_11); var currVal_12 = i1.ɵnov(_v, 20).target; var currVal_13 = i1.ɵnov(_v, 20).href; _ck(_v, 19, 0, currVal_12, currVal_13); }); }
+function View_HomeComponent_7(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 20, "div", [["class", "col-md-12 ml-auto mr-auto"], ["style", "margin-bottom: -15px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 19, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 18, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 6).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(6, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(7, 1), (_l()(), i1.ɵeld(8, 0, null, null, 0, "img", [["class", "img"], ["height", "130"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 11, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 5, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 18).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(18, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 7, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 6, 0, currVal_3); var currVal_8 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_8); var currVal_13 = _ck(_v, 19, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 18, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 6).target; var currVal_2 = i1.ɵnov(_v, 6).href; _ck(_v, 5, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 8, 0, currVal_4); var currVal_5 = _v.context.$implicit.titulo; var currVal_6 = i1.ɵnov(_v, 12).target; var currVal_7 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_5, currVal_6, currVal_7); var currVal_9 = _v.context.$implicit.titulo.substring(0, 30); _ck(_v, 14, 0, currVal_9); var currVal_10 = _v.context.$implicit.bloque_plano.substring(0, 120); _ck(_v, 16, 0, currVal_10); var currVal_11 = i1.ɵnov(_v, 18).target; var currVal_12 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_11, currVal_12); }); }
+function View_HomeComponent_8(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 20, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 19, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 5, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(5, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 0, "img", [["class", "img"], ["height", "90"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 12, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h6", [["class", "card-title mb-0"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 1, "span", [["class", "text-muted"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, ["", ""])), (_l()(), i1.ɵeld(16, 0, null, null, 4, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 18).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(18, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 6, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 5, 0, currVal_3); var currVal_8 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_8); var currVal_13 = _ck(_v, 19, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 18, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 7, 0, currVal_4); var currVal_5 = _v.context.$implicit.titulo; var currVal_6 = i1.ɵnov(_v, 11).target; var currVal_7 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_5, currVal_6, currVal_7); var currVal_9 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_9); var currVal_10 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 15, 0, currVal_10); var currVal_11 = i1.ɵnov(_v, 18).target; var currVal_12 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_11, currVal_12); }); }
+function View_HomeComponent_10(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "mat-error", [["class", "mat-error"], ["role", "alert"]], [[1, "id", 0]], null, null, null, null)), i1.ɵdid(1, 16384, [[4, 4]], 0, i4.MatError, [], null, null), (_l()(), i1.ɵted(-1, null, ["Por favor, escriba correo"]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1).id; _ck(_v, 0, 0, currVal_0); }); }
+function View_HomeComponent_11(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "mat-error", [["class", "mat-error"], ["role", "alert"]], [[1, "id", 0]], null, null, null, null)), i1.ɵdid(1, 16384, [[4, 4]], 0, i4.MatError, [], null, null), (_l()(), i1.ɵted(-1, null, ["Correo invalido"]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1).id; _ck(_v, 0, 0, currVal_0); }); }
+function View_HomeComponent_12(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "mat-error", [["class", "mat-error"], ["role", "alert"]], [[1, "id", 0]], null, null, null, null)), i1.ɵdid(1, 16384, [[11, 4]], 0, i4.MatError, [], null, null), (_l()(), i1.ɵted(-1, null, ["Por favor, escriba la contrase\u00F1a"]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 1).id; _ck(_v, 0, 0, currVal_0); }); }
+function View_HomeComponent_9(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 69, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Acceder"])), (_l()(), i1.ɵeld(5, 0, null, null, 64, "div", [["class", ""]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 63, "form", [["novalidate", ""]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null]], [[null, "submit"], [null, "reset"]], function (_v, en, $event) { var ad = true; if (("submit" === en)) {
         var pd_0 = (i1.ɵnov(_v, 8).onSubmit($event) !== false);
         ad = (pd_0 && ad);
     } if (("reset" === en)) {
@@ -3181,7 +4053,7 @@ function View_HomeComponent_5(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, 
     } if (("input" === en)) {
         var pd_6 = (i1.ɵnov(_v, 28)._onInput() !== false);
         ad = (pd_6 && ad);
-    } return ad; }, null, null)), i1.ɵdid(23, 16384, null, 0, i5.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i5.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i5.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i5.DefaultValueAccessor]), i1.ɵdid(25, 671744, null, 0, i5.FormControlName, [[3, i5.ControlContainer], [8, null], [8, null], [6, i5.NG_VALUE_ACCESSOR], [2, i5.ɵangular_packages_forms_forms_k]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i5.NgControl, null, [i5.FormControlName]), i1.ɵdid(27, 16384, null, 0, i5.NgControlStatus, [[4, i5.NgControl]], null, null), i1.ɵdid(28, 999424, null, 0, i11.MatInput, [i1.ElementRef, i9.Platform, [6, i5.NgControl], [2, i5.NgForm], [2, i5.FormGroupDirective], i7.ErrorStateMatcher, [8, null], i12.AutofillMonitor, i1.NgZone], { id: [0, "id"], placeholder: [1, "placeholder"] }, null), i1.ɵprd(2048, [[1, 4]], i4.MatFormFieldControl, null, [i11.MatInput]), (_l()(), i1.ɵeld(30, 0, null, 4, 3, "mat-icon", [["class", "mat-icon notranslate"], ["matSuffix", ""], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], null, null, i13.View_MatIcon_0, i13.RenderType_MatIcon)), i1.ɵdid(31, 16384, [[7, 4]], 0, i4.MatSuffix, [], null, null), i1.ɵdid(32, 9158656, null, 0, i14.MatIcon, [i1.ElementRef, i14.MatIconRegistry, [8, null], [2, i14.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(-1, 0, ["contact_mail"])), (_l()(), i1.ɵand(16777216, null, 5, 1, null, View_HomeComponent_6)), i1.ɵdid(35, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, 5, 1, null, View_HomeComponent_7)), i1.ɵdid(37, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(38, 0, null, null, 23, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 22, "mat-form-field", [["class", "mat-form-field"]], [[2, "mat-form-field-appearance-standard", null], [2, "mat-form-field-appearance-fill", null], [2, "mat-form-field-appearance-outline", null], [2, "mat-form-field-appearance-legacy", null], [2, "mat-form-field-invalid", null], [2, "mat-form-field-can-float", null], [2, "mat-form-field-should-float", null], [2, "mat-form-field-has-label", null], [2, "mat-form-field-hide-placeholder", null], [2, "mat-form-field-disabled", null], [2, "mat-form-field-autofilled", null], [2, "mat-focused", null], [2, "mat-accent", null], [2, "mat-warn", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null], [2, "_mat-animation-noopable", null]], null, null, i6.View_MatFormField_0, i6.RenderType_MatFormField)), i1.ɵdid(40, 7520256, null, 7, i4.MatFormField, [i1.ElementRef, i1.ChangeDetectorRef, [2, i7.MAT_LABEL_GLOBAL_OPTIONS], [2, i8.Directionality], [2, i4.MAT_FORM_FIELD_DEFAULT_OPTIONS], i9.Platform, i1.NgZone, [2, i10.ANIMATION_MODULE_TYPE]], null, null), i1.ɵqud(335544320, 8, { _control: 0 }), i1.ɵqud(335544320, 9, { _placeholderChild: 0 }), i1.ɵqud(335544320, 10, { _labelChild: 0 }), i1.ɵqud(603979776, 11, { _errorChildren: 1 }), i1.ɵqud(603979776, 12, { _hintChildren: 1 }), i1.ɵqud(603979776, 13, { _prefixChildren: 1 }), i1.ɵqud(603979776, 14, { _suffixChildren: 1 }), (_l()(), i1.ɵeld(48, 0, null, 1, 7, "input", [["class", "mat-input-element mat-form-field-autofill-control"], ["formControlName", "password"], ["id", "password"], ["matInput", ""], ["placeholder", "Contrase\u00F1a"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null], [2, "mat-input-server", null], [1, "id", 0], [1, "placeholder", 0], [8, "disabled", 0], [8, "required", 0], [1, "readonly", 0], [1, "aria-describedby", 0], [1, "aria-invalid", 0], [1, "aria-required", 0]], [[null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"], [null, "focus"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(23, 16384, null, 0, i5.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i5.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i5.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i5.DefaultValueAccessor]), i1.ɵdid(25, 671744, null, 0, i5.FormControlName, [[3, i5.ControlContainer], [8, null], [8, null], [6, i5.NG_VALUE_ACCESSOR], [2, i5.ɵangular_packages_forms_forms_k]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i5.NgControl, null, [i5.FormControlName]), i1.ɵdid(27, 16384, null, 0, i5.NgControlStatus, [[4, i5.NgControl]], null, null), i1.ɵdid(28, 999424, null, 0, i11.MatInput, [i1.ElementRef, i9.Platform, [6, i5.NgControl], [2, i5.NgForm], [2, i5.FormGroupDirective], i7.ErrorStateMatcher, [8, null], i12.AutofillMonitor, i1.NgZone], { id: [0, "id"], placeholder: [1, "placeholder"] }, null), i1.ɵprd(2048, [[1, 4]], i4.MatFormFieldControl, null, [i11.MatInput]), (_l()(), i1.ɵeld(30, 0, null, 4, 3, "mat-icon", [["class", "mat-icon notranslate"], ["matSuffix", ""], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], null, null, i13.View_MatIcon_0, i13.RenderType_MatIcon)), i1.ɵdid(31, 16384, [[7, 4]], 0, i4.MatSuffix, [], null, null), i1.ɵdid(32, 9158656, null, 0, i14.MatIcon, [i1.ElementRef, i14.MatIconRegistry, [8, null], [2, i14.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(-1, 0, ["contact_mail"])), (_l()(), i1.ɵand(16777216, null, 5, 1, null, View_HomeComponent_10)), i1.ɵdid(35, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, 5, 1, null, View_HomeComponent_11)), i1.ɵdid(37, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(38, 0, null, null, 23, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 22, "mat-form-field", [["class", "mat-form-field"]], [[2, "mat-form-field-appearance-standard", null], [2, "mat-form-field-appearance-fill", null], [2, "mat-form-field-appearance-outline", null], [2, "mat-form-field-appearance-legacy", null], [2, "mat-form-field-invalid", null], [2, "mat-form-field-can-float", null], [2, "mat-form-field-should-float", null], [2, "mat-form-field-has-label", null], [2, "mat-form-field-hide-placeholder", null], [2, "mat-form-field-disabled", null], [2, "mat-form-field-autofilled", null], [2, "mat-focused", null], [2, "mat-accent", null], [2, "mat-warn", null], [2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null], [2, "_mat-animation-noopable", null]], null, null, i6.View_MatFormField_0, i6.RenderType_MatFormField)), i1.ɵdid(40, 7520256, null, 7, i4.MatFormField, [i1.ElementRef, i1.ChangeDetectorRef, [2, i7.MAT_LABEL_GLOBAL_OPTIONS], [2, i8.Directionality], [2, i4.MAT_FORM_FIELD_DEFAULT_OPTIONS], i9.Platform, i1.NgZone, [2, i10.ANIMATION_MODULE_TYPE]], null, null), i1.ɵqud(335544320, 8, { _control: 0 }), i1.ɵqud(335544320, 9, { _placeholderChild: 0 }), i1.ɵqud(335544320, 10, { _labelChild: 0 }), i1.ɵqud(603979776, 11, { _errorChildren: 1 }), i1.ɵqud(603979776, 12, { _hintChildren: 1 }), i1.ɵqud(603979776, 13, { _prefixChildren: 1 }), i1.ɵqud(603979776, 14, { _suffixChildren: 1 }), (_l()(), i1.ɵeld(48, 0, null, 1, 7, "input", [["class", "mat-input-element mat-form-field-autofill-control"], ["formControlName", "password"], ["id", "password"], ["matInput", ""], ["placeholder", "Contrase\u00F1a"]], [[2, "ng-untouched", null], [2, "ng-touched", null], [2, "ng-pristine", null], [2, "ng-dirty", null], [2, "ng-valid", null], [2, "ng-invalid", null], [2, "ng-pending", null], [2, "mat-input-server", null], [1, "id", 0], [1, "placeholder", 0], [8, "disabled", 0], [8, "required", 0], [1, "readonly", 0], [1, "aria-describedby", 0], [1, "aria-invalid", 0], [1, "aria-required", 0]], [[null, "input"], [null, "blur"], [null, "compositionstart"], [null, "compositionend"], [null, "focus"]], function (_v, en, $event) { var ad = true; if (("input" === en)) {
         var pd_0 = (i1.ɵnov(_v, 49)._handleInput($event.target.value) !== false);
         ad = (pd_0 && ad);
     } if (("blur" === en)) {
@@ -3205,7 +4077,7 @@ function View_HomeComponent_5(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, 
     } return ad; }, null, null)), i1.ɵdid(49, 16384, null, 0, i5.DefaultValueAccessor, [i1.Renderer2, i1.ElementRef, [2, i5.COMPOSITION_BUFFER_MODE]], null, null), i1.ɵprd(1024, null, i5.NG_VALUE_ACCESSOR, function (p0_0) { return [p0_0]; }, [i5.DefaultValueAccessor]), i1.ɵdid(51, 671744, null, 0, i5.FormControlName, [[3, i5.ControlContainer], [8, null], [8, null], [6, i5.NG_VALUE_ACCESSOR], [2, i5.ɵangular_packages_forms_forms_k]], { name: [0, "name"] }, null), i1.ɵprd(2048, null, i5.NgControl, null, [i5.FormControlName]), i1.ɵdid(53, 16384, null, 0, i5.NgControlStatus, [[4, i5.NgControl]], null, null), i1.ɵdid(54, 999424, null, 0, i11.MatInput, [i1.ElementRef, i9.Platform, [6, i5.NgControl], [2, i5.NgForm], [2, i5.FormGroupDirective], i7.ErrorStateMatcher, [8, null], i12.AutofillMonitor, i1.NgZone], { id: [0, "id"], placeholder: [1, "placeholder"], type: [2, "type"] }, null), i1.ɵprd(2048, [[8, 4]], i4.MatFormFieldControl, null, [i11.MatInput]), (_l()(), i1.ɵeld(56, 0, null, 4, 3, "mat-icon", [["class", "mat-icon notranslate"], ["matSuffix", ""], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = ((_co.hide = !_co.hide) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, i13.View_MatIcon_0, i13.RenderType_MatIcon)), i1.ɵdid(57, 16384, [[14, 4]], 0, i4.MatSuffix, [], null, null), i1.ɵdid(58, 9158656, null, 0, i14.MatIcon, [i1.ElementRef, i14.MatIconRegistry, [8, null], [2, i14.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(59, 0, ["", ""])), (_l()(), i1.ɵand(16777216, null, 5, 1, null, View_HomeComponent_8)), i1.ɵdid(61, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(62, 0, null, null, 2, "button", [["class", "btn btn-danger pull-right btn-addp"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+    } return ad; }, i13.View_MatIcon_0, i13.RenderType_MatIcon)), i1.ɵdid(57, 16384, [[14, 4]], 0, i4.MatSuffix, [], null, null), i1.ɵdid(58, 9158656, null, 0, i14.MatIcon, [i1.ElementRef, i14.MatIconRegistry, [8, null], [2, i14.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(59, 0, ["", ""])), (_l()(), i1.ɵand(16777216, null, 5, 1, null, View_HomeComponent_12)), i1.ɵdid(61, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(62, 0, null, null, 2, "button", [["class", "btn btn-danger pull-right btn-addp"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.onSubmit() !== false);
         ad = (pd_0 && ad);
     } return ad; }, i15.View_MatButton_0, i15.RenderType_MatButton)), i1.ɵdid(63, 180224, null, 0, i16.MatButton, [i1.ElementRef, i9.Platform, i17.FocusMonitor, [2, i10.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵted(-1, 0, ["Entrar"])), (_l()(), i1.ɵeld(65, 0, null, null, 0, "div", [["class", "clearfix"]], null, null, null, null, null)), (_l()(), i1.ɵeld(66, 0, null, null, 3, "mat-chip-list", [["class", "mat-chip-list"]], [[1, "tabindex", 0], [1, "aria-describedby", 0], [1, "aria-required", 0], [1, "aria-disabled", 0], [1, "aria-invalid", 0], [1, "aria-multiselectable", 0], [1, "role", 0], [2, "mat-chip-list-disabled", null], [2, "mat-chip-list-invalid", null], [2, "mat-chip-list-required", null], [1, "aria-orientation", 0], [8, "id", 0]], [[null, "focus"], [null, "blur"], [null, "keydown"]], function (_v, en, $event) { var ad = true; if (("focus" === en)) {
@@ -3218,11 +4090,21 @@ function View_HomeComponent_5(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, 
         var pd_2 = (i1.ɵnov(_v, 68)._keydown($event) !== false);
         ad = (pd_2 && ad);
     } return ad; }, i18.View_MatChipList_0, i18.RenderType_MatChipList)), i1.ɵprd(6144, null, i4.MatFormFieldControl, null, [i19.MatChipList]), i1.ɵdid(68, 1556480, null, 1, i19.MatChipList, [i1.ElementRef, i1.ChangeDetectorRef, [2, i8.Directionality], [2, i5.NgForm], [2, i5.FormGroupDirective], i7.ErrorStateMatcher, [8, null]], null, null), i1.ɵqud(603979776, 15, { chips: 1 })], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.userForm; _ck(_v, 8, 0, currVal_7); var currVal_46 = "correo"; _ck(_v, 25, 0, currVal_46); var currVal_47 = "correo"; var currVal_48 = "Correo"; _ck(_v, 28, 0, currVal_47, currVal_48); _ck(_v, 32, 0); var currVal_51 = _co.f.correo.hasError("required"); _ck(_v, 35, 0, currVal_51); var currVal_52 = _co.f.correo.hasError("email"); _ck(_v, 37, 0, currVal_52); var currVal_91 = "password"; _ck(_v, 51, 0, currVal_91); var currVal_92 = "password"; var currVal_93 = "Contrase\u00F1a"; var currVal_94 = (_co.hide ? "password" : "text"); _ck(_v, 54, 0, currVal_92, currVal_93, currVal_94); _ck(_v, 58, 0); var currVal_98 = _co.f.password.hasError("required"); _ck(_v, 61, 0, currVal_98); _ck(_v, 68, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 10).ngClassUntouched; var currVal_1 = i1.ɵnov(_v, 10).ngClassTouched; var currVal_2 = i1.ɵnov(_v, 10).ngClassPristine; var currVal_3 = i1.ɵnov(_v, 10).ngClassDirty; var currVal_4 = i1.ɵnov(_v, 10).ngClassValid; var currVal_5 = i1.ɵnov(_v, 10).ngClassInvalid; var currVal_6 = i1.ɵnov(_v, 10).ngClassPending; _ck(_v, 6, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = (i1.ɵnov(_v, 14).appearance == "standard"); var currVal_9 = (i1.ɵnov(_v, 14).appearance == "fill"); var currVal_10 = (i1.ɵnov(_v, 14).appearance == "outline"); var currVal_11 = (i1.ɵnov(_v, 14).appearance == "legacy"); var currVal_12 = i1.ɵnov(_v, 14)._control.errorState; var currVal_13 = i1.ɵnov(_v, 14)._canLabelFloat; var currVal_14 = i1.ɵnov(_v, 14)._shouldLabelFloat(); var currVal_15 = i1.ɵnov(_v, 14)._hasFloatingLabel(); var currVal_16 = i1.ɵnov(_v, 14)._hideControlPlaceholder(); var currVal_17 = i1.ɵnov(_v, 14)._control.disabled; var currVal_18 = i1.ɵnov(_v, 14)._control.autofilled; var currVal_19 = i1.ɵnov(_v, 14)._control.focused; var currVal_20 = (i1.ɵnov(_v, 14).color == "accent"); var currVal_21 = (i1.ɵnov(_v, 14).color == "warn"); var currVal_22 = i1.ɵnov(_v, 14)._shouldForward("untouched"); var currVal_23 = i1.ɵnov(_v, 14)._shouldForward("touched"); var currVal_24 = i1.ɵnov(_v, 14)._shouldForward("pristine"); var currVal_25 = i1.ɵnov(_v, 14)._shouldForward("dirty"); var currVal_26 = i1.ɵnov(_v, 14)._shouldForward("valid"); var currVal_27 = i1.ɵnov(_v, 14)._shouldForward("invalid"); var currVal_28 = i1.ɵnov(_v, 14)._shouldForward("pending"); var currVal_29 = !i1.ɵnov(_v, 14)._animationsEnabled; _ck(_v, 13, 1, [currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15, currVal_16, currVal_17, currVal_18, currVal_19, currVal_20, currVal_21, currVal_22, currVal_23, currVal_24, currVal_25, currVal_26, currVal_27, currVal_28, currVal_29]); var currVal_30 = i1.ɵnov(_v, 27).ngClassUntouched; var currVal_31 = i1.ɵnov(_v, 27).ngClassTouched; var currVal_32 = i1.ɵnov(_v, 27).ngClassPristine; var currVal_33 = i1.ɵnov(_v, 27).ngClassDirty; var currVal_34 = i1.ɵnov(_v, 27).ngClassValid; var currVal_35 = i1.ɵnov(_v, 27).ngClassInvalid; var currVal_36 = i1.ɵnov(_v, 27).ngClassPending; var currVal_37 = i1.ɵnov(_v, 28)._isServer; var currVal_38 = i1.ɵnov(_v, 28).id; var currVal_39 = i1.ɵnov(_v, 28).placeholder; var currVal_40 = i1.ɵnov(_v, 28).disabled; var currVal_41 = i1.ɵnov(_v, 28).required; var currVal_42 = ((i1.ɵnov(_v, 28).readonly && !i1.ɵnov(_v, 28)._isNativeSelect) || null); var currVal_43 = (i1.ɵnov(_v, 28)._ariaDescribedby || null); var currVal_44 = i1.ɵnov(_v, 28).errorState; var currVal_45 = i1.ɵnov(_v, 28).required.toString(); _ck(_v, 22, 1, [currVal_30, currVal_31, currVal_32, currVal_33, currVal_34, currVal_35, currVal_36, currVal_37, currVal_38, currVal_39, currVal_40, currVal_41, currVal_42, currVal_43, currVal_44, currVal_45]); var currVal_49 = i1.ɵnov(_v, 32).inline; var currVal_50 = (((i1.ɵnov(_v, 32).color !== "primary") && (i1.ɵnov(_v, 32).color !== "accent")) && (i1.ɵnov(_v, 32).color !== "warn")); _ck(_v, 30, 0, currVal_49, currVal_50); var currVal_53 = (i1.ɵnov(_v, 40).appearance == "standard"); var currVal_54 = (i1.ɵnov(_v, 40).appearance == "fill"); var currVal_55 = (i1.ɵnov(_v, 40).appearance == "outline"); var currVal_56 = (i1.ɵnov(_v, 40).appearance == "legacy"); var currVal_57 = i1.ɵnov(_v, 40)._control.errorState; var currVal_58 = i1.ɵnov(_v, 40)._canLabelFloat; var currVal_59 = i1.ɵnov(_v, 40)._shouldLabelFloat(); var currVal_60 = i1.ɵnov(_v, 40)._hasFloatingLabel(); var currVal_61 = i1.ɵnov(_v, 40)._hideControlPlaceholder(); var currVal_62 = i1.ɵnov(_v, 40)._control.disabled; var currVal_63 = i1.ɵnov(_v, 40)._control.autofilled; var currVal_64 = i1.ɵnov(_v, 40)._control.focused; var currVal_65 = (i1.ɵnov(_v, 40).color == "accent"); var currVal_66 = (i1.ɵnov(_v, 40).color == "warn"); var currVal_67 = i1.ɵnov(_v, 40)._shouldForward("untouched"); var currVal_68 = i1.ɵnov(_v, 40)._shouldForward("touched"); var currVal_69 = i1.ɵnov(_v, 40)._shouldForward("pristine"); var currVal_70 = i1.ɵnov(_v, 40)._shouldForward("dirty"); var currVal_71 = i1.ɵnov(_v, 40)._shouldForward("valid"); var currVal_72 = i1.ɵnov(_v, 40)._shouldForward("invalid"); var currVal_73 = i1.ɵnov(_v, 40)._shouldForward("pending"); var currVal_74 = !i1.ɵnov(_v, 40)._animationsEnabled; _ck(_v, 39, 1, [currVal_53, currVal_54, currVal_55, currVal_56, currVal_57, currVal_58, currVal_59, currVal_60, currVal_61, currVal_62, currVal_63, currVal_64, currVal_65, currVal_66, currVal_67, currVal_68, currVal_69, currVal_70, currVal_71, currVal_72, currVal_73, currVal_74]); var currVal_75 = i1.ɵnov(_v, 53).ngClassUntouched; var currVal_76 = i1.ɵnov(_v, 53).ngClassTouched; var currVal_77 = i1.ɵnov(_v, 53).ngClassPristine; var currVal_78 = i1.ɵnov(_v, 53).ngClassDirty; var currVal_79 = i1.ɵnov(_v, 53).ngClassValid; var currVal_80 = i1.ɵnov(_v, 53).ngClassInvalid; var currVal_81 = i1.ɵnov(_v, 53).ngClassPending; var currVal_82 = i1.ɵnov(_v, 54)._isServer; var currVal_83 = i1.ɵnov(_v, 54).id; var currVal_84 = i1.ɵnov(_v, 54).placeholder; var currVal_85 = i1.ɵnov(_v, 54).disabled; var currVal_86 = i1.ɵnov(_v, 54).required; var currVal_87 = ((i1.ɵnov(_v, 54).readonly && !i1.ɵnov(_v, 54)._isNativeSelect) || null); var currVal_88 = (i1.ɵnov(_v, 54)._ariaDescribedby || null); var currVal_89 = i1.ɵnov(_v, 54).errorState; var currVal_90 = i1.ɵnov(_v, 54).required.toString(); _ck(_v, 48, 1, [currVal_75, currVal_76, currVal_77, currVal_78, currVal_79, currVal_80, currVal_81, currVal_82, currVal_83, currVal_84, currVal_85, currVal_86, currVal_87, currVal_88, currVal_89, currVal_90]); var currVal_95 = i1.ɵnov(_v, 58).inline; var currVal_96 = (((i1.ɵnov(_v, 58).color !== "primary") && (i1.ɵnov(_v, 58).color !== "accent")) && (i1.ɵnov(_v, 58).color !== "warn")); _ck(_v, 56, 0, currVal_95, currVal_96); var currVal_97 = (_co.hide ? "visibility_off" : "visibility"); _ck(_v, 59, 0, currVal_97); var currVal_99 = (i1.ɵnov(_v, 63).disabled || null); var currVal_100 = (i1.ɵnov(_v, 63)._animationMode === "NoopAnimations"); _ck(_v, 62, 0, currVal_99, currVal_100); var currVal_101 = (i1.ɵnov(_v, 68).disabled ? null : i1.ɵnov(_v, 68)._tabIndex); var currVal_102 = (i1.ɵnov(_v, 68)._ariaDescribedby || null); var currVal_103 = i1.ɵnov(_v, 68).required.toString(); var currVal_104 = i1.ɵnov(_v, 68).disabled.toString(); var currVal_105 = i1.ɵnov(_v, 68).errorState; var currVal_106 = i1.ɵnov(_v, 68).multiple; var currVal_107 = i1.ɵnov(_v, 68).role; var currVal_108 = i1.ɵnov(_v, 68).disabled; var currVal_109 = i1.ɵnov(_v, 68).errorState; var currVal_110 = i1.ɵnov(_v, 68).required; var currVal_111 = i1.ɵnov(_v, 68).ariaOrientation; var currVal_112 = i1.ɵnov(_v, 68)._uid; _ck(_v, 66, 1, [currVal_101, currVal_102, currVal_103, currVal_104, currVal_105, currVal_106, currVal_107, currVal_108, currVal_109, currVal_110, currVal_111, currVal_112]); }); }
-function View_HomeComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "noscript", [], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 0, "iframe", [["height", "0"], ["src", "https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6"], ["style", "display:none;visibility:hidden"], ["width", "0"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 1, "noscript", [], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 0, "img", [["height", "1"], ["src", "https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1"], ["style", "display:none"], ["width", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 48, "nav", [["class", "navbar bg-danger fixed-top navbar-expand-lg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 47, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "navbar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "a", [["class", "navbar-brand"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Curiositylol"])), (_l()(), i1.ɵeld(9, 0, null, null, 5, "button", [["aria-controls", "navigation-index"], ["aria-expanded", "false"], ["aria-label", "Toggle navigation"], ["class", "navbar-toggler"], ["data-toggle", "collapse"], ["type", "button"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Toggle navigation"])), (_l()(), i1.ɵeld(12, 0, null, null, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 37, "div", [["class", "collapse navbar-collapse justify-content-end"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 36, "ul", [["class", "navbar-nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 4, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 3, "a", [["class", "nav-link"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["healing"])), (_l()(), i1.ɵted(-1, null, ["Salud "])), (_l()(), i1.ɵeld(22, 0, null, null, 4, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 3, "a", [["class", "nav-link"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["mood"])), (_l()(), i1.ɵted(-1, null, ["Gracioso "])), (_l()(), i1.ɵeld(27, 0, null, null, 4, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 3, "a", [["class", "nav-link"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["new_releases"])), (_l()(), i1.ɵted(-1, null, ["Curiosidades "])), (_l()(), i1.ɵeld(32, 0, null, null, 4, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(33, 0, null, null, 3, "a", [["class", "nav-link"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵeld(34, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["video_library"])), (_l()(), i1.ɵted(-1, null, ["Videos "])), (_l()(), i1.ɵeld(37, 0, null, null, 4, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 3, "a", [["class", "nav-link"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["settings_applications"])), (_l()(), i1.ɵted(-1, null, ["Tecnologia "])), (_l()(), i1.ɵeld(42, 0, null, null, 4, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(43, 0, null, null, 3, "a", [["class", "nav-link"], ["href", "https://material-dashboard-pro-laravel.creative-tim.com/dashboard"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["build"])), (_l()(), i1.ɵted(-1, null, ["Manualidades "])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_1)), i1.ɵdid(48, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_2)), i1.ɵdid(50, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_3)), i1.ɵdid(52, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(53, 0, null, null, 360, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(54, 0, null, null, 359, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 330, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(57, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(58, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ultimas entradas"])), (_l()(), i1.ɵeld(60, 0, null, null, 2, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_4)), i1.ɵdid(62, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(63, 0, null, null, 322, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(64, 0, null, null, 204, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(65, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(66, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(67, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Salud"])), (_l()(), i1.ɵeld(69, 0, null, null, 63, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(70, 0, null, null, 18, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(71, 0, null, null, 17, "div", [["class", "card card-blog"], ["data-count", "13"]], null, null, null, null, null)), (_l()(), i1.ɵeld(72, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(73, 0, null, null, 3, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(74, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(75, 0, null, null, 1, "div", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" This Summer Will be Awesome "])), (_l()(), i1.ɵeld(77, 0, null, null, 7, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(78, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Fashion"])), (_l()(), i1.ɵeld(80, 0, null, null, 2, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(81, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(83, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can enjoy the main night life in Barcelona. "])), (_l()(), i1.ɵeld(85, 0, null, null, 3, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(86, 0, null, null, 2, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(87, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(89, 0, null, null, 43, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(90, 0, null, null, 42, "div", [["class", "col-md-12 ml-auto mr-auto"], ["style", "margin-bottom: -15px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(91, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(92, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(93, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(94, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(95, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(96, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(97, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(98, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(99, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(101, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(103, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(105, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(106, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(107, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(108, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(109, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(110, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(111, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(112, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(113, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(115, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(117, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(119, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(120, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(121, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(122, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(123, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(124, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(125, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(126, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(127, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(129, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(131, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(133, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(134, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(135, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Curiosidades"])), (_l()(), i1.ɵeld(137, 0, null, null, 63, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(138, 0, null, null, 18, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(139, 0, null, null, 17, "div", [["class", "card card-blog"], ["data-count", "13"]], null, null, null, null, null)), (_l()(), i1.ɵeld(140, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(141, 0, null, null, 3, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(142, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(143, 0, null, null, 1, "div", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" This Summer Will be Awesome "])), (_l()(), i1.ɵeld(145, 0, null, null, 7, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(146, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Fashion"])), (_l()(), i1.ɵeld(148, 0, null, null, 2, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(149, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(151, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can enjoy the main night life in Barcelona. "])), (_l()(), i1.ɵeld(153, 0, null, null, 3, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(154, 0, null, null, 2, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(155, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(157, 0, null, null, 43, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(158, 0, null, null, 42, "div", [["class", "col-md-12 ml-auto mr-auto"], ["style", "margin-bottom: -15px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(159, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(160, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(161, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(162, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(163, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(164, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(165, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(166, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(167, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(169, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(171, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(173, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(174, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(175, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(176, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(177, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(178, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(179, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(180, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(181, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(183, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(185, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(187, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(188, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(189, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(190, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(191, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(192, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(193, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(194, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(195, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(197, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(199, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(201, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(202, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(203, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Manualidades"])), (_l()(), i1.ɵeld(205, 0, null, null, 63, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(206, 0, null, null, 18, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(207, 0, null, null, 17, "div", [["class", "card card-blog"], ["data-count", "13"]], null, null, null, null, null)), (_l()(), i1.ɵeld(208, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(209, 0, null, null, 3, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(210, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(211, 0, null, null, 1, "div", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" This Summer Will be Awesome "])), (_l()(), i1.ɵeld(213, 0, null, null, 7, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(214, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Fashion"])), (_l()(), i1.ɵeld(216, 0, null, null, 2, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(217, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(219, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can enjoy the main night life in Barcelona. "])), (_l()(), i1.ɵeld(221, 0, null, null, 3, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(222, 0, null, null, 2, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(223, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(225, 0, null, null, 43, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(226, 0, null, null, 42, "div", [["class", "col-md-12 ml-auto mr-auto"], ["style", "margin-bottom: -15px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(227, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(228, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(229, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(230, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(231, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(232, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(233, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(234, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(235, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(237, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(239, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(241, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(242, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(243, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(244, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(245, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(246, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(247, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(248, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(249, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(251, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(253, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(255, 0, null, null, 13, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(256, 0, null, null, 12, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(257, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(258, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(259, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(260, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(261, 0, null, null, 7, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(262, 0, null, null, 2, "h6", [["class", "card-title"], ["style", "margin-bottom: -4px;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(263, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(265, 0, null, null, 3, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to \"Naviglio\" where you can "])), (_l()(), i1.ɵeld(267, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(269, 0, null, null, 116, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(270, 0, null, null, 56, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(271, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(272, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(273, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mas popular"])), (_l()(), i1.ɵeld(275, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(276, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(277, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(278, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(279, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(280, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(281, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(282, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(283, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(285, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(286, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(288, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(289, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(290, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(291, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(292, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(293, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(294, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(295, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(296, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(298, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(299, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(301, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(302, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(303, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(304, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(305, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(306, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(307, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(308, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(309, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(311, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(312, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(314, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(315, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(316, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(317, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(318, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(319, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(320, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(321, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(322, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(324, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(325, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_5)), i1.ɵdid(328, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(329, 0, null, null, 56, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(330, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(331, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(332, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ultimas Entradas"])), (_l()(), i1.ɵeld(334, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(335, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(336, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(337, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(338, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(339, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(340, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(341, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(342, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(344, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(345, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(347, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(348, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(349, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(350, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(351, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(352, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(353, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(354, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(355, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(357, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(358, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(360, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(361, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(362, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(363, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(364, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(365, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(366, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(367, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(368, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(370, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(371, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(373, 0, null, null, 12, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(374, 0, null, null, 11, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(375, 0, null, null, 3, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(376, 0, null, null, 2, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(377, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(378, 0, null, null, 0, "img", [["class", "img"], ["src", "https://material-dashboard-pro-laravel.creative-tim.com/material/img/card-2.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(379, 0, null, null, 6, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(380, 0, null, null, 2, "h6", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(381, 0, null, null, 1, "a", [["href", "#pablo"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cozy 5 Stars Apartment"])), (_l()(), i1.ɵeld(383, 0, null, null, 2, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(384, 0, null, null, 1, "a", [["class", "card-link"], ["href", "#0"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Card link"])), (_l()(), i1.ɵeld(386, 0, null, null, 27, "footer", [["class", "footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(387, 0, null, null, 26, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(388, 0, null, null, 13, "nav", [["class", "float-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(389, 0, null, null, 12, "ul", [], null, null, null, null, null)), (_l()(), i1.ɵeld(390, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(391, 0, null, null, 1, "a", [["href", "https://www.creative-tim.com"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Creative Tim "])), (_l()(), i1.ɵeld(393, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(394, 0, null, null, 1, "a", [["href", "https://creative-tim.com/presentation"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" About Us "])), (_l()(), i1.ɵeld(396, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(397, 0, null, null, 1, "a", [["href", "http://blog.creative-tim.com"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Blog "])), (_l()(), i1.ɵeld(399, 0, null, null, 2, "li", [], null, null, null, null, null)), (_l()(), i1.ɵeld(400, 0, null, null, 1, "a", [["href", "https://www.creative-tim.com/license"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Licenses "])), (_l()(), i1.ɵeld(402, 0, null, null, 11, "div", [["class", "copyright float-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" \u00A9 "])), (_l()(), i1.ɵted(-1, null, [", made with "])), (_l()(), i1.ɵeld(405, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["favorite"])), (_l()(), i1.ɵted(-1, null, [" by "])), (_l()(), i1.ɵeld(408, 0, null, null, 1, "a", [["href", "https://www.creative-tim.com"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Creative Tim"])), (_l()(), i1.ɵted(-1, null, [" and "])), (_l()(), i1.ɵeld(411, 0, null, null, 1, "a", [["href", "https://www.updivision.com"], ["target", "_blank"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["UPDIVISION"])), (_l()(), i1.ɵted(-1, null, [" for a better web. "]))], function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.login; _ck(_v, 48, 0, currVal_0); var currVal_1 = !_co.login; _ck(_v, 50, 0, currVal_1); var currVal_2 = _co.login; _ck(_v, 52, 0, currVal_2); var currVal_3 = _co.lastnotis; _ck(_v, 62, 0, currVal_3); var currVal_4 = !_co.login; _ck(_v, 328, 0, currVal_4); }, null); }
+function View_HomeComponent_13(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 20, "div", [["class", "card card-plain card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 19, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 5, "div", [["class", "col-md-5"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(5, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 0, "img", [["class", "img"], ["height", "90"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 12, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 4, "h6", [["class", "card-title mb-0"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 3, "a", [["marked", "1"]], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(11, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(12, 1), (_l()(), i1.ɵted(13, null, ["", ".."])), (_l()(), i1.ɵeld(14, 0, null, null, 1, "span", [["class", "text-muted"]], null, null, null, null, null)), (_l()(), i1.ɵted(15, null, ["", ""])), (_l()(), i1.ɵeld(16, 0, null, null, 4, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 3, "a", [["class", "card-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 18).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(18, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_3 = _ck(_v, 6, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 5, 0, currVal_3); var currVal_8 = _ck(_v, 12, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 11, 0, currVal_8); var currVal_13 = _ck(_v, 19, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 18, 0, currVal_13); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 7, 0, currVal_4); var currVal_5 = _v.context.$implicit.titulo; var currVal_6 = i1.ɵnov(_v, 11).target; var currVal_7 = i1.ɵnov(_v, 11).href; _ck(_v, 10, 0, currVal_5, currVal_6, currVal_7); var currVal_9 = _v.context.$implicit.titulo; _ck(_v, 13, 0, currVal_9); var currVal_10 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 15, 0, currVal_10); var currVal_11 = i1.ɵnov(_v, 18).target; var currVal_12 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_11, currVal_12); }); }
+function View_HomeComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i20.View_MenuComponent_0, i20.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i21.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 67, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 66, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 63, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ultimas entradas"])), (_l()(), i1.ɵeld(9, 0, null, null, 3, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_1)), i1.ɵdid(11, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(13, 0, null, null, 54, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 36, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Salud"])), (_l()(), i1.ɵeld(19, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_2)), i1.ɵdid(21, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(23, 0, null, null, 3, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_3)), i1.ɵdid(25, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(27, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Curiosidades"])), (_l()(), i1.ɵeld(31, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_4)), i1.ɵdid(33, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(35, 0, null, null, 3, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_5)), i1.ɵdid(37, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(39, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(40, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(41, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Manualidades"])), (_l()(), i1.ɵeld(43, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_6)), i1.ɵdid(45, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(47, 0, null, null, 3, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_7)), i1.ɵdid(49, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(51, 0, null, null, 16, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(52, 0, null, null, 6, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(53, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(54, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mas popular"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_8)), i1.ɵdid(58, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_9)), i1.ɵdid(60, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(61, 0, null, null, 6, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(62, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(63, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(64, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ultimas Entradas"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_13)), i1.ɵdid(67, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(68, 0, null, null, 1, "app-footerblog", [], null, null, null, i22.View_FooterblogComponent_0, i22.RenderType_FooterblogComponent)), i1.ɵdid(69, 114688, null, 0, i23.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = i1.ɵunv(_v, 11, 0, i1.ɵnov(_v, 12).transform(_co.lastnotis, 0, 4)); _ck(_v, 11, 0, currVal_0); var currVal_1 = i1.ɵunv(_v, 21, 0, i1.ɵnov(_v, 22).transform(_co.popularsalud, 0, 1)); _ck(_v, 21, 0, currVal_1); var currVal_2 = i1.ɵunv(_v, 25, 0, i1.ɵnov(_v, 26).transform(_co.popularsalud, 1)); _ck(_v, 25, 0, currVal_2); var currVal_3 = i1.ɵunv(_v, 33, 0, i1.ɵnov(_v, 34).transform(_co.popularcurios, 0, 1)); _ck(_v, 33, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 37, 0, i1.ɵnov(_v, 38).transform(_co.popularcurios, 1)); _ck(_v, 37, 0, currVal_4); var currVal_5 = i1.ɵunv(_v, 45, 0, i1.ɵnov(_v, 46).transform(_co.popularmanual, 0, 1)); _ck(_v, 45, 0, currVal_5); var currVal_6 = i1.ɵunv(_v, 49, 0, i1.ɵnov(_v, 50).transform(_co.popularmanual, 1)); _ck(_v, 49, 0, currVal_6); var currVal_7 = _co.popular; _ck(_v, 58, 0, currVal_7); var currVal_8 = !_co.login; _ck(_v, 60, 0, currVal_8); var currVal_9 = _co.lastnotis; _ck(_v, 67, 0, currVal_9); _ck(_v, 69, 0); }, null); }
 exports.View_HomeComponent_0 = View_HomeComponent_0;
-function View_HomeComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i1.ɵdid(1, 4308992, null, 0, i20.HomeComponent, [i5.FormBuilder, i21.Globals, i22.UsuarioService, i2.Router, i23.AuthenticationService, i24.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_HomeComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i1.ɵdid(1, 4308992, null, 0, i24.HomeComponent, [i5.FormBuilder, i25.Globals, i26.UsuarioService, i2.Router, i27.AuthenticationService, i28.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_HomeComponent_Host_0 = View_HomeComponent_Host_0;
-var HomeComponentNgFactory = i1.ɵccf("app-home", i20.HomeComponent, View_HomeComponent_Host_0, {}, {}, []);
+var HomeComponentNgFactory = i1.ɵccf("app-home", i24.HomeComponent, View_HomeComponent_Host_0, {}, {}, []);
 exports.HomeComponentNgFactory = HomeComponentNgFactory;
 
 
@@ -3260,6 +4142,10 @@ var HomeComponent = /** @class */ (function () {
         this.error = '';
         this.login = false;
         this.lastnotis = [];
+        this.popular = [];
+        this.popularsalud = [];
+        this.popularcurios = [];
+        this.popularmanual = [];
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -3279,6 +4165,26 @@ var HomeComponent = /** @class */ (function () {
             .subscribe(function (data) {
             var da = data;
             _this.lastnotis = da;
+        });
+        this.blogService.getPopular()
+            .subscribe(function (data) {
+            var da = data;
+            _this.popular = da;
+        });
+        this.blogService.getPopularSalud()
+            .subscribe(function (data) {
+            var da = data;
+            _this.popularsalud = da;
+        });
+        this.blogService.getPopularCurio()
+            .subscribe(function (data) {
+            var da = data;
+            _this.popularcurios = da;
+        });
+        this.blogService.getPopularManual()
+            .subscribe(function (data) {
+            var da = data;
+            _this.popularmanual = da;
         });
     };
     Object.defineProperty(HomeComponent.prototype, "f", {
@@ -3314,6 +4220,255 @@ var HomeComponent = /** @class */ (function () {
     return HomeComponent;
 }());
 exports.HomeComponent = HomeComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/menu/menu.component.css.shim.ngstyle.js":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/blog/menu/menu.component.css.shim.ngstyle.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvbWVudS9tZW51LmNvbXBvbmVudC5jc3MifQ== */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/menu/menu.component.ngfactory.js":
+/*!*************************************************************!*\
+  !*** ./src/app/pages/blog/menu/menu.component.ngfactory.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./menu.component.css.shim.ngstyle */ "./src/app/pages/blog/menu/menu.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ./menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var styles_MenuComponent = [i0.styles];
+var RenderType_MenuComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_MenuComponent, data: {} });
+exports.RenderType_MenuComponent = RenderType_MenuComponent;
+function View_MenuComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(2, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(3, 1), (_l()(), i1.ɵeld(4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["http"])), (_l()(), i1.ɵted(-1, null, ["Acortar "]))], function (_ck, _v) { var currVal_2 = _ck(_v, 3, 0, "/urls"); _ck(_v, 2, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
+function View_MenuComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(2, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(3, 1), (_l()(), i1.ɵeld(4, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["fingerprint"])), (_l()(), i1.ɵted(-1, null, ["Entrar "]))], function (_ck, _v) { var currVal_2 = _ck(_v, 3, 0, "/login"); _ck(_v, 2, 0, currVal_2); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
+function View_MenuComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 5, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 2).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } if (("click" === en)) {
+        var pd_1 = (_co.logout() !== false);
+        ad = (pd_1 && ad);
+    } return ad; }, null, null)), i1.ɵdid(2, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(3, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["directions_run"])), (_l()(), i1.ɵted(-1, null, ["Salir "]))], null, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 2).target; var currVal_1 = i1.ɵnov(_v, 2).href; _ck(_v, 1, 0, currVal_0, currVal_1); }); }
+function View_MenuComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 62, "nav", [["class", "navbar bg-danger fixed-top navbar-expand-lg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 61, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 4, "div", [["class", "navbar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "a", [["class", "navbar-brand"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵted(-1, null, ["Cropers Viral"])), (_l()(), i1.ɵeld(7, 0, null, null, 5, "button", [["aria-controls", "navigation-index"], ["aria-expanded", "false"], ["aria-label", "Toggle navigation"], ["class", "navbar-toggler"], ["data-toggle", "collapse"], ["type", "button"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Toggle navigation"])), (_l()(), i1.ɵeld(10, 0, null, null, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 49, "div", [["class", "collapse navbar-collapse justify-content-end"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 48, "ul", [["class", "navbar-nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 17).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(17, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(18, 1), (_l()(), i1.ɵeld(19, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["healing"])), (_l()(), i1.ɵted(-1, null, ["Salud "])), (_l()(), i1.ɵeld(22, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 24).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(24, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(25, 1), (_l()(), i1.ɵeld(26, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["mood"])), (_l()(), i1.ɵted(-1, null, ["Gracioso "])), (_l()(), i1.ɵeld(29, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 31).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(31, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(32, 1), (_l()(), i1.ɵeld(33, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["new_releases"])), (_l()(), i1.ɵted(-1, null, ["Curiosidades "])), (_l()(), i1.ɵeld(36, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(37, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 38).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(38, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(39, 1), (_l()(), i1.ɵeld(40, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["video_library"])), (_l()(), i1.ɵted(-1, null, ["Videos "])), (_l()(), i1.ɵeld(43, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 45).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(45, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(46, 1), (_l()(), i1.ɵeld(47, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["settings_applications"])), (_l()(), i1.ɵted(-1, null, ["Tecnologia "])), (_l()(), i1.ɵeld(50, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(51, 0, null, null, 5, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 52).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(52, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(53, 1), (_l()(), i1.ɵeld(54, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["build"])), (_l()(), i1.ɵted(-1, null, ["Manualidades "])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_MenuComponent_1)), i1.ɵdid(58, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_MenuComponent_2)), i1.ɵdid(60, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_MenuComponent_3)), i1.ɵdid(62, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_2 = _ck(_v, 5, 0, "/"); _ck(_v, 4, 0, currVal_2); var currVal_5 = _ck(_v, 18, 0, "/salud"); _ck(_v, 17, 0, currVal_5); var currVal_8 = _ck(_v, 25, 0, "/gracioso"); _ck(_v, 24, 0, currVal_8); var currVal_11 = _ck(_v, 32, 0, "/curiosidades"); _ck(_v, 31, 0, currVal_11); var currVal_14 = _ck(_v, 39, 0, "/videos"); _ck(_v, 38, 0, currVal_14); var currVal_17 = _ck(_v, 46, 0, "/tecnologia"); _ck(_v, 45, 0, currVal_17); var currVal_20 = _ck(_v, 53, 0, "/manualidades"); _ck(_v, 52, 0, currVal_20); var currVal_21 = _co.login; _ck(_v, 58, 0, currVal_21); var currVal_22 = !_co.login; _ck(_v, 60, 0, currVal_22); var currVal_23 = _co.login; _ck(_v, 62, 0, currVal_23); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 4).target; var currVal_1 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_3 = i1.ɵnov(_v, 17).target; var currVal_4 = i1.ɵnov(_v, 17).href; _ck(_v, 16, 0, currVal_3, currVal_4); var currVal_6 = i1.ɵnov(_v, 24).target; var currVal_7 = i1.ɵnov(_v, 24).href; _ck(_v, 23, 0, currVal_6, currVal_7); var currVal_9 = i1.ɵnov(_v, 31).target; var currVal_10 = i1.ɵnov(_v, 31).href; _ck(_v, 30, 0, currVal_9, currVal_10); var currVal_12 = i1.ɵnov(_v, 38).target; var currVal_13 = i1.ɵnov(_v, 38).href; _ck(_v, 37, 0, currVal_12, currVal_13); var currVal_15 = i1.ɵnov(_v, 45).target; var currVal_16 = i1.ɵnov(_v, 45).href; _ck(_v, 44, 0, currVal_15, currVal_16); var currVal_18 = i1.ɵnov(_v, 52).target; var currVal_19 = i1.ɵnov(_v, 52).href; _ck(_v, 51, 0, currVal_18, currVal_19); }); }
+exports.View_MenuComponent_0 = View_MenuComponent_0;
+function View_MenuComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, View_MenuComponent_0, RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i4.MenuComponent, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_MenuComponent_Host_0 = View_MenuComponent_Host_0;
+var MenuComponentNgFactory = i1.ɵccf("app-menu", i4.MenuComponent, View_MenuComponent_Host_0, {}, {}, []);
+exports.MenuComponentNgFactory = MenuComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/menu/menu.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/pages/blog/menu/menu.component.ts ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var MenuComponent = /** @class */ (function () {
+    function MenuComponent() {
+        this.login = false;
+    }
+    MenuComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+    };
+    return MenuComponent;
+}());
+exports.MenuComponent = MenuComponent;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/noticia/noticia.component.css.shim.ngstyle.js":
+/*!**************************************************************************!*\
+  !*** ./src/app/pages/blog/noticia/noticia.component.css.shim.ngstyle.js ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2Jsb2cvbm90aWNpYS9ub3RpY2lhLmNvbXBvbmVudC5jc3MifQ== */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/noticia/noticia.component.ngfactory.js":
+/*!*******************************************************************!*\
+  !*** ./src/app/pages/blog/noticia/noticia.component.ngfactory.js ***!
+  \*******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./noticia.component.css.shim.ngstyle */ "./src/app/pages/blog/noticia/noticia.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! ../menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
+var i3 = __webpack_require__(/*! ../menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
+var i4 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i5 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
+var i6 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
+var i7 = __webpack_require__(/*! ./noticia.component */ "./src/app/pages/blog/noticia/noticia.component.ts");
+var i8 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i9 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i10 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var i11 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var styles_NoticiaComponent = [i0.styles];
+var RenderType_NoticiaComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_NoticiaComponent, data: {} });
+exports.RenderType_NoticiaComponent = RenderType_NoticiaComponent;
+function View_NoticiaComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "div", [["class", "col-md-6 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 0, "iframe", [["allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"], ["allowfullscreen", ""], ["frameborder", "0"], ["height", "315"], ["width", "560"]], [[8, "src", 5]], null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.video; _ck(_v, 1, 0, currVal_0); }); }
+function View_NoticiaComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i2.View_MenuComponent_0, i2.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i3.MenuComponent, [], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 19, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 18, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 15, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 14, "div", [["class", "card mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["alt", "Card image cap"], ["class", "card-img-top"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 12, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 1, "h2", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(11, null, ["", ""])), (_l()(), i1.ɵeld(12, 0, null, null, 0, "p", [["class", "card-text"], ["id", "bloque1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 0, "div", [["class", "col-md-8 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 0, "p", [["class", "card-text"], ["id", "bloque2"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_NoticiaComponent_1)), i1.ɵdid(16, 16384, null, 0, i4.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(17, 0, null, null, 2, "p", [["class", "card-text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 1, "small", [["class", "text-muted"]], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, ["Creada por: ", ""])), (_l()(), i1.ɵeld(20, 0, null, null, 1, "app-footerblog", [], null, null, null, i5.View_FooterblogComponent_0, i5.RenderType_FooterblogComponent)), i1.ɵdid(21, 114688, null, 0, i6.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_3 = (_co.video != null); _ck(_v, 16, 0, currVal_3); _ck(_v, 21, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.foto; _ck(_v, 6, 0, currVal_0); var currVal_1 = _co.categoria.toUpperCase(); _ck(_v, 9, 0, currVal_1); var currVal_2 = _co.titulo; _ck(_v, 11, 0, currVal_2); var currVal_4 = _co.creada; _ck(_v, 19, 0, currVal_4); }); }
+exports.View_NoticiaComponent_0 = View_NoticiaComponent_0;
+function View_NoticiaComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-noticia", [], null, null, null, View_NoticiaComponent_0, RenderType_NoticiaComponent)), i1.ɵdid(1, 4308992, null, 0, i7.NoticiaComponent, [i8.ActivatedRoute, i9.BlogService, i10.Globals, i11.DomSanitizer], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_NoticiaComponent_Host_0 = View_NoticiaComponent_Host_0;
+var NoticiaComponentNgFactory = i1.ɵccf("app-noticia", i7.NoticiaComponent, View_NoticiaComponent_Host_0, {}, {}, []);
+exports.NoticiaComponentNgFactory = NoticiaComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/blog/noticia/noticia.component.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/pages/blog/noticia/noticia.component.ts ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
+var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var NoticiaComponent = /** @class */ (function () {
+    function NoticiaComponent(route, blogService, globals, _sanitizer) {
+        this.route = route;
+        this.blogService = blogService;
+        this.globals = globals;
+        this._sanitizer = _sanitizer;
+        this.id_url = null;
+        this.categoria = '';
+        this.login = '';
+        this.titulo = '';
+        this.foto = '';
+        this.creada = '';
+        this.video = null;
+    }
+    NoticiaComponent.prototype.ngAfterViewInit = function () {
+    };
+    NoticiaComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        setTimeout(function () {
+            _this.login = us != null ? true : false;
+        }, 0);
+        this.id_url = this.route.snapshot.paramMap.get('id');
+        setTimeout(function () {
+            _this.blogService.getNoti(_this.id_url)
+                .subscribe(function (data) {
+                var da = data;
+                _this.categoria = da.categoria.categoria;
+                _this.titulo = da.titulo;
+                $('#bloque1').html(da.bloque1);
+                $('#bloque2').html(da.bloque2);
+                _this.foto = _this.globals.urlPhoto + da.foto;
+                _this.creada = da.users.nombre_apellidos + ', ' + moment(da.fecha).locale('es').fromNow();
+                if (da.video != null) {
+                    var results = da.video.match('[\\?&]v=([^&#]*)');
+                    var vid = (results === null) ? da.video : results[1];
+                    _this.video = _this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + vid);
+                }
+            });
+        }, 0);
+    };
+    return NoticiaComponent;
+}());
+exports.NoticiaComponent = NoticiaComponent;
 
 
 /***/ }),
@@ -3619,16 +4774,11 @@ var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i2 = __webpack_require__(/*! @angular/common */ "@angular/common");
 var i3 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
 var i4 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i5 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
-var i6 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i7 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i8 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i9 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i10 = __webpack_require__(/*! ./login.component */ "./src/app/pages/login/login.component.ts");
-var i11 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i12 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
-var i13 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
-var i14 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i5 = __webpack_require__(/*! ./login.component */ "./src/app/pages/login/login.component.ts");
+var i6 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i7 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var i8 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var i9 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var styles_LoginComponent = [i0.styles];
 var RenderType_LoginComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_LoginComponent, data: {} });
 exports.RenderType_LoginComponent = RenderType_LoginComponent;
@@ -3677,12 +4827,11 @@ function View_LoginComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0,
         var pd_0 = (i1.ɵnov(_v, 61).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(61, 671744, null, 0, i4.RouterLinkWithHref, [i4.Router, i4.ActivatedRoute, i2.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(62, 1), (_l()(), i1.ɵted(-1, null, ["Blog"]))], function (_ck, _v) { var _co = _v.component; var currVal_7 = _co.loginForm; _ck(_v, 5, 0, currVal_7); var currVal_16 = "form-control"; var currVal_17 = _ck(_v, 30, 0, (_co.submitted && _co.f.correo.errors)); _ck(_v, 29, 0, currVal_16, currVal_17); var currVal_18 = "true"; _ck(_v, 32, 0, currVal_18); var currVal_19 = "correo"; _ck(_v, 35, 0, currVal_19); var currVal_20 = (_co.submitted && _co.f.correo.errors); _ck(_v, 39, 0, currVal_20); var currVal_28 = "form-control"; var currVal_29 = _ck(_v, 48, 0, (_co.submitted && _co.f.password.errors)); _ck(_v, 47, 0, currVal_28, currVal_29); var currVal_30 = "password"; _ck(_v, 51, 0, currVal_30); var currVal_31 = (_co.submitted && _co.f.password.errors); _ck(_v, 55, 0, currVal_31); var currVal_36 = _ck(_v, 62, 0, "/"); _ck(_v, 61, 0, currVal_36); }, function (_ck, _v) { var currVal_0 = i1.ɵnov(_v, 7).ngClassUntouched; var currVal_1 = i1.ɵnov(_v, 7).ngClassTouched; var currVal_2 = i1.ɵnov(_v, 7).ngClassPristine; var currVal_3 = i1.ɵnov(_v, 7).ngClassDirty; var currVal_4 = i1.ɵnov(_v, 7).ngClassValid; var currVal_5 = i1.ɵnov(_v, 7).ngClassInvalid; var currVal_6 = i1.ɵnov(_v, 7).ngClassPending; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3, currVal_4, currVal_5, currVal_6); var currVal_8 = (i1.ɵnov(_v, 32).required ? "" : null); var currVal_9 = i1.ɵnov(_v, 37).ngClassUntouched; var currVal_10 = i1.ɵnov(_v, 37).ngClassTouched; var currVal_11 = i1.ɵnov(_v, 37).ngClassPristine; var currVal_12 = i1.ɵnov(_v, 37).ngClassDirty; var currVal_13 = i1.ɵnov(_v, 37).ngClassValid; var currVal_14 = i1.ɵnov(_v, 37).ngClassInvalid; var currVal_15 = i1.ɵnov(_v, 37).ngClassPending; _ck(_v, 28, 0, currVal_8, currVal_9, currVal_10, currVal_11, currVal_12, currVal_13, currVal_14, currVal_15); var currVal_21 = i1.ɵnov(_v, 53).ngClassUntouched; var currVal_22 = i1.ɵnov(_v, 53).ngClassTouched; var currVal_23 = i1.ɵnov(_v, 53).ngClassPristine; var currVal_24 = i1.ɵnov(_v, 53).ngClassDirty; var currVal_25 = i1.ɵnov(_v, 53).ngClassValid; var currVal_26 = i1.ɵnov(_v, 53).ngClassInvalid; var currVal_27 = i1.ɵnov(_v, 53).ngClassPending; _ck(_v, 46, 0, currVal_21, currVal_22, currVal_23, currVal_24, currVal_25, currVal_26, currVal_27); var currVal_32 = i1.ɵnov(_v, 58).target; var currVal_33 = i1.ɵnov(_v, 58).href; _ck(_v, 57, 0, currVal_32, currVal_33); var currVal_34 = i1.ɵnov(_v, 61).target; var currVal_35 = i1.ɵnov(_v, 61).href; _ck(_v, 60, 0, currVal_34, currVal_35); }); }
-function View_LoginComponent_7(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 12, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 11, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 10, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 9, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 0, "div", [["class", "mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(7, null, ["", ""])), (_l()(), i1.ɵeld(8, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i5.View_MatButton_0, i5.RenderType_MatButton)), i1.ɵdid(10, 180224, null, 0, i6.MatButton, [i1.ElementRef, i7.Platform, i8.FocusMonitor, [2, i9.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(11, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 0, "div", [["class", "mb-2"]], null, null, null, null, null))], function (_ck, _v) { var currVal_3 = "warn"; _ck(_v, 10, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 7, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 10).disabled || null); var currVal_2 = (i1.ɵnov(_v, 10)._animationMode === "NoopAnimations"); _ck(_v, 9, 0, currVal_1, currVal_2); }); }
-function View_LoginComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵand(16777216, null, null, 1, null, View_LoginComponent_1)), i1.ɵdid(1, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_LoginComponent_7)), i1.ɵdid(3, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == false); _ck(_v, 1, 0, currVal_0); var currVal_1 = (_co.show == true); _ck(_v, 3, 0, currVal_1); }, null); }
+function View_LoginComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵand(16777216, null, null, 1, null, View_LoginComponent_1)), i1.ɵdid(1, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == false); _ck(_v, 1, 0, currVal_0); }, null); }
 exports.View_LoginComponent_0 = View_LoginComponent_0;
-function View_LoginComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-login", [], null, null, null, View_LoginComponent_0, RenderType_LoginComponent)), i1.ɵdid(1, 4308992, null, 0, i10.LoginComponent, [i3.FormBuilder, i4.ActivatedRoute, i4.Router, i11.AuthenticationService, i12.Globals, i13.UrlsService, i14.Meta, i14.Title, i14.DOCUMENT], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_LoginComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-login", [], null, null, null, View_LoginComponent_0, RenderType_LoginComponent)), i1.ɵdid(1, 4308992, null, 0, i5.LoginComponent, [i3.FormBuilder, i4.ActivatedRoute, i4.Router, i6.AuthenticationService, i7.Globals, i8.UrlsService, i9.Meta, i9.Title, i9.DOCUMENT], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_LoginComponent_Host_0 = View_LoginComponent_Host_0;
-var LoginComponentNgFactory = i1.ɵccf("app-login", i10.LoginComponent, View_LoginComponent_Host_0, {}, {}, []);
+var LoginComponentNgFactory = i1.ɵccf("app-login", i5.LoginComponent, View_LoginComponent_Host_0, {}, {}, []);
 exports.LoginComponentNgFactory = LoginComponentNgFactory;
 
 
@@ -3729,7 +4878,6 @@ var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@
 __webpack_require__(/*! jquery-countdown */ "jquery-countdown");
 var authentication_service_1 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
 var urls_service_1 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
-var $ = __webpack_require__(/*! jquery */ "jquery");
 var LoginComponent = /** @class */ (function () {
     function LoginComponent(formBuilder, route, router, authenticationService, globals, urlsService, meta, titleService, document) {
         this.formBuilder = formBuilder;
@@ -3750,7 +4898,6 @@ var LoginComponent = /** @class */ (function () {
         this.id_url = null;
     }
     LoginComponent.prototype.ngOnInit = function () {
-        var _this = this;
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
             this.show = true;
@@ -3765,45 +4912,49 @@ var LoginComponent = /** @class */ (function () {
             }
 
             this.document.head.appendChild(script);*/
-            this.urlsService.getUrl(this.id_url)
-                .subscribe(function (data) {
-                var da = data;
-                _this.url = da;
-                _this.titleService.setTitle(da.titulo);
-                _this.meta.updateTag({ name: 'title', content: da.titulo });
-                _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: da.url_real });
-                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                _this.title = da.titulo;
-                var link = _this.document.createElement('link');
-                link.rel = 'canonical';
-                link.href = da.url_real;
-                _this.document.head.appendChild(link);
-                var that = _this;
-                var fiveSeconds = new Date().getTime() + 15000;
-                setTimeout(function () {
-                    $('#clock').countdown(fiveSeconds, function (event) {
-                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                    }).on('finish.countdown', function (event) {
-                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                        $('.btn-count').html(link);
-                    });
-                }, 5000);
-            }, function (err) {
-                if (err.id != null) {
-                    _this.show = false;
-                    window.location = err.url_real;
-                }
-                else
-                    _this.router.navigate(['404']);
-            });
+            /*this.urlsService.getUrl(this.id_url)
+                .subscribe(data => {
+                    let da: any = data;
+                    this.url = da;
+                    
+                    this.titleService.setTitle(da.titulo);
+                    this.meta.updateTag({name: 'title', content: da.titulo});
+                    this.meta.updateTag({name: 'description', content: da.descripcion});
+                    this.meta.updateTag({property: 'og:url', content: da.url_real});
+                    this.meta.updateTag({property: 'og:title', content: da.titulo});
+                    this.meta.updateTag({property: 'og:description', content: da.descripcion});
+                    this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
+
+                    this.meta.updateTag({name: 'twitter:card', content: "summary"});
+                    this.meta.updateTag({name: 'twitter:site', content: da.url_real});
+                    this.meta.updateTag({name: 'twitter:title', content: da.titulo});
+                    this.meta.updateTag({name: 'twitter:description', content: da.descripcion});
+                    this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+da.foto});
+
+                    this.title = da.titulo;
+                    let link: any = this.document.createElement('link');
+                    link.rel = 'canonical';
+                    link.href = da.url_real;
+                    this.document.head.appendChild(link);
+                    var that = this;
+                    var fiveSeconds = new Date().getTime() + 15000;
+                    setTimeout(() => {
+                        $('#clock').countdown(fiveSeconds, function(event) {
+                            $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                        }).on('finish.countdown', function(event) {
+                            var link = '<a href="'+that.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                            $('.btn-count').html(link);
+                        });
+                    }, 5000);
+                },
+                err => {
+                    if(err.id != null) {
+                        this.show = false;
+                        window.location = err.url_real;
+                    }
+                    else
+                        this.router.navigate(['404']);
+                });*/
         }
         else {
             this.authenticationService.logout();
@@ -4586,7 +5737,7 @@ var i12 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
 var styles_TemporalComponent = [i0.styles];
 var RenderType_TemporalComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_TemporalComponent, data: {} });
 exports.RenderType_TemporalComponent = RenderType_TemporalComponent;
-function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 16, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 15, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 14, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 13, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_716616"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(7, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(12, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(13, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_716617"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."]))], function (_ck, _v) { var currVal_3 = "warn"; _ck(_v, 12, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 9, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 12).disabled || null); var currVal_2 = (i1.ɵnov(_v, 12)._animationMode === "NoopAnimations"); _ck(_v, 11, 0, currVal_1, currVal_2); }); }
+function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 16, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 15, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 14, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 13, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717615"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(7, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(12, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(13, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717619"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."]))], function (_ck, _v) { var currVal_3 = "warn"; _ck(_v, 12, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 9, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 12).disabled || null); var currVal_2 = (i1.ɵnov(_v, 12)._animationMode === "NoopAnimations"); _ck(_v, 11, 0, currVal_1, currVal_2); }); }
 function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(2, 16384, null, 0, i7.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == true); _ck(_v, 2, 0, currVal_0); }, null); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
 function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 4308992, null, 0, i8.TemporalComponent, [i9.ActivatedRoute, i9.Router, i10.UrlsService, i11.Meta, i11.Title, i12.Globals, i11.DOCUMENT], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
@@ -5101,6 +6252,13 @@ var UrlsComponent = /** @class */ (function () {
         this.urlsForm.get('url').setValue('');
         this.urlsForm.get('categoria').setValue('1');
         this.urlsForm.get('accion').setValue('');
+        $('[data-toggle="tooltip"]').tooltip('hide');
+        $('[data-toggle=tooltip]').tooltip('hide');
+        $("*").each(function () {
+            var popover = $.data(this, "bs.tooltip");
+            if (popover)
+                $(this).tooltip('hide');
+        });
     };
     UrlsComponent.prototype.showMessage = function (message) {
         $.notify({
@@ -5520,6 +6678,13 @@ var UsuariosComponent = /** @class */ (function () {
                 _this.table = $('#data-table').DataTable(_this.fillTable());
                 _this.showMessage("Usuario eliminado");
                 _this.clearAll();
+                $('[data-toggle="tooltip"]').tooltip('hide');
+                $('[data-toggle=tooltip]').tooltip('hide');
+                $("*").each(function () {
+                    var popover = $.data(this, "bs.tooltip");
+                    if (popover)
+                        $(this).tooltip('hide');
+                });
             });
         }
     };
@@ -5695,6 +6860,13 @@ var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var auth_guard_1 = __webpack_require__(/*! ../guard/auth.guard */ "./src/app/guard/auth.guard.ts");
 var home_component_1 = __webpack_require__(/*! ../pages/blog/home/home.component */ "./src/app/pages/blog/home/home.component.ts");
 var addnotice_component_1 = __webpack_require__(/*! ../pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
+var noticia_component_1 = __webpack_require__(/*! ../pages/blog/noticia/noticia.component */ "./src/app/pages/blog/noticia/noticia.component.ts");
+var catsalud_component_1 = __webpack_require__(/*! ../pages/blog/catsalud/catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
+var catgracioso_component_1 = __webpack_require__(/*! ../pages/blog/catgracioso/catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
+var catcuriosi_component_1 = __webpack_require__(/*! ../pages/blog/catcuriosi/catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
+var catvideo_component_1 = __webpack_require__(/*! ../pages/blog/catvideo/catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
+var cattecno_component_1 = __webpack_require__(/*! ../pages/blog/cattecno/cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
+var catmanual_component_1 = __webpack_require__(/*! ../pages/blog/catmanual/catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
 var estadisticas_component_1 = __webpack_require__(/*! ../pages/estadisticas/estadisticas.component */ "./src/app/pages/estadisticas/estadisticas.component.ts");
 var usuarios_component_1 = __webpack_require__(/*! ../pages/usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
 var login_component_1 = __webpack_require__(/*! ../pages/login/login.component */ "./src/app/pages/login/login.component.ts");
@@ -5729,6 +6901,18 @@ var appRoutes = [
     { path: 'categoria/videos/:id', component: temporal_component_1.TemporalComponent },
     { path: 'categoria/tecnologia/:id', component: temporal_component_1.TemporalComponent },
     { path: 'categoria/manualidades/:id', component: temporal_component_1.TemporalComponent },
+    { path: 'salud/:id', component: noticia_component_1.NoticiaComponent },
+    { path: 'gracioso/:id', component: noticia_component_1.NoticiaComponent },
+    { path: 'curiosidades/:id', component: noticia_component_1.NoticiaComponent },
+    { path: 'videos/:id', component: noticia_component_1.NoticiaComponent },
+    { path: 'tecnologia/:id', component: noticia_component_1.NoticiaComponent },
+    { path: 'manualidades/:id', component: noticia_component_1.NoticiaComponent },
+    { path: 'salud', component: catsalud_component_1.CatsaludComponent },
+    { path: 'gracioso', component: catgracioso_component_1.CatgraciosoComponent },
+    { path: 'curiosidades', component: catcuriosi_component_1.CatcuriosiComponent },
+    { path: 'videos', component: catvideo_component_1.CatvideoComponent },
+    { path: 'tecnologia', component: cattecno_component_1.CattecnoComponent },
+    { path: 'manualidades', component: catmanual_component_1.CatmanualComponent },
     { path: '404', component: error_component_1.ErrorComponent },
     { path: '**', redirectTo: '404' },
 ];
@@ -5812,11 +6996,44 @@ var BlogService = /** @class */ (function () {
     BlogService.prototype.updateNoti = function (id, noti) {
         return this.http.put(this.globals.apiUrl + "/blogs/update/" + id, noti);
     };
+    BlogService.prototype.delNoti = function (id) {
+        return this.http.delete(this.globals.apiUrl + "/blogs/delete/" + id);
+    };
     BlogService.prototype.getNoti = function (id) {
         return this.http.get(this.globals.apiUrl + "/blog/" + id);
     };
     BlogService.prototype.getLastNotis3 = function () {
         return this.http.get(this.globals.apiUrl + "/blogs/lastnoti3");
+    };
+    BlogService.prototype.getPopular = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/popular");
+    };
+    BlogService.prototype.getPopularSalud = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/lastsalud");
+    };
+    BlogService.prototype.getPopularCurio = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/lastcuriosidad");
+    };
+    BlogService.prototype.getPopularManual = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/lastmanual");
+    };
+    BlogService.prototype.getAllSalud = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/allsalud");
+    };
+    BlogService.prototype.getAllGracioso = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/allgracioso");
+    };
+    BlogService.prototype.getAllCurio = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/allcuriosidades");
+    };
+    BlogService.prototype.getAllVideo = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/allvideo");
+    };
+    BlogService.prototype.getAllTecno = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/alltecnologia");
+    };
+    BlogService.prototype.getAllManual = function () {
+        return this.http.get(this.globals.apiUrl + "/blogs/allmanualidades");
     };
     BlogService.ngInjectableDef = i0.defineInjectable({ factory: function BlogService_Factory() { return new BlogService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: BlogService, providedIn: "root" });
     return BlogService;
