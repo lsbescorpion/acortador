@@ -163,9 +163,9 @@ class UrlsController extends Controller
         stream_context_set_default(
             array(
                 'http' => array(
-                    'proxy' => "tcp://172.16.4.1:3128",
-                    'request_fulluri' => true,
-                    'header' => "Proxy-Authorization: Basic $auth"
+                    //'proxy' => "tcp://172.16.4.1:3128",
+                    'request_fulluri' => true
+                    //'header' => "Proxy-Authorization: Basic $auth"
                 ),
                 'ssl' => array(
                     'verify_peer'      => false,
