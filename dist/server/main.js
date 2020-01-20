@@ -1877,7 +1877,7 @@ var Globals = /** @class */ (function () {
         this.apiUrl = 'https://back.cropersviral.com/api';
         this.urlPhoto = 'https://back.cropersviral.com/';
         this.globalUrl = 'https://www.cropersviral.com';
-        this.urlShared = 'https://wwww.cropersviral.com/categoria';
+        this.urlShared = 'https://www.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
@@ -2881,7 +2881,7 @@ var AddnoticeComponent = /** @class */ (function () {
             if (!confirm("Esta Seguro que desea Modificar la NOTICIA?"))
                 return false;
             var us = JSON.parse(localStorage.getItem('currentUser'));
-            this.notiForm.get('user_id').setValue(us.user.id);
+            //this.notiForm.get('user_id').setValue(us.user.id);
             this.notiForm.get('bloque1').setValue($('#bloque1').html());
             this.notiForm.get('bloque2').setValue($('#bloque2').html());
             this.notiForm.get('bloquep').setValue($('#bloque1').text());
@@ -5822,19 +5822,19 @@ var TemporalComponent = /** @class */ (function () {
     TemporalComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         setTimeout(function () {
-            var script1 = _this.document.createElement('script');
+            /*let script1 = this.document.createElement('script');
             script1.innerHTML = '';
-            script1.src = _this.globals.globalUrl + '/assets/js/js_a.js';
+            script1.src = this.globals.globalUrl+'/assets/js/js_a.js';
             script1.async = true;
             script1.defer = true;
-            _this.document.body.appendChild(script1);
-            var script = _this.document.createElement('script');
+            this.document.body.appendChild(script1);
+            let script = this.document.createElement('script');
             script.innerHTML = '';
-            script.src = _this.globals.globalUrl + '/assets/js/adnow.js';
+            script.src = this.globals.globalUrl+'/assets/js/adnow.js';
             script.async = true;
             script.defer = true;
-            _this.document.body.appendChild(script);
-            /*let script = this.document.createElement('script');
+            this.document.body.appendChild(script);
+            let script = this.document.createElement('script');
             script.innerHTML = '';
             script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
             script.async = true;

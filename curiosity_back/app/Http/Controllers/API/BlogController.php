@@ -179,7 +179,7 @@ class BlogController extends Controller
         $blog->titulo = $request->get('titulo');
         $blog->fecha = Carbon::now()->format('Y-m-d H:i');
         $blog->video = $request->get('video');
-        $blog->user_id = $request->get('user_id');
+        //$blog->user_id = $request->get('user_id');
         $blog->categoria_id = $request->get('categoria');
 
         if ($handle = opendir('tempb')) {
