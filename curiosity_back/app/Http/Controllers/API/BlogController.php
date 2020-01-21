@@ -22,6 +22,8 @@ class BlogController extends Controller
     public function getBlog($id)
     {
         $blog = Blog::with(['categoria','users'])->where(['id' => $id])->first();
+        $blog->visitas = $blog->visitas + 1;
+        $blog->save();
         return response()->json($blog);
     }
 
