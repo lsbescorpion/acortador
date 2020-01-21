@@ -2906,7 +2906,7 @@ var AddnoticeComponent = /** @class */ (function () {
     AddnoticeComponent.prototype.fillNoti = function (p) {
         var _this = this;
         var that = this;
-        this.blogService.getNoti(p)
+        this.blogService.getNotiEdit(p)
             .subscribe(function (data) {
             var blog = data;
             _this.noti_id = blog.id;
@@ -7350,6 +7350,9 @@ var BlogService = /** @class */ (function () {
     };
     BlogService.prototype.getNoti = function (id) {
         return this.http.get(this.globals.apiUrl + "/blog/" + id);
+    };
+    BlogService.prototype.getNotiEdit = function (id) {
+        return this.http.get(this.globals.apiUrl + "/blog/edit/" + id);
     };
     BlogService.prototype.getLastNotis3 = function () {
         return this.http.get(this.globals.apiUrl + "/blogs/lastnoti3");

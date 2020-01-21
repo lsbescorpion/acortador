@@ -27,6 +27,12 @@ class BlogController extends Controller
         return response()->json($blog);
     }
 
+    public function getBlogEdit($id)
+    {
+        $blog = Blog::with(['categoria','users'])->where(['id' => $id])->first();
+        return response()->json($blog);
+    }
+
     public function lastNoti3()
     {
         $blog = Blog::with(['categoria','users'])->orderby('id', 'DESC')->limit(4)->offset(0)->get();
