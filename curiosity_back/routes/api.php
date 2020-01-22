@@ -41,6 +41,7 @@ Route::post('blogs/create', 'API\BlogController@createBlog')->name('createBlog')
 Route::put('blogs/update/{blog}', 'API\BlogController@updateBlog')->name('updateBlog');
 Route::delete('blogs/delete/{blog}', 'API\BlogController@deleteBlog')->name('deleteblog');
 Route::get('blog/{blog}', 'API\BlogController@getBlog')->name('getBlog');
+Route::get('blog/edit/{blog}', 'API\BlogController@getBlogEdit')->name('getBlogEdit');
 Route::get('blogs/lastnoti3', 'API\BlogController@lastNoti3')->name('lastNoti3');
 Route::get('blogs/popular', 'API\BlogController@Popular')->name('popular');
 Route::get('blogs/lastsalud', 'API\BlogController@LastSalud')->name('lastsalud');
