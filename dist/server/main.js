@@ -2785,6 +2785,7 @@ var AddnoticeComponent = /** @class */ (function () {
             categoria: ['1'],
             video: [''],
             user_id: [''],
+            slug: ['']
         });
     };
     AddnoticeComponent.prototype.ngAfterViewInit = function () {
@@ -2861,6 +2862,8 @@ var AddnoticeComponent = /** @class */ (function () {
             this.notiForm.get('bloque1').setValue($('#bloque1').html());
             this.notiForm.get('bloque2').setValue($('#bloque2').html());
             this.notiForm.get('bloquep').setValue($('#bloque1').text());
+            var slug = this.getSlug($('#titulo').val());
+            this.notiForm.get('slug').setValue(slug);
             this.blogService.crearNoti(this.notiForm.value)
                 .subscribe(function (data) {
                 _this.clearAll();
@@ -2886,6 +2889,8 @@ var AddnoticeComponent = /** @class */ (function () {
             this.notiForm.get('bloque1').setValue($('#bloque1').html());
             this.notiForm.get('bloque2').setValue($('#bloque2').html());
             this.notiForm.get('bloquep').setValue($('#bloque1').text());
+            var slug = this.getSlug($('#titulo').val());
+            this.notiForm.get('slug').setValue(slug);
             this.blogService.updateNoti(this.noti_id, this.notiForm.value)
                 .subscribe(function (data) {
                 _this.clearAll();
@@ -3061,6 +3066,22 @@ var AddnoticeComponent = /** @class */ (function () {
         };
         Dropzone.autoDiscover = false;
         this.drop = new Dropzone('#photo', this.opt);
+    };
+    AddnoticeComponent.prototype.getSlug = function (url) {
+        var a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+        var b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+        var p = new RegExp(a.split('').join('|'), 'g');
+        var fin = url.toString().toLowerCase()
+            .replace(/\s+/g, '-') // Replace spaces with -
+            .replace(p, function (c) { return b.charAt(a.indexOf(c)); }) // Replace special characters
+            .replace(/&/g, '-and-') // Replace & with 'and'
+            .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+            .replace(/\-\-+/g, '-') // Replace multiple - with single -
+            .replace(/^-+/, '') // Trim - from start of text
+            .replace(/-+$/, ''); // Trim - from end of text
+        if (fin != '') {
+            return fin;
+        }
     };
     AddnoticeComponent.prototype.showMessage = function (message) {
         $.notify({
@@ -4741,6 +4762,7 @@ var NoticiaComponent = /** @class */ (function () {
             _this.login = us != null ? true : false;
         }, 0);
         this.id_url = this.route.snapshot.paramMap.get('id');
+        console.log(this.id_url);
         //setTimeout(() => {
         this.blogService.getNoti(this.id_url)
             .subscribe(function (data) {

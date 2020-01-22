@@ -22,6 +22,8 @@ class BlogController extends Controller
     public function getBlog($id)
     {
         $blog = Blog::with(['categoria','users'])->where(['id' => $id])->first();
+        if($blog == null)
+            $blog = Blog::with(['categoria','users'])->where(['slug' => $id])->first();
         $blog->visitas = $blog->visitas + 1;
         $blog->save();
         return response()->json($blog);
@@ -152,6 +154,7 @@ class BlogController extends Controller
         $blog->titulo = $request->get('titulo');
         $blog->fecha = Carbon::now()->format('Y-m-d H:i');
         $blog->video = $request->get('video');
+        $blog->slug = $request->get('slug');
         $blog->visitas = 0;
         $blog->user_id = $request->get('user_id');
         $blog->categoria_id = $request->get('categoria');
@@ -187,6 +190,7 @@ class BlogController extends Controller
         $blog->titulo = $request->get('titulo');
         $blog->fecha = Carbon::now()->format('Y-m-d H:i');
         $blog->video = $request->get('video');
+        $blog->slug = $request->get('slug');
         //$blog->user_id = $request->get('user_id');
         $blog->categoria_id = $request->get('categoria');
 
