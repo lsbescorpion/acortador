@@ -6231,13 +6231,12 @@ var TemporalComponent = /** @class */ (function () {
             }, function (err) {
                 if (err.id != null) {
                     _this.show = false;
-                    console.log(200);
                     window.location = err.url_real;
                 }
-                else {
+                /*else {
                     console.log(404);
-                    _this.router.navigate(['404']);
-                }
+                    this.router.navigate(['404']);
+                }*/
             });
         }
     };
