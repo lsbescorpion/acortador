@@ -1877,8 +1877,8 @@ var Globals = /** @class */ (function () {
     function Globals() {
         this.apiUrl = 'https://back.cropersviral.com/api';
         this.urlPhoto = 'https://back.cropersviral.com/';
-        this.globalUrl = 'https://www.cropersviral.com';
-        this.urlShared = 'https://www.cropersviral.com/categoria';
+        this.globalUrl = 'http://www.cropersviral.com';
+        this.urlShared = 'http://www.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
