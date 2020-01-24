@@ -2551,12 +2551,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./error.component.scss.shim.ngstyle */ "./src/app/pages/error/error.component.scss.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i2 = __webpack_require__(/*! ./error.component */ "./src/app/pages/error/error.component.ts");
+var i3 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var i4 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i5 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i6 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var i7 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var i8 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var styles_ErrorComponent = [i0.styles];
 var RenderType_ErrorComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_ErrorComponent, data: {} });
 exports.RenderType_ErrorComponent = RenderType_ErrorComponent;
 function View_ErrorComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 8, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 7, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 6, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 5, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 4, "div", [["class", "text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "span", [["class", "error-code"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["404"])), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h1", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["P\u00E1gina no encontrada"]))], null, null); }
 exports.View_ErrorComponent_0 = View_ErrorComponent_0;
-function View_ErrorComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-error", [], null, null, null, View_ErrorComponent_0, RenderType_ErrorComponent)), i1.ɵdid(1, 114688, null, 0, i2.ErrorComponent, [], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_ErrorComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-error", [], null, null, null, View_ErrorComponent_0, RenderType_ErrorComponent)), i1.ɵdid(1, 114688, null, 0, i2.ErrorComponent, [i3.FormBuilder, i4.ActivatedRoute, i4.Router, i5.AuthenticationService, i6.Globals, i7.UrlsService, i8.Meta, i8.Title, i8.DOCUMENT], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_ErrorComponent_Host_0 = View_ErrorComponent_Host_0;
 var ErrorComponentNgFactory = i1.ɵccf("app-error", i2.ErrorComponent, View_ErrorComponent_Host_0, {}, {}, []);
 exports.ErrorComponentNgFactory = ErrorComponentNgFactory;
@@ -2597,10 +2603,96 @@ exports.styles = styles;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var forms_1 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var globals_1 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+__webpack_require__(/*! jquery-countdown */ "jquery-countdown");
+var authentication_service_1 = __webpack_require__(/*! ../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var urls_service_1 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var $ = __webpack_require__(/*! jquery */ "jquery");
 var ErrorComponent = /** @class */ (function () {
-    function ErrorComponent() {
+    function ErrorComponent(formBuilder, route, router, authenticationService, globals, urlsService, meta, titleService, document) {
+        this.formBuilder = formBuilder;
+        this.route = route;
+        this.router = router;
+        this.authenticationService = authenticationService;
+        this.globals = globals;
+        this.urlsService = urlsService;
+        this.meta = meta;
+        this.titleService = titleService;
+        this.document = document;
+        this.loading = false;
+        this.submitted = false;
+        this.error = '';
+        this.url = null;
+        this.title = '';
+        this.show = false;
+        this.id_url = null;
     }
     ErrorComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.id_url = this.route.snapshot.paramMap.get('id');
+        if (this.id_url != null) {
+            this.show = true;
+            /*const script = this.document.createElement('script');
+            script.onload = () => {
+                setTimeout(() => {
+                    ((window as any).adsbygoogle || []).push({
+                        google_ad_client: "ca-pub-8486867415622163",
+                        enable_page_level_ads: true
+                    });
+                }, 100);
+            }
+
+            this.document.head.appendChild(script);*/
+            this.urlsService.getUrl(this.id_url)
+                .subscribe(function (data) {
+                var da = data;
+                _this.url = da;
+                _this.titleService.setTitle(da.titulo);
+                _this.meta.addTags([
+                    { name: 'title', content: da.titulo },
+                    { name: 'description', content: da.descripcion },
+                    { property: 'og:url', content: da.url_real },
+                    { property: 'og:title', content: da.titulo },
+                    { property: 'og:description', content: da.descripcion },
+                    { property: 'og:image', content: _this.globals.urlPhoto + da.foto },
+                    { property: 'og:image:width', content: '740' },
+                    { property: 'og:image:height', content: '370' },
+                    { name: 'twitter:card', content: "summary" },
+                    { name: 'twitter:site', content: da.url_real },
+                    { name: 'twitter:title', content: da.titulo },
+                    { name: 'twitter:description', content: da.descripcion },
+                    { name: 'twitter:image', content: _this.globals.urlPhoto + da.foto }
+                ]);
+                _this.title = da.titulo;
+                var link = _this.document.createElement('link');
+                link.rel = 'canonical';
+                link.href = da.url_real;
+                _this.document.head.appendChild(link);
+                var that = _this;
+                var fiveSeconds = new Date().getTime() + 15000;
+                setTimeout(function () {
+                    $('#clock').countdown(fiveSeconds, function (event) {
+                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                    }).on('finish.countdown', function (event) {
+                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                        $('.btn-count').html(link);
+                    });
+                }, 5000);
+            }, function (err) {
+                if (err.id != null) {
+                    _this.show = false;
+                    window.location = err.url_real;
+                }
+                else
+                    _this.router.navigate(['404']);
+            });
+        }
+        else {
+            this.router.navigate(['/login']);
+        }
     };
     return ErrorComponent;
 }());
