@@ -93,8 +93,6 @@ class UrlsController extends Controller
         $visitas->user_id = $url->user_id;
         $visitas->save();
 
-        $url->titulo = utf8_decode($url->titulo);
-
         return response()->json($url);
     }
 
@@ -163,34 +161,15 @@ class UrlsController extends Controller
         stream_context_set_default(
             array(
                 'http' => array(
-                    //'proxy' => "tcp://172.16.4.1:3128",
-                    'request_fulluri' => true
-                    //'header' => "Proxy-Authorization: Basic $auth"
-                ),
-                'ssl' => array(
-                    'verify_peer'      => false,
-                    'verify_peer_name' => false
-                ),
-            )
+                    'proxy' => "tcp://172.16.4.1:3128",
+                    'request_fulluri' => true,
+                    'header' => "Proxy-Authorization: Basic $auth"
+                ))
         );
-        /*stream_context_create(array(
-                    'http' => array(
-                        'method' => 'POST',
-                        'header' => 'Content-Type: application/json',
-                        'proxy' => "tcp://172.16.4.1:3128",
-                        'request_fulluri' => true,
-                        'header' => "Proxy-Authorization: Basic $auth"
-                        ),
-                    'ssl' => array(
-                        'verify_peer'      => false,
-                        'verify_peer_name' => false
-                        ),
-                    )
-                );*/
         $dom = new \DOMDocument;
         $dom->preserveWhiteSpace = FALSE;
         $internalErrors = libxml_use_internal_errors(true);
-        $data = $dom->loadHTML(file_get_contents($request->get('url')));
+        $dom->loadHTML(file_get_contents($request->get('url')));
         //$dom->loadXML(file_get_contents($_POST['url']));
         libxml_use_internal_errors($internalErrors);
         $dom->preserveWhiteSpace = false;
@@ -205,7 +184,7 @@ class UrlsController extends Controller
         }  
         $metas_array = [];
         foreach($metas as $met)
-        {   
+        {
             if($met->getAttribute('property') == "og:image")                
                 $metas_array['image'] = $met->getAttribute('content');
             if($met->getAttribute('property') == "og:title")                
@@ -226,10 +205,6 @@ class UrlsController extends Controller
         }      
         if(!isset($metas_array['descripcion']))
             $metas_array['descripcion'] = $metas_array['titulo'];
-        if(!isset($metas_array['image'])) {
-            $meta = get_meta_tags($request->get('url'));
-            $metas_array['image'] = $meta['twitter:image'];
-        }
         $imagen = file_get_contents($metas_array['image']);
         $ds = DIRECTORY_SEPARATOR;
         $dir = $ds.date('Y',time()).$ds.date('m',time()).$ds.date('d',time()).$ds;
@@ -249,6 +224,8 @@ class UrlsController extends Controller
         $urls->categoria_id = $request->get('categoria');
         $urls->foto = 'imagenes'.$dir.$name.'.jpg';
         $urls->activa = 1;
+        /*$urls->width = (isset($metas_array['width'])) ? $metas_array['width'] : null;
+        $urls->height = (isset($metas_array['height'])) ? $metas_array['height'] : null;*/
         $urls->save();
         if(!is_dir('imagenes'.$dir))
             mkdir('imagenes'.$dir, 0777, true);
@@ -335,19 +312,5 @@ class UrlsController extends Controller
         $estadisticas['maxg'] = $maxg;
 
         return response()->json($estadisticas);
-    }
-
-    public function getMonthData() {
-        /*$startDate = Carbon::now();
-        $mes = date('m',strtotime($startDate));
-        $anno = date('Y',strtotime($startDate));
-        $end = date('m',strtotime($startDate));
-        $start = date('Y-m-1',strtotime($fecha));
-        $end = date('Y-m-t',strtotime($fecha));   */
-        $start = date("Y-m-1 H:i:s",strtotime("-1 month"));  
-        $end = date("Y-m-t H:i:s",strtotime("-1 month"));
-        $gmensual = GananciasDiarias::groupBy('user_id')->selectRaw('user_id, sum(ganancia) as sum')->whereBetween('fecha', [$start, $end])->get();
-
-        return response()->json($gmensual);   
     }
 }
