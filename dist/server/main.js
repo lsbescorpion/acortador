@@ -4728,29 +4728,27 @@ var NoticiaComponent = /** @class */ (function () {
         });
     };
     NoticiaComponent.prototype.ngAfterViewChecked = function () {
-        var anchors = document.getElementsByTagName('a');
-        var _loop_1 = function (i) {
-            var valores = anchors[i].href.split('/');
-            if (Number.isInteger(parseInt(valores[valores.length - 1]))) {
-                var a_1 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-                var b_1 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-                var p = new RegExp(a_1.split('').join('|'), 'g');
-                var fin = anchors[i].title.toString().toLowerCase()
+        /*const anchors = document.getElementsByTagName('a');
+        for (let i = 0; i < anchors.length; i++) {
+            let valores = anchors[i].href.split('/');
+            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
+                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+                const p = new RegExp(a.split('').join('|'), 'g')
+
+                let fin = anchors[i].title.toString().toLowerCase()
                     .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, function (c) { return b_1.charAt(a_1.indexOf(c)); }) // Replace special characters
+                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
                     .replace(/&/g, '-and-') // Replace & with 'and'
                     .replace(/[^\w\-]+/g, '') // Remove all non-word characters
                     .replace(/\-\-+/g, '-') // Replace multiple - with single -
                     .replace(/^-+/, '') // Trim - from start of text
-                    .replace(/-+$/, ''); // Trim - from end of text
-                if (fin != '') {
+                    .replace(/-+$/, '') // Trim - from end of text
+                if(fin != '') {
                     anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
                 }
             }
-        };
-        for (var i = 0; i < anchors.length; i++) {
-            _loop_1(i);
-        }
+        }*/
     };
     NoticiaComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -4793,18 +4791,18 @@ var NoticiaComponent = /** @class */ (function () {
                 _this.video = _this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + vid);
             }
             if (Number.isInteger(_this.id_url)) {
-                var a_2 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-                var b_2 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-                var p = new RegExp(a_2.split('').join('|'), 'g');
+                var a_1 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+                var b_1 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+                var p = new RegExp(a_1.split('').join('|'), 'g');
                 var fin = da.titulo.toString().toLowerCase()
                     .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, function (c) { return b_2.charAt(a_2.indexOf(c)); }) // Replace special characters
+                    .replace(p, function (c) { return b_1.charAt(a_1.indexOf(c)); }) // Replace special characters
                     .replace(/&/g, '-and-') // Replace & with 'and'
                     .replace(/[^\w\-]+/g, '') // Remove all non-word characters
                     .replace(/\-\-+/g, '-') // Replace multiple - with single -
                     .replace(/^-+/, '') // Trim - from start of text
                     .replace(/-+$/, '');
-                _this.local.replaceState(da.categoria.categoria + '/' + fin);
+                //this.local.replaceState(da.categoria.categoria + '/' + fin);
             }
         });
         //}, 0);
