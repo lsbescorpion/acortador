@@ -2982,17 +2982,33 @@ var LoginComponent = /** @class */ (function () {
                 var da = data;
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
-                _this.meta.updateTag({ name: 'title', content: da.titulo });
-                _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: da.url_real });
-                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                /*this.meta.updateTag({name: 'title', content: da.titulo});
+                this.meta.updateTag({name: 'description', content: da.descripcion});
+                this.meta.updateTag({property: 'og:url', content: da.url_real});
+                this.meta.updateTag({property: 'og:title', content: da.titulo});
+                this.meta.updateTag({property: 'og:description', content: da.descripcion});
+                this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
+
+                this.meta.updateTag({name: 'twitter:card', content: "summary"});
+                this.meta.updateTag({name: 'twitter:site', content: da.url_real});
+                this.meta.updateTag({name: 'twitter:title', content: da.titulo});
+                this.meta.updateTag({name: 'twitter:description', content: da.descripcion});
+                this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+da.foto});*/
+                _this.meta.addTags([
+                    { name: 'title', content: da.titulo },
+                    { name: 'description', content: da.descripcion },
+                    { property: 'og:url', content: da.url_real },
+                    { property: 'og:title', content: da.titulo },
+                    { property: 'og:description', content: da.descripcion },
+                    { property: 'og:image', content: _this.globals.urlPhoto + da.foto },
+                    { property: 'og:image:width', content: '740' },
+                    { property: 'og:image:height', content: '370' },
+                    { name: 'twitter:card', content: "summary" },
+                    { name: 'twitter:site', content: da.url_real },
+                    { name: 'twitter:title', content: da.titulo },
+                    { name: 'twitter:description', content: da.descripcion },
+                    { name: 'twitter:image', content: _this.globals.urlPhoto + da.foto }
+                ]);
                 _this.title = da.titulo;
                 var link = _this.document.createElement('link');
                 link.rel = 'canonical';
