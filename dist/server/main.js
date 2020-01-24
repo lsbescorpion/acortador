@@ -3248,9 +3248,11 @@ var i22 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
 var i23 = __webpack_require__(/*! ../footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
 var i24 = __webpack_require__(/*! ../footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
 var i25 = __webpack_require__(/*! ./home.component */ "./src/app/pages/blog/home/home.component.ts");
-var i26 = __webpack_require__(/*! ../../../services/usuario.service */ "./src/app/services/usuario.service.ts");
-var i27 = __webpack_require__(/*! ../../../services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i28 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i26 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i27 = __webpack_require__(/*! ../../../services/usuario.service */ "./src/app/services/usuario.service.ts");
+var i28 = __webpack_require__(/*! ../../../services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i29 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i30 = __webpack_require__(/*! ../../../services/urls.service */ "./src/app/services/urls.service.ts");
 var styles_HomeComponent = [i0.styles];
 var RenderType_HomeComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_HomeComponent, data: {} });
 exports.RenderType_HomeComponent = RenderType_HomeComponent;
@@ -3413,7 +3415,7 @@ function View_HomeComponent_13(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0,
     } return ad; }, null, null)), i1.ɵdid(25, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(26, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."]))], function (_ck, _v) { var currVal_4 = _ck(_v, 6, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 5, 0, currVal_4); var currVal_11 = _ck(_v, 15, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 14, 0, currVal_11); var currVal_19 = _ck(_v, 26, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 25, 0, currVal_19); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.categoria.categoria; var currVal_1 = _v.context.$implicit.titulo; var currVal_2 = i1.ɵnov(_v, 5).target; var currVal_3 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_5 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 7, 0, currVal_5); var currVal_6 = _v.context.$implicit.visitas; _ck(_v, 9, 0, currVal_6); var currVal_7 = _v.context.$implicit.categoria.categoria; var currVal_8 = _v.context.$implicit.titulo; var currVal_9 = i1.ɵnov(_v, 14).target; var currVal_10 = i1.ɵnov(_v, 14).href; _ck(_v, 13, 0, currVal_7, currVal_8, currVal_9, currVal_10); var currVal_12 = _v.context.$implicit.titulo.substring(0, 30); _ck(_v, 16, 0, currVal_12); var currVal_13 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 18, 0, currVal_13); var currVal_14 = _co.getFecha(_v.context.$implicit.fecha); _ck(_v, 22, 0, currVal_14); var currVal_15 = _v.context.$implicit.categoria.categoria; var currVal_16 = _v.context.$implicit.titulo; var currVal_17 = i1.ɵnov(_v, 25).target; var currVal_18 = i1.ɵnov(_v, 25).href; _ck(_v, 24, 0, currVal_15, currVal_16, currVal_17, currVal_18); }); }
 function View_HomeComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i20.View_MenuComponent_0, i20.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i21.MenuComponent, [i2.Router, i22.Globals], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 68, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 0, "a", [["href", "https://www.cropersviral.com"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 66, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 63, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ultimas entradas"])), (_l()(), i1.ɵeld(10, 0, null, null, 3, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_1)), i1.ɵdid(12, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(14, 0, null, null, 54, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 36, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Salud"])), (_l()(), i1.ɵeld(20, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_2)), i1.ɵdid(22, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(24, 0, null, null, 3, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_3)), i1.ɵdid(26, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(28, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Curiosidades"])), (_l()(), i1.ɵeld(32, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_4)), i1.ɵdid(34, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(36, 0, null, null, 3, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_5)), i1.ɵdid(38, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(40, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(41, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(42, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Manualidades"])), (_l()(), i1.ɵeld(44, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_6)), i1.ɵdid(46, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(48, 0, null, null, 3, "div", [["class", "col-md-7"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_HomeComponent_7)), i1.ɵdid(50, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(52, 0, null, null, 16, "div", [["class", "col-md-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(53, 0, null, null, 6, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(54, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mas popular"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_8)), i1.ɵdid(59, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_9)), i1.ɵdid(61, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(62, 0, null, null, 6, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(63, 0, null, null, 3, "nav", [["aria-label", "breadcrumb"], ["role", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(64, 0, null, null, 2, "ol", [["class", "breadcrumb"], ["style", "background-color: #dfdddd;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(65, 0, null, null, 1, "li", [["aria-current", "page"], ["class", "breadcrumb-item active"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ultimas Entradas"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_HomeComponent_13)), i1.ɵdid(68, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), (_l()(), i1.ɵeld(69, 0, null, null, 1, "app-footerblog", [], null, null, null, i23.View_FooterblogComponent_0, i23.RenderType_FooterblogComponent)), i1.ɵdid(70, 114688, null, 0, i24.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = i1.ɵunv(_v, 12, 0, i1.ɵnov(_v, 13).transform(_co.lastnotis, 0, 3)); _ck(_v, 12, 0, currVal_0); var currVal_1 = i1.ɵunv(_v, 22, 0, i1.ɵnov(_v, 23).transform(_co.popularsalud, 0, 1)); _ck(_v, 22, 0, currVal_1); var currVal_2 = i1.ɵunv(_v, 26, 0, i1.ɵnov(_v, 27).transform(_co.popularsalud, 1)); _ck(_v, 26, 0, currVal_2); var currVal_3 = i1.ɵunv(_v, 34, 0, i1.ɵnov(_v, 35).transform(_co.popularcurios, 0, 1)); _ck(_v, 34, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 38, 0, i1.ɵnov(_v, 39).transform(_co.popularcurios, 1)); _ck(_v, 38, 0, currVal_4); var currVal_5 = i1.ɵunv(_v, 46, 0, i1.ɵnov(_v, 47).transform(_co.popularmanual, 0, 1)); _ck(_v, 46, 0, currVal_5); var currVal_6 = i1.ɵunv(_v, 50, 0, i1.ɵnov(_v, 51).transform(_co.popularmanual, 1)); _ck(_v, 50, 0, currVal_6); var currVal_7 = _co.popular; _ck(_v, 59, 0, currVal_7); var currVal_8 = !_co.login; _ck(_v, 61, 0, currVal_8); var currVal_9 = _co.lastnotis; _ck(_v, 68, 0, currVal_9); _ck(_v, 70, 0); }, null); }
 exports.View_HomeComponent_0 = View_HomeComponent_0;
-function View_HomeComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i1.ɵdid(1, 12697600, null, 0, i25.HomeComponent, [i5.FormBuilder, i22.Globals, i26.UsuarioService, i2.Router, i27.AuthenticationService, i28.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_HomeComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-home", [], null, null, null, View_HomeComponent_0, RenderType_HomeComponent)), i1.ɵdid(1, 12697600, null, 0, i25.HomeComponent, [i5.FormBuilder, i26.Meta, i26.Title, i22.Globals, i2.ActivatedRoute, i26.DOCUMENT, i27.UsuarioService, i2.Router, i28.AuthenticationService, i29.BlogService, i30.UrlsService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_HomeComponent_Host_0 = View_HomeComponent_Host_0;
 var HomeComponentNgFactory = i1.ɵccf("app-home", i25.HomeComponent, View_HomeComponent_Host_0, {}, {}, []);
 exports.HomeComponentNgFactory = HomeComponentNgFactory;
@@ -3436,18 +3438,25 @@ var forms_1 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var operators_1 = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
 var globals_1 = __webpack_require__(/*! ../../../globals */ "./src/app/globals.ts");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var moment = __webpack_require__(/*! ../../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
 var usuario_service_1 = __webpack_require__(/*! ../../../services/usuario.service */ "./src/app/services/usuario.service.ts");
 var authentication_service_1 = __webpack_require__(/*! ../../../services/authentication.service */ "./src/app/services/authentication.service.ts");
 var blog_service_1 = __webpack_require__(/*! ../../../services/blog.service */ "./src/app/services/blog.service.ts");
+var urls_service_1 = __webpack_require__(/*! ../../../services/urls.service */ "./src/app/services/urls.service.ts");
 var HomeComponent = /** @class */ (function () {
-    function HomeComponent(formBuilder, globals, userService, router, authenticationService, blogService) {
+    function HomeComponent(formBuilder, meta, titleService, globals, route, document, userService, router, authenticationService, blogService, urlsService) {
         this.formBuilder = formBuilder;
+        this.meta = meta;
+        this.titleService = titleService;
         this.globals = globals;
+        this.route = route;
+        this.document = document;
         this.userService = userService;
         this.router = router;
         this.authenticationService = authenticationService;
         this.blogService = blogService;
+        this.urlsService = urlsService;
         this.hide = true;
         this.loading = false;
         this.submitted = false;
@@ -3458,6 +3467,9 @@ var HomeComponent = /** @class */ (function () {
         this.popularsalud = [];
         this.popularcurios = [];
         this.popularmanual = [];
+        this.id_url = null;
+        this.url = null;
+        this.title = '';
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -3469,6 +3481,50 @@ var HomeComponent = /** @class */ (function () {
         setTimeout(function () {
             _this.login = us != null ? true : false;
         }, 0);
+        this.id_url = this.route.snapshot.paramMap.get('id');
+        if (this.id_url != null) {
+            //this.show = true;
+            this.urlsService.getUrl(this.id_url)
+                .subscribe(function (data) {
+                var da = data;
+                _this.url = da;
+                _this.titleService.setTitle(da.titulo);
+                _this.meta.updateTag({ name: 'title', content: da.titulo });
+                _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:url', content: da.url_real });
+                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                _this.title = da.titulo;
+                var link = _this.document.createElement('link');
+                link.rel = 'canonical';
+                link.href = da.url_real;
+                _this.document.head.appendChild(link);
+                /*var that = this;
+                var fiveSeconds = new Date().getTime() + 20000;
+                setTimeout(() => {
+                    $('#clock').countdown(fiveSeconds, function(event) {
+                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                    }).on('finish.countdown', function(event) {
+                        var link = '<a href="'+that.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                        $('.btn-count').html(link);
+                    });
+                }, 7000); */
+            }, function (err) {
+                /*if(err.id != null) {
+                    this.show = false;
+                    window.location = err.url_real;
+                }*/
+            });
+        }
     };
     HomeComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -4951,41 +5007,27 @@ exports.ShowurlComponent = ShowurlComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./temporal.component.scss.shim.ngstyle */ "./src/app/pages/temporal/temporal.component.scss.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i4 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
-var i5 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i6 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i7 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i8 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i9 = __webpack_require__(/*! ../blog/menu/menu.component.ngfactory */ "./src/app/pages/blog/menu/menu.component.ngfactory.js");
-var i10 = __webpack_require__(/*! ../blog/menu/menu.component */ "./src/app/pages/blog/menu/menu.component.ts");
-var i11 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
-var i12 = __webpack_require__(/*! ../blog/footerblog/footerblog.component.ngfactory */ "./src/app/pages/blog/footerblog/footerblog.component.ngfactory.js");
-var i13 = __webpack_require__(/*! ../blog/footerblog/footerblog.component */ "./src/app/pages/blog/footerblog/footerblog.component.ts");
-var i14 = __webpack_require__(/*! ./temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
-var i15 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
-var i16 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
-var i17 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i2 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
+var i3 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i4 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i5 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i6 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i7 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i8 = __webpack_require__(/*! ./temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
+var i9 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i10 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var i11 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i12 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var i13 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/services/blog.service.ts");
 var styles_TemporalComponent = [i0.styles];
 var RenderType_TemporalComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_TemporalComponent, data: {} });
 exports.RenderType_TemporalComponent = RenderType_TemporalComponent;
-function View_TemporalComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 27, "div", [["class", "col-md-4 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 26, "div", [["class", "card card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 4, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "200"], ["width", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 3, "a", [], [[8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 12).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(12, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(13, 1), (_l()(), i1.ɵted(14, null, ["", ".."])), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, [" ", "... "])), (_l()(), i1.ɵeld(17, 0, null, null, 10, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 3, "a", [["class", "btn btn-primary"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 20).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(20, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(21, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(23, 0, null, null, 4, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 3, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["contacts"])), (_l()(), i1.ɵted(27, null, [" ", ""]))], function (_ck, _v) { var currVal_3 = _ck(_v, 5, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 4, 0, currVal_3); var currVal_9 = _ck(_v, 13, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 12, 0, currVal_9); var currVal_14 = _ck(_v, 21, 0, ((("/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.id)); _ck(_v, 20, 0, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.titulo; var currVal_1 = i1.ɵnov(_v, 4).target; var currVal_2 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2); var currVal_4 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_4); var currVal_5 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 9, 0, currVal_5); var currVal_6 = _v.context.$implicit.titulo; var currVal_7 = i1.ɵnov(_v, 12).target; var currVal_8 = i1.ɵnov(_v, 12).href; _ck(_v, 11, 0, currVal_6, currVal_7, currVal_8); var currVal_10 = _v.context.$implicit.titulo.substring(0, 28); _ck(_v, 14, 0, currVal_10); var currVal_11 = _v.context.$implicit.bloque_plano.substring(0, 171); _ck(_v, 16, 0, currVal_11); var currVal_12 = i1.ɵnov(_v, 20).target; var currVal_13 = i1.ɵnov(_v, 20).href; _ck(_v, 19, 0, currVal_12, currVal_13); var currVal_15 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 27, 0, currVal_15); }); }
-function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 22, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 21, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 20, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717615"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(11, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(12, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717619"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(16, 0, null, null, 2, "div", [["class", "mb-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(19, 0, null, null, 3, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_TemporalComponent_2)), i1.ɵdid(21, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, [])], function (_ck, _v) { var _co = _v.component; var currVal_3 = "warn"; _ck(_v, 11, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 21, 0, i1.ɵnov(_v, 22).transform(_co.popular, 0, 3)); _ck(_v, 21, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 8, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 11).disabled || null); var currVal_2 = (i1.ɵnov(_v, 11)._animationMode === "NoopAnimations"); _ck(_v, 10, 0, currVal_1, currVal_2); }); }
-function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i9.View_MenuComponent_0, i9.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i10.MenuComponent, [i2.Router, i11.Globals], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(7, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(8, 0, null, null, 1, "app-footerblog", [], null, null, null, i12.View_FooterblogComponent_0, i12.RenderType_FooterblogComponent)), i1.ɵdid(9, 114688, null, 0, i13.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = (_co.show == true); _ck(_v, 7, 0, currVal_0); _ck(_v, 9, 0); }, null); }
+function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 15, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 14, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 13, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717615"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(11, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(12, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717619"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."]))], function (_ck, _v) { var currVal_3 = "warn"; _ck(_v, 11, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 8, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 11).disabled || null); var currVal_2 = (i1.ɵnov(_v, 11)._animationMode === "NoopAnimations"); _ck(_v, 10, 0, currVal_1, currVal_2); }); }
+function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 3, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(5, 16384, null, 0, i7.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == true); _ck(_v, 5, 0, currVal_0); }, null); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
-function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 4308992, null, 0, i14.TemporalComponent, [i2.ActivatedRoute, i2.Router, i15.UrlsService, i16.Meta, i16.Title, i11.Globals, i16.DOCUMENT, i17.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 4308992, null, 0, i8.TemporalComponent, [i9.ActivatedRoute, i9.Router, i10.UrlsService, i11.Meta, i11.Title, i12.Globals, i11.DOCUMENT, i13.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TemporalComponent_Host_0 = View_TemporalComponent_Host_0;
-var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i14.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
+var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i8.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
 exports.TemporalComponentNgFactory = TemporalComponentNgFactory;
 
 
@@ -5069,12 +5111,11 @@ var TemporalComponent = /** @class */ (function () {
             script.data-ad-client = "ca-pub-5156820505017882";
             this.document.head.appendChild(script);
         }, 0);*/
-        var _this = this;
-        this.blogService.getPopular()
-            .subscribe(function (data) {
-            var da = data;
-            _this.popular = da;
-        });
+        /*this.blogService.getPopular()
+            .subscribe(data => {
+                let da: any = data;
+                this.popular = da;
+            })*/
     };
     TemporalComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -5092,6 +5133,8 @@ var TemporalComponent = /** @class */ (function () {
                 _this.meta.updateTag({ property: 'og:title', content: da.titulo });
                 _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
                 _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
                 _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
                 _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
                 _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
@@ -5119,8 +5162,6 @@ var TemporalComponent = /** @class */ (function () {
                 }
             });
         }
-        else
-            console.log(this.route);
     };
     TemporalComponent.prototype.onFinished = function () {
         /*var link = '<a href="'+this.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
