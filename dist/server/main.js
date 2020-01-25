@@ -3073,12 +3073,12 @@ var LoginComponent = /** @class */ (function () {
                 });
             }, 5000);
         }, function (err) {
-            if (err.id != null) {
-                _this.show = false;
+            /*if(err.id != null) {
+                this.show = false;
                 window.location = err.url_real;
             }
             else
-                _this.router.navigate(['404']);
+                this.router.navigate(['404']);*/
         });
         /*}
         else {
