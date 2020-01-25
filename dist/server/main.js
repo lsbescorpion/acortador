@@ -2892,7 +2892,7 @@ function View_LoginComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0,
 function View_LoginComponent_7(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 12, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 11, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 10, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 9, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 0, "div", [["class", "mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(7, null, ["", ""])), (_l()(), i1.ɵeld(8, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i5.View_MatButton_0, i5.RenderType_MatButton)), i1.ɵdid(10, 180224, null, 0, i6.MatButton, [i1.ElementRef, i7.Platform, i8.FocusMonitor, [2, i9.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(11, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 0, "div", [["class", "mb-2"]], null, null, null, null, null))], function (_ck, _v) { var currVal_3 = "warn"; _ck(_v, 10, 0, currVal_3); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 7, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 10).disabled || null); var currVal_2 = (i1.ɵnov(_v, 10)._animationMode === "NoopAnimations"); _ck(_v, 9, 0, currVal_1, currVal_2); }); }
 function View_LoginComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵand(16777216, null, null, 1, null, View_LoginComponent_1)), i1.ɵdid(1, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_LoginComponent_7)), i1.ɵdid(3, 16384, null, 0, i2.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == false); _ck(_v, 1, 0, currVal_0); var currVal_1 = (_co.show == true); _ck(_v, 3, 0, currVal_1); }, null); }
 exports.View_LoginComponent_0 = View_LoginComponent_0;
-function View_LoginComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-login", [], null, null, null, View_LoginComponent_0, RenderType_LoginComponent)), i1.ɵdid(1, 4308992, null, 0, i10.LoginComponent, [i3.FormBuilder, i4.ActivatedRoute, i4.Router, i11.AuthenticationService, i12.Globals, i13.UrlsService, i14.Meta, i14.Title, i14.DOCUMENT], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_LoginComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-login", [], null, null, null, View_LoginComponent_0, RenderType_LoginComponent)), i1.ɵdid(1, 12697600, null, 0, i10.LoginComponent, [i3.FormBuilder, i4.ActivatedRoute, i4.Router, i11.AuthenticationService, i12.Globals, i13.UrlsService, i14.Meta, i14.Title, i14.DOCUMENT], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_LoginComponent_Host_0 = View_LoginComponent_Host_0;
 var LoginComponentNgFactory = i1.ɵccf("app-login", i10.LoginComponent, View_LoginComponent_Host_0, {}, {}, []);
 exports.LoginComponentNgFactory = LoginComponentNgFactory;
@@ -2960,7 +2960,7 @@ var LoginComponent = /** @class */ (function () {
         this.show = false;
         this.id_url = null;
     }
-    LoginComponent.prototype.ngOnInit = function () {
+    LoginComponent.prototype.ngAfterViewChecked = function () {
         var _this = this;
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
@@ -2981,21 +2981,34 @@ var LoginComponent = /** @class */ (function () {
                 var da = data;
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
-                _this.meta.addTags([
-                    { name: 'title', content: da.titulo },
-                    { name: 'description', content: da.descripcion },
-                    { property: 'og:url', content: da.url_real },
-                    { property: 'og:title', content: da.titulo },
-                    { property: 'og:description', content: da.descripcion },
-                    { property: 'og:image', content: _this.globals.urlPhoto + da.foto },
-                    { property: 'og:image:width', content: '740' },
-                    { property: 'og:image:height', content: '370' },
-                    { name: 'twitter:card', content: "summary" },
-                    { name: 'twitter:site', content: da.url_real },
-                    { name: 'twitter:title', content: da.titulo },
-                    { name: 'twitter:description', content: da.descripcion },
-                    { name: 'twitter:image', content: _this.globals.urlPhoto + da.foto }
-                ]);
+                /*this.meta.addTags([
+                    {name: 'title', content: da.titulo},
+                    {name: 'description', content: da.descripcion},
+                    {property: 'og:url', content: da.url_real},
+                    {property: 'og:title', content: da.titulo},
+                    {property: 'og:description', content: da.descripcion},
+                    {property: 'og:image', content: this.globals.urlPhoto+da.foto},
+                    {property: 'og:image:width', content: '740'},
+                    {property: 'og:image:height', content: '370'},
+                    {name: 'twitter:card', content: "summary"},
+                    {name: 'twitter:site', content: da.url_real},
+                    {name: 'twitter:title', content: da.titulo},
+                    {name: 'twitter:description', content: da.descripcion},
+                    {name: 'twitter:image', content: this.globals.urlPhoto+da.foto}
+                ]);*/
+                _this.meta.updateTag({ name: 'title', content: da.titulo });
+                _this.meta.updateTag({ name: 'description', content: da.bloque_plano });
+                _this.meta.updateTag({ property: 'og:url', content: _this.globals.globalUrl + '/' + da.categoria.categoria + '/' + da.id });
+                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                _this.meta.updateTag({ property: 'og:description', content: da.bloque_plano });
+                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                _this.meta.updateTag({ property: 'og:image:width', content: '740' }),
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' }),
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.globalUrl + '/' + da.categoria.categoria + '/' + da.id });
+                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                _this.meta.updateTag({ name: 'twitter:description', content: da.bloque_plano });
+                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                 _this.title = da.titulo;
                 var link = _this.document.createElement('link');
                 link.rel = 'canonical';
@@ -3022,15 +3035,18 @@ var LoginComponent = /** @class */ (function () {
                 }
             });
         }
-        else {
-            this.authenticationService.logout();
-            this.globals.isLogued = false;
-            this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
-        }
-        this.loginForm = this.formBuilder.group({
-            correo: ['', [forms_1.Validators.required, forms_1.Validators.email]],
-            password: ['', forms_1.Validators.required]
-        });
+    };
+    LoginComponent.prototype.ngOnInit = function () {
+        //else {
+        /*this.authenticationService.logout();
+        this.globals.isLogued = false;
+
+        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';*/
+        //}
+        /*this.loginForm = this.formBuilder.group({
+            correo: ['', [Validators.required, Validators.email]],
+            password: ['', Validators.required]
+        });*/
     };
     LoginComponent.prototype.ngAfterViewInit = function () {
     };
