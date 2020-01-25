@@ -32,3 +32,24 @@ Route::get('url/byid/{url}', 'API\UrlsController@getUrlbyId')->name('getUrlbyId'
 Route::delete('urls/delete/{url}', 'API\UrlsController@deleteUrl')->name('deleteUrl');
 Route::get('urls/estadisticas', 'API\UrlsController@getEstadisticas')->name('getestadisticas');
 Route::get('urls/analytic', 'API\UrlsController@getAnalytic')->name('getAnalytic');
+Route::get('urls/monthdata', 'API\UrlsController@getMonthData')->name('getMonthData');
+
+Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
+Route::post('blog/photob', 'API\BlogController@photob')->name('photob');
+Route::get('blog/removephotob', 'API\BlogController@removePhotob')->name('removephotob');
+Route::post('blogs/create', 'API\BlogController@createBlog')->name('createBlog');
+Route::put('blogs/update/{blog}', 'API\BlogController@updateBlog')->name('updateBlog');
+Route::delete('blogs/delete/{blog}', 'API\BlogController@deleteBlog')->name('deleteblog');
+Route::get('blog/{blog}', 'API\BlogController@getBlog')->name('getBlog');
+Route::get('blog/edit/{blog}', 'API\BlogController@getBlogEdit')->name('getBlogEdit');
+Route::get('blogs/lastnoti3', 'API\BlogController@lastNoti3')->name('lastNoti3');
+Route::get('blogs/popular', 'API\BlogController@Popular')->name('popular');
+Route::get('blogs/lastsalud', 'API\BlogController@LastSalud')->name('lastsalud');
+Route::get('blogs/lastcuriosidad', 'API\BlogController@LastCuriosidades')->name('lastcuriosidad');
+Route::get('blogs/lastmanual', 'API\BlogController@LastManualidades')->name('lastmanual');
+Route::get('blogs/allsalud', 'API\BlogController@AllSalud')->name('allsalud');
+Route::get('blogs/allgracioso', 'API\BlogController@AllGracioso')->name('allgracioso');
+Route::get('blogs/allcuriosidades', 'API\BlogController@AllCurio')->name('allcuriosidades');
+Route::get('blogs/allvideo', 'API\BlogController@AllVideo')->name('allvideo');
+Route::get('blogs/alltecnologia', 'API\BlogController@AllTecno')->name('alltecnologia');
+Route::get('blogs/allmanualidades', 'API\BlogController@AllManual')->name('allmanualidades');

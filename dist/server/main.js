@@ -2961,41 +2961,17 @@ var LoginComponent = /** @class */ (function () {
         this.id_url = null;
     }
     LoginComponent.prototype.ngAfterViewChecked = function () {
+    };
+    LoginComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
             this.show = true;
-            /*const script = this.document.createElement('script');
-            script.onload = () => {
-                setTimeout(() => {
-                    ((window as any).adsbygoogle || []).push({
-                        google_ad_client: "ca-pub-8486867415622163",
-                        enable_page_level_ads: true
-                    });
-                }, 100);
-            }
-
-            this.document.head.appendChild(script);*/
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) {
                 var da = data;
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
-                /*this.meta.addTags([
-                    {name: 'title', content: da.titulo},
-                    {name: 'description', content: da.descripcion},
-                    {property: 'og:url', content: da.url_real},
-                    {property: 'og:title', content: da.titulo},
-                    {property: 'og:description', content: da.descripcion},
-                    {property: 'og:image', content: this.globals.urlPhoto+da.foto},
-                    {property: 'og:image:width', content: '740'},
-                    {property: 'og:image:height', content: '370'},
-                    {name: 'twitter:card', content: "summary"},
-                    {name: 'twitter:site', content: da.url_real},
-                    {name: 'twitter:title', content: da.titulo},
-                    {name: 'twitter:description', content: da.descripcion},
-                    {name: 'twitter:image', content: this.globals.urlPhoto+da.foto}
-                ]);*/
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.bloque_plano });
                 _this.meta.updateTag({ property: 'og:url', content: _this.globals.globalUrl + '/' + da.categoria.categoria + '/' + da.id });
@@ -3014,16 +2990,6 @@ var LoginComponent = /** @class */ (function () {
                 link.rel = 'canonical';
                 link.href = da.url_real;
                 _this.document.head.appendChild(link);
-                /*var that = this;
-                var fiveSeconds = new Date().getTime() + 15000;
-                setTimeout(() => {
-                    $('#clock').countdown(fiveSeconds, function(event) {
-                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                    }).on('finish.countdown', function(event) {
-                        var link = '<a href="'+that.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                        $('.btn-count').html(link);
-                    });
-                }, 5000);  */
             }, function (err) {
                 if (err.id != null) {
                     _this.show = false;
@@ -3035,18 +3001,6 @@ var LoginComponent = /** @class */ (function () {
                 }
             });
         }
-    };
-    LoginComponent.prototype.ngOnInit = function () {
-        //else {
-        /*this.authenticationService.logout();
-        this.globals.isLogued = false;
-
-        this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';*/
-        //}
-        /*this.loginForm = this.formBuilder.group({
-            correo: ['', [Validators.required, Validators.email]],
-            password: ['', Validators.required]
-        });*/
     };
     LoginComponent.prototype.ngAfterViewInit = function () {
     };
