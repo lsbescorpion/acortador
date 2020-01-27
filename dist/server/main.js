@@ -4728,27 +4728,29 @@ var NoticiaComponent = /** @class */ (function () {
         });
     };
     NoticiaComponent.prototype.ngAfterViewChecked = function () {
-        /*const anchors = document.getElementsByTagName('a');
-        for (let i = 0; i < anchors.length; i++) {
-            let valores = anchors[i].href.split('/');
-            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
-                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-                const p = new RegExp(a.split('').join('|'), 'g')
-
-                let fin = anchors[i].title.toString().toLowerCase()
+        var anchors = document.getElementsByTagName('a');
+        var _loop_1 = function (i) {
+            var valores = anchors[i].href.split('/');
+            if (Number.isInteger(parseInt(valores[valores.length - 1]))) {
+                var a_1 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+                var b_1 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+                var p = new RegExp(a_1.split('').join('|'), 'g');
+                var fin = anchors[i].title.toString().toLowerCase()
                     .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+                    .replace(p, function (c) { return b_1.charAt(a_1.indexOf(c)); }) // Replace special characters
                     .replace(/&/g, '-and-') // Replace & with 'and'
                     .replace(/[^\w\-]+/g, '') // Remove all non-word characters
                     .replace(/\-\-+/g, '-') // Replace multiple - with single -
                     .replace(/^-+/, '') // Trim - from start of text
-                    .replace(/-+$/, '') // Trim - from end of text
-                if(fin != '') {
+                    .replace(/-+$/, ''); // Trim - from end of text
+                if (fin != '') {
                     anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
                 }
             }
-        }*/
+        };
+        for (var i = 0; i < anchors.length; i++) {
+            _loop_1(i);
+        }
     };
     NoticiaComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -4768,6 +4770,8 @@ var NoticiaComponent = /** @class */ (function () {
             _this.meta.updateTag({ property: 'og:title', content: da.titulo });
             _this.meta.updateTag({ property: 'og:description', content: da.bloque_plano });
             _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+            _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+            _this.meta.updateTag({ property: 'og:image:height', content: '370' });
             _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
             _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.globalUrl + '/' + da.categoria.categoria + '/' + da.id });
             _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
@@ -4791,18 +4795,18 @@ var NoticiaComponent = /** @class */ (function () {
                 _this.video = _this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + vid);
             }
             if (Number.isInteger(_this.id_url)) {
-                var a_1 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-                var b_1 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-                var p = new RegExp(a_1.split('').join('|'), 'g');
+                var a_2 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+                var b_2 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+                var p = new RegExp(a_2.split('').join('|'), 'g');
                 var fin = da.titulo.toString().toLowerCase()
                     .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, function (c) { return b_1.charAt(a_1.indexOf(c)); }) // Replace special characters
+                    .replace(p, function (c) { return b_2.charAt(a_2.indexOf(c)); }) // Replace special characters
                     .replace(/&/g, '-and-') // Replace & with 'and'
                     .replace(/[^\w\-]+/g, '') // Remove all non-word characters
                     .replace(/\-\-+/g, '-') // Replace multiple - with single -
                     .replace(/^-+/, '') // Trim - from start of text
                     .replace(/-+$/, '');
-                //this.local.replaceState(da.categoria.categoria + '/' + fin);
+                _this.local.replaceState(da.categoria.categoria + '/' + fin);
             }
         }, function (err) {
             _this.router.navigate(['noticia']);
@@ -6101,7 +6105,7 @@ function View_TemporalComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0,
 function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 22, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 21, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 20, "div", [["class", "card-body text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717615"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 3, "div", [["class", "col-md-12 mb-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(11, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(12, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 2, "div", [["class", "col-md-6 ml-auto mr-auto mb-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_717619"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(16, 0, null, null, 2, "div", [["class", "mb-4"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(19, 0, null, null, 3, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_TemporalComponent_2)), i1.ɵdid(21, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, [])], function (_ck, _v) { var _co = _v.component; var currVal_3 = "warn"; _ck(_v, 11, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 21, 0, i1.ɵnov(_v, 22).transform(_co.popular, 0, 4)); _ck(_v, 21, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 8, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 11).disabled || null); var currVal_2 = (i1.ɵnov(_v, 11)._animationMode === "NoopAnimations"); _ck(_v, 10, 0, currVal_1, currVal_2); }); }
 function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-menu", [], null, null, null, i9.View_MenuComponent_0, i9.RenderType_MenuComponent)), i1.ɵdid(1, 114688, null, 0, i10.MenuComponent, [i2.Router, i11.Globals], null, null), (_l()(), i1.ɵeld(2, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 6, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 5, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(7, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(8, 0, null, null, 1, "app-footerblog", [], null, null, null, i12.View_FooterblogComponent_0, i12.RenderType_FooterblogComponent)), i1.ɵdid(9, 114688, null, 0, i13.FooterblogComponent, [], null, null)], function (_ck, _v) { var _co = _v.component; _ck(_v, 1, 0); var currVal_0 = (_co.show == true); _ck(_v, 7, 0, currVal_0); _ck(_v, 9, 0); }, null); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
-function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 4308992, null, 0, i14.TemporalComponent, [i2.ActivatedRoute, i2.Router, i15.UrlsService, i16.Meta, i16.Title, i11.Globals, i16.DOCUMENT, i17.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i14.TemporalComponent, [i2.ActivatedRoute, i2.Router, i15.UrlsService, i16.Meta, i16.Title, i11.Globals, i16.DOCUMENT, i17.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TemporalComponent_Host_0 = View_TemporalComponent_Host_0;
 var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i14.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
 exports.TemporalComponentNgFactory = TemporalComponentNgFactory;
@@ -6187,11 +6191,37 @@ var TemporalComponent = /** @class */ (function () {
             script.data-ad-client = "ca-pub-5156820505017882";
             this.document.head.appendChild(script);
         }, 0);*/
-        /*this.blogService.getPopular()
-            .subscribe(data => {
-                let da: any = data;
-                this.popular = da;
-            })*/
+        var _this = this;
+        this.blogService.getPopular()
+            .subscribe(function (data) {
+            var da = data;
+            _this.popular = da;
+        });
+    };
+    TemporalComponent.prototype.ngAfterViewChecked = function () {
+        var anchors = document.getElementsByTagName('a');
+        var _loop_1 = function (i) {
+            var valores = anchors[i].href.split('/');
+            if (Number.isInteger(parseInt(valores[valores.length - 1]))) {
+                var a_1 = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+                var b_1 = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+                var p = new RegExp(a_1.split('').join('|'), 'g');
+                var fin = anchors[i].title.toString().toLowerCase()
+                    .replace(/\s+/g, '-') // Replace spaces with -
+                    .replace(p, function (c) { return b_1.charAt(a_1.indexOf(c)); }) // Replace special characters
+                    .replace(/&/g, '-and-') // Replace & with 'and'
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+                    .replace(/^-+/, '') // Trim - from start of text
+                    .replace(/-+$/, ''); // Trim - from end of text
+                if (fin != '') {
+                    anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
+                }
+            }
+        };
+        for (var i = 0; i < anchors.length; i++) {
+            _loop_1(i);
+        }
     };
     TemporalComponent.prototype.ngOnInit = function () {
         var _this = this;

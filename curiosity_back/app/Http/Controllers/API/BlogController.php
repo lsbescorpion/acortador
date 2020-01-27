@@ -24,6 +24,10 @@ class BlogController extends Controller
         $blog = Blog::with(['categoria','users'])->where(['id' => $id])->first();
         if($blog == null)
             $blog = Blog::with(['categoria','users'])->where(['slug' => $id])->first();
+
+        if($blog == null) {
+            return response()->json('Url no encontrada', 404);
+        }
         $blog->visitas = $blog->visitas + 1;
         $blog->save();
         return response()->json($blog);
