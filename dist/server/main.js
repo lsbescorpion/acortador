@@ -1877,8 +1877,8 @@ var Globals = /** @class */ (function () {
     function Globals() {
         this.apiUrl = 'https://back.cropersviral.com/api';
         this.urlPhoto = 'https://back.cropersviral.com/';
-        this.globalUrl = 'http://www.cropersviral.com';
-        this.urlShared = 'http://www.cropersviral.com/categoria';
+        this.globalUrl = 'https://www.cropersviral.com';
+        this.urlShared = 'https://www.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
@@ -4797,27 +4797,9 @@ var NoticiaComponent = /** @class */ (function () {
                 var vid = (results === null) ? da.video : results[1];
                 _this.video = _this._sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + vid);
             }
-            /*if(Number.isInteger(this.id_url)) {console.log("entra");
-                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-                const p = new RegExp(a.split('').join('|'), 'g')
-
-                let fin = da.titulo.toString().toLowerCase()
-                    .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-                    .replace(/&/g, '-and-') // Replace & with 'and'
-                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
-                    .replace(/^-+/, '') // Trim - from start of text
-                    .replace(/-+$/, '');
-                this.fin = da.categoria.categoria + '/' + fin;
-                console.log(fin);
-                this.local.replaceState(this.fin);
-            }*/
-            //this.fin = da.categoria.categoria + '/' + fin;
             _this.local.replaceState(da.categoria.categoria + '/' + da.slug);
         }, function (err) {
-            _this.router.navigate(['noticia']);
+            _this.router.navigate(['404']);
         });
         //}, 0);
     };
@@ -6277,7 +6259,7 @@ var TemporalComponent = /** @class */ (function () {
                     window.location = err.url_real;
                 }
                 else {
-                    _this.router.navigate(['temporal']);
+                    _this.router.navigate(['404']);
                 }
             });
         }
