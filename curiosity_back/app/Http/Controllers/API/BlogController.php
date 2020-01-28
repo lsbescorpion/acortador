@@ -69,6 +69,24 @@ class BlogController extends Controller
         return response()->json($blog);
     }
 
+    public function LastEntretenimientos()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 2])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function LastVideos()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 4])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
+    public function LastTecnologia()
+    {
+        $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 5])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        return response()->json($blog);
+    }
+
     public function AllSalud()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 1])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();

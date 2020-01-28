@@ -394,4 +394,14 @@ my-app .main-panel .main-content .card{
   padding-bottom: 0px !important;
 }
 
-  
+.footer-big h4,.footer-big h5{font-weight:700;}
+.footer-big h4,.footer-big h4 a,.footer-big h5,.footer-big h5 a{color:#3c4858;text-decoration:none}
+.footer-big p{color:#999}
+
+
+.footer-big{padding:1.875rem 0}
+.footer-big .content{text-align:left}
+.footer-big .social-feed i{font-size:20px;display:table-cell;padding-right:10px}
+.footer-big .social-feed p{display:table-cell;vertical-align:top;overflow:hidden;padding-bottom:10px;max-width:300px}
+.footer-big .gallery-feed img{width:20%;margin-right:5%;margin-bottom:5%;float:left}
+.footer-white{background-color:#fff;}
