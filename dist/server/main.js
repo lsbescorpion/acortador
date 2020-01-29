@@ -4885,6 +4885,7 @@ var NoticiaComponent = /** @class */ (function () {
             _this.meta.updateTag({ name: 'twitter:description', content: da.bloque_plano });
             _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
             var link = _this.document.createElement('link');
+            link.async = true;
             link.rel = 'canonical';
             link.href = _this.globals.globalUrl + '/' + da.categoria.categoria + '/' + da.id;
             _this.document.head.appendChild(link);
