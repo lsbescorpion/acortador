@@ -56,3 +56,5 @@ Route::get('blogs/allcuriosidades', 'API\BlogController@AllCurio')->name('allcur
 Route::get('blogs/allvideo', 'API\BlogController@AllVideo')->name('allvideo');
 Route::get('blogs/alltecnologia', 'API\BlogController@AllTecno')->name('alltecnologia');
 Route::get('blogs/allmanualidades', 'API\BlogController@AllManual')->name('allmanualidades');
+
+Route::get('mgid/getdata', 'API\MgidController@getData')->name('getdata');
