@@ -33,6 +33,7 @@ Route::delete('urls/delete/{url}', 'API\UrlsController@deleteUrl')->name('delete
 Route::get('urls/estadisticas', 'API\UrlsController@getEstadisticas')->name('getestadisticas');
 Route::get('urls/analytic', 'API\UrlsController@getAnalytic')->name('getAnalytic');
 Route::get('urls/monthdata', 'API\UrlsController@getMonthData')->name('getMonthData');
+Route::get('urls/checkurl/{url}', 'API\UrlsController@CheckUrl')->name('CheckUrl');
 
 Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
 Route::post('blog/photob', 'API\BlogController@photob')->name('photob');

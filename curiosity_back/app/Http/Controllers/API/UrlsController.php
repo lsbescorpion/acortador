@@ -8,6 +8,7 @@ use App\Models\Urls;
 use App\Models\Categoria;
 use App\Models\VisitasDiarias;
 use App\Models\GananciasDiarias;
+use App\Models\GananciasMensuales;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Jenssegers\Agent\Agent;
@@ -31,7 +32,7 @@ class UrlsController extends Controller
             ]
         );
 
-        $ch = curl_init();
+        /*$ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_EUR&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 60);
@@ -39,7 +40,7 @@ class UrlsController extends Controller
         curl_close($ch);
         $rates = json_decode($data, true);
 
-        $euro = $rates['USD_EUR']['val'];
+        $euro = $rates['USD_EUR']['val'];*/
 
         $rows = $analyticsData->rows;
         for($i = 0; $i < count($rows); $i++) {
@@ -53,11 +54,11 @@ class UrlsController extends Controller
                         $ganancias->fecha = date('Y-m-d',strtotime($fecha));
                         $ganancias->user_id = $ur->users->id;
                         $ganancias->url_id = $ur->id;
-                        if($euro != null && $euro != '')
+                        /*if($euro != null && $euro != '')
                             $valor = $rows[$i][1] * $euro;
                         else
-                            $valor = $rows[$i][1] * 0.90;
-                        $ganancias->ganancia = round($valor, 2, PHP_ROUND_HALF_DOWN);
+                            $valor = $rows[$i][1] * 0.90;*/
+                        $ganancias->ganancia = round($rows[$i][1], 2, PHP_ROUND_HALF_DOWN);
                         $ganancias->save();
                     }
                 }
@@ -67,19 +68,49 @@ class UrlsController extends Controller
         
         return response()->json($analyticsData);
     }
-    
+
+    public function CheckUrl($id) {
+        $agent = new Agent();
+        $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
+
+        if($url == null) {
+            return response()->json('Url no encontrada', 404);
+        }
+
+        $redirect = 0;
+        if($agent->isRobot()) {
+            $redirect = 1;
+        }
+
+        $ips = \Location::get();
+        if($ips == null || $ips->countryCode == 'CU') {
+            $redirect = 1;
+        }
+
+        $url->check = $redirect;
+
+        return response()->json($url);
+    }
+ 
     public function getUrl($id)
     {
         $agent = new Agent();
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
         if($agent->isRobot()) {
-            return response()->json($url, 500);
+            //return response()->json($url, 500);
+            header('Location: ' . $url->url_real, true, 301);
+        }
+
+        $ips = \Location::get();
+        if($ips == null || $ips->countryCode == 'CU') {
+            header('Location: ' . $url->url_real, true, 301);
         }
 
         if($url == null) {
             return response()->json('Url no encontrada', 404);
         }
+
         $url->visitas = $url->visitas + 1;
         $url->save();
 
@@ -338,16 +369,21 @@ class UrlsController extends Controller
     }
 
     public function getMonthData() {
-        /*$startDate = Carbon::now();
-        $mes = date('m',strtotime($startDate));
-        $anno = date('Y',strtotime($startDate));
-        $end = date('m',strtotime($startDate));
-        $start = date('Y-m-1',strtotime($fecha));
-        $end = date('Y-m-t',strtotime($fecha));   */
+        $mes = date("m",strtotime("-1 month"));
+        $anno = date("Y",strtotime("-1 month"));
         $start = date("Y-m-1 H:i:s",strtotime("-1 month"));  
         $end = date("Y-m-t H:i:s",strtotime("-1 month"));
         $gmensual = GananciasDiarias::groupBy('user_id')->selectRaw('user_id, sum(ganancia) as sum')->whereBetween('fecha', [$start, $end])->get();
-
+        for($i = 0; $i < count($gmensual); $i++) {
+            $mensual = GananciasMensuales::where(['user_id' => $gmensual[$i]->user_id, 'mes' => $mes, 'anno' => $anno])->first();
+            $mensual = ($mensual != null ? $mensual : new GananciasMensuales());
+            $mensual->mes = $mes;
+            $mensual->anno = $anno;
+            $mensual->pagado = 0;
+            $mensual->user_id = $gmensual[$i]->user_id;
+            $mensual->ganancia = round($gmensual[$i]->sum, 2, PHP_ROUND_HALF_DOWN);
+            $mensual->save();
+        }
         return response()->json($gmensual);   
     }
 }
