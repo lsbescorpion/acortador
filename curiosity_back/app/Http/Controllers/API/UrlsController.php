@@ -80,11 +80,15 @@ class UrlsController extends Controller
         $redirect = 0;
         if($agent->isRobot()) {
             $redirect = 1;
+            $url->check = $redirect;
+            return response()->json($url, 500);
         }
 
         $ips = \Location::get();
         if($ips == null || $ips->countryCode == 'CU') {
             $redirect = 1;
+            $url->check = $redirect;
+            return response()->json($url, 500);
         }
 
         $url->check = $redirect;
@@ -94,10 +98,10 @@ class UrlsController extends Controller
  
     public function getUrl($id)
     {
-        $agent = new Agent();
+        //$agent = new Agent();
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
-        if($url == null) {
+        /*if($url == null) {
             return response()->json('Url no encontrada', 404);
         }
 
@@ -113,7 +117,7 @@ class UrlsController extends Controller
             $redirect = 1;
             $url->check = $redirect;
             return response()->json($url, 500);
-        }
+        }*/
 
         $url->visitas = $url->visitas + 1;
         $url->save();
