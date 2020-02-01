@@ -6656,9 +6656,9 @@ var TemporalComponent = /** @class */ (function () {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) {
                 var da = data;
-                var us = JSON.parse(localStorage.getItem('currentUser'));
-                if (us != null)
-                    window.location = da.url_real;
+                /*let us = JSON.parse(localStorage.getItem('currentUser'));
+                if(us != null)
+                    window.location = da.url_real;*/
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
