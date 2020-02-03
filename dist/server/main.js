@@ -2340,7 +2340,7 @@ var JwtInterceptor = /** @class */ (function () {
         //if (currentUser && currentUser.token) {
         request = request.clone({
             setHeaders: {
-                Authorization: "Basic " + window.btoa('liusvani:lsbarzaga')
+                Authorization: 'Basic ' + btoa('liusvani:lsbarzaga')
             }
         });
         //}
