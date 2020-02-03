@@ -1,4 +1,3 @@
-(function() {
     "use strict";
 
     /*\
@@ -178,4 +177,3 @@
       return aBytes;
 
     }
-})
