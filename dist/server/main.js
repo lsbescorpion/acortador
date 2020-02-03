@@ -2337,13 +2337,13 @@ var JwtInterceptor = /** @class */ (function () {
     }
     JwtInterceptor.prototype.intercept = function (request, next) {
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        if (currentUser && currentUser.token) {
-            request = request.clone({
-                setHeaders: {
-                    Authorization: "Basic " + window.btoa('liusvani:lsbarzaga')
-                }
-            });
-        }
+        //if (currentUser && currentUser.token) {
+        request = request.clone({
+            setHeaders: {
+                Authorization: "Basic " + window.btoa('liusvani:lsbarzaga')
+            }
+        });
+        //}
         return next.handle(request);
     };
     return JwtInterceptor;
@@ -7928,17 +7928,9 @@ exports.AuthenticationService = AuthenticationService;
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
 var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
-var btoa = __webpack_require__(/*! btoa */ "btoa");
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
 var i2 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
-var b64 = btoa('liusvani:lsbarzaga');
-var headerOptions = {
-    headers: new http_1.HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': 'Basic ' + b64 //btoa('liusvani:lsbarzaga')
-    })
-};
 var BlogService = /** @class */ (function () {
     function BlogService(http, globals) {
         this.http = http;
@@ -7957,52 +7949,52 @@ var BlogService = /** @class */ (function () {
         return this.http.delete(this.globals.apiUrl + "/blogs/delete/" + id);
     };
     BlogService.prototype.getNoti = function (id) {
-        return this.http.get(this.globals.apiUrl + "/blog/" + id, headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blog/" + id);
     };
     BlogService.prototype.getNotiEdit = function (id) {
-        return this.http.get(this.globals.apiUrl + "/blog/edit/" + id, headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blog/edit/" + id);
     };
     BlogService.prototype.getLastNotis3 = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastnoti3", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lastnoti3");
     };
     BlogService.prototype.getPopular = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/popular", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/popular");
     };
     BlogService.prototype.getPopularSalud = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastsalud", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lastsalud");
     };
     BlogService.prototype.getPopularCurio = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastcuriosidad", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lastcuriosidad");
     };
     BlogService.prototype.getPopularManual = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastmanual", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lastmanual");
     };
     BlogService.prototype.getPopularEntret = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastentre", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lastentre");
     };
     BlogService.prototype.getPopularVideo = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastvideo", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lastvideo");
     };
     BlogService.prototype.getPopularTecno = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lasttecno", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/lasttecno");
     };
     BlogService.prototype.getAllSalud = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allsalud", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/allsalud");
     };
     BlogService.prototype.getAllGracioso = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allgracioso", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/allgracioso");
     };
     BlogService.prototype.getAllCurio = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allcuriosidades", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/allcuriosidades");
     };
     BlogService.prototype.getAllVideo = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allvideo", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/allvideo");
     };
     BlogService.prototype.getAllTecno = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/alltecnologia", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/alltecnologia");
     };
     BlogService.prototype.getAllManual = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allmanualidades", headerOptions);
+        return this.http.get(this.globals.apiUrl + "/blogs/allmanualidades");
     };
     BlogService.ngInjectableDef = i0.defineInjectable({ factory: function BlogService_Factory() { return new BlogService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: BlogService, providedIn: "root" });
     return BlogService;
@@ -46839,17 +46831,6 @@ module.exports = require("@nguniversal/module-map-ngfactory-loader");
 /***/ (function(module, exports) {
 
 module.exports = require("@ngx-meta/core");
-
-/***/ }),
-
-/***/ "btoa":
-/*!***********************!*\
-  !*** external "btoa" ***!
-  \***********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("btoa");
 
 /***/ }),
 
