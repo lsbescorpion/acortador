@@ -1,7 +1,7 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+/*header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, DELETE, PUT, *');
-header('Access-Control-Allow-Headers: Origin, Accept, Methods, Content-Type, Authorization, Access-Control-Allow-Origin, X-CSRF-TOKEN, X-Requested-With, Access-Control-Allow-Methods, Cache-Control');
+header('Access-Control-Allow-Headers: Origin, Accept, Methods, Content-Type, Authorization, Access-Control-Allow-Origin, X-CSRF-TOKEN, X-Requested-With, Access-Control-Allow-Methods, Cache-Control');*/
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
