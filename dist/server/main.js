@@ -2337,168 +2337,18 @@ var JwtInterceptor = /** @class */ (function () {
     }
     JwtInterceptor.prototype.intercept = function (request, next) {
         var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        //if (currentUser && currentUser.token) {
-        var sMyInput = 'liusvani:lsbarzaga';
-        var aMyUTF8Input = strToUTF8Arr(sMyInput);
-        var sMyBase64 = base64EncArr(aMyUTF8Input);
-        request = request.clone({
-            setHeaders: {
-                Authorization: 'Basic ' + sMyBase64
-            }
-        });
-        //}
+        if (currentUser && currentUser.token) {
+            request = request.clone({
+                setHeaders: {
+                    Authorization: "Basic sssssssssssssssssssss="
+                }
+            });
+        }
         return next.handle(request);
     };
     return JwtInterceptor;
 }());
 exports.JwtInterceptor = JwtInterceptor;
-"use strict";
-/*\
-|*|
-|*|  Base64 / binary data / UTF-8 strings utilities (#2)
-|*|
-|*|  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
-|*|
-|*|  Author: madmurphy
-|*|
-\*/
-/* Array of bytes to base64 string decoding */
-function b64ToUint6(nChr) {
-    return nChr > 64 && nChr < 91 ?
-        nChr - 65
-        : nChr > 96 && nChr < 123 ?
-            nChr - 71
-            : nChr > 47 && nChr < 58 ?
-                nChr + 4
-                : nChr === 43 ?
-                    62
-                    : nChr === 47 ?
-                        63
-                        :
-                            0;
-}
-function base64DecToArr(sBase64, nBlockSize) {
-    var sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""), nInLen = sB64Enc.length, nOutLen = nBlockSize ? Math.ceil((nInLen * 3 + 1 >>> 2) / nBlockSize) * nBlockSize : nInLen * 3 + 1 >>> 2, aBytes = new Uint8Array(nOutLen);
-    for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
-        nMod4 = nInIdx & 3;
-        nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
-        if (nMod4 === 3 || nInLen - nInIdx === 1) {
-            for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
-                aBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
-            }
-            nUint24 = 0;
-        }
-    }
-    return aBytes;
-}
-/* Base64 string to array encoding */
-function uint6ToB64(nUint6) {
-    return nUint6 < 26 ?
-        nUint6 + 65
-        : nUint6 < 52 ?
-            nUint6 + 71
-            : nUint6 < 62 ?
-                nUint6 - 4
-                : nUint6 === 62 ?
-                    43
-                    : nUint6 === 63 ?
-                        47
-                        :
-                            65;
-}
-function base64EncArr(aBytes) {
-    var eqLen = (3 - (aBytes.length % 3)) % 3, sB64Enc = "";
-    for (var nMod3, nLen = aBytes.length, nUint24 = 0, nIdx = 0; nIdx < nLen; nIdx++) {
-        nMod3 = nIdx % 3;
-        /* Uncomment the following line in order to split the output in lines 76-character long: */
-        /*
-        if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { sB64Enc += "\r\n"; }
-        */
-        nUint24 |= aBytes[nIdx] << (16 >>> nMod3 & 24);
-        if (nMod3 === 2 || aBytes.length - nIdx === 1) {
-            sB64Enc += String.fromCharCode(uint6ToB64(nUint24 >>> 18 & 63), uint6ToB64(nUint24 >>> 12 & 63), uint6ToB64(nUint24 >>> 6 & 63), uint6ToB64(nUint24 & 63));
-            nUint24 = 0;
-        }
-    }
-    return eqLen === 0 ?
-        sB64Enc
-        :
-            sB64Enc.substring(0, sB64Enc.length - eqLen) + (eqLen === 1 ? "=" : "==");
-}
-/* UTF-8 array to DOMString and vice versa */
-function UTF8ArrToStr(aBytes) {
-    var sView = "";
-    for (var nPart, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
-        nPart = aBytes[nIdx];
-        sView += String.fromCharCode(nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
-            /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
-            (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-            : nPart > 247 && nPart < 252 && nIdx + 4 < nLen ? /* five bytes */
-                (nPart - 248 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-                : nPart > 239 && nPart < 248 && nIdx + 3 < nLen ? /* four bytes */
-                    (nPart - 240 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-                    : nPart > 223 && nPart < 240 && nIdx + 2 < nLen ? /* three bytes */
-                        (nPart - 224 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
-                        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen ? /* two bytes */
-                            (nPart - 192 << 6) + aBytes[++nIdx] - 128
-                            : /* nPart < 127 ? */ /* one byte */
-                                nPart);
-    }
-    return sView;
-}
-function strToUTF8Arr(sDOMStr) {
-    var aBytes, nChr, nStrLen = sDOMStr.length, nArrLen = 0;
-    /* mapping... */
-    for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
-        nChr = sDOMStr.charCodeAt(nMapIdx);
-        nArrLen += nChr < 0x80 ? 1 : nChr < 0x800 ? 2 : nChr < 0x10000 ? 3 : nChr < 0x200000 ? 4 : nChr < 0x4000000 ? 5 : 6;
-    }
-    aBytes = new Uint8Array(nArrLen);
-    /* transcription... */
-    for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
-        nChr = sDOMStr.charCodeAt(nChrIdx);
-        if (nChr < 128) {
-            /* one byte */
-            aBytes[nIdx++] = nChr;
-        }
-        else if (nChr < 0x800) {
-            /* two bytes */
-            aBytes[nIdx++] = 192 + (nChr >>> 6);
-            aBytes[nIdx++] = 128 + (nChr & 63);
-        }
-        else if (nChr < 0x10000) {
-            /* three bytes */
-            aBytes[nIdx++] = 224 + (nChr >>> 12);
-            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
-            aBytes[nIdx++] = 128 + (nChr & 63);
-        }
-        else if (nChr < 0x200000) {
-            /* four bytes */
-            aBytes[nIdx++] = 240 + (nChr >>> 18);
-            aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
-            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
-            aBytes[nIdx++] = 128 + (nChr & 63);
-        }
-        else if (nChr < 0x4000000) {
-            /* five bytes */
-            aBytes[nIdx++] = 248 + (nChr >>> 24);
-            aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
-            aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
-            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
-            aBytes[nIdx++] = 128 + (nChr & 63);
-        }
-        else /* if (nChr <= 0x7fffffff) */ {
-            /* six bytes */
-            aBytes[nIdx++] = 252 + (nChr >>> 30);
-            aBytes[nIdx++] = 128 + (nChr >>> 24 & 63);
-            aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
-            aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
-            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
-            aBytes[nIdx++] = 128 + (nChr & 63);
-        }
-    }
-    return aBytes;
-}
 
 
 /***/ }),
@@ -8081,75 +7931,231 @@ var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
 var i2 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
+var headers = new http_1.HttpHeaders();
+var sMyInput = 'liusvani:lsbarzaga';
+var aMyUTF8Input = strToUTF8Arr(sMyInput);
+var sMyBase64 = base64EncArr(aMyUTF8Input);
+headers = headers.append("Authorization", "Basic " + sMyBase64);
+//headers = headers.append("Content-Type", "application/x-www-form-urlencoded");
+var httpOptions = {
+    headers: headers
+};
 var BlogService = /** @class */ (function () {
     function BlogService(http, globals) {
         this.http = http;
         this.globals = globals;
     }
     BlogService.prototype.removePhotob = function (id, photob) {
-        return this.http.get(this.globals.apiUrl + "/blog/removephotob?photob=" + photob + "&id=" + id);
+        return this.http.get(this.globals.apiUrl + "/blog/removephotob?photob=" + photob + "&id=" + id, httpOptions);
     };
     BlogService.prototype.crearNoti = function (noti) {
-        return this.http.post(this.globals.apiUrl + "/blogs/create", noti);
+        return this.http.post(this.globals.apiUrl + "/blogs/create", noti, httpOptions);
     };
     BlogService.prototype.updateNoti = function (id, noti) {
-        return this.http.put(this.globals.apiUrl + "/blogs/update/" + id, noti);
+        return this.http.put(this.globals.apiUrl + "/blogs/update/" + id, noti, httpOptions);
     };
     BlogService.prototype.delNoti = function (id) {
-        return this.http.delete(this.globals.apiUrl + "/blogs/delete/" + id);
+        return this.http.delete(this.globals.apiUrl + "/blogs/delete/" + id, httpOptions);
     };
     BlogService.prototype.getNoti = function (id) {
-        return this.http.get(this.globals.apiUrl + "/blog/" + id);
+        return this.http.get(this.globals.apiUrl + "/blog/" + id, httpOptions);
     };
     BlogService.prototype.getNotiEdit = function (id) {
-        return this.http.get(this.globals.apiUrl + "/blog/edit/" + id);
+        return this.http.get(this.globals.apiUrl + "/blog/edit/" + id, httpOptions);
     };
     BlogService.prototype.getLastNotis3 = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastnoti3");
+        return this.http.get(this.globals.apiUrl + "/blogs/lastnoti3", httpOptions);
     };
     BlogService.prototype.getPopular = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/popular");
+        return this.http.get(this.globals.apiUrl + "/blogs/popular", httpOptions);
     };
     BlogService.prototype.getPopularSalud = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastsalud");
+        return this.http.get(this.globals.apiUrl + "/blogs/lastsalud", httpOptions);
     };
     BlogService.prototype.getPopularCurio = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastcuriosidad");
+        return this.http.get(this.globals.apiUrl + "/blogs/lastcuriosidad", httpOptions);
     };
     BlogService.prototype.getPopularManual = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastmanual");
+        return this.http.get(this.globals.apiUrl + "/blogs/lastmanual", httpOptions);
     };
     BlogService.prototype.getPopularEntret = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastentre");
+        return this.http.get(this.globals.apiUrl + "/blogs/lastentre", httpOptions);
     };
     BlogService.prototype.getPopularVideo = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lastvideo");
+        return this.http.get(this.globals.apiUrl + "/blogs/lastvideo", httpOptions);
     };
     BlogService.prototype.getPopularTecno = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/lasttecno");
+        return this.http.get(this.globals.apiUrl + "/blogs/lasttecno", httpOptions);
     };
     BlogService.prototype.getAllSalud = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allsalud");
+        return this.http.get(this.globals.apiUrl + "/blogs/allsalud", httpOptions);
     };
     BlogService.prototype.getAllGracioso = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allgracioso");
+        return this.http.get(this.globals.apiUrl + "/blogs/allgracioso", httpOptions);
     };
     BlogService.prototype.getAllCurio = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allcuriosidades");
+        return this.http.get(this.globals.apiUrl + "/blogs/allcuriosidades", httpOptions);
     };
     BlogService.prototype.getAllVideo = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allvideo");
+        return this.http.get(this.globals.apiUrl + "/blogs/allvideo", httpOptions);
     };
     BlogService.prototype.getAllTecno = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/alltecnologia");
+        return this.http.get(this.globals.apiUrl + "/blogs/alltecnologia", httpOptions);
     };
     BlogService.prototype.getAllManual = function () {
-        return this.http.get(this.globals.apiUrl + "/blogs/allmanualidades");
+        return this.http.get(this.globals.apiUrl + "/blogs/allmanualidades", httpOptions);
     };
     BlogService.ngInjectableDef = i0.defineInjectable({ factory: function BlogService_Factory() { return new BlogService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: BlogService, providedIn: "root" });
     return BlogService;
 }());
 exports.BlogService = BlogService;
+"use strict";
+/*\
+|*|
+|*|  Base64 / binary data / UTF-8 strings utilities (#2)
+|*|
+|*|  https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding
+|*|
+|*|  Author: madmurphy
+|*|
+\*/
+/* Array of bytes to base64 string decoding */
+function b64ToUint6(nChr) {
+    return nChr > 64 && nChr < 91 ?
+        nChr - 65
+        : nChr > 96 && nChr < 123 ?
+            nChr - 71
+            : nChr > 47 && nChr < 58 ?
+                nChr + 4
+                : nChr === 43 ?
+                    62
+                    : nChr === 47 ?
+                        63
+                        :
+                            0;
+}
+function base64DecToArr(sBase64, nBlockSize) {
+    var sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""), nInLen = sB64Enc.length, nOutLen = nBlockSize ? Math.ceil((nInLen * 3 + 1 >>> 2) / nBlockSize) * nBlockSize : nInLen * 3 + 1 >>> 2, aBytes = new Uint8Array(nOutLen);
+    for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
+        nMod4 = nInIdx & 3;
+        nUint24 |= b64ToUint6(sB64Enc.charCodeAt(nInIdx)) << 18 - 6 * nMod4;
+        if (nMod4 === 3 || nInLen - nInIdx === 1) {
+            for (nMod3 = 0; nMod3 < 3 && nOutIdx < nOutLen; nMod3++, nOutIdx++) {
+                aBytes[nOutIdx] = nUint24 >>> (16 >>> nMod3 & 24) & 255;
+            }
+            nUint24 = 0;
+        }
+    }
+    return aBytes;
+}
+/* Base64 string to array encoding */
+function uint6ToB64(nUint6) {
+    return nUint6 < 26 ?
+        nUint6 + 65
+        : nUint6 < 52 ?
+            nUint6 + 71
+            : nUint6 < 62 ?
+                nUint6 - 4
+                : nUint6 === 62 ?
+                    43
+                    : nUint6 === 63 ?
+                        47
+                        :
+                            65;
+}
+function base64EncArr(aBytes) {
+    var eqLen = (3 - (aBytes.length % 3)) % 3, sB64Enc = "";
+    for (var nMod3, nLen = aBytes.length, nUint24 = 0, nIdx = 0; nIdx < nLen; nIdx++) {
+        nMod3 = nIdx % 3;
+        /* Uncomment the following line in order to split the output in lines 76-character long: */
+        /*
+        if (nIdx > 0 && (nIdx * 4 / 3) % 76 === 0) { sB64Enc += "\r\n"; }
+        */
+        nUint24 |= aBytes[nIdx] << (16 >>> nMod3 & 24);
+        if (nMod3 === 2 || aBytes.length - nIdx === 1) {
+            sB64Enc += String.fromCharCode(uint6ToB64(nUint24 >>> 18 & 63), uint6ToB64(nUint24 >>> 12 & 63), uint6ToB64(nUint24 >>> 6 & 63), uint6ToB64(nUint24 & 63));
+            nUint24 = 0;
+        }
+    }
+    return eqLen === 0 ?
+        sB64Enc
+        :
+            sB64Enc.substring(0, sB64Enc.length - eqLen) + (eqLen === 1 ? "=" : "==");
+}
+/* UTF-8 array to DOMString and vice versa */
+function UTF8ArrToStr(aBytes) {
+    var sView = "";
+    for (var nPart, nLen = aBytes.length, nIdx = 0; nIdx < nLen; nIdx++) {
+        nPart = aBytes[nIdx];
+        sView += String.fromCharCode(nPart > 251 && nPart < 254 && nIdx + 5 < nLen ? /* six bytes */
+            /* (nPart - 252 << 30) may be not so safe in ECMAScript! So...: */
+            (nPart - 252) * 1073741824 + (aBytes[++nIdx] - 128 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+            : nPart > 247 && nPart < 252 && nIdx + 4 < nLen ? /* five bytes */
+                (nPart - 248 << 24) + (aBytes[++nIdx] - 128 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                : nPart > 239 && nPart < 248 && nIdx + 3 < nLen ? /* four bytes */
+                    (nPart - 240 << 18) + (aBytes[++nIdx] - 128 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                    : nPart > 223 && nPart < 240 && nIdx + 2 < nLen ? /* three bytes */
+                        (nPart - 224 << 12) + (aBytes[++nIdx] - 128 << 6) + aBytes[++nIdx] - 128
+                        : nPart > 191 && nPart < 224 && nIdx + 1 < nLen ? /* two bytes */
+                            (nPart - 192 << 6) + aBytes[++nIdx] - 128
+                            : /* nPart < 127 ? */ /* one byte */
+                                nPart);
+    }
+    return sView;
+}
+function strToUTF8Arr(sDOMStr) {
+    var aBytes, nChr, nStrLen = sDOMStr.length, nArrLen = 0;
+    /* mapping... */
+    for (var nMapIdx = 0; nMapIdx < nStrLen; nMapIdx++) {
+        nChr = sDOMStr.charCodeAt(nMapIdx);
+        nArrLen += nChr < 0x80 ? 1 : nChr < 0x800 ? 2 : nChr < 0x10000 ? 3 : nChr < 0x200000 ? 4 : nChr < 0x4000000 ? 5 : 6;
+    }
+    aBytes = new Uint8Array(nArrLen);
+    /* transcription... */
+    for (var nIdx = 0, nChrIdx = 0; nIdx < nArrLen; nChrIdx++) {
+        nChr = sDOMStr.charCodeAt(nChrIdx);
+        if (nChr < 128) {
+            /* one byte */
+            aBytes[nIdx++] = nChr;
+        }
+        else if (nChr < 0x800) {
+            /* two bytes */
+            aBytes[nIdx++] = 192 + (nChr >>> 6);
+            aBytes[nIdx++] = 128 + (nChr & 63);
+        }
+        else if (nChr < 0x10000) {
+            /* three bytes */
+            aBytes[nIdx++] = 224 + (nChr >>> 12);
+            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+            aBytes[nIdx++] = 128 + (nChr & 63);
+        }
+        else if (nChr < 0x200000) {
+            /* four bytes */
+            aBytes[nIdx++] = 240 + (nChr >>> 18);
+            aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
+            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+            aBytes[nIdx++] = 128 + (nChr & 63);
+        }
+        else if (nChr < 0x4000000) {
+            /* five bytes */
+            aBytes[nIdx++] = 248 + (nChr >>> 24);
+            aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
+            aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
+            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+            aBytes[nIdx++] = 128 + (nChr & 63);
+        }
+        else /* if (nChr <= 0x7fffffff) */ {
+            /* six bytes */
+            aBytes[nIdx++] = 252 + (nChr >>> 30);
+            aBytes[nIdx++] = 128 + (nChr >>> 24 & 63);
+            aBytes[nIdx++] = 128 + (nChr >>> 18 & 63);
+            aBytes[nIdx++] = 128 + (nChr >>> 12 & 63);
+            aBytes[nIdx++] = 128 + (nChr >>> 6 & 63);
+            aBytes[nIdx++] = 128 + (nChr & 63);
+        }
+    }
+    return aBytes;
+}
 
 
 /***/ }),
