@@ -6860,20 +6860,20 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var scripta = this.document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        this.document.body.appendChild(scripta);
+        var script = this.document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        this.document.body.appendChild(script);
+        /*let scriptnow: any = this.document.createElement('script');
+        scriptnow.async = "true";
+        scriptnow.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
+        this.document.body.appendChild(scriptnow);*/
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
-            var scripta = this.document.createElement('script');
-            scripta.async = true;
-            scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-            this.document.body.appendChild(scripta);
-            var script = this.document.createElement('script');
-            script.async = true;
-            script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-            this.document.body.appendChild(script);
-            var scriptnow = this.document.createElement('script');
-            scriptnow.async = "true";
-            scriptnow.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
-            this.document.body.appendChild(scriptnow);
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) {
                 var da = data;
