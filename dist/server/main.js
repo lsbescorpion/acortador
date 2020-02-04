@@ -6868,14 +6868,14 @@ var TemporalComponent = /** @class */ (function () {
                 scripta.async = true;
                 scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
                 document.body.appendChild(scripta);
-                var script = document.createElement('script');
+                /*let script: any = document.createElement('script');
                 script.async = true;
                 script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
                 document.body.appendChild(script);
-                var scriptnow = document.createElement('script');
+                let scriptnow: any = document.createElement('script');
                 scriptnow.async = "true";
                 scriptnow.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
-                document.body.appendChild(scriptnow);
+                document.body.appendChild(scriptnow);*/
                 var da = data;
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
