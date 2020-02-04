@@ -6871,6 +6871,10 @@ var TemporalComponent = /** @class */ (function () {
                 scripta.async = true;
                 scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
                 document.body.appendChild(scripta);
+                var scriptnow1 = document.createElement('script');
+                scriptnow1.type = "text/javascript";
+                scriptnow1.src = _this.globals.globalUrl + "/assets/js/adnow.js";
+                document.body.appendChild(scriptnow1);
                 var scriptnow = document.createElement('script');
                 scriptnow.type = "text/javascript";
                 scriptnow.src = "//st-n.ads1-adnow.com/js/a.js";
