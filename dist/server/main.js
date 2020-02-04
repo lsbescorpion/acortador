@@ -6827,6 +6827,18 @@ var TemporalComponent = /** @class */ (function () {
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
+        var scripta = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);
+        var scriptnow = document.createElement('script');
+        scriptnow.async = "true";
+        scriptnow.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
+        document.body.appendChild(scriptnow);
         this.blogService.getPopular()
             .subscribe(function (data) {
             var da = data;
@@ -6864,18 +6876,6 @@ var TemporalComponent = /** @class */ (function () {
         if (this.id_url != null) {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) {
-                var scripta = document.createElement('script');
-                scripta.async = true;
-                scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-                document.body.appendChild(scripta);
-                /*let script: any = document.createElement('script');
-                script.async = true;
-                script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-                document.body.appendChild(script);
-                let scriptnow: any = document.createElement('script');
-                scriptnow.async = "true";
-                scriptnow.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
-                document.body.appendChild(scriptnow);*/
                 var da = data;
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
