@@ -5019,41 +5019,41 @@ var HomeComponent = /** @class */ (function () {
             .subscribe(function (data) {
             var da = data;
             _this.lastnotis = da;
-        });
-        this.blogService.getPopular()
-            .subscribe(function (data) {
-            var da = data;
-            _this.popular = da;
-        });
-        this.blogService.getPopularSalud()
-            .subscribe(function (data) {
-            var da = data;
-            _this.popularsalud = da;
-        });
-        this.blogService.getPopularCurio()
-            .subscribe(function (data) {
-            var da = data;
-            _this.popularcurios = da;
+            _this.blogService.getPopular()
+                .subscribe(function (data) {
+                var da = data;
+                _this.popular = da;
+                _this.blogService.getPopularSalud()
+                    .subscribe(function (data) {
+                    var da = data;
+                    _this.popularsalud = da;
+                    _this.blogService.getPopularCurio()
+                        .subscribe(function (data) {
+                        var da = data;
+                        _this.popularcurios = da;
+                    });
+                });
+            });
         });
         this.blogService.getPopularManual()
             .subscribe(function (data) {
             var da = data;
             _this.popularmanual = da;
-        });
-        this.blogService.getPopularEntret()
-            .subscribe(function (data) {
-            var da = data;
-            _this.popularentre = da;
-        });
-        this.blogService.getPopularVideo()
-            .subscribe(function (data) {
-            var da = data;
-            _this.popularvideo = da;
-        });
-        this.blogService.getPopularTecno()
-            .subscribe(function (data) {
-            var da = data;
-            _this.populartecno = da;
+            _this.blogService.getPopularEntret()
+                .subscribe(function (data) {
+                var da = data;
+                _this.popularentre = da;
+                _this.blogService.getPopularVideo()
+                    .subscribe(function (data) {
+                    var da = data;
+                    _this.popularvideo = da;
+                    _this.blogService.getPopularTecno()
+                        .subscribe(function (data) {
+                        var da = data;
+                        _this.populartecno = da;
+                    });
+                });
+            });
         });
     };
     Object.defineProperty(HomeComponent.prototype, "f", {
