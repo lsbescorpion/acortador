@@ -5011,14 +5011,14 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         var that = this;
-        /*let script: any = document.createElement('script');
+        var script = document.createElement('script');
         script.async = true;
         script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797657.js";
         document.body.appendChild(script);
-        let scripta: any = document.createElement('script');
+        var scripta = document.createElement('script');
         scripta.async = true;
         scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);  */
+        document.body.appendChild(scripta);
         this.blogService.getLastNotis3()
             .subscribe(function (data) {
             var da = data;
