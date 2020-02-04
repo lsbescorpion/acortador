@@ -2207,10 +2207,10 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'https://back.cropersviral.com/api';
-        this.urlPhoto = 'https://back.cropersviral.com/';
-        this.globalUrl = 'https://www.cropersviral.com';
-        this.urlShared = 'https://www.cropersviral.com/categoria';
+        this.apiUrl = 'http://back.cropersviral.com/api';
+        this.urlPhoto = 'http://back.cropersviral.com/';
+        this.globalUrl = 'http://www.cropersviral.com';
+        this.urlShared = 'http://www.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
@@ -3471,7 +3471,12 @@ var AddnoticeComponent = /** @class */ (function () {
                 "url": "assets/Spanish.json",
                 searchPlaceholder: "Escriba parametro a filtrar..."
             },
-            ajax: this.globals.apiUrl + '/blogs',
+            ajax: {
+                'url': this.globals.apiUrl + '/blogs',
+                "headers": {
+                    "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh"
+                },
+            },
             columns: [
                 { title: 'Titulo', data: 'titulo', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
@@ -7263,7 +7268,12 @@ var UrlsComponent = /** @class */ (function () {
                 "url": "assets/Spanish.json",
                 searchPlaceholder: "Escriba parametro a filtrar..."
             },
-            ajax: this.globals.apiUrl + '/urls?id=' + us.user.id,
+            ajax: {
+                'url': this.globals.apiUrl + '/urls?id=' + us.user.id,
+                "headers": {
+                    "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh"
+                },
+            },
             columns: [
                 { title: 'Fecha', data: 'fecha', className: "align-middle", "render": function (data, type, row, meta) {
                         return moment(data).format('YYYY/MM/DD H:mm');
@@ -7783,7 +7793,12 @@ var UsuariosComponent = /** @class */ (function () {
                 "url": "assets/Spanish.json",
                 searchPlaceholder: "Escriba parametro a filtrar..."
             },
-            ajax: this.globals.apiUrl + '/users',
+            ajax: {
+                "url": this.globals.apiUrl + '/users',
+                "headers": {
+                    "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh"
+                },
+            },
             columns: [
                 { title: 'Nombre y Apellidos', data: 'nombre_apellidos', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
