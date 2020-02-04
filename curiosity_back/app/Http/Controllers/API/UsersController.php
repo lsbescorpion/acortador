@@ -36,57 +36,13 @@ class UsersController extends Controller
         }
     }
 
-    public function getPrestadores(Request $request)
-    {
-        $search = (null !== $request->get('q')) ? $request->get('q') : '';
-        $prestadores = null;
-        if($search != '')
-            $prestadores = User::with(['prestador','identificacion'])->role(['PRESTADOR'])->where(
-                function($q) use ($search) {
-                    $q->orwhere('NOMBRES', 'like', "%search%");
-                    $q->orwhere('APELLIDOS', 'like', "%$search%");
-                    $q->orwhere('NO_IDENTIFICACION', 'like', "%$search%");
-                })->get();
-        else
-            $prestadores = User::with(['prestador','identificacion'])->role(['PRESTADOR'])->get();
-
-        $resultado = [];
-        foreach ($prestadores as $key => $value) {
-            $resultado[$key] = ['id' => $value['ID_USUARIO'], 'text' => $value['NOMBRES']." ".$value['APELLIDOS']];
-        }
-        return response()->json(['results' => $resultado]);
-    }
-
-    public function ListPrestadores(Request $request)
-    {
-        $prestadores = null;
-        if($request->get('empresa') != 'null') {
-            $presta = User::with(['prestador', 'empresa', 'identificacion'])->role(['PRESTADOR'])->get();
-            $pos = 0;
-            for($i = 0; $i < count($presta); $i++){
-                if($presta[$i]->empresa != null && $presta[$i]->empresa->ID_EMPRESA == $request->get('empresa')) {
-                    $prestadores[$pos] = $presta[$i];
-                    $pos++;
-                }
-            }
-        }
-        else
-            $prestadores = User::with(['prestador','identificacion'])->role(['PRESTADOR'])->get();
-
-        return response()->json($prestadores);
-    }
-
     public function logout(Request $request) {
-        /*$client = ClientConect::where(['token' => $request->get('token')])->first();
-        if($client != null) {
-            ClientConect::where(['token' => $request->get('token')])->update(['offline' => Carbon::now()->format('Y-m-d H:i')]);
-        }
-        return response()->json("Usuario deslogueado", 200);*/
+
     }
 
     public function logins(Request $request) {
 
-        $user = User::where(['correo' => $request->get('correo')])->first();
+        $user = User::where(['correo' => $request->get('correo'), 'activo' => 1])->first();
         if ($user != null) {
             if(Hash::check($request->get('password'), $user->password)) {
                 $success['token'] = base64_encode($user->id." ".$user->correo." ".Carbon::now()->format('Y-m-d H:i')." ".request()->ip());
