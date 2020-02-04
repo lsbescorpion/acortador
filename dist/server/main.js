@@ -2207,10 +2207,10 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'http://back.cropersviral.com/api';
-        this.urlPhoto = 'http://back.cropersviral.com/';
-        this.globalUrl = 'http://www.cropersviral.com';
-        this.urlShared = 'http://www.cropersviral.com/categoria';
+        this.apiUrl = 'https://back.cropersviral.com/api';
+        this.urlPhoto = 'https://back.cropersviral.com/';
+        this.globalUrl = 'https://www.cropersviral.com';
+        this.urlShared = 'https://www.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
