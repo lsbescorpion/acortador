@@ -41,7 +41,7 @@ class BlogController extends Controller
 
     public function lastNoti3()
     {
-        $blog = Blog::with(['categoria','users'])->orderby('id', 'DESC')->limit(4)->offset(0)->get();
+        $blog = Blog::with(['categoria','users'])->orderby('id', 'DESC')->limit(6)->offset(0)->get();
         return response()->json($blog);
     }
 
