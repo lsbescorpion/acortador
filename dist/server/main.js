@@ -4974,6 +4974,11 @@ var HomeComponent = /** @class */ (function () {
             password: ['', [forms_1.Validators.required]],
             correo: ['', [forms_1.Validators.required, forms_1.Validators.email]],
         });
+        this.mgid.getData()
+            .subscribe(function (data) {
+            var da = data;
+            console.log(da);
+        });
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
             _this.login = us != null ? true : false;
@@ -5010,15 +5015,15 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        var that = this;
-        var script = document.createElement('script');
+        /*var that = this;
+        let script: any = document.createElement('script');
         script.async = true;
         script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797657.js";
         document.body.appendChild(script);
-        var scripta = document.createElement('script');
+        let scripta: any = document.createElement('script');
         scripta.async = true;
         scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
+        document.body.appendChild(scripta);  */
         this.blogService.getLastNotis3()
             .subscribe(function (data) {
             var da = data;
