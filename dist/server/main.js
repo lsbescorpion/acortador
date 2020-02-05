@@ -3530,6 +3530,7 @@ var AddnoticeComponent = /** @class */ (function () {
             acceptedFiles: "image/*",
             thumbnailWidth: 120,
             thumbnailHeight: 120,
+            headers: { "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh" },
             init: function () {
                 this.on('addedfile', function (file) {
                     if (this.files.length > 1) {
@@ -4974,11 +4975,11 @@ var HomeComponent = /** @class */ (function () {
             password: ['', [forms_1.Validators.required]],
             correo: ['', [forms_1.Validators.required, forms_1.Validators.email]],
         });
-        this.mgid.getData()
-            .subscribe(function (data) {
-            var da = data;
-            console.log(da);
-        });
+        /*this.mgid.getData()
+            .subscribe(data => {
+                let da: any = data;
+                console.log(da);
+            })*/
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
             _this.login = us != null ? true : false;
@@ -5015,15 +5016,15 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        /*var that = this;
-        let script: any = document.createElement('script');
+        var that = this;
+        var script = document.createElement('script');
         script.async = true;
         script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797657.js";
         document.body.appendChild(script);
-        let scripta: any = document.createElement('script');
+        var scripta = document.createElement('script');
         scripta.async = true;
         scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);  */
+        document.body.appendChild(scripta);
         this.blogService.getLastNotis3()
             .subscribe(function (data) {
             var da = data;
@@ -6427,6 +6428,7 @@ var PerfilComponent = /** @class */ (function () {
             acceptedFiles: "image/*",
             thumbnailWidth: 120,
             thumbnailHeight: 120,
+            headers: { "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh" },
             init: function () {
                 this.on('addedfile', function (file) {
                     if (this.files.length > 1) {
@@ -7833,6 +7835,7 @@ var UsuariosComponent = /** @class */ (function () {
             acceptedFiles: "image/*",
             thumbnailWidth: 120,
             thumbnailHeight: 120,
+            headers: { "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh" },
             init: function () {
                 this.on('addedfile', function (file) {
                     if (this.files.length > 1) {
