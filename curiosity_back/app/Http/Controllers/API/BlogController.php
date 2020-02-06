@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Perfil;
 use App\Models\Urls;
 use App\Models\Blog;
+use App\Models\Contact;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -272,5 +273,18 @@ class BlogController extends Controller
             }
             return response()->json("Foto eliminada", 200);
         }
+    }
+
+    public function createMensaje(Request $request) {
+        $blog = new Contact();
+
+        $blog->mensaje = $request->get('mensaje');
+        $blog->nombre = $request->get('nombre');
+        $blog->asunto = $request->get('asunto');
+        $blog->correo = $request->get('correo');
+        $blog->fecha = Carbon::now()->format('Y-m-d H:i');
+        $blog->save();
+
+        return response()->json("Mensaje recibido", 200);
     }
 }
