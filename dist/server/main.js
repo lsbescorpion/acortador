@@ -3709,14 +3709,6 @@ var CatcuriosiComponent = /** @class */ (function () {
         this.login = '';
     }
     CatcuriosiComponent.prototype.ngAfterViewInit = function () {
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        document.body.appendChild(script);
     };
     CatcuriosiComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -3745,6 +3737,14 @@ var CatcuriosiComponent = /** @class */ (function () {
     };
     CatcuriosiComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -3862,14 +3862,6 @@ var CatgraciosoComponent = /** @class */ (function () {
         this.login = '';
     }
     CatgraciosoComponent.prototype.ngAfterViewInit = function () {
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        document.body.appendChild(script);
     };
     CatgraciosoComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -3898,6 +3890,14 @@ var CatgraciosoComponent = /** @class */ (function () {
     };
     CatgraciosoComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -4015,14 +4015,6 @@ var CatmanualComponent = /** @class */ (function () {
         this.login = '';
     }
     CatmanualComponent.prototype.ngAfterViewInit = function () {
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        document.body.appendChild(script);
     };
     CatmanualComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -4051,6 +4043,14 @@ var CatmanualComponent = /** @class */ (function () {
     };
     CatmanualComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -4168,14 +4168,6 @@ var CatsaludComponent = /** @class */ (function () {
         this.login = '';
     }
     CatsaludComponent.prototype.ngAfterViewInit = function () {
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        document.body.appendChild(script);
     };
     CatsaludComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -4204,6 +4196,14 @@ var CatsaludComponent = /** @class */ (function () {
     };
     CatsaludComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -4321,14 +4321,6 @@ var CattecnoComponent = /** @class */ (function () {
         this.login = '';
     }
     CattecnoComponent.prototype.ngAfterViewInit = function () {
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        document.body.appendChild(script);
     };
     CattecnoComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -4357,6 +4349,14 @@ var CattecnoComponent = /** @class */ (function () {
     };
     CattecnoComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -4474,14 +4474,6 @@ var CatvideoComponent = /** @class */ (function () {
         this.login = '';
     }
     CatvideoComponent.prototype.ngAfterViewInit = function () {
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        document.body.appendChild(scripta);
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        document.body.appendChild(script);
     };
     CatvideoComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -4510,6 +4502,14 @@ var CatvideoComponent = /** @class */ (function () {
     };
     CatvideoComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        document.body.appendChild(scripta);
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        document.body.appendChild(script);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -4992,6 +4992,15 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*var that = this;
+        let script: any = document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797657.js";
+        document.body.appendChild(script);
+        let scripta: any = document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
+        document.body.appendChild(scripta);*/
         $('body').addClass("off-canvas-sidebar");
         this.userForm = this.formBuilder.group({
             password: ['', [forms_1.Validators.required]],
@@ -5038,15 +5047,6 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
-        var that = this;
-        var script = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797657.js";
-        document.body.appendChild(script);
-        var scripta = document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
-        document.body.appendChild(scripta);
         this.blogService.getLastNotis3()
             .subscribe(function (data) {
             var da = data;
@@ -5395,18 +5395,6 @@ var NoticiaComponent = /** @class */ (function () {
             var da = data;
             _this.popular = da;
         });
-        var scripta = this.document.createElement('script');
-        scripta.async = true;
-        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-        this.document.body.appendChild(scripta);
-        var script = this.document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-        this.document.body.appendChild(script);
-        var scriptcon = this.document.createElement('script');
-        scriptcon.async = true;
-        scriptcon.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
-        this.document.body.appendChild(scriptcon);
     };
     NoticiaComponent.prototype.ngAfterViewChecked = function () {
         var anchors = document.getElementsByTagName('a');
@@ -5437,6 +5425,18 @@ var NoticiaComponent = /** @class */ (function () {
     };
     NoticiaComponent.prototype.ngOnInit = function () {
         var _this = this;
+        /*let scripta: any = this.document.createElement('script');
+        scripta.async = true;
+        scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
+        this.document.body.appendChild(scripta);
+        let script: any = this.document.createElement('script');
+        script.async = true;
+        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
+        this.document.body.appendChild(script);
+        let scriptcon: any = this.document.createElement('script');
+        scriptcon.async = true;
+        scriptcon.src = "https://jsc.mgid.com/c/r/cropersviral.com.802483.js";
+        this.document.body.appendChild(scriptcon);*/
         $('body').addClass("off-canvas-sidebar");
         var us = JSON.parse(localStorage.getItem('currentUser'));
         setTimeout(function () {
@@ -6894,22 +6894,23 @@ var TemporalComponent = /** @class */ (function () {
         if (this.id_url != null) {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) {
-                var script = document.createElement('script');
+                /*let script: any = document.createElement('script');
                 script.async = true;
                 script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
                 document.body.appendChild(script);
-                var scripta = document.createElement('script');
+                let scripta: any = document.createElement('script');
                 scripta.async = true;
                 scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
                 document.body.appendChild(scripta);
-                var scriptnow1 = document.createElement('script');
+
+                let scriptnow1: any = document.createElement('script');
                 scriptnow1.type = "text/javascript";
-                scriptnow1.src = _this.globals.globalUrl + "/assets/js/adnow.js";
+                scriptnow1.src = this.globals.globalUrl + "/assets/js/adnow.js";
                 document.body.appendChild(scriptnow1);
-                var scriptnow = document.createElement('script');
+                let scriptnow: any = document.createElement('script');
                 scriptnow.type = "text/javascript";
                 scriptnow.src = "//st-n.ads1-adnow.com/js/a.js";
-                document.body.appendChild(scriptnow);
+                document.body.appendChild(scriptnow);*/
                 var da = data;
                 _this.url = da;
                 _this.titleService.setTitle(da.titulo);
