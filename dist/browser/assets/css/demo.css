@@ -405,3 +405,18 @@ my-app .main-panel .main-content .card{
 .footer-big .social-feed p{display:table-cell;vertical-align:top;overflow:hidden;padding-bottom:10px;max-width:300px}
 .footer-big .gallery-feed img{width:20%;margin-right:5%;margin-bottom:5%;float:left}
 .footer-white{background-color:#fff;}
+
+
+.off-canvas-sidebar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
+  margin: 0 5px;
+}
+
+.off-canvas-sidebar .footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+.off-canvas-sidebar .navbar-collapse:after {
+  background-color: #666666;
+}
