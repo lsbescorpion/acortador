@@ -408,7 +408,7 @@ my-app .main-panel .main-content .card{
 
 
 .off-canvas-sidebar .navbar .navbar-collapse .navbar-nav .nav-item .nav-link {
-  margin: 0 5px;
+  margin: 0;
 }
 
 .off-canvas-sidebar .footer {
