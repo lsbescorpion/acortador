@@ -7313,7 +7313,28 @@ var TemporalComponent = /** @class */ (function () {
             }, function (err) {
                 if (err.id != null) {
                     _this.show = false;
-                    window.location = err.url_real;
+                    _this.titleService.setTitle(err.titulo);
+                    _this.meta.updateTag({ name: 'title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                    _this.meta.updateTag({ property: 'og:url', content: err.url_real });
+                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                    _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                    _this.title = err.titulo;
+                    var link = _this.document.createElement('link');
+                    link.async = true;
+                    link.rel = 'canonical';
+                    link.href = err.url_real;
+                    _this.document.head.appendChild(link);
+                    window.location.href = err.url_real;
                 }
                 else {
                     _this.router.navigate(['404']);
