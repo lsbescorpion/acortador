@@ -9,6 +9,8 @@ use App\Models\Categoria;
 use App\Models\VisitasDiarias;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasMensuales;
+use App\Models\Paises;
+use App\Models\UrlVisitasP;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Jenssegers\Agent\Agent;
@@ -97,7 +99,7 @@ class UrlsController extends Controller
     }
  
     public function getUrl($id, Request $request)
-    {
+    {//print_r($_SERVER["HTTP_USER_AGENT"]);
         $agent = new Agent();
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
@@ -122,6 +124,18 @@ class UrlsController extends Controller
         if($ips == null || $ips->countryCode == 'CU') {
             return response()->json($url, 500);
         }
+
+        $pais = Paises::where(['iso_a2' => $ips->countryCode])->first();
+
+        $p = UrlVisitasP::where(['url_id' => $url->id, 'iso_2' => $ips->countryCode])->first();
+
+        $p = ($p != null ? $p : new UrlVisitasP());
+
+        $p->iso_2 = $ips->countryCode;
+        $p->iso_3 = $pais->iso_a3;
+        $p->visitas = ($p != null ? $p->visitas + 1 : 1);
+        $p->url_id = $url->id;
+        $p->save();
 
         $url->visitas = $url->visitas + 1;
         $url->save();
@@ -206,9 +220,9 @@ class UrlsController extends Controller
         stream_context_set_default(
             array(
                 'http' => array(
-                    //'proxy' => "tcp://172.16.4.1:3128",
-                    'request_fulluri' => true
-                    //'header' => "Proxy-Authorization: Basic $auth"
+                    'proxy' => "tcp://172.16.4.1:3128",
+                    'request_fulluri' => true,
+                    'header' => "Proxy-Authorization: Basic $auth"
                 ),
                 'ssl' => array(
                     'verify_peer'      => false,
