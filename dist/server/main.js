@@ -7297,7 +7297,7 @@ var TemporalComponent = /** @class */ (function () {
                 var link = _this.document.createElement('link');
                 link.async = true;
                 link.rel = 'canonical';
-                link.href = da.url_real;
+                link.href = _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada;
                 _this.document.head.appendChild(link);
                 var that = _this;
                 var fiveSeconds = new Date().getTime() + 20000;
@@ -7332,7 +7332,7 @@ var TemporalComponent = /** @class */ (function () {
                     var link = _this.document.createElement('link');
                     link.async = true;
                     link.rel = 'canonical';
-                    link.href = err.url_real;
+                    link.href = _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada;
                     _this.document.head.appendChild(link);
                     window.location.href = err.url_real;
                 }
