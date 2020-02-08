@@ -26,4 +26,9 @@ class Urls extends Model
     {
         return $this->hasMany(GananciasDiarias::class, 'url_id');
     }
+
+    public function visitasp()
+    {
+        return $this->hasMany(UrlVisitasP::class, 'url_id');
+    }
 }
