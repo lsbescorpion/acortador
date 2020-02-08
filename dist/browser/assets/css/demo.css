@@ -420,3 +420,12 @@ my-app .main-panel .main-content .card{
 .off-canvas-sidebar .navbar-collapse:after {
   background-color: #666666;
 }
+
+.progress .progress-bar.progress-bar-danger {
+  background: #f44336;
+}
+
+.fla .flag-icon {
+  position: relative;
+  top: -2px;
+}

@@ -135,6 +135,7 @@ class UrlsController extends Controller
         $p->iso_3 = $pais->iso_a3;
         $p->visitas = ($p != null ? $p->visitas + 1 : 1);
         $p->url_id = $url->id;
+        $p->nombre = $pais->name_es;
         $p->save();
 
         $url->visitas = $url->visitas + 1;
@@ -157,7 +158,10 @@ class UrlsController extends Controller
 
     public function getUrlbyId($id, Request $request)
     {
-        $url = Urls::with(['categoria'])->where(['id' => $id, 'activa' => 1])->first();
+        $url = Urls::with(['categoria', 'visitasp' => function ($query) {
+            $query->orderBy('visitasp', 'desc');
+        }])->where(['id' => $id, 'activa' => 1])->first();
+
         $fecha = Carbon::now()->format('Y-m-d');
         $lastd = date('t',strtotime($fecha));
 
