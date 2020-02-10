@@ -224,9 +224,9 @@ class UrlsController extends Controller
         stream_context_set_default(
             array(
                 'http' => array(
-                    'proxy' => "tcp://172.16.4.1:3128",
-                    'request_fulluri' => true,
-                    'header' => "Proxy-Authorization: Basic $auth"
+                    //'proxy' => "tcp://172.16.4.1:3128",
+                    'request_fulluri' => true
+                    //'header' => "Proxy-Authorization: Basic $auth"
                 ),
                 'ssl' => array(
                     'verify_peer'      => false,
@@ -291,6 +291,14 @@ class UrlsController extends Controller
             $meta = get_meta_tags($request->get('url'));
             $metas_array['image'] = $meta['twitter:image'];
         }
+        if(!isset($metas_array['image'] == null))
+        {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Error',
+                'errors' => ['url' => ['Error obteniendo los metadatos']],
+            ], 422);
+        }  
         $imagen = file_get_contents($metas_array['image']);
         $ds = DIRECTORY_SEPARATOR;
         $dir = $ds.date('Y',time()).$ds.date('m',time()).$ds.date('d',time()).$ds;
