@@ -2253,8 +2253,8 @@ var Globals = /** @class */ (function () {
     function Globals() {
         this.apiUrl = 'https://back.cropersviral.com/api';
         this.urlPhoto = 'https://back.cropersviral.com/';
-        this.globalUrl = 'https://shared.cropersviral.com';
-        this.urlShared = 'https://shared.cropersviral.com/categoria';
+        this.globalUrl = 'https://shared.albonmarche.com';
+        this.urlShared = 'https://shared.albonmarche.com/categoria';
         this.isLogued = false;
         this.role = '';
     }
