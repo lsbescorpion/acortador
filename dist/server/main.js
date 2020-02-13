@@ -7387,10 +7387,10 @@ var TemporalComponent = /** @class */ (function () {
                 scriptnow.type = "text/javascript";
                 scriptnow.src = "//st-n.ads1-adnow.com/js/a.js";
                 document.body.appendChild(scriptnow);*/
-                var script = document.createElement('script');
+                /*let script: any = document.createElement('script');
                 script.async = true;
                 script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-                document.head.appendChild(script);
+                document.head.appendChild(script);*/
                 var da = data;
                 _this.url = da;
                 var link = document.createElement('link');
