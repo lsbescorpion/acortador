@@ -7446,26 +7446,26 @@ var TemporalComponent = /** @class */ (function () {
         }
     };
     TemporalComponent.prototype.setScript = function () {
-        var script = document.createElement('script');
+        /*let script: any = document.createElement('script');
         script.async = true;
-        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";*/
         var scriptnow = document.createElement('script');
         scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
-        var script1 = document.createElement('script');
+        /*let script1: any = document.createElement('script');
         script1.async = true;
-        script1.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+        script1.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";*/
         var scriptnow1 = document.createElement('script');
         scriptnow1.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
-        //return new Promise(resolve => {
-        setTimeout(function () {
-            var bloque1 = document.getElementById('bloque1');
-            bloque1.insertBefore(script, bloque1.childNodes[0]);
-            bloque1.appendChild(scriptnow);
-            var bloque2 = document.getElementById('bloque2');
-            bloque2.insertBefore(script1, bloque2.childNodes[0]);
-            bloque2.appendChild(scriptnow1);
-        }, 0);
-        //});
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                var bloque1 = document.getElementById('bloque1');
+                //bloque1.insertBefore(script, bloque1.childNodes[0]);
+                bloque1.appendChild(scriptnow);
+                var bloque2 = document.getElementById('bloque2');
+                //bloque2.insertBefore(script1, bloque2.childNodes[0]);
+                bloque2.appendChild(scriptnow1);
+            }, 0);
+        });
     };
     TemporalComponent.prototype.onFinished = function () {
         /*var link = '<a href="'+this.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
