@@ -7368,60 +7368,52 @@ var TemporalComponent = /** @class */ (function () {
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
             this.urlsService.getUrl(this.id_url)
-                .subscribe(function (data) {
-                _this.show = true;
-                /*let script: any = document.createElement('script');
-                script.async = true;
-                script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-                document.body.appendChild(script);
-                let scripta: any = document.createElement('script');
-                scripta.async = true;
-                scripta.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";
-                document.body.appendChild(scripta);
-
-                let scriptnow1: any = document.createElement('script');
-                scriptnow1.type = "text/javascript";
-                scriptnow1.src = this.globals.globalUrl + "/assets/js/adnow.js";
-                document.body.appendChild(scriptnow1);
-                let scriptnow: any = document.createElement('script');
-                scriptnow.type = "text/javascript";
-                scriptnow.src = "//st-n.ads1-adnow.com/js/a.js";
-                document.body.appendChild(scriptnow);*/
-                var da = data;
-                _this.url = da;
-                var link = document.createElement('link');
-                link.async = true;
-                link.rel = 'canonical';
-                link.href = _this.url.url_real;
-                document.head.appendChild(link);
-                _this.titleService.setTitle(da.titulo);
-                _this.meta.updateTag({ name: 'title', content: da.titulo });
-                _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                _this.title = da.titulo;
-                var that = _this;
-                var fiveSeconds = new Date().getTime() + 20000;
-                _this.setScript();
-                setTimeout(function () {
-                    $('#clock').countdown(fiveSeconds, function (event) {
-                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                    }).on('finish.countdown', function (event) {
-                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                        $('.btn-count').html(link);
-                    });
-                }, 7000);
-            }, function (err) {
+                .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
+                var da, link, that, fiveSeconds;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            this.show = true;
+                            da = data;
+                            this.url = da;
+                            link = document.createElement('link');
+                            link.async = true;
+                            link.rel = 'canonical';
+                            link.href = this.url.url_real;
+                            document.head.appendChild(link);
+                            this.titleService.setTitle(da.titulo);
+                            this.meta.updateTag({ name: 'title', content: da.titulo });
+                            this.meta.updateTag({ name: 'description', content: da.descripcion });
+                            this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                            this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                            this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                            this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
+                            this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                            this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                            this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                            this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                            this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                            this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                            this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
+                            this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                            this.title = da.titulo;
+                            that = this;
+                            fiveSeconds = new Date().getTime() + 20000;
+                            return [4 /*yield*/, this.Esperar()];
+                        case 1:
+                            _a.sent();
+                            setTimeout(function () {
+                                $('#clock').countdown(fiveSeconds, function (event) {
+                                    $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                                }).on('finish.countdown', function (event) {
+                                    var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                                    $('.btn-count').html(link);
+                                });
+                            }, 7000);
+                            return [2 /*return*/];
+                    }
+                });
+            }); }, function (err) {
                 if (err.id != null) {
                     _this.show = false;
                     var link = _this.document.createElement('link');
