@@ -7357,11 +7357,11 @@ var TemporalComponent = /** @class */ (function () {
                 var scriptnow = document.createElement('script');
                 scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
                 //scriptnow.src = this.globals.globalUrl + "/assets/js/adsense.js";
-                var bloque1 = _this.document.getElementById('bloque1');
+                var bloque1 = document.getElementById('bloque1');
                 bloque1.insertBefore(script, bloque1.childNodes[0]);
                 bloque1.appendChild(scriptnow);
-                var bloque2 = _this.document.getElementById('bloque2');
-                bloque2.insertBefore(script, bloque1.childNodes[0]);
+                var bloque2 = document.getElementById('bloque2');
+                bloque2.insertBefore(script, bloque2.childNodes[0]);
                 bloque2.appendChild(scriptnow);
                 var da = data;
                 _this.url = da;
