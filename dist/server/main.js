@@ -7456,16 +7456,16 @@ var TemporalComponent = /** @class */ (function () {
         script1.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         var scriptnow1 = document.createElement('script');
         scriptnow1.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
-        //return new Promise(resolve => {
-        setTimeout(function () {
-            var bloque1 = document.getElementById('bloque1');
-            bloque1.insertBefore(script, bloque1.childNodes[0]);
-            bloque1.appendChild(scriptnow);
-            var bloque2 = document.getElementById('bloque2');
-            bloque2.insertBefore(script1, bloque2.childNodes[0]);
-            bloque2.appendChild(scriptnow1);
-        }, 0);
-        //});
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                var bloque1 = document.getElementById('bloque1');
+                bloque1.insertBefore(script, bloque1.childNodes[0]);
+                bloque1.appendChild(scriptnow);
+                var bloque2 = document.getElementById('bloque2');
+                bloque2.insertBefore(script1, bloque2.childNodes[0]);
+                bloque2.appendChild(scriptnow1);
+            }, 500);
+        });
     };
     TemporalComponent.prototype.onFinished = function () {
         /*var link = '<a href="'+this.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
