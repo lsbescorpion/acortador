@@ -7409,7 +7409,7 @@ var TemporalComponent = /** @class */ (function () {
                                     var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
                                     $('.btn-count').html(link);
                                 });
-                            }, 0);
+                            }, 1000);
                             return [2 /*return*/];
                     }
                 });
