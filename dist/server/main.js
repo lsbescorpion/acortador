@@ -6072,6 +6072,12 @@ var EstadisticasComponent = /** @class */ (function () {
                 let da: any = data;
                 console.log(da);
             })*/
+        console.log(1);
+        this.urlsService.getAnalytic()
+            .subscribe(function (data) {
+            var da = data;
+            console.log(da);
+        });
     };
     EstadisticasComponent.prototype.getEstadisticas = function () {
         var _this = this;
@@ -7464,7 +7470,7 @@ var TemporalComponent = /** @class */ (function () {
             var bloque2 = document.getElementById('bloque2');
             bloque2.insertBefore(script1, bloque2.childNodes[0]);
             bloque2.appendChild(scriptnow1);
-        }, 0);
+        }, 500);
         //});
     };
     TemporalComponent.prototype.onFinished = function () {
