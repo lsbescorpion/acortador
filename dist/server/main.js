@@ -7369,6 +7369,8 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.ngOnInit = function () {
         var _this = this;
+        var userAgent = window.navigator.userAgent;
+        console.log(userAgent);
         $('body').addClass("off-canvas-sidebar");
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
