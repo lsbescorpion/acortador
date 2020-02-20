@@ -266,4 +266,11 @@ class UsersController extends Controller
             return response()->json("Foto eliminada", 200);
         }
     }
+
+    public function getGanancias() {
+        $users = User::with('roles')->withCount(['ganancias as gan' => function ($query) {
+            $query->select(\DB::raw('sum(ganancia)'));
+        }])->get();
+        return response()->json(["draw"=> 1, "recordsTotal"=> count($users),"recordsFiltered"=> count($users),'data' => $users]);
+    }
 }

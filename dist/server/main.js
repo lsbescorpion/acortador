@@ -1338,87 +1338,89 @@ var i14 = __webpack_require__(/*! ./pages/perfil/perfil.component.ngfactory */ "
 var i15 = __webpack_require__(/*! ./pages/urls/urls.component.ngfactory */ "./src/app/pages/urls/urls.component.ngfactory.js");
 var i16 = __webpack_require__(/*! ./pages/showurl/showurl.component.ngfactory */ "./src/app/pages/showurl/showurl.component.ngfactory.js");
 var i17 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component.ngfactory */ "./src/app/pages/blog/addnotice/addnotice.component.ngfactory.js");
-var i18 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component.ngfactory */ "./src/app/pages/blog/catsalud/catsalud.component.ngfactory.js");
-var i19 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component.ngfactory */ "./src/app/pages/blog/catgracioso/catgracioso.component.ngfactory.js");
-var i20 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component.ngfactory */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ngfactory.js");
-var i21 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component.ngfactory */ "./src/app/pages/blog/catvideo/catvideo.component.ngfactory.js");
-var i22 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component.ngfactory */ "./src/app/pages/blog/cattecno/cattecno.component.ngfactory.js");
-var i23 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component.ngfactory */ "./src/app/pages/blog/catmanual/catmanual.component.ngfactory.js");
-var i24 = __webpack_require__(/*! ./pages/error/error.component.ngfactory */ "./src/app/pages/error/error.component.ngfactory.js");
-var i25 = __webpack_require__(/*! ./pages/alertcopy/alertcopy.component.ngfactory */ "./src/app/pages/alertcopy/alertcopy.component.ngfactory.js");
-var i26 = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
-var i27 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i28 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
-var i29 = __webpack_require__(/*! @angular/material/core */ "@angular/material/core");
-var i30 = __webpack_require__(/*! @angular/platform-server */ "@angular/platform-server");
-var i31 = __webpack_require__(/*! @angular/animations/browser */ "@angular/animations/browser");
-var i32 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i33 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
-var i34 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
-var i35 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
-var i36 = __webpack_require__(/*! ./help/jwt.interceptor */ "./src/app/help/jwt.interceptor.ts");
-var i37 = __webpack_require__(/*! ./help/error.interceptor */ "./src/app/help/error.interceptor.ts");
-var i38 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
-var i39 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i40 = __webpack_require__(/*! @angular/cdk/observers */ "@angular/cdk/observers");
-var i41 = __webpack_require__(/*! @angular/cdk/overlay */ "@angular/cdk/overlay");
-var i42 = __webpack_require__(/*! @angular/cdk/bidi */ "@angular/cdk/bidi");
-var i43 = __webpack_require__(/*! @angular/material/select */ "@angular/material/select");
-var i44 = __webpack_require__(/*! @angular/material/tooltip */ "@angular/material/tooltip");
-var i45 = __webpack_require__(/*! ng2-slim-loading-bar/src/slim-loading-bar.service */ "ng2-slim-loading-bar/src/slim-loading-bar.service");
-var i46 = __webpack_require__(/*! ngx-tweet */ "ngx-tweet");
-var i47 = __webpack_require__(/*! @agm/core/utils/browser-globals */ "@agm/core/utils/browser-globals");
-var i48 = __webpack_require__(/*! @agm/core/services/maps-api-loader/maps-api-loader */ "@agm/core/services/maps-api-loader/maps-api-loader");
-var i49 = __webpack_require__(/*! @agm/core/services/maps-api-loader/lazy-maps-api-loader */ "@agm/core/services/maps-api-loader/lazy-maps-api-loader");
-var i50 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
-var i51 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
-var i52 = __webpack_require__(/*! ./globals */ "./src/app/globals.ts");
-var i53 = __webpack_require__(/*! ngx-cookie-service */ "ngx-cookie-service");
-var i54 = __webpack_require__(/*! @angular/http */ "@angular/http");
-var i55 = __webpack_require__(/*! ng2-adsense */ "ng2-adsense");
-var i56 = __webpack_require__(/*! @nguniversal/module-map-ngfactory-loader */ "@nguniversal/module-map-ngfactory-loader");
-var i57 = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
-var i58 = __webpack_require__(/*! ./pages/blog/home/home.component */ "./src/app/pages/blog/home/home.component.ts");
-var i59 = __webpack_require__(/*! ./pages/temporal/temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
-var i60 = __webpack_require__(/*! ./pages/blog/noticia/noticia.component */ "./src/app/pages/blog/noticia/noticia.component.ts");
-var i61 = __webpack_require__(/*! ./pages/info/info.component */ "./src/app/pages/info/info.component.ts");
-var i62 = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-var i63 = __webpack_require__(/*! ./pages/estadisticas/estadisticas.component */ "./src/app/pages/estadisticas/estadisticas.component.ts");
-var i64 = __webpack_require__(/*! ./guard/auth.guard */ "./src/app/guard/auth.guard.ts");
-var i65 = __webpack_require__(/*! ./routes/app.routing */ "./src/app/routes/app.routing.ts");
-var i66 = __webpack_require__(/*! ./pages/usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
-var i67 = __webpack_require__(/*! ./pages/perfil/perfil.component */ "./src/app/pages/perfil/perfil.component.ts");
-var i68 = __webpack_require__(/*! ./pages/urls/urls.component */ "./src/app/pages/urls/urls.component.ts");
-var i69 = __webpack_require__(/*! ./pages/showurl/showurl.component */ "./src/app/pages/showurl/showurl.component.ts");
-var i70 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
-var i71 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
-var i72 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
-var i73 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
-var i74 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
-var i75 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
-var i76 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
-var i77 = __webpack_require__(/*! ./pages/error/error.component */ "./src/app/pages/error/error.component.ts");
-var i78 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i79 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i80 = __webpack_require__(/*! @angular/material/form-field */ "@angular/material/form-field");
-var i81 = __webpack_require__(/*! @angular/cdk/text-field */ "@angular/cdk/text-field");
-var i82 = __webpack_require__(/*! @angular/material/input */ "@angular/material/input");
-var i83 = __webpack_require__(/*! @angular/cdk/portal */ "@angular/cdk/portal");
-var i84 = __webpack_require__(/*! @angular/cdk/scrolling */ "@angular/cdk/scrolling");
-var i85 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i86 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
-var i87 = __webpack_require__(/*! @angular/material/slide-toggle */ "@angular/material/slide-toggle");
-var i88 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
-var i89 = __webpack_require__(/*! @angular/material/badge */ "@angular/material/badge");
-var i90 = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
-var i91 = __webpack_require__(/*! @agm/core/core.module */ "@agm/core/core.module");
-var i92 = __webpack_require__(/*! @angular/material/tabs */ "@angular/material/tabs");
-var i93 = __webpack_require__(/*! @angular/material/progress-bar */ "@angular/material/progress-bar");
-var i94 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
-var i95 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
-var i96 = __webpack_require__(/*! ng2-slim-loading-bar */ "ng2-slim-loading-bar");
-var i97 = __webpack_require__(/*! @angular/cdk/keycodes */ "@angular/cdk/keycodes");
-var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.TooltipComponentNgFactory, i5.MatSnackBarContainerNgFactory, i5.SimpleSnackBarNgFactory, i6.LoginComponentNgFactory, i7.HomeComponentNgFactory, i8.TemporalComponentNgFactory, i9.NoticiaComponentNgFactory, i10.InfoComponentNgFactory, i11.ContactComponentNgFactory, i12.EstadisticasComponentNgFactory, i13.UsuariosComponentNgFactory, i14.PerfilComponentNgFactory, i15.UrlsComponentNgFactory, i16.ShowurlComponentNgFactory, i17.AddnoticeComponentNgFactory, i18.CatsaludComponentNgFactory, i19.CatgraciosoComponentNgFactory, i20.CatcuriosiComponentNgFactory, i21.CatvideoComponentNgFactory, i22.CattecnoComponentNgFactory, i23.CatmanualComponentNgFactory, i24.ErrorComponentNgFactory, i25.AlertcopyComponentNgFactory, i26.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_s, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i27.NgLocalization, i27.NgLocaleLocalization, [i0.LOCALE_ID, [2, i27.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_q, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_r, []), i0.ɵmpd(4608, i28.DomSanitizer, i28.ɵDomSanitizerImpl, [i27.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i28.DomSanitizer]), i0.ɵmpd(4608, i28.HAMMER_GESTURE_CONFIG, i29.GestureConfig, [[2, i29.MAT_HAMMER_OPTIONS], [2, i29.MatCommonModule]]), i0.ɵmpd(5120, i28.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i28.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i28.ɵKeyEventsPlugin(p1_0), new i28.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i30.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i27.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i27.DOCUMENT, i27.DOCUMENT, i28.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i28.HAMMER_LOADER], i28.DOCUMENT]), i0.ɵmpd(4608, i28.EventManager, i28.EventManager, [i28.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i28.ɵDomSharedStylesHost, i28.ɵDomSharedStylesHost, [i27.DOCUMENT]), i0.ɵmpd(4608, i28.ɵDomRendererFactory2, i28.ɵDomRendererFactory2, [i28.EventManager, i28.ɵDomSharedStylesHost, i0.APP_ID]), i0.ɵmpd(4608, i30.ɵangular_packages_platform_server_platform_server_c, i30.ɵangular_packages_platform_server_platform_server_c, [i28.DOCUMENT, [2, i28.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i28.ɵSharedStylesHost, null, [i30.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i30.ɵServerRendererFactory2, i30.ɵServerRendererFactory2, [i28.EventManager, i0.NgZone, i28.DOCUMENT, i28.ɵSharedStylesHost]), i0.ɵmpd(4608, i31.AnimationDriver, i31.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i31.ɵAnimationStyleNormalizer, i32.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(4608, i31.ɵAnimationEngine, i32.ɵInjectableAnimationEngine, [i27.DOCUMENT, i31.AnimationDriver, i31.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i30.ɵangular_packages_platform_server_platform_server_a, [i30.ɵServerRendererFactory2, i31.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i33.AnimationBuilder, i32.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i28.DOCUMENT]), i0.ɵmpd(4608, i34.ɵangular_packages_forms_forms_j, i34.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(4608, i34.FormBuilder, i34.FormBuilder, []), i0.ɵmpd(4608, i35.HttpXsrfTokenExtractor, i35.ɵangular_packages_common_http_http_g, [i27.DOCUMENT, i0.PLATFORM_ID, i35.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i35.ɵangular_packages_common_http_http_h, i35.ɵangular_packages_common_http_http_h, [i35.HttpXsrfTokenExtractor, i35.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i35.HTTP_INTERCEPTORS, function (p0_0, p2_0, p2_1) { return [p0_0, new i36.JwtInterceptor(), new i37.ErrorInterceptor(p2_0, p2_1)]; }, [i35.ɵangular_packages_common_http_http_h, i38.AuthenticationService, i39.Router]), i0.ɵmpd(4608, i35.XhrFactory, i30.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i35.HttpXhrBackend, i35.HttpXhrBackend, [i35.XhrFactory]), i0.ɵmpd(6144, i35.HttpBackend, null, [i35.HttpXhrBackend]), i0.ɵmpd(5120, i35.HttpHandler, i30.ɵangular_packages_platform_server_platform_server_h, [i35.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i35.HttpClient, i35.HttpClient, [i35.HttpHandler]), i0.ɵmpd(4608, i35.ɵangular_packages_common_http_http_d, i35.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i40.MutationObserverFactory, i40.MutationObserverFactory, []), i0.ɵmpd(4608, i29.ErrorStateMatcher, i29.ErrorStateMatcher, []), i0.ɵmpd(4608, i41.Overlay, i41.Overlay, [i41.ScrollStrategyOptions, i41.OverlayContainer, i0.ComponentFactoryResolver, i41.OverlayPositionBuilder, i41.OverlayKeyboardDispatcher, i0.Injector, i0.NgZone, i27.DOCUMENT, i42.Directionality, [2, i27.Location]]), i0.ɵmpd(5120, i41.ɵc, i41.ɵd, [i41.Overlay]), i0.ɵmpd(5120, i43.MAT_SELECT_SCROLL_STRATEGY, i43.MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY, [i41.Overlay]), i0.ɵmpd(5120, i44.MAT_TOOLTIP_SCROLL_STRATEGY, i44.MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, [i41.Overlay]), i0.ɵmpd(4608, i45.SlimLoadingBarService, i45.SlimLoadingBarService, []), i0.ɵmpd(4608, i46.ɵb, i46.ɵb, [i27.DOCUMENT]), i0.ɵmpd(5120, i39.ActivatedRoute, i39.ɵangular_packages_router_router_g, [i39.Router]), i0.ɵmpd(4608, i39.NoPreloading, i39.NoPreloading, []), i0.ɵmpd(6144, i39.PreloadingStrategy, null, [i39.NoPreloading]), i0.ɵmpd(135680, i39.RouterPreloader, i39.RouterPreloader, [i39.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i39.PreloadingStrategy]), i0.ɵmpd(4608, i39.PreloadAllModules, i39.PreloadAllModules, []), i0.ɵmpd(4608, i27.ViewportScroller, i27.ɵNullViewportScroller, []), i0.ɵmpd(5120, i39.ɵangular_packages_router_router_n, i39.ɵangular_packages_router_router_c, [i39.Router, i27.ViewportScroller, i39.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i39.ROUTER_INITIALIZER, i39.ɵangular_packages_router_router_j, [i39.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i39.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i47.WindowRef, i47.WindowRef, []), i0.ɵmpd(4608, i47.DocumentRef, i47.DocumentRef, []), i0.ɵmpd(4608, i48.MapsAPILoader, i49.LazyMapsAPILoader, [[2, i49.LAZY_MAPS_API_CONFIG], i47.WindowRef, i47.DocumentRef]), i0.ɵmpd(5120, i50.MetaLoader, i51.ɵ0, []), i0.ɵmpd(4608, i50.MetaService, i50.MetaService, [i50.MetaLoader, i28.Title, i28.Meta]), i0.ɵmpd(4608, i50.MetaGuard, i50.MetaGuard, [i50.MetaService]), i0.ɵmpd(4608, i52.Globals, i52.Globals, []), i0.ɵmpd(4608, i53.CookieService, i53.CookieService, [i27.DOCUMENT, i0.PLATFORM_ID]), i0.ɵmpd(4608, i54.BrowserXhr, i30.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i54.ResponseOptions, i54.BaseResponseOptions, []), i0.ɵmpd(4608, i54.XSRFStrategy, i30.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i54.XHRBackend, i54.XHRBackend, [i54.BrowserXhr, i54.ResponseOptions, i54.XSRFStrategy]), i0.ɵmpd(4608, i54.RequestOptions, i54.BaseRequestOptions, []), i0.ɵmpd(5120, i54.Http, i30.ɵangular_packages_platform_server_platform_server_g, [i54.XHRBackend, i54.RequestOptions]), i0.ɵmpd(1073742336, i27.CommonModule, i27.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i28.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i39.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(256, i0.APP_ID, "CropersViral", []), i0.ɵmpd(2048, i28.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(512, i39.ɵangular_packages_router_router_h, i39.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p1_1, p1_2, p2_0) { return [i28.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i28.ɵangular_packages_platform_browser_platform_browser_h(p1_0, p1_1, p1_2), i39.ɵangular_packages_router_router_i(p2_0)]; }, [[2, i0.NgProbeToken], i28.ɵTRANSITION_ID, i27.DOCUMENT, i0.Injector, i39.ɵangular_packages_router_router_h]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i28.BrowserModule, i28.BrowserModule, [[3, i28.BrowserModule]]), i0.ɵmpd(1073742336, i32.BrowserAnimationsModule, i32.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i55.AdsenseModule, i55.AdsenseModule, []), i0.ɵmpd(1073742336, i34.ɵangular_packages_forms_forms_bc, i34.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i34.FormsModule, i34.FormsModule, []), i0.ɵmpd(1073742336, i34.ReactiveFormsModule, i34.ReactiveFormsModule, []), i0.ɵmpd(1073742336, i35.HttpClientXsrfModule, i35.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i35.HttpClientModule, i35.HttpClientModule, []), i0.ɵmpd(1024, i39.ɵangular_packages_router_router_a, i39.ɵangular_packages_router_router_e, [[3, i39.Router]]), i0.ɵmpd(512, i39.UrlSerializer, i39.DefaultUrlSerializer, []), i0.ɵmpd(512, i39.ChildrenOutletContexts, i39.ChildrenOutletContexts, []), i0.ɵmpd(256, i39.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i27.LocationStrategy, i39.ɵangular_packages_router_router_d, [i27.PlatformLocation, [2, i27.APP_BASE_HREF], i39.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i27.Location, i27.Location, [i27.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i56.ModuleMapNgFactoryLoader, [i0.Compiler, i56.MODULE_MAP]), i0.ɵmpd(1024, i39.ROUTES, function () { return [[{ path: "login", component: i57.LoginComponent }, { path: "", redirectTo: "home", pathMatch: "full" }, { path: "home", component: i58.HomeComponent }, { path: "temporal", component: i59.TemporalComponent }, { path: "noticia", component: i60.NoticiaComponent }, { path: "info", component: i61.InfoComponent }, { path: "contact", component: i62.ContactComponent }, { path: "estadisticas", component: i63.EstadisticasComponent, canActivate: [i64.AuthGuards], data: i65.ɵ0 }, { path: "usuarios", component: i66.UsuariosComponent, canActivate: [i64.AuthGuards], data: i65.ɵ1 }, { path: "perfil", component: i67.PerfilComponent, canActivate: [i64.AuthGuards], data: i65.ɵ2 }, { path: "urls", component: i68.UrlsComponent, canActivate: [i64.AuthGuards], data: i65.ɵ3 }, { path: "showurl/:id", component: i69.ShowurlComponent, canActivate: [i64.AuthGuards], data: i65.ɵ4 }, { path: "addnotice", component: i70.AddnoticeComponent, canActivate: [i64.AuthGuards], data: i65.ɵ5 }, { path: "categoria/salud/:id", component: i59.TemporalComponent }, { path: "categoria/entretenimiento/:id", component: i59.TemporalComponent }, { path: "categoria/curiosidades/:id", component: i59.TemporalComponent }, { path: "categoria/videos/:id", component: i59.TemporalComponent }, { path: "categoria/tecnologia/:id", component: i59.TemporalComponent }, { path: "categoria/manualidades/:id", component: i59.TemporalComponent }, { path: "salud/:id", component: i60.NoticiaComponent }, { path: "entretenimiento/:id", component: i60.NoticiaComponent }, { path: "curiosidades/:id", component: i60.NoticiaComponent }, { path: "videos/:id", component: i60.NoticiaComponent }, { path: "tecnologia/:id", component: i60.NoticiaComponent }, { path: "manualidades/:id", component: i60.NoticiaComponent }, { path: "salud", component: i71.CatsaludComponent }, { path: "entretenimiento", component: i72.CatgraciosoComponent }, { path: "curiosidades", component: i73.CatcuriosiComponent }, { path: "videos", component: i74.CatvideoComponent }, { path: "tecnologia", component: i75.CattecnoComponent }, { path: "manualidades", component: i76.CatmanualComponent }, { path: "404", component: i77.ErrorComponent }, { path: "**", redirectTo: "404" }]]; }, []), i0.ɵmpd(1024, i39.Router, i39.ɵangular_packages_router_router_f, [i0.ApplicationRef, i39.UrlSerializer, i39.ChildrenOutletContexts, i27.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i39.ROUTES, i39.ROUTER_CONFIGURATION, [2, i39.UrlHandlingStrategy], [2, i39.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i39.RouterModule, i39.RouterModule, [[2, i39.ɵangular_packages_router_router_a], [2, i39.Router]]), i0.ɵmpd(1073742336, i42.BidiModule, i42.BidiModule, []), i0.ɵmpd(1073742336, i29.MatCommonModule, i29.MatCommonModule, [[2, i29.MATERIAL_SANITY_CHECKS], [2, i28.HAMMER_LOADER]]), i0.ɵmpd(1073742336, i78.PlatformModule, i78.PlatformModule, []), i0.ɵmpd(1073742336, i29.MatRippleModule, i29.MatRippleModule, []), i0.ɵmpd(1073742336, i79.MatButtonModule, i79.MatButtonModule, []), i0.ɵmpd(1073742336, i40.ObserversModule, i40.ObserversModule, []), i0.ɵmpd(1073742336, i80.MatFormFieldModule, i80.MatFormFieldModule, []), i0.ɵmpd(1073742336, i81.TextFieldModule, i81.TextFieldModule, []), i0.ɵmpd(1073742336, i82.MatInputModule, i82.MatInputModule, []), i0.ɵmpd(1073742336, i83.PortalModule, i83.PortalModule, []), i0.ɵmpd(1073742336, i84.ScrollingModule, i84.ScrollingModule, []), i0.ɵmpd(1073742336, i41.OverlayModule, i41.OverlayModule, []), i0.ɵmpd(1073742336, i29.MatPseudoCheckboxModule, i29.MatPseudoCheckboxModule, []), i0.ɵmpd(1073742336, i29.MatOptionModule, i29.MatOptionModule, []), i0.ɵmpd(1073742336, i43.MatSelectModule, i43.MatSelectModule, []), i0.ɵmpd(1073742336, i85.A11yModule, i85.A11yModule, []), i0.ɵmpd(1073742336, i44.MatTooltipModule, i44.MatTooltipModule, []), i0.ɵmpd(1073742336, i86.MatIconModule, i86.MatIconModule, []), i0.ɵmpd(1073742336, i87.MatSlideToggleModule, i87.MatSlideToggleModule, []), i0.ɵmpd(1073742336, i88.MatChipsModule, i88.MatChipsModule, []), i0.ɵmpd(1073742336, i89.MatBadgeModule, i89.MatBadgeModule, []), i0.ɵmpd(1073742336, i90.ComponentsModule, i90.ComponentsModule, []), i0.ɵmpd(1073742336, i91.AgmCoreModule, i91.AgmCoreModule, []), i0.ɵmpd(1073742336, i92.MatTabsModule, i92.MatTabsModule, []), i0.ɵmpd(1073742336, i93.MatProgressBarModule, i93.MatProgressBarModule, []), i0.ɵmpd(1073742336, i94.MatProgressSpinnerModule, i94.MatProgressSpinnerModule, []), i0.ɵmpd(1073742336, i95.MatSnackBarModule, i95.MatSnackBarModule, []), i0.ɵmpd(1073742336, i50.MetaModule, i50.MetaModule, [[3, i50.MetaModule]]), i0.ɵmpd(1073742336, i96.SlimLoadingBarModule, i96.SlimLoadingBarModule, []), i0.ɵmpd(1073742336, i46.NgxTweetModule, i46.NgxTweetModule, []), i0.ɵmpd(1073742336, i51.AppModule, i51.AppModule, [i0.PLATFORM_ID, i0.APP_ID]), i0.ɵmpd(1073742336, i54.HttpModule, i54.HttpModule, []), i0.ɵmpd(1073742336, i32.NoopAnimationsModule, i32.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i30.ServerModule, i30.ServerModule, []), i0.ɵmpd(1073742336, i56.ModuleMapLoaderModule, i56.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i32.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i35.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i35.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i88.MAT_CHIPS_DEFAULT_OPTIONS, { separatorKeyCodes: [i97.ENTER] }, []), i0.ɵmpd(256, i55.ADSENSE_TOKEN, { adClient: "ca-pub-4607014230623673", adSlot: 4808134978 }, []), i0.ɵmpd(256, i49.LAZY_MAPS_API_CONFIG, { apiKey: "YOUR_GOOGLE_MAPS_API_KEY" }, [])]); });
+var i18 = __webpack_require__(/*! ./pages/estadadmin/estadadmin.component.ngfactory */ "./src/app/pages/estadadmin/estadadmin.component.ngfactory.js");
+var i19 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component.ngfactory */ "./src/app/pages/blog/catsalud/catsalud.component.ngfactory.js");
+var i20 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component.ngfactory */ "./src/app/pages/blog/catgracioso/catgracioso.component.ngfactory.js");
+var i21 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component.ngfactory */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ngfactory.js");
+var i22 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component.ngfactory */ "./src/app/pages/blog/catvideo/catvideo.component.ngfactory.js");
+var i23 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component.ngfactory */ "./src/app/pages/blog/cattecno/cattecno.component.ngfactory.js");
+var i24 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component.ngfactory */ "./src/app/pages/blog/catmanual/catmanual.component.ngfactory.js");
+var i25 = __webpack_require__(/*! ./pages/error/error.component.ngfactory */ "./src/app/pages/error/error.component.ngfactory.js");
+var i26 = __webpack_require__(/*! ./pages/alertcopy/alertcopy.component.ngfactory */ "./src/app/pages/alertcopy/alertcopy.component.ngfactory.js");
+var i27 = __webpack_require__(/*! ./app.component.ngfactory */ "./src/app/app.component.ngfactory.js");
+var i28 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i29 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i30 = __webpack_require__(/*! @angular/material/core */ "@angular/material/core");
+var i31 = __webpack_require__(/*! @angular/platform-server */ "@angular/platform-server");
+var i32 = __webpack_require__(/*! @angular/animations/browser */ "@angular/animations/browser");
+var i33 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i34 = __webpack_require__(/*! @angular/animations */ "@angular/animations");
+var i35 = __webpack_require__(/*! @angular/forms */ "@angular/forms");
+var i36 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
+var i37 = __webpack_require__(/*! ./help/jwt.interceptor */ "./src/app/help/jwt.interceptor.ts");
+var i38 = __webpack_require__(/*! ./help/error.interceptor */ "./src/app/help/error.interceptor.ts");
+var i39 = __webpack_require__(/*! ./services/authentication.service */ "./src/app/services/authentication.service.ts");
+var i40 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i41 = __webpack_require__(/*! @angular/cdk/observers */ "@angular/cdk/observers");
+var i42 = __webpack_require__(/*! @angular/cdk/overlay */ "@angular/cdk/overlay");
+var i43 = __webpack_require__(/*! @angular/cdk/bidi */ "@angular/cdk/bidi");
+var i44 = __webpack_require__(/*! @angular/material/select */ "@angular/material/select");
+var i45 = __webpack_require__(/*! @angular/material/tooltip */ "@angular/material/tooltip");
+var i46 = __webpack_require__(/*! ng2-slim-loading-bar/src/slim-loading-bar.service */ "ng2-slim-loading-bar/src/slim-loading-bar.service");
+var i47 = __webpack_require__(/*! ngx-tweet */ "ngx-tweet");
+var i48 = __webpack_require__(/*! @agm/core/utils/browser-globals */ "@agm/core/utils/browser-globals");
+var i49 = __webpack_require__(/*! @agm/core/services/maps-api-loader/maps-api-loader */ "@agm/core/services/maps-api-loader/maps-api-loader");
+var i50 = __webpack_require__(/*! @agm/core/services/maps-api-loader/lazy-maps-api-loader */ "@agm/core/services/maps-api-loader/lazy-maps-api-loader");
+var i51 = __webpack_require__(/*! @ngx-meta/core */ "@ngx-meta/core");
+var i52 = __webpack_require__(/*! ./app.module */ "./src/app/app.module.ts");
+var i53 = __webpack_require__(/*! ./globals */ "./src/app/globals.ts");
+var i54 = __webpack_require__(/*! ngx-cookie-service */ "ngx-cookie-service");
+var i55 = __webpack_require__(/*! @angular/http */ "@angular/http");
+var i56 = __webpack_require__(/*! ng2-adsense */ "ng2-adsense");
+var i57 = __webpack_require__(/*! @nguniversal/module-map-ngfactory-loader */ "@nguniversal/module-map-ngfactory-loader");
+var i58 = __webpack_require__(/*! ./pages/login/login.component */ "./src/app/pages/login/login.component.ts");
+var i59 = __webpack_require__(/*! ./pages/blog/home/home.component */ "./src/app/pages/blog/home/home.component.ts");
+var i60 = __webpack_require__(/*! ./pages/temporal/temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
+var i61 = __webpack_require__(/*! ./pages/blog/noticia/noticia.component */ "./src/app/pages/blog/noticia/noticia.component.ts");
+var i62 = __webpack_require__(/*! ./pages/info/info.component */ "./src/app/pages/info/info.component.ts");
+var i63 = __webpack_require__(/*! ./pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
+var i64 = __webpack_require__(/*! ./pages/estadisticas/estadisticas.component */ "./src/app/pages/estadisticas/estadisticas.component.ts");
+var i65 = __webpack_require__(/*! ./guard/auth.guard */ "./src/app/guard/auth.guard.ts");
+var i66 = __webpack_require__(/*! ./routes/app.routing */ "./src/app/routes/app.routing.ts");
+var i67 = __webpack_require__(/*! ./pages/usuarios/usuarios.component */ "./src/app/pages/usuarios/usuarios.component.ts");
+var i68 = __webpack_require__(/*! ./pages/perfil/perfil.component */ "./src/app/pages/perfil/perfil.component.ts");
+var i69 = __webpack_require__(/*! ./pages/urls/urls.component */ "./src/app/pages/urls/urls.component.ts");
+var i70 = __webpack_require__(/*! ./pages/showurl/showurl.component */ "./src/app/pages/showurl/showurl.component.ts");
+var i71 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
+var i72 = __webpack_require__(/*! ./pages/estadadmin/estadadmin.component */ "./src/app/pages/estadadmin/estadadmin.component.ts");
+var i73 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
+var i74 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
+var i75 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
+var i76 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
+var i77 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
+var i78 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
+var i79 = __webpack_require__(/*! ./pages/error/error.component */ "./src/app/pages/error/error.component.ts");
+var i80 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i81 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i82 = __webpack_require__(/*! @angular/material/form-field */ "@angular/material/form-field");
+var i83 = __webpack_require__(/*! @angular/cdk/text-field */ "@angular/cdk/text-field");
+var i84 = __webpack_require__(/*! @angular/material/input */ "@angular/material/input");
+var i85 = __webpack_require__(/*! @angular/cdk/portal */ "@angular/cdk/portal");
+var i86 = __webpack_require__(/*! @angular/cdk/scrolling */ "@angular/cdk/scrolling");
+var i87 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i88 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
+var i89 = __webpack_require__(/*! @angular/material/slide-toggle */ "@angular/material/slide-toggle");
+var i90 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
+var i91 = __webpack_require__(/*! @angular/material/badge */ "@angular/material/badge");
+var i92 = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
+var i93 = __webpack_require__(/*! @agm/core/core.module */ "@agm/core/core.module");
+var i94 = __webpack_require__(/*! @angular/material/tabs */ "@angular/material/tabs");
+var i95 = __webpack_require__(/*! @angular/material/progress-bar */ "@angular/material/progress-bar");
+var i96 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
+var i97 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
+var i98 = __webpack_require__(/*! ng2-slim-loading-bar */ "ng2-slim-loading-bar");
+var i99 = __webpack_require__(/*! @angular/cdk/keycodes */ "@angular/cdk/keycodes");
+var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.TooltipComponentNgFactory, i5.MatSnackBarContainerNgFactory, i5.SimpleSnackBarNgFactory, i6.LoginComponentNgFactory, i7.HomeComponentNgFactory, i8.TemporalComponentNgFactory, i9.NoticiaComponentNgFactory, i10.InfoComponentNgFactory, i11.ContactComponentNgFactory, i12.EstadisticasComponentNgFactory, i13.UsuariosComponentNgFactory, i14.PerfilComponentNgFactory, i15.UrlsComponentNgFactory, i16.ShowurlComponentNgFactory, i17.AddnoticeComponentNgFactory, i18.EstadadminComponentNgFactory, i19.CatsaludComponentNgFactory, i20.CatgraciosoComponentNgFactory, i21.CatcuriosiComponentNgFactory, i22.CatvideoComponentNgFactory, i23.CattecnoComponentNgFactory, i24.CatmanualComponentNgFactory, i25.ErrorComponentNgFactory, i26.AlertcopyComponentNgFactory, i27.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_s, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i28.NgLocalization, i28.NgLocaleLocalization, [i0.LOCALE_ID, [2, i28.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_q, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_r, []), i0.ɵmpd(4608, i29.DomSanitizer, i29.ɵDomSanitizerImpl, [i28.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i29.DomSanitizer]), i0.ɵmpd(4608, i29.HAMMER_GESTURE_CONFIG, i30.GestureConfig, [[2, i30.MAT_HAMMER_OPTIONS], [2, i30.MatCommonModule]]), i0.ɵmpd(5120, i29.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i29.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i29.ɵKeyEventsPlugin(p1_0), new i29.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i31.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i28.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i28.DOCUMENT, i28.DOCUMENT, i29.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i29.HAMMER_LOADER], i29.DOCUMENT]), i0.ɵmpd(4608, i29.EventManager, i29.EventManager, [i29.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i29.ɵDomSharedStylesHost, i29.ɵDomSharedStylesHost, [i28.DOCUMENT]), i0.ɵmpd(4608, i29.ɵDomRendererFactory2, i29.ɵDomRendererFactory2, [i29.EventManager, i29.ɵDomSharedStylesHost, i0.APP_ID]), i0.ɵmpd(4608, i31.ɵangular_packages_platform_server_platform_server_c, i31.ɵangular_packages_platform_server_platform_server_c, [i29.DOCUMENT, [2, i29.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i29.ɵSharedStylesHost, null, [i31.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i31.ɵServerRendererFactory2, i31.ɵServerRendererFactory2, [i29.EventManager, i0.NgZone, i29.DOCUMENT, i29.ɵSharedStylesHost]), i0.ɵmpd(4608, i32.AnimationDriver, i32.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i32.ɵAnimationStyleNormalizer, i33.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(4608, i32.ɵAnimationEngine, i33.ɵInjectableAnimationEngine, [i28.DOCUMENT, i32.AnimationDriver, i32.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i31.ɵangular_packages_platform_server_platform_server_a, [i31.ɵServerRendererFactory2, i32.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i34.AnimationBuilder, i33.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i29.DOCUMENT]), i0.ɵmpd(4608, i35.ɵangular_packages_forms_forms_j, i35.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(4608, i35.FormBuilder, i35.FormBuilder, []), i0.ɵmpd(4608, i36.HttpXsrfTokenExtractor, i36.ɵangular_packages_common_http_http_g, [i28.DOCUMENT, i0.PLATFORM_ID, i36.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i36.ɵangular_packages_common_http_http_h, i36.ɵangular_packages_common_http_http_h, [i36.HttpXsrfTokenExtractor, i36.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i36.HTTP_INTERCEPTORS, function (p0_0, p2_0, p2_1) { return [p0_0, new i37.JwtInterceptor(), new i38.ErrorInterceptor(p2_0, p2_1)]; }, [i36.ɵangular_packages_common_http_http_h, i39.AuthenticationService, i40.Router]), i0.ɵmpd(4608, i36.XhrFactory, i31.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i36.HttpXhrBackend, i36.HttpXhrBackend, [i36.XhrFactory]), i0.ɵmpd(6144, i36.HttpBackend, null, [i36.HttpXhrBackend]), i0.ɵmpd(5120, i36.HttpHandler, i31.ɵangular_packages_platform_server_platform_server_h, [i36.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i36.HttpClient, i36.HttpClient, [i36.HttpHandler]), i0.ɵmpd(4608, i36.ɵangular_packages_common_http_http_d, i36.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i41.MutationObserverFactory, i41.MutationObserverFactory, []), i0.ɵmpd(4608, i30.ErrorStateMatcher, i30.ErrorStateMatcher, []), i0.ɵmpd(4608, i42.Overlay, i42.Overlay, [i42.ScrollStrategyOptions, i42.OverlayContainer, i0.ComponentFactoryResolver, i42.OverlayPositionBuilder, i42.OverlayKeyboardDispatcher, i0.Injector, i0.NgZone, i28.DOCUMENT, i43.Directionality, [2, i28.Location]]), i0.ɵmpd(5120, i42.ɵc, i42.ɵd, [i42.Overlay]), i0.ɵmpd(5120, i44.MAT_SELECT_SCROLL_STRATEGY, i44.MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY, [i42.Overlay]), i0.ɵmpd(5120, i45.MAT_TOOLTIP_SCROLL_STRATEGY, i45.MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, [i42.Overlay]), i0.ɵmpd(4608, i46.SlimLoadingBarService, i46.SlimLoadingBarService, []), i0.ɵmpd(4608, i47.ɵb, i47.ɵb, [i28.DOCUMENT]), i0.ɵmpd(5120, i40.ActivatedRoute, i40.ɵangular_packages_router_router_g, [i40.Router]), i0.ɵmpd(4608, i40.NoPreloading, i40.NoPreloading, []), i0.ɵmpd(6144, i40.PreloadingStrategy, null, [i40.NoPreloading]), i0.ɵmpd(135680, i40.RouterPreloader, i40.RouterPreloader, [i40.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i40.PreloadingStrategy]), i0.ɵmpd(4608, i40.PreloadAllModules, i40.PreloadAllModules, []), i0.ɵmpd(4608, i28.ViewportScroller, i28.ɵNullViewportScroller, []), i0.ɵmpd(5120, i40.ɵangular_packages_router_router_n, i40.ɵangular_packages_router_router_c, [i40.Router, i28.ViewportScroller, i40.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i40.ROUTER_INITIALIZER, i40.ɵangular_packages_router_router_j, [i40.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i40.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i48.WindowRef, i48.WindowRef, []), i0.ɵmpd(4608, i48.DocumentRef, i48.DocumentRef, []), i0.ɵmpd(4608, i49.MapsAPILoader, i50.LazyMapsAPILoader, [[2, i50.LAZY_MAPS_API_CONFIG], i48.WindowRef, i48.DocumentRef]), i0.ɵmpd(5120, i51.MetaLoader, i52.ɵ0, []), i0.ɵmpd(4608, i51.MetaService, i51.MetaService, [i51.MetaLoader, i29.Title, i29.Meta]), i0.ɵmpd(4608, i51.MetaGuard, i51.MetaGuard, [i51.MetaService]), i0.ɵmpd(4608, i53.Globals, i53.Globals, []), i0.ɵmpd(4608, i54.CookieService, i54.CookieService, [i28.DOCUMENT, i0.PLATFORM_ID]), i0.ɵmpd(4608, i55.BrowserXhr, i31.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i55.ResponseOptions, i55.BaseResponseOptions, []), i0.ɵmpd(4608, i55.XSRFStrategy, i31.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i55.XHRBackend, i55.XHRBackend, [i55.BrowserXhr, i55.ResponseOptions, i55.XSRFStrategy]), i0.ɵmpd(4608, i55.RequestOptions, i55.BaseRequestOptions, []), i0.ɵmpd(5120, i55.Http, i31.ɵangular_packages_platform_server_platform_server_g, [i55.XHRBackend, i55.RequestOptions]), i0.ɵmpd(1073742336, i28.CommonModule, i28.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i29.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i40.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(256, i0.APP_ID, "CropersViral", []), i0.ɵmpd(2048, i29.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(512, i40.ɵangular_packages_router_router_h, i40.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p1_1, p1_2, p2_0) { return [i29.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i29.ɵangular_packages_platform_browser_platform_browser_h(p1_0, p1_1, p1_2), i40.ɵangular_packages_router_router_i(p2_0)]; }, [[2, i0.NgProbeToken], i29.ɵTRANSITION_ID, i28.DOCUMENT, i0.Injector, i40.ɵangular_packages_router_router_h]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i29.BrowserModule, i29.BrowserModule, [[3, i29.BrowserModule]]), i0.ɵmpd(1073742336, i33.BrowserAnimationsModule, i33.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i56.AdsenseModule, i56.AdsenseModule, []), i0.ɵmpd(1073742336, i35.ɵangular_packages_forms_forms_bc, i35.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i35.FormsModule, i35.FormsModule, []), i0.ɵmpd(1073742336, i35.ReactiveFormsModule, i35.ReactiveFormsModule, []), i0.ɵmpd(1073742336, i36.HttpClientXsrfModule, i36.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i36.HttpClientModule, i36.HttpClientModule, []), i0.ɵmpd(1024, i40.ɵangular_packages_router_router_a, i40.ɵangular_packages_router_router_e, [[3, i40.Router]]), i0.ɵmpd(512, i40.UrlSerializer, i40.DefaultUrlSerializer, []), i0.ɵmpd(512, i40.ChildrenOutletContexts, i40.ChildrenOutletContexts, []), i0.ɵmpd(256, i40.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i28.LocationStrategy, i40.ɵangular_packages_router_router_d, [i28.PlatformLocation, [2, i28.APP_BASE_HREF], i40.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i28.Location, i28.Location, [i28.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i57.ModuleMapNgFactoryLoader, [i0.Compiler, i57.MODULE_MAP]), i0.ɵmpd(1024, i40.ROUTES, function () { return [[{ path: "login", component: i58.LoginComponent }, { path: "", redirectTo: "home", pathMatch: "full" }, { path: "home", component: i59.HomeComponent }, { path: "temporal", component: i60.TemporalComponent }, { path: "noticia", component: i61.NoticiaComponent }, { path: "info", component: i62.InfoComponent }, { path: "contact", component: i63.ContactComponent }, { path: "estadisticas", component: i64.EstadisticasComponent, canActivate: [i65.AuthGuards], data: i66.ɵ0 }, { path: "usuarios", component: i67.UsuariosComponent, canActivate: [i65.AuthGuards], data: i66.ɵ1 }, { path: "perfil", component: i68.PerfilComponent, canActivate: [i65.AuthGuards], data: i66.ɵ2 }, { path: "urls", component: i69.UrlsComponent, canActivate: [i65.AuthGuards], data: i66.ɵ3 }, { path: "showurl/:id", component: i70.ShowurlComponent, canActivate: [i65.AuthGuards], data: i66.ɵ4 }, { path: "addnotice", component: i71.AddnoticeComponent, canActivate: [i65.AuthGuards], data: i66.ɵ5 }, { path: "estadadmin", component: i72.EstadadminComponent, canActivate: [i65.AuthGuards], data: i66.ɵ6 }, { path: "categoria/salud/:id", component: i60.TemporalComponent }, { path: "categoria/entretenimiento/:id", component: i60.TemporalComponent }, { path: "categoria/curiosidades/:id", component: i60.TemporalComponent }, { path: "categoria/videos/:id", component: i60.TemporalComponent }, { path: "categoria/tecnologia/:id", component: i60.TemporalComponent }, { path: "categoria/manualidades/:id", component: i60.TemporalComponent }, { path: "salud/:id", component: i61.NoticiaComponent }, { path: "entretenimiento/:id", component: i61.NoticiaComponent }, { path: "curiosidades/:id", component: i61.NoticiaComponent }, { path: "videos/:id", component: i61.NoticiaComponent }, { path: "tecnologia/:id", component: i61.NoticiaComponent }, { path: "manualidades/:id", component: i61.NoticiaComponent }, { path: "salud", component: i73.CatsaludComponent }, { path: "entretenimiento", component: i74.CatgraciosoComponent }, { path: "curiosidades", component: i75.CatcuriosiComponent }, { path: "videos", component: i76.CatvideoComponent }, { path: "tecnologia", component: i77.CattecnoComponent }, { path: "manualidades", component: i78.CatmanualComponent }, { path: "404", component: i79.ErrorComponent }, { path: "**", redirectTo: "404" }]]; }, []), i0.ɵmpd(1024, i40.Router, i40.ɵangular_packages_router_router_f, [i0.ApplicationRef, i40.UrlSerializer, i40.ChildrenOutletContexts, i28.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i40.ROUTES, i40.ROUTER_CONFIGURATION, [2, i40.UrlHandlingStrategy], [2, i40.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i40.RouterModule, i40.RouterModule, [[2, i40.ɵangular_packages_router_router_a], [2, i40.Router]]), i0.ɵmpd(1073742336, i43.BidiModule, i43.BidiModule, []), i0.ɵmpd(1073742336, i30.MatCommonModule, i30.MatCommonModule, [[2, i30.MATERIAL_SANITY_CHECKS], [2, i29.HAMMER_LOADER]]), i0.ɵmpd(1073742336, i80.PlatformModule, i80.PlatformModule, []), i0.ɵmpd(1073742336, i30.MatRippleModule, i30.MatRippleModule, []), i0.ɵmpd(1073742336, i81.MatButtonModule, i81.MatButtonModule, []), i0.ɵmpd(1073742336, i41.ObserversModule, i41.ObserversModule, []), i0.ɵmpd(1073742336, i82.MatFormFieldModule, i82.MatFormFieldModule, []), i0.ɵmpd(1073742336, i83.TextFieldModule, i83.TextFieldModule, []), i0.ɵmpd(1073742336, i84.MatInputModule, i84.MatInputModule, []), i0.ɵmpd(1073742336, i85.PortalModule, i85.PortalModule, []), i0.ɵmpd(1073742336, i86.ScrollingModule, i86.ScrollingModule, []), i0.ɵmpd(1073742336, i42.OverlayModule, i42.OverlayModule, []), i0.ɵmpd(1073742336, i30.MatPseudoCheckboxModule, i30.MatPseudoCheckboxModule, []), i0.ɵmpd(1073742336, i30.MatOptionModule, i30.MatOptionModule, []), i0.ɵmpd(1073742336, i44.MatSelectModule, i44.MatSelectModule, []), i0.ɵmpd(1073742336, i87.A11yModule, i87.A11yModule, []), i0.ɵmpd(1073742336, i45.MatTooltipModule, i45.MatTooltipModule, []), i0.ɵmpd(1073742336, i88.MatIconModule, i88.MatIconModule, []), i0.ɵmpd(1073742336, i89.MatSlideToggleModule, i89.MatSlideToggleModule, []), i0.ɵmpd(1073742336, i90.MatChipsModule, i90.MatChipsModule, []), i0.ɵmpd(1073742336, i91.MatBadgeModule, i91.MatBadgeModule, []), i0.ɵmpd(1073742336, i92.ComponentsModule, i92.ComponentsModule, []), i0.ɵmpd(1073742336, i93.AgmCoreModule, i93.AgmCoreModule, []), i0.ɵmpd(1073742336, i94.MatTabsModule, i94.MatTabsModule, []), i0.ɵmpd(1073742336, i95.MatProgressBarModule, i95.MatProgressBarModule, []), i0.ɵmpd(1073742336, i96.MatProgressSpinnerModule, i96.MatProgressSpinnerModule, []), i0.ɵmpd(1073742336, i97.MatSnackBarModule, i97.MatSnackBarModule, []), i0.ɵmpd(1073742336, i51.MetaModule, i51.MetaModule, [[3, i51.MetaModule]]), i0.ɵmpd(1073742336, i98.SlimLoadingBarModule, i98.SlimLoadingBarModule, []), i0.ɵmpd(1073742336, i47.NgxTweetModule, i47.NgxTweetModule, []), i0.ɵmpd(1073742336, i52.AppModule, i52.AppModule, [i0.PLATFORM_ID, i0.APP_ID]), i0.ɵmpd(1073742336, i55.HttpModule, i55.HttpModule, []), i0.ɵmpd(1073742336, i33.NoopAnimationsModule, i33.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i31.ServerModule, i31.ServerModule, []), i0.ɵmpd(1073742336, i57.ModuleMapLoaderModule, i57.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i33.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i36.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i36.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i90.MAT_CHIPS_DEFAULT_OPTIONS, { separatorKeyCodes: [i99.ENTER] }, []), i0.ɵmpd(256, i56.ADSENSE_TOKEN, { adClient: "ca-pub-4607014230623673", adSlot: 4808134978 }, []), i0.ɵmpd(256, i50.LAZY_MAPS_API_CONFIG, { apiKey: "YOUR_GOOGLE_MAPS_API_KEY" }, [])]); });
 exports.AppServerModuleNgFactory = AppServerModuleNgFactory;
 
 
@@ -1812,7 +1814,11 @@ function View_SidebarComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 
         var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(5, 671744, [[10, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["publish"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "span", [["class", "sidebar-normal"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Subir Noticia "]))], function (_ck, _v) { var currVal_0 = "active"; _ck(_v, 1, 0, currVal_0); var currVal_3 = _ck(_v, 6, 0, "/addnotice"); _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_1, currVal_2); }); }
-function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "div", [["class", "logo"], ["style", "background: #fdfcfc;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "a", [["class", "simple-text"], ["href", "https://www.cropersviral.com"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "img", [["src", "/assets/img/logo1.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 57, "div", [["class", "sidebar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 56, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "li", [["class", "user"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 6, "a", [["class", "user__info"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_SidebarComponent_4(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 10, "li", [["class", "nav-item"], ["routerLinkActive", "active"]], null, null, null, null, null)), i1.ɵdid(1, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 11, { links: 1 }), i1.ɵqud(603979776, 12, { linksWithHrefs: 1 }), (_l()(), i1.ɵeld(4, 0, null, null, 6, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(5, 671744, [[12, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["ballot"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Estadisiticas Globales"]))], function (_ck, _v) { var currVal_0 = "active"; _ck(_v, 1, 0, currVal_0); var currVal_3 = _ck(_v, 6, 0, "/estadadmin"); _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_1, currVal_2); }); }
+function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "div", [["class", "logo"], ["style", "background: #fdfcfc;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "a", [["class", "simple-text"], ["href", "https://www.cropersviral.com"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "img", [["src", "/assets/img/logo1.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 59, "div", [["class", "sidebar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 58, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "li", [["class", "user"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 6, "a", [["class", "user__info"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 7).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } if (("click" === en)) {
@@ -1824,13 +1830,13 @@ function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 
     } return ad; }, null, null)), i1.ɵdid(18, 671744, [[4, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵeld(20, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["dashboard"])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Estadisticas"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_2)), i1.ɵdid(25, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(26, 0, null, null, 10, "li", [["class", "nav-item"], ["routerLinkActive", "active"]], null, null, null, null, null)), i1.ɵdid(27, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 7, { links: 1 }), i1.ɵqud(603979776, 8, { linksWithHrefs: 1 }), (_l()(), i1.ɵeld(30, 0, null, null, 6, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 31).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(31, 671744, [[8, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(32, 1), (_l()(), i1.ɵeld(33, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["http"])), (_l()(), i1.ɵeld(35, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Urls"])), (_l()(), i1.ɵeld(37, 0, null, null, 16, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 5, "a", [["aria-expanded", "true"], ["class", "nav-link"], ["data-toggle", "collapse"], ["href", "#formsExamples"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["public"])), (_l()(), i1.ɵeld(41, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Blog "])), (_l()(), i1.ɵeld(43, 0, null, null, 0, "b", [["class", "caret"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 9, "div", [["class", "collapse"], ["id", "formsExamples"]], null, null, null, null, null)), (_l()(), i1.ɵeld(45, 0, null, null, 8, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(46, 0, null, null, 5, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(47, 0, null, null, 4, "a", [["class", "nav-link"], ["marked", "1"]], [[8, "href", 4]], null, null, null, null)), (_l()(), i1.ɵeld(48, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["home_work"])), (_l()(), i1.ɵeld(50, 0, null, null, 1, "span", [["class", "sidebar-normal"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" P\u00E1gina Inicio "])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_3)), i1.ɵdid(53, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(54, 0, null, null, 6, "li", [["class", "active-pro nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 5, "a", [["class", "nav-link"], ["style", "border-top: 1px #ddd solid;border-bottom: 1px #ddd solid;"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 56).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+    } return ad; }, null, null)), i1.ɵdid(31, 671744, [[8, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(32, 1), (_l()(), i1.ɵeld(33, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["http"])), (_l()(), i1.ɵeld(35, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Urls"])), (_l()(), i1.ɵeld(37, 0, null, null, 16, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 5, "a", [["aria-expanded", "true"], ["class", "nav-link"], ["data-toggle", "collapse"], ["href", "#formsExamples"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["public"])), (_l()(), i1.ɵeld(41, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Blog "])), (_l()(), i1.ɵeld(43, 0, null, null, 0, "b", [["class", "caret"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 9, "div", [["class", "collapse"], ["id", "formsExamples"]], null, null, null, null, null)), (_l()(), i1.ɵeld(45, 0, null, null, 8, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(46, 0, null, null, 5, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(47, 0, null, null, 4, "a", [["class", "nav-link"], ["marked", "1"]], [[8, "href", 4]], null, null, null, null)), (_l()(), i1.ɵeld(48, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["home_work"])), (_l()(), i1.ɵeld(50, 0, null, null, 1, "span", [["class", "sidebar-normal"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" P\u00E1gina Inicio "])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_3)), i1.ɵdid(53, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_4)), i1.ɵdid(55, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(56, 0, null, null, 6, "li", [["class", "active-pro nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(57, 0, null, null, 5, "a", [["class", "nav-link"], ["style", "border-top: 1px #ddd solid;border-bottom: 1px #ddd solid;"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 58).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } if (("click" === en)) {
         var pd_1 = (_co.logout() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), i1.ɵdid(56, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(57, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["power_off"])), (_l()(), i1.ɵeld(59, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cerrar"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = _co.showFiller; _ck(_v, 12, 0, currVal_4); var currVal_5 = "active"; _ck(_v, 14, 0, currVal_5); var currVal_8 = _ck(_v, 19, 0, "/estadisticas"); _ck(_v, 18, 0, currVal_8); var currVal_9 = (_co.r == "Administrador"); _ck(_v, 25, 0, currVal_9); var currVal_10 = "active"; _ck(_v, 27, 0, currVal_10); var currVal_13 = _ck(_v, 32, 0, "/urls"); _ck(_v, 31, 0, currVal_13); var currVal_15 = ((_co.r == "Administrador") || (_co.r == "Moderador")); _ck(_v, 53, 0, currVal_15); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 7).target; var currVal_1 = i1.ɵnov(_v, 7).href; _ck(_v, 6, 0, currVal_0, currVal_1); var currVal_2 = i1.ɵinlineInterpolate(1, "", _co.foto, ""); _ck(_v, 8, 0, currVal_2); var currVal_3 = _co.nombre; _ck(_v, 10, 0, currVal_3); var currVal_6 = i1.ɵnov(_v, 18).target; var currVal_7 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_6, currVal_7); var currVal_11 = i1.ɵnov(_v, 31).target; var currVal_12 = i1.ɵnov(_v, 31).href; _ck(_v, 30, 0, currVal_11, currVal_12); var currVal_14 = _co.globals.globalUrl; _ck(_v, 47, 0, currVal_14); var currVal_16 = i1.ɵnov(_v, 56).target; var currVal_17 = i1.ɵnov(_v, 56).href; _ck(_v, 55, 0, currVal_16, currVal_17); }); }
+    } return ad; }, null, null)), i1.ɵdid(58, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(59, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["power_off"])), (_l()(), i1.ɵeld(61, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cerrar"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = _co.showFiller; _ck(_v, 12, 0, currVal_4); var currVal_5 = "active"; _ck(_v, 14, 0, currVal_5); var currVal_8 = _ck(_v, 19, 0, "/estadisticas"); _ck(_v, 18, 0, currVal_8); var currVal_9 = (_co.r == "Administrador"); _ck(_v, 25, 0, currVal_9); var currVal_10 = "active"; _ck(_v, 27, 0, currVal_10); var currVal_13 = _ck(_v, 32, 0, "/urls"); _ck(_v, 31, 0, currVal_13); var currVal_15 = ((_co.r == "Administrador") || (_co.r == "Moderador")); _ck(_v, 53, 0, currVal_15); var currVal_16 = (_co.r == "Administrador"); _ck(_v, 55, 0, currVal_16); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 7).target; var currVal_1 = i1.ɵnov(_v, 7).href; _ck(_v, 6, 0, currVal_0, currVal_1); var currVal_2 = i1.ɵinlineInterpolate(1, "", _co.foto, ""); _ck(_v, 8, 0, currVal_2); var currVal_3 = _co.nombre; _ck(_v, 10, 0, currVal_3); var currVal_6 = i1.ɵnov(_v, 18).target; var currVal_7 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_6, currVal_7); var currVal_11 = i1.ɵnov(_v, 31).target; var currVal_12 = i1.ɵnov(_v, 31).href; _ck(_v, 30, 0, currVal_11, currVal_12); var currVal_14 = _co.globals.globalUrl; _ck(_v, 47, 0, currVal_14); var currVal_17 = i1.ɵnov(_v, 58).target; var currVal_18 = i1.ɵnov(_v, 58).href; _ck(_v, 57, 0, currVal_17, currVal_18); }); }
 exports.View_SidebarComponent_0 = View_SidebarComponent_0;
 function View_SidebarComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-sidebar", [], null, null, null, View_SidebarComponent_0, RenderType_SidebarComponent)), i1.ɵdid(1, 114688, null, 0, i4.SidebarComponent, [i2.Router, i5.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_SidebarComponent_Host_0 = View_SidebarComponent_Host_0;
@@ -1860,6 +1866,7 @@ exports.ROUTES = [
     { path: '/urls', title: 'Urls', icon: 'person', class: '' },
     { path: '/showurl/:id', title: 'Estadísticas Url', icon: 'person', class: '' },
     { path: '/addnotice', title: 'Subir Noticia', icon: 'person', class: '' },
+    { path: '/estadadmin', title: 'Estadisiticas Globales', icon: 'person', class: '' },
 ];
 var SidebarComponent = /** @class */ (function () {
     function SidebarComponent(router, globals) {
@@ -5979,6 +5986,227 @@ exports.ErrorComponent = ErrorComponent;
 
 /***/ }),
 
+/***/ "./src/app/pages/estadadmin/estadadmin.component.css.shim.ngstyle.js":
+/*!***************************************************************************!*\
+  !*** ./src/app/pages/estadadmin/estadadmin.component.css.shim.ngstyle.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var styles = ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2VzdGFkYWRtaW4vZXN0YWRhZG1pbi5jb21wb25lbnQuY3NzIn0= */"];
+exports.styles = styles;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/estadadmin/estadadmin.component.ngfactory.js":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/estadadmin/estadadmin.component.ngfactory.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+/**
+ * @fileoverview This file was generated by the Angular template compiler. Do not edit.
+ *
+ * @suppress {suspiciousCode,uselessCode,missingProperties,missingOverride,checkTypes}
+ * tslint:disable
+ */ 
+Object.defineProperty(exports, "__esModule", { value: true });
+var i0 = __webpack_require__(/*! ./estadadmin.component.css.shim.ngstyle */ "./src/app/pages/estadadmin/estadadmin.component.css.shim.ngstyle.js");
+var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i2 = __webpack_require__(/*! ./estadadmin.component */ "./src/app/pages/estadadmin/estadadmin.component.ts");
+var i3 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var i4 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var styles_EstadadminComponent = [i0.styles];
+var RenderType_EstadadminComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_EstadadminComponent, data: {} });
+exports.RenderType_EstadadminComponent = RenderType_EstadadminComponent;
+function View_EstadadminComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 96, "div", [["class", "main-content"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 95, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 94, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias totales mes"])), (_l()(), i1.ɵeld(11, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(12, null, ["", ""])), (_l()(), i1.ɵeld(13, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(18, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, ["", ""])), (_l()(), i1.ɵeld(20, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(26, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias totales d\u00EDa"])), (_l()(), i1.ɵeld(28, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(29, null, ["", ""])), (_l()(), i1.ɵeld(30, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(31, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(32, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(35, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(36, null, ["", ""])), (_l()(), i1.ɵeld(37, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(40, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(41, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["trending_up"])), (_l()(), i1.ɵeld(43, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["RPM en el d\u00EDa"])), (_l()(), i1.ɵeld(45, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(46, null, ["", ""])), (_l()(), i1.ɵeld(47, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(48, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(49, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(52, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(53, null, ["", ""])), (_l()(), i1.ɵeld(54, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(57, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(58, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(60, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias en el mes"])), (_l()(), i1.ɵeld(62, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(63, null, ["", ""])), (_l()(), i1.ɵeld(64, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(65, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(66, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(69, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(70, null, ["", ""])), (_l()(), i1.ɵeld(71, 0, null, null, 15, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(72, 0, null, null, 14, "div", [["class", "card card-chart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(73, 0, null, null, 1, "div", [["class", "card-header card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(74, 0, null, null, 0, "div", [["class", "ct-chart"], ["id", "gananciasChart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(75, 0, null, null, 4, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(76, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias"])), (_l()(), i1.ɵeld(78, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Todas las ganancias generales por d\u00EDas en el mes"])), (_l()(), i1.ɵeld(80, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(81, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(82, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["access_time"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizaci\u00F3n "])), (_l()(), i1.ɵeld(85, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(86, null, ["", ""])), (_l()(), i1.ɵeld(87, 0, null, null, 9, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(88, 0, null, null, 8, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(89, 0, null, null, 3, "div", [["class", "card-header card-header-text card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(90, 0, null, null, 2, "div", [["class", "card-text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(91, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias usuarios en el mes"])), (_l()(), i1.ɵeld(93, 0, null, null, 3, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(94, 0, null, null, 2, "div", [["class", "table-responsive"]], null, null, null, null, null)), (_l()(), i1.ɵeld(95, 0, null, null, 1, "table", [["class", "table table-hover table-striped table-sm"], ["id", "data-table"]], null, null, null, null, null)), (_l()(), i1.ɵeld(96, 0, null, null, 0, "thead", [["class", "text-danger"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.gmensual; _ck(_v, 12, 0, currVal_0); var currVal_1 = _co.fvdiarias; _ck(_v, 19, 0, currVal_1); var currVal_2 = _co.gdiarias; _ck(_v, 29, 0, currVal_2); var currVal_3 = _co.fvdiarias; _ck(_v, 36, 0, currVal_3); var currVal_4 = _co.rpm; _ck(_v, 46, 0, currVal_4); var currVal_5 = _co.fvdiarias; _ck(_v, 53, 0, currVal_5); var currVal_6 = _co.gmensual; _ck(_v, 63, 0, currVal_6); var currVal_7 = _co.fvdiarias; _ck(_v, 70, 0, currVal_7); var currVal_8 = _co.fvdiarias; _ck(_v, 86, 0, currVal_8); }); }
+exports.View_EstadadminComponent_0 = View_EstadadminComponent_0;
+function View_EstadadminComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-estadadmin", [], null, null, null, View_EstadadminComponent_0, RenderType_EstadadminComponent)), i1.ɵdid(1, 4308992, null, 0, i2.EstadadminComponent, [i3.Globals, i4.UrlsService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+exports.View_EstadadminComponent_Host_0 = View_EstadadminComponent_Host_0;
+var EstadadminComponentNgFactory = i1.ɵccf("app-estadadmin", i2.EstadadminComponent, View_EstadadminComponent_Host_0, {}, {}, []);
+exports.EstadadminComponentNgFactory = EstadadminComponentNgFactory;
+
+
+/***/ }),
+
+/***/ "./src/app/pages/estadadmin/estadadmin.component.ts":
+/*!**********************************************************!*\
+  !*** ./src/app/pages/estadadmin/estadadmin.component.ts ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var globals_1 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var Chartist = __webpack_require__(/*! chartist */ "chartist");
+var urls_service_1 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var EstadadminComponent = /** @class */ (function () {
+    function EstadadminComponent(globals, urlsService) {
+        this.globals = globals;
+        this.urlsService = urlsService;
+        this.gdiarias = 0;
+        this.gmensual = 0;
+        this.fvdiarias = '';
+        this.rpm = 0;
+        this.table = '';
+        this.dtOptions = {};
+    }
+    EstadadminComponent.prototype.startAnimationForLineChart = function (chart) {
+        var seq, delays, durations;
+        seq = 0;
+        delays = 80;
+        durations = 500;
+        chart.on('draw', function (data) {
+            if (data.type === 'line' || data.type === 'area') {
+                data.element.animate({
+                    d: {
+                        begin: 600,
+                        dur: 700,
+                        from: data.path.clone().scale(1, 0).translate(0, data.chartRect.height()).stringify(),
+                        to: data.path.clone().stringify(),
+                        easing: Chartist.Svg.Easing.easeOutQuint
+                    }
+                });
+            }
+            else if (data.type === 'point') {
+                seq++;
+                data.element.animate({
+                    opacity: {
+                        begin: seq * delays,
+                        dur: durations,
+                        from: 0,
+                        to: 1,
+                        easing: 'ease'
+                    }
+                });
+            }
+        });
+        seq = 0;
+    };
+    ;
+    EstadadminComponent.prototype.ngOnInit = function () {
+        $("body").removeClass("off-canvas-sidebar");
+        this.table = $('#data-table').DataTable(this.fillTable());
+    };
+    EstadadminComponent.prototype.ngAfterViewInit = function () {
+        this.getEstadisticas();
+    };
+    EstadadminComponent.prototype.getEstadisticas = function () {
+        var _this = this;
+        this.urlsService.getEstadAdmin()
+            .subscribe(function (data) {
+            var da = data;
+            _this.gmensual = da.gmensual.toFixed(2);
+            _this.gdiarias = da.gdiarias.toFixed(2);
+            _this.fvdiarias = da.fvdiarias;
+            _this.rpm = da.rpm;
+            var dataGananciasChart = {
+                labels: da.chartganancias.dia,
+                series: [
+                    da.chartganancias.ganancias
+                ]
+            };
+            var optionsGananciasChart = {
+                lineSmooth: Chartist.Interpolation.cardinal({
+                    tension: 0
+                }),
+                low: 0,
+                high: da.maxg,
+                chartPadding: { top: 0, right: 0, bottom: 0, left: 0 }
+            };
+            var gananciasChart = new Chartist.Line('#gananciasChart', dataGananciasChart, optionsGananciasChart)
+                .on("draw", function (data) {
+                if (data.type === "point") {
+                    data.element._node.setAttribute("title", "Value: " + data.value.y);
+                    data.element._node.setAttribute("data-chart-tooltip", "gananciasChart");
+                }
+            }).on("created", function () {
+                $("#gananciasChart").tooltip({
+                    selector: '[data-chart-tooltip="gananciasChart"]',
+                    container: "#gananciasChart",
+                    html: true
+                });
+            });
+            _this.startAnimationForLineChart(gananciasChart);
+        });
+    };
+    EstadadminComponent.prototype.fillTable = function () {
+        var that = this;
+        return this.dtOptions = {
+            pageLength: 10,
+            autoWidth: !1,
+            responsive: !0,
+            "destroy": true,
+            language: {
+                "url": "assets/Spanish.json",
+                searchPlaceholder: "Escriba parametro a filtrar..."
+            },
+            ajax: {
+                "url": this.globals.apiUrl + '/users/ganancias',
+                "headers": {
+                    "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh"
+                },
+            },
+            columns: [
+                { title: 'Nombre y Apellidos', data: 'nombre_apellidos', className: "align-middle", "render": function (data, type, row, meta) {
+                        return data;
+                    } },
+                { title: 'Correo', data: 'correo', className: "align-middle", "render": function (data, type, row, meta) {
+                        return '<i class="zmdi zmdi-account-box-mail"></i> ' + data;
+                    } },
+                { title: 'Perfil FB', data: 'perfil_fb', className: "align-middle", "render": function (data, type, row, meta) {
+                        return '<i class="zmdi zmdi-facebook"></i> ' + data;
+                    } },
+                { title: 'Rol', data: 'id', className: "align-middle", "render": function (data, type, row, meta) {
+                        return '<mat-chip-list _ngcontent-c4="" class="mat-chip-list" tabindex="0" aria-required="false" aria-disabled="false" aria-invalid="false" aria-multiselectable="false" role="listbox" aria-orientation="horizontal" id="mat-chip-list-1"><div class="mat-chip-list-wrapper"><mat-chip _ngcontent-c4="" class="mat-chip mat-standard-chip mat-accent mat-chip-selected" color="accent" role="option" selected="" ng-reflect-color="accent" ng-reflect-selected="" tabindex="-1" aria-disabled="false" aria-selected="true">' + row.roles[0].name + '</mat-chip></div></mat-chip-list>';
+                    } },
+                { title: 'Activo', data: 'activo', className: "align-middle", "render": function (data, type, row, meta) {
+                        return (data == 1 ? '<i class="zmdi zmdi-check-circle-u zmdi-hc-2x"></i>' : '<i class="zmdi zmdi-dot-circle zmdi-hc-2x"></i>');
+                    } },
+                { title: 'Ganancia', data: 'gan', "render": function (data, type, row, meta) {
+                        return (data != null ? '<i class="zmdi zmdi-money"></i> ' + data.toFixed(2) : 0);
+                    } }
+            ],
+            dom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
+            buttons: [{
+                    extend: "excelHtml5",
+                    title: "Export Data"
+                }, {
+                    extend: "csvHtml5",
+                    title: "Export Data"
+                }, {
+                    extend: "print",
+                    title: "Material Admin"
+                }],
+            "initComplete": function () {
+                $('[data-toggle="tooltip"]').tooltip();
+                $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend('<div class="dataTables_buttons hidden-sm-down actions"><span class="actions__item zmdi zmdi-print" data-table-action="print" /><span class="actions__item zmdi zmdi-fullscreen" data-table-action="fullscreen" /><div class="dropdown actions__item"><i data-toggle="dropdown" class="zmdi zmdi-download" /><ul class="dropdown-menu dropdown-menu-right"><a href="" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a><a href="" class="dropdown-item" data-table-action="csv">CSV (.csv)</a></ul></div></div>');
+            },
+        };
+    };
+    return EstadadminComponent;
+}());
+exports.EstadadminComponent = EstadadminComponent;
+
+
+/***/ }),
+
 /***/ "./src/app/pages/estadisticas/estadisticas.component.ngfactory.js":
 /*!************************************************************************!*\
   !*** ./src/app/pages/estadisticas/estadisticas.component.ngfactory.js ***!
@@ -6000,13 +6228,12 @@ var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i2 = __webpack_require__(/*! ./estadisticas.component */ "./src/app/pages/estadisticas/estadisticas.component.ts");
 var i3 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
 var i4 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
-var i5 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
 var styles_EstadisticasComponent = [i0.styles];
 var RenderType_EstadisticasComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_EstadisticasComponent, data: {} });
 exports.RenderType_EstadisticasComponent = RenderType_EstadisticasComponent;
 function View_EstadisticasComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 100, "div", [["class", "main-content"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 99, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 98, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 14, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 13, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["visibility"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Visitas"])), (_l()(), i1.ɵeld(11, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(12, null, ["", ""])), (_l()(), i1.ɵeld(13, 0, null, null, 4, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["local_offer"])), (_l()(), i1.ɵted(-1, null, [" Total de visitas "])), (_l()(), i1.ɵeld(18, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(20, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(24, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias en el mes"])), (_l()(), i1.ɵeld(26, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(27, null, ["", ""])), (_l()(), i1.ɵeld(28, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(33, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(34, null, ["", ""])), (_l()(), i1.ɵeld(35, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(36, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(37, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["visibility"])), (_l()(), i1.ɵeld(41, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Visitas en el d\u00EDa"])), (_l()(), i1.ɵeld(43, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(44, null, ["", ""])), (_l()(), i1.ɵeld(45, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(46, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(47, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(50, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(51, null, ["", ""])), (_l()(), i1.ɵeld(52, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(53, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(54, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(58, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias en el d\u00EDa"])), (_l()(), i1.ɵeld(60, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(61, null, ["", ""])), (_l()(), i1.ɵeld(62, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(63, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(64, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(67, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(68, null, ["", ""])), (_l()(), i1.ɵeld(69, 0, null, null, 15, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(70, 0, null, null, 14, "div", [["class", "card card-chart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(71, 0, null, null, 1, "div", [["class", "card-header card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(72, 0, null, null, 0, "div", [["class", "ct-chart"], ["id", "completedTasksChart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(73, 0, null, null, 4, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(74, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Visitas"])), (_l()(), i1.ɵeld(76, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Todas las visitas por d\u00EDas en el mes"])), (_l()(), i1.ɵeld(78, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(79, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(80, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["access_time"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizaci\u00F3n "])), (_l()(), i1.ɵeld(83, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(84, null, ["", ""])), (_l()(), i1.ɵeld(85, 0, null, null, 15, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(86, 0, null, null, 14, "div", [["class", "card card-chart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(87, 0, null, null, 1, "div", [["class", "card-header card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(88, 0, null, null, 0, "div", [["class", "ct-chart"], ["id", "gananciasChart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(89, 0, null, null, 4, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(90, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias"])), (_l()(), i1.ɵeld(92, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Todas las ganancias por d\u00EDas en el mes"])), (_l()(), i1.ɵeld(94, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(95, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(96, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["access_time"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizaci\u00F3n "])), (_l()(), i1.ɵeld(99, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(100, null, ["", ""]))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.visitas; _ck(_v, 12, 0, currVal_0); var currVal_1 = _co.gmensual; _ck(_v, 27, 0, currVal_1); var currVal_2 = _co.fvdiarias; _ck(_v, 34, 0, currVal_2); var currVal_3 = _co.vdiarias; _ck(_v, 44, 0, currVal_3); var currVal_4 = _co.fvdiarias; _ck(_v, 51, 0, currVal_4); var currVal_5 = _co.gdiarias; _ck(_v, 61, 0, currVal_5); var currVal_6 = _co.fvdiarias; _ck(_v, 68, 0, currVal_6); var currVal_7 = _co.fvdiarias; _ck(_v, 84, 0, currVal_7); var currVal_8 = _co.fvdiarias; _ck(_v, 100, 0, currVal_8); }); }
 exports.View_EstadisticasComponent_0 = View_EstadisticasComponent_0;
-function View_EstadisticasComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-estadisticas", [], null, null, null, View_EstadisticasComponent_0, RenderType_EstadisticasComponent)), i1.ɵdid(1, 4308992, null, 0, i2.EstadisticasComponent, [i3.Globals, i4.UrlsService, i5.MatSnackBar], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_EstadisticasComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-estadisticas", [], null, null, null, View_EstadisticasComponent_0, RenderType_EstadisticasComponent)), i1.ɵdid(1, 4308992, null, 0, i2.EstadisticasComponent, [i3.Globals, i4.UrlsService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_EstadisticasComponent_Host_0 = View_EstadisticasComponent_Host_0;
 var EstadisticasComponentNgFactory = i1.ɵccf("app-estadisticas", i2.EstadisticasComponent, View_EstadisticasComponent_Host_0, {}, {}, []);
 exports.EstadisticasComponentNgFactory = EstadisticasComponentNgFactory;
@@ -6047,15 +6274,13 @@ exports.styles = styles;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var material_1 = __webpack_require__(/*! @angular/material */ "@angular/material");
 var globals_1 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
 var Chartist = __webpack_require__(/*! chartist */ "chartist");
 var urls_service_1 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
 var EstadisticasComponent = /** @class */ (function () {
-    function EstadisticasComponent(globals, urlsService, snackBar) {
+    function EstadisticasComponent(globals, urlsService) {
         this.globals = globals;
         this.urlsService = urlsService;
-        this.snackBar = snackBar;
         this.vdiarias = 0;
         this.fvdiarias = '';
         this.visitas = 0;
@@ -6099,18 +6324,7 @@ var EstadisticasComponent = /** @class */ (function () {
         $("body").removeClass("off-canvas-sidebar");
     };
     EstadisticasComponent.prototype.ngAfterViewInit = function () {
-        var that = this;
         this.getEstadisticas();
-        /*this.urlsService.getMonthData()
-            .subscribe(data => {
-                let da: any = data;
-                console.log(da);
-            })*/
-        /*this.urlsService.getAnalytic()
-            .subscribe(data => {
-                let da: any = data;
-                console.log(da);
-            })*/
     };
     EstadisticasComponent.prototype.getEstadisticas = function () {
         var _this = this;
@@ -8529,13 +8743,15 @@ var error_component_1 = __webpack_require__(/*! ../pages/error/error.component *
 var showurl_component_1 = __webpack_require__(/*! ../pages/showurl/showurl.component */ "./src/app/pages/showurl/showurl.component.ts");
 var info_component_1 = __webpack_require__(/*! ../pages/info/info.component */ "./src/app/pages/info/info.component.ts");
 var contact_component_1 = __webpack_require__(/*! ../pages/contact/contact.component */ "./src/app/pages/contact/contact.component.ts");
-var ɵ0 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ1 = { Role: ['Administrador'] }, ɵ2 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ3 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ4 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ5 = { Role: ['Administrador', 'Moderador'] };
+var estadadmin_component_1 = __webpack_require__(/*! ../pages/estadadmin/estadadmin.component */ "./src/app/pages/estadadmin/estadadmin.component.ts");
+var ɵ0 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ1 = { Role: ['Administrador'] }, ɵ2 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ3 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ4 = { Role: ['Administrador', 'Moderador', 'Usuarios'] }, ɵ5 = { Role: ['Administrador', 'Moderador'] }, ɵ6 = { Role: ['Administrador'] };
 exports.ɵ0 = ɵ0;
 exports.ɵ1 = ɵ1;
 exports.ɵ2 = ɵ2;
 exports.ɵ3 = ɵ3;
 exports.ɵ4 = ɵ4;
 exports.ɵ5 = ɵ5;
+exports.ɵ6 = ɵ6;
 /*********************************
 Configuración de las Rutas del APP
 **********************************/
@@ -8553,6 +8769,7 @@ var appRoutes = [
     { path: 'urls', component: urls_component_1.UrlsComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ3 },
     { path: 'showurl/:id', component: showurl_component_1.ShowurlComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ4 },
     { path: 'addnotice', component: addnotice_component_1.AddnoticeComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ5 },
+    { path: 'estadadmin', component: estadadmin_component_1.EstadadminComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ6 },
     { path: 'categoria/salud/:id', component: temporal_component_1.TemporalComponent },
     { path: 'categoria/entretenimiento/:id', component: temporal_component_1.TemporalComponent },
     { path: 'categoria/curiosidades/:id', component: temporal_component_1.TemporalComponent },
@@ -8791,6 +9008,9 @@ var UrlsService = /** @class */ (function () {
     };
     UrlsService.prototype.getMonthData = function () {
         return this.http.get(this.globals.apiUrl + "/urls/monthdata");
+    };
+    UrlsService.prototype.getEstadAdmin = function () {
+        return this.http.get(this.globals.apiUrl + "/urls/estadadmin");
     };
     UrlsService.ngInjectableDef = i0.defineInjectable({ factory: function UrlsService_Factory() { return new UrlsService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: UrlsService, providedIn: "root" });
     return UrlsService;

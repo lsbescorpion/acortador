@@ -23,6 +23,7 @@ Route::delete('users/delete/{user}', 'API\UsersController@deleteUser')->name('de
 Route::post('user/photo', 'API\UsersController@photo')->name('photo');
 Route::get('user/removephoto', 'API\UsersController@removePhoto')->name('removephoto');
 Route::get('usr/remphotos', 'API\UsersController@remPhotos')->name('remphotos');
+Route::get('users/ganancias', 'API\UsersController@getGanancias')->name('ganancias');
 
 
 Route::post('urls/acortar', 'API\UrlsController@acortar')->name('acortar');
@@ -34,6 +35,7 @@ Route::get('urls/estadisticas', 'API\UrlsController@getEstadisticas')->name('get
 Route::get('urls/analytic', 'API\UrlsController@getAnalytic')->name('getAnalytic');
 Route::get('urls/monthdata', 'API\UrlsController@getMonthData')->name('getMonthData');
 Route::get('urls/checkurl/{url}', 'API\UrlsController@CheckUrl')->name('CheckUrl');
+Route::get('urls/estadadmin', 'API\UrlsController@getEstadAdmin')->name('getestadadmin');
 
 Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
 Route::post('blog/photob', 'API\BlogController@photob')->name('photob');
