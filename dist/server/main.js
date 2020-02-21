@@ -1585,30 +1585,33 @@ exports.styles = styles;
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./navbar.component.css.shim.ngstyle */ "./src/app/components/navbar/navbar.component.css.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var i2 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
-var i3 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i4 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i5 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i6 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i7 = __webpack_require__(/*! ../../../../node_modules/@angular/material/icon/typings/index.ngfactory */ "./node_modules/@angular/material/icon/typings/index.ngfactory.js");
-var i8 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
-var i9 = __webpack_require__(/*! ./navbar.component */ "./src/app/components/navbar/navbar.component.ts");
-var i10 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i11 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
+var i5 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i6 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i7 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i8 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i9 = __webpack_require__(/*! ../../../../node_modules/@angular/material/icon/typings/index.ngfactory */ "./node_modules/@angular/material/icon/typings/index.ngfactory.js");
+var i10 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
+var i11 = __webpack_require__(/*! ./navbar.component */ "./src/app/components/navbar/navbar.component.ts");
 var styles_NavbarComponent = [i0.styles];
 var RenderType_NavbarComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_NavbarComponent, data: {} });
 exports.RenderType_NavbarComponent = RenderType_NavbarComponent;
-function View_NavbarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 60, "nav", [["class", "navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 59, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 7, "div", [["class", "navbar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 6, "a", [["class", "navbar-brand"]], null, [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+function View_NavbarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 61, "nav", [["class", "navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 60, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 8, "div", [["class", "navbar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 7, "a", [["class", "navbar-brand"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(5, 0, null, null, 4, "button", [["color", "warn"], ["mat-mini-fab", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.Update() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 4, "button", [["color", "warn"], ["mat-mini-fab", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(5, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(6, 0, null, 0, 2, "mat-icon", [["class", "mat-icon notranslate"], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], null, null, i7.View_MatIcon_0, i7.RenderType_MatIcon)), i1.ɵdid(7, 9158656, null, 0, i8.MatIcon, [i1.ElementRef, i8.MatIconRegistry, [8, null], [2, i8.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(-1, 0, ["update"])), (_l()(), i1.ɵted(9, null, [" ", " "])), (_l()(), i1.ɵeld(10, 0, null, null, 6, "button", [["class", "navbar-toggler"], ["mat-raised-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+    } return ad; }, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(6, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(7, 0, null, 0, 2, "mat-icon", [["class", "mat-icon notranslate"], ["role", "img"]], [[2, "mat-icon-inline", null], [2, "mat-icon-no-color", null]], null, null, i9.View_MatIcon_0, i9.RenderType_MatIcon)), i1.ɵdid(8, 9158656, null, 0, i10.MatIcon, [i1.ElementRef, i10.MatIconRegistry, [8, null], [2, i10.MAT_ICON_LOCATION]], null, null), (_l()(), i1.ɵted(-1, 0, ["update"])), (_l()(), i1.ɵted(10, null, [" ", " "])), (_l()(), i1.ɵeld(11, 0, null, null, 6, "button", [["class", "navbar-toggler"], ["mat-raised-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (_co.sidebarToggle() !== false);
         ad = (pd_0 && ad);
-    } return ad; }, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(11, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵeld(12, 0, null, 0, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Toggle navigation"])), (_l()(), i1.ɵeld(14, 0, null, 0, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, 0, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, 0, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 43, "div", [["class", "collapse navbar-collapse justify-content-end"], ["id", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 7, "form", [["class", "navbar-form"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 6, "div", [["class", "input-group no-border"]], null, null, null, null, null)), (_l()(), i1.ɵeld(20, 0, null, null, 0, "input", [["class", "form-control"], ["placeholder", "Search..."], ["type", "text"], ["value", ""]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 4, "button", [["class", "btn btn-white btn-round btn-just-icon"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(22, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵeld(23, 0, null, 0, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["search"])), (_l()(), i1.ɵeld(25, 0, null, 0, 0, "div", [["class", "ripple-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 34, "ul", [["class", "navbar-nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 5, "a", [["class", "nav-link"], ["href", "#pablo"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["dashboard"])), (_l()(), i1.ɵeld(31, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(32, 0, null, null, 1, "span", [["class", "d-lg-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Stats"])), (_l()(), i1.ɵeld(34, 0, null, null, 19, "li", [["class", "nav-item dropdown"]], null, null, null, null, null)), (_l()(), i1.ɵeld(35, 0, null, null, 7, "a", [["aria-expanded", "false"], ["aria-haspopup", "true"], ["class", "nav-link"], ["data-toggle", "dropdown"], ["href", "#pablo"], ["id", "navbarDropdownMenuLink"]], null, null, null, null, null)), (_l()(), i1.ɵeld(36, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["notifications"])), (_l()(), i1.ɵeld(38, 0, null, null, 1, "span", [["class", "notification"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["5"])), (_l()(), i1.ɵeld(40, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(41, 0, null, null, 1, "span", [["class", "d-lg-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Some Actions"])), (_l()(), i1.ɵeld(43, 0, null, null, 10, "div", [["aria-labelledby", "navbarDropdownMenuLink"], ["class", "dropdown-menu dropdown-menu-right"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mike John responded to your email"])), (_l()(), i1.ɵeld(46, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["You have 5 new tasks"])), (_l()(), i1.ɵeld(48, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["You're now friend with Andrew"])), (_l()(), i1.ɵeld(50, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Another Notification"])), (_l()(), i1.ɵeld(52, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Another One"])), (_l()(), i1.ɵeld(54, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 5, "a", [["class", "nav-link"], ["href", "#pablo"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["person"])), (_l()(), i1.ɵeld(58, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(59, 0, null, null, 1, "span", [["class", "d-lg-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Account"]))], function (_ck, _v) { var currVal_2 = "warn"; _ck(_v, 5, 0, currVal_2); _ck(_v, 7, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = (i1.ɵnov(_v, 5).disabled || null); var currVal_1 = (i1.ɵnov(_v, 5)._animationMode === "NoopAnimations"); _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_3 = i1.ɵnov(_v, 7).inline; var currVal_4 = (((i1.ɵnov(_v, 7).color !== "primary") && (i1.ɵnov(_v, 7).color !== "accent")) && (i1.ɵnov(_v, 7).color !== "warn")); _ck(_v, 6, 0, currVal_3, currVal_4); var currVal_5 = _co.getTitle(); _ck(_v, 9, 0, currVal_5); var currVal_6 = (i1.ɵnov(_v, 11).disabled || null); var currVal_7 = (i1.ɵnov(_v, 11)._animationMode === "NoopAnimations"); _ck(_v, 10, 0, currVal_6, currVal_7); var currVal_8 = (i1.ɵnov(_v, 22).disabled || null); var currVal_9 = (i1.ɵnov(_v, 22)._animationMode === "NoopAnimations"); _ck(_v, 21, 0, currVal_8, currVal_9); }); }
+    } return ad; }, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(12, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵeld(13, 0, null, 0, 1, "span", [["class", "sr-only"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Toggle navigation"])), (_l()(), i1.ɵeld(15, 0, null, 0, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, 0, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, 0, 0, "span", [["class", "navbar-toggler-icon icon-bar"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 43, "div", [["class", "collapse navbar-collapse justify-content-end"], ["id", "navigation"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 7, "form", [["class", "navbar-form"]], null, null, null, null, null)), (_l()(), i1.ɵeld(20, 0, null, null, 6, "div", [["class", "input-group no-border"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 0, "input", [["class", "form-control"], ["placeholder", "Search..."], ["type", "text"], ["value", ""]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 4, "button", [["class", "btn btn-white btn-round btn-just-icon"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(23, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵeld(24, 0, null, 0, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["search"])), (_l()(), i1.ɵeld(26, 0, null, 0, 0, "div", [["class", "ripple-container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 34, "ul", [["class", "navbar-nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 5, "a", [["class", "nav-link"], ["href", "#pablo"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["dashboard"])), (_l()(), i1.ɵeld(32, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(33, 0, null, null, 1, "span", [["class", "d-lg-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Stats"])), (_l()(), i1.ɵeld(35, 0, null, null, 19, "li", [["class", "nav-item dropdown"]], null, null, null, null, null)), (_l()(), i1.ɵeld(36, 0, null, null, 7, "a", [["aria-expanded", "false"], ["aria-haspopup", "true"], ["class", "nav-link"], ["data-toggle", "dropdown"], ["href", "#pablo"], ["id", "navbarDropdownMenuLink"]], null, null, null, null, null)), (_l()(), i1.ɵeld(37, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["notifications"])), (_l()(), i1.ɵeld(39, 0, null, null, 1, "span", [["class", "notification"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["5"])), (_l()(), i1.ɵeld(41, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(42, 0, null, null, 1, "span", [["class", "d-lg-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Some Actions"])), (_l()(), i1.ɵeld(44, 0, null, null, 10, "div", [["aria-labelledby", "navbarDropdownMenuLink"], ["class", "dropdown-menu dropdown-menu-right"]], null, null, null, null, null)), (_l()(), i1.ɵeld(45, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Mike John responded to your email"])), (_l()(), i1.ɵeld(47, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["You have 5 new tasks"])), (_l()(), i1.ɵeld(49, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["You're now friend with Andrew"])), (_l()(), i1.ɵeld(51, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Another Notification"])), (_l()(), i1.ɵeld(53, 0, null, null, 1, "a", [["class", "dropdown-item"], ["href", "#"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Another One"])), (_l()(), i1.ɵeld(55, 0, null, null, 6, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 5, "a", [["class", "nav-link"], ["href", "#pablo"]], null, null, null, null, null)), (_l()(), i1.ɵeld(57, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["person"])), (_l()(), i1.ɵeld(59, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵeld(60, 0, null, null, 1, "span", [["class", "d-lg-none d-md-block"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Account"]))], function (_ck, _v) { var currVal_4 = "warn"; _ck(_v, 6, 0, currVal_4); _ck(_v, 8, 0); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 4).target; var currVal_1 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 6).disabled || null); var currVal_3 = (i1.ɵnov(_v, 6)._animationMode === "NoopAnimations"); _ck(_v, 5, 0, currVal_2, currVal_3); var currVal_5 = i1.ɵnov(_v, 8).inline; var currVal_6 = (((i1.ɵnov(_v, 8).color !== "primary") && (i1.ɵnov(_v, 8).color !== "accent")) && (i1.ɵnov(_v, 8).color !== "warn")); _ck(_v, 7, 0, currVal_5, currVal_6); var currVal_7 = _co.getTitle(); _ck(_v, 10, 0, currVal_7); var currVal_8 = (i1.ɵnov(_v, 12).disabled || null); var currVal_9 = (i1.ɵnov(_v, 12)._animationMode === "NoopAnimations"); _ck(_v, 11, 0, currVal_8, currVal_9); var currVal_10 = (i1.ɵnov(_v, 23).disabled || null); var currVal_11 = (i1.ɵnov(_v, 23)._animationMode === "NoopAnimations"); _ck(_v, 22, 0, currVal_10, currVal_11); }); }
 exports.View_NavbarComponent_0 = View_NavbarComponent_0;
-function View_NavbarComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-navbar", [], null, null, null, View_NavbarComponent_0, RenderType_NavbarComponent)), i1.ɵdid(1, 114688, null, 0, i9.NavbarComponent, [i10.Location, i1.ElementRef, i11.Router], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_NavbarComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-navbar", [], null, null, null, View_NavbarComponent_0, RenderType_NavbarComponent)), i1.ɵdid(1, 114688, null, 0, i11.NavbarComponent, [i3.Location, i1.ElementRef, i2.Router], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_NavbarComponent_Host_0 = View_NavbarComponent_Host_0;
-var NavbarComponentNgFactory = i1.ɵccf("app-navbar", i9.NavbarComponent, View_NavbarComponent_Host_0, {}, {}, []);
+var NavbarComponentNgFactory = i1.ɵccf("app-navbar", i11.NavbarComponent, View_NavbarComponent_Host_0, {}, {}, []);
 exports.NavbarComponentNgFactory = NavbarComponentNgFactory;
 
 
@@ -1654,11 +1657,12 @@ var NavbarComponent = /** @class */ (function () {
         });
     };
     NavbarComponent.prototype.Update = function () {
-        var link = document.createElement('link');
+        /*let link: any = document.createElement('link');
         link.href = this.router.url;
         document.body.appendChild(link);
         link.click();
-        link.parentNode.removeChild(link);
+        link.parentNode.removeChild(link);*/
+        location.reload(true);
     };
     NavbarComponent.prototype.sidebarOpen = function () {
         var toggleButton = this.toggleButton;
@@ -6026,17 +6030,25 @@ exports.styles = styles;
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./estadadmin.component.css.shim.ngstyle */ "./src/app/pages/estadadmin/estadadmin.component.css.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var i2 = __webpack_require__(/*! ./estadadmin.component */ "./src/app/pages/estadadmin/estadadmin.component.ts");
-var i3 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
-var i4 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var i2 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
+var i3 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i4 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i5 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i6 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i7 = __webpack_require__(/*! ./estadadmin.component */ "./src/app/pages/estadadmin/estadadmin.component.ts");
+var i8 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var i9 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
 var styles_EstadadminComponent = [i0.styles];
 var RenderType_EstadadminComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_EstadadminComponent, data: {} });
 exports.RenderType_EstadadminComponent = RenderType_EstadadminComponent;
-function View_EstadadminComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 96, "div", [["class", "main-content"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 95, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 94, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias totales mes"])), (_l()(), i1.ɵeld(11, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(12, null, ["", ""])), (_l()(), i1.ɵeld(13, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(18, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, ["", ""])), (_l()(), i1.ɵeld(20, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(26, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias totales d\u00EDa"])), (_l()(), i1.ɵeld(28, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(29, null, ["", ""])), (_l()(), i1.ɵeld(30, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(31, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(32, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(35, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(36, null, ["", ""])), (_l()(), i1.ɵeld(37, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(40, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(41, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["trending_up"])), (_l()(), i1.ɵeld(43, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["RPM en el d\u00EDa"])), (_l()(), i1.ɵeld(45, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(46, null, ["", ""])), (_l()(), i1.ɵeld(47, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(48, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(49, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(52, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(53, null, ["", ""])), (_l()(), i1.ɵeld(54, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(55, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(56, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(57, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(58, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(60, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias en el mes"])), (_l()(), i1.ɵeld(62, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(63, null, ["", ""])), (_l()(), i1.ɵeld(64, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(65, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(66, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(69, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(70, null, ["", ""])), (_l()(), i1.ɵeld(71, 0, null, null, 15, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(72, 0, null, null, 14, "div", [["class", "card card-chart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(73, 0, null, null, 1, "div", [["class", "card-header card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(74, 0, null, null, 0, "div", [["class", "ct-chart"], ["id", "gananciasChart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(75, 0, null, null, 4, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(76, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias"])), (_l()(), i1.ɵeld(78, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Todas las ganancias generales por d\u00EDas en el mes"])), (_l()(), i1.ɵeld(80, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(81, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(82, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["access_time"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizaci\u00F3n "])), (_l()(), i1.ɵeld(85, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(86, null, ["", ""])), (_l()(), i1.ɵeld(87, 0, null, null, 9, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(88, 0, null, null, 8, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(89, 0, null, null, 3, "div", [["class", "card-header card-header-text card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(90, 0, null, null, 2, "div", [["class", "card-text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(91, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias usuarios en el mes"])), (_l()(), i1.ɵeld(93, 0, null, null, 3, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(94, 0, null, null, 2, "div", [["class", "table-responsive"]], null, null, null, null, null)), (_l()(), i1.ɵeld(95, 0, null, null, 1, "table", [["class", "table table-hover table-striped table-sm"], ["id", "data-table"]], null, null, null, null, null)), (_l()(), i1.ɵeld(96, 0, null, null, 0, "thead", [["class", "text-danger"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.gmensual; _ck(_v, 12, 0, currVal_0); var currVal_1 = _co.fvdiarias; _ck(_v, 19, 0, currVal_1); var currVal_2 = _co.gdiarias; _ck(_v, 29, 0, currVal_2); var currVal_3 = _co.fvdiarias; _ck(_v, 36, 0, currVal_3); var currVal_4 = _co.rpm; _ck(_v, 46, 0, currVal_4); var currVal_5 = _co.fvdiarias; _ck(_v, 53, 0, currVal_5); var currVal_6 = _co.gmensual; _ck(_v, 63, 0, currVal_6); var currVal_7 = _co.fvdiarias; _ck(_v, 70, 0, currVal_7); var currVal_8 = _co.fvdiarias; _ck(_v, 86, 0, currVal_8); }); }
+function View_EstadadminComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 110, "div", [["class", "main-content"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 109, "div", [["class", "container-fluid"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 108, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 3, "div", [["class", "col-md-12 text-center mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "button", [["class", "btn btn-danger pull-center"], ["mat-raised-button", ""], ["type", "submit"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (_co.Ganancias() !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(5, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], null, null), (_l()(), i1.ɵted(-1, 0, ["Actualizar Ganancias Manualmente"])), (_l()(), i1.ɵeld(7, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(13, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias totales mes"])), (_l()(), i1.ɵeld(15, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(16, null, ["", ""])), (_l()(), i1.ɵeld(17, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(23, null, ["", ""])), (_l()(), i1.ɵeld(24, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(30, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias totales d\u00EDa"])), (_l()(), i1.ɵeld(32, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(33, null, ["", ""])), (_l()(), i1.ɵeld(34, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(35, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(36, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(39, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(40, null, ["", ""])), (_l()(), i1.ɵeld(41, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(42, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(43, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(45, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["trending_up"])), (_l()(), i1.ɵeld(47, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["RPM en el d\u00EDa"])), (_l()(), i1.ɵeld(49, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(50, null, ["", ""])), (_l()(), i1.ɵeld(51, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(52, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(53, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(56, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(57, null, ["", ""])), (_l()(), i1.ɵeld(58, 0, null, null, 16, "div", [["class", "col-lg-3 col-md-6 col-sm-6"]], null, null, null, null, null)), (_l()(), i1.ɵeld(59, 0, null, null, 15, "div", [["class", "card card-stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(60, 0, null, null, 7, "div", [["class", "card-header card-header-danger card-header-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(61, 0, null, null, 2, "div", [["class", "card-icon"]], null, null, null, null, null)), (_l()(), i1.ɵeld(62, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["attach_money"])), (_l()(), i1.ɵeld(64, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias en el mes"])), (_l()(), i1.ɵeld(66, 0, null, null, 1, "h3", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(67, null, ["", ""])), (_l()(), i1.ɵeld(68, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(69, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(70, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["update"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizacion "])), (_l()(), i1.ɵeld(73, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(74, null, ["", ""])), (_l()(), i1.ɵeld(75, 0, null, null, 15, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(76, 0, null, null, 14, "div", [["class", "card card-chart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(77, 0, null, null, 1, "div", [["class", "card-header card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(78, 0, null, null, 0, "div", [["class", "ct-chart"], ["id", "gananciasChart"]], null, null, null, null, null)), (_l()(), i1.ɵeld(79, 0, null, null, 4, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(80, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias"])), (_l()(), i1.ɵeld(82, 0, null, null, 1, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Todas las ganancias generales por d\u00EDas en el mes"])), (_l()(), i1.ɵeld(84, 0, null, null, 6, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(85, 0, null, null, 3, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(86, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["access_time"])), (_l()(), i1.ɵted(-1, null, [" Ultima actualizaci\u00F3n "])), (_l()(), i1.ɵeld(89, 0, null, null, 1, "div", [["class", "stats text-right"]], null, null, null, null, null)), (_l()(), i1.ɵted(90, null, ["", ""])), (_l()(), i1.ɵeld(91, 0, null, null, 9, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(92, 0, null, null, 8, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(93, 0, null, null, 3, "div", [["class", "card-header card-header-text card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(94, 0, null, null, 2, "div", [["class", "card-text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(95, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Ganancias usuarios en el mes"])), (_l()(), i1.ɵeld(97, 0, null, null, 3, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(98, 0, null, null, 2, "div", [["class", "table-responsive"]], null, null, null, null, null)), (_l()(), i1.ɵeld(99, 0, null, null, 1, "table", [["class", "table table-hover table-striped table-sm"], ["id", "data-table"]], null, null, null, null, null)), (_l()(), i1.ɵeld(100, 0, null, null, 0, "thead", [["class", "text-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(101, 0, null, null, 9, "div", [["class", "col-md-12"]], null, null, null, null, null)), (_l()(), i1.ɵeld(102, 0, null, null, 8, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(103, 0, null, null, 3, "div", [["class", "card-header card-header-text card-header-danger"]], null, null, null, null, null)), (_l()(), i1.ɵeld(104, 0, null, null, 2, "div", [["class", "card-text"]], null, null, null, null, null)), (_l()(), i1.ɵeld(105, 0, null, null, 1, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Todas las URL del sistema"])), (_l()(), i1.ɵeld(107, 0, null, null, 3, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(108, 0, null, null, 2, "div", [["class", "table-responsive"]], null, null, null, null, null)), (_l()(), i1.ɵeld(109, 0, null, null, 1, "table", [["class", "table table-hover table-striped table-sm"], ["id", "data-table-url"]], null, null, null, null, null)), (_l()(), i1.ɵeld(110, 0, null, null, 0, "thead", [["class", "text-danger"]], null, null, null, null, null))], null, function (_ck, _v) { var _co = _v.component; var currVal_0 = (i1.ɵnov(_v, 5).disabled || null); var currVal_1 = (i1.ɵnov(_v, 5)._animationMode === "NoopAnimations"); _ck(_v, 4, 0, currVal_0, currVal_1); var currVal_2 = _co.gmensual; _ck(_v, 16, 0, currVal_2); var currVal_3 = _co.fvdiarias; _ck(_v, 23, 0, currVal_3); var currVal_4 = _co.gdiarias; _ck(_v, 33, 0, currVal_4); var currVal_5 = _co.fvdiarias; _ck(_v, 40, 0, currVal_5); var currVal_6 = _co.rpm; _ck(_v, 50, 0, currVal_6); var currVal_7 = _co.fvdiarias; _ck(_v, 57, 0, currVal_7); var currVal_8 = _co.gmensual; _ck(_v, 67, 0, currVal_8); var currVal_9 = _co.fvdiarias; _ck(_v, 74, 0, currVal_9); var currVal_10 = _co.fvdiarias; _ck(_v, 90, 0, currVal_10); }); }
 exports.View_EstadadminComponent_0 = View_EstadadminComponent_0;
-function View_EstadadminComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-estadadmin", [], null, null, null, View_EstadadminComponent_0, RenderType_EstadadminComponent)), i1.ɵdid(1, 4308992, null, 0, i2.EstadadminComponent, [i3.Globals, i4.UrlsService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_EstadadminComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-estadadmin", [], null, null, null, View_EstadadminComponent_0, RenderType_EstadadminComponent)), i1.ɵdid(1, 4308992, null, 0, i7.EstadadminComponent, [i8.Globals, i9.UrlsService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_EstadadminComponent_Host_0 = View_EstadadminComponent_Host_0;
-var EstadadminComponentNgFactory = i1.ɵccf("app-estadadmin", i2.EstadadminComponent, View_EstadadminComponent_Host_0, {}, {}, []);
+var EstadadminComponentNgFactory = i1.ɵccf("app-estadadmin", i7.EstadadminComponent, View_EstadadminComponent_Host_0, {}, {}, []);
 exports.EstadadminComponentNgFactory = EstadadminComponentNgFactory;
 
 
@@ -6054,6 +6066,7 @@ exports.EstadadminComponentNgFactory = EstadadminComponentNgFactory;
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var globals_1 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var moment = __webpack_require__(/*! ../../../assets/plantilla/vendors/bower_components/moment/moment.js */ "./src/assets/plantilla/vendors/bower_components/moment/moment.js");
 var Chartist = __webpack_require__(/*! chartist */ "chartist");
 var urls_service_1 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
 var EstadadminComponent = /** @class */ (function () {
@@ -6066,6 +6079,8 @@ var EstadadminComponent = /** @class */ (function () {
         this.rpm = 0;
         this.table = '';
         this.dtOptions = {};
+        this.tableurl = '';
+        this.dtOptionsurl = {};
     }
     EstadadminComponent.prototype.startAnimationForLineChart = function (chart) {
         var seq, delays, durations;
@@ -6103,9 +6118,21 @@ var EstadadminComponent = /** @class */ (function () {
     EstadadminComponent.prototype.ngOnInit = function () {
         $("body").removeClass("off-canvas-sidebar");
         this.table = $('#data-table').DataTable(this.fillTable());
+        this.tableurl = $('#data-table-url').DataTable(this.fillTableUrl());
     };
     EstadadminComponent.prototype.ngAfterViewInit = function () {
+        var that = this;
         this.getEstadisticas();
+        $('#data-table-url').on('click', '.btn-delete', function () {
+            that.deleteUrl($(this).attr('date'));
+        });
+        $('[data-toggle="tooltip"]').tooltip('hide');
+        $('[data-toggle=tooltip]').tooltip('hide');
+        $("*").each(function () {
+            var popover = $.data(this, "bs.tooltip");
+            if (popover)
+                $(this).tooltip('hide');
+        });
     };
     EstadadminComponent.prototype.getEstadisticas = function () {
         var _this = this;
@@ -6205,6 +6232,130 @@ var EstadadminComponent = /** @class */ (function () {
                 $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend('<div class="dataTables_buttons hidden-sm-down actions"><span class="actions__item zmdi zmdi-print" data-table-action="print" /><span class="actions__item zmdi zmdi-fullscreen" data-table-action="fullscreen" /><div class="dropdown actions__item"><i data-toggle="dropdown" class="zmdi zmdi-download" /><ul class="dropdown-menu dropdown-menu-right"><a href="" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a><a href="" class="dropdown-item" data-table-action="csv">CSV (.csv)</a></ul></div></div>');
             },
         };
+    };
+    EstadadminComponent.prototype.fillTableUrl = function () {
+        var that = this;
+        return this.dtOptionsurl = {
+            pageLength: 10,
+            autoWidth: true,
+            fixedColumns: true,
+            responsive: true,
+            "destroy": true,
+            "order": [[0, 'desc']],
+            language: {
+                "url": "assets/Spanish.json",
+                searchPlaceholder: "Escriba parametro a filtrar..."
+            },
+            ajax: {
+                'url': this.globals.apiUrl + '/urls/admin',
+                "headers": {
+                    "Authorization": "bGl1c3Zhbmk6bHNiYXJ6YWdh"
+                },
+            },
+            columns: [
+                { title: 'Fecha', data: 'fecha', className: "align-middle", "render": function (data, type, row, meta) {
+                        return moment(data).format('YYYY/MM/DD H:mm');
+                    } },
+                { title: 'Acortada', data: 'url_acortada', className: "align-middle", "render": function (data, type, row, meta) {
+                        return that.globals.urlShared + '/' + row.categoria.categoria + '/' + data;
+                    } },
+                { title: 'Acción', data: 'accion', className: "align-middle", "render": function (data, type, row, meta) {
+                        return data;
+                    } },
+                { title: 'Real', data: 'url_real', className: "align-middle", "render": function (data, type, row, meta) {
+                        return data;
+                    } },
+                { title: 'Visitas', data: 'visitas', className: "align-middle", "render": function (data, type, row, meta) {
+                        return data;
+                    } },
+                { title: 'Ganancia Brutas', data: 'gan', "render": function (data, type, row, meta) {
+                        return (data != null ? '<i class="zmdi zmdi-money"></i> ' + data.toFixed(2) : 0);
+                    } },
+                { title: 'Opciones', data: 'id', "render": function (data, type, row, meta) {
+                        var eliminar = '<button date="' + data + '" title="Eliminar url" data-toggle="tooltip" class="mat-icon-button mat-accent btn-delete"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">delete_sweep</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
+                        return eliminar;
+                    } }
+            ],
+            /*"columnDefs": [
+                { "width": "150px", "targets": 0 },
+                { "width": "200px", "targets": 1 },
+                { "width": "400px", "targets": 2 },
+                { "width": "300px", "targets": 3 },
+                { "width": "60px", "targets": 4 },
+                { "width": "120px", "targets": 5 }
+            ],*/
+            dom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
+            buttons: [{
+                    extend: "excelHtml5",
+                    title: "Export Data"
+                }, {
+                    extend: "csvHtml5",
+                    title: "Export Data"
+                }, {
+                    extend: "print",
+                    title: "Material Admin"
+                }],
+            "initComplete": function () {
+                $('[data-toggle="tooltip"]').tooltip();
+                $(this).closest(".dataTables_wrapper").find(".dataTables__top").prepend('<div class="dataTables_buttons hidden-sm-down actions"><span class="actions__item zmdi zmdi-print" data-table-action="print" /><span class="actions__item zmdi zmdi-fullscreen" data-table-action="fullscreen" /><div class="dropdown actions__item"><i data-toggle="dropdown" class="zmdi zmdi-download" /><ul class="dropdown-menu dropdown-menu-right"><a href="" class="dropdown-item" data-table-action="excel">Excel (.xlsx)</a><a href="" class="dropdown-item" data-table-action="csv">CSV (.csv)</a></ul></div></div>');
+            },
+        };
+    };
+    EstadadminComponent.prototype.deleteUrl = function (id) {
+        var _this = this;
+        if (confirm("Esta Seguro que desea eliminar la URL?")) {
+            this.urlsService.delUriAdmin(id)
+                .subscribe(function (data) {
+                _this.tableurl = $('#data-table-url').DataTable(_this.fillTableUrl());
+                _this.showMessage("Url eliminada");
+                $('[data-toggle="tooltip"]').tooltip('hide');
+                $('[data-toggle=tooltip]').tooltip('hide');
+                $("*").each(function () {
+                    var popover = $.data(this, "bs.tooltip");
+                    if (popover)
+                        $(this).tooltip('hide');
+                });
+            });
+        }
+    };
+    EstadadminComponent.prototype.Ganancias = function () {
+        var _this = this;
+        this.urlsService.getAnalytic()
+            .subscribe(function (data) {
+            var da = data;
+            _this.showMessage("Ganancias actualizadas");
+            location.reload(true);
+        });
+    };
+    EstadadminComponent.prototype.showMessage = function (message) {
+        $.notify({
+            icon: 'notifications',
+            title: ' Notificación',
+            message: message,
+            url: ''
+        }, {
+            type: 'info',
+            allow_dismiss: true,
+            placement: {
+                from: 'top',
+                align: 'center'
+            },
+            timer: 1000,
+            animate: {
+                enter: 'fadeInDown',
+                exit: 'fadeOutUp'
+            },
+            template: '<div data-notify="container" class="col-xl-4 col-lg-4 col-11 col-sm-4 col-md-4 alert alert-{0} alert-with-icon" role="alert">' +
+                '<button mat-button  type="button" aria-hidden="true" class="close mat-button" data-notify="dismiss">  <i class="material-icons">close</i></button>' +
+                '<i class="material-icons" data-notify="icon">notifications</i> ' +
+                '<span data-notify="title">{1}</span> ' +
+                '<span data-notify="message">{2}</span>' +
+                '<div class="progress" data-notify="progressbar">' +
+                '<div class="progress-bar progress-bar-{0}" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>' +
+                '</div>' +
+                '<a href="{3}" target="{4}" data-notify="url"></a>' +
+                '</div>'
+        });
     };
     return EstadadminComponent;
 }());
@@ -9017,6 +9168,9 @@ var UrlsService = /** @class */ (function () {
     };
     UrlsService.prototype.getEstadAdmin = function () {
         return this.http.get(this.globals.apiUrl + "/urls/estadadmin");
+    };
+    UrlsService.prototype.delUriAdmin = function (id) {
+        return this.http.delete(this.globals.apiUrl + "/urls/del/admin/" + id);
     };
     UrlsService.ngInjectableDef = i0.defineInjectable({ factory: function UrlsService_Factory() { return new UrlsService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: UrlsService, providedIn: "root" });
     return UrlsService;
