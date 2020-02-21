@@ -6276,14 +6276,15 @@ var EstadadminComponent = /** @class */ (function () {
                         return eliminar;
                     } }
             ],
-            /*"columnDefs": [
+            "columnDefs": [
                 { "width": "150px", "targets": 0 },
                 { "width": "200px", "targets": 1 },
                 { "width": "400px", "targets": 2 },
-                { "width": "300px", "targets": 3 },
+                { "width": "200px", "targets": 3 },
                 { "width": "60px", "targets": 4 },
-                { "width": "120px", "targets": 5 }
-            ],*/
+                { "width": "70px", "targets": 5 },
+                { "width": "70px", "targets": 5 }
+            ],
             dom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
             buttons: [{
                     extend: "excelHtml5",
