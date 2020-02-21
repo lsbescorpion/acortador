@@ -6179,9 +6179,12 @@ var EstadadminComponent = /** @class */ (function () {
                 { title: 'Activo', data: 'activo', className: "align-middle", "render": function (data, type, row, meta) {
                         return (data == 1 ? '<i class="zmdi zmdi-check-circle-u zmdi-hc-2x"></i>' : '<i class="zmdi zmdi-dot-circle zmdi-hc-2x"></i>');
                     } },
-                { title: 'Ganancia', data: 'gan', "render": function (data, type, row, meta) {
+                { title: 'Ganancia Brutas', data: 'gan', "render": function (data, type, row, meta) {
                         return (data != null ? '<i class="zmdi zmdi-money"></i> ' + data.toFixed(2) : 0);
-                    } }
+                    } },
+                { title: 'A Pagar', data: 'id', className: "align-middle", "render": function (data, type, row, meta) {
+                        return (row.roles[0].name == "Administrador" ? '<i class="zmdi zmdi-money"></i> ' + row.gan.toFixed(2) : (row.roles[0].name == "Moderador" ? '<i class="zmdi zmdi-money"></i> ' + (row.gan * 60 / 100).toFixed(2) : '<i class="zmdi zmdi-money"></i> ' + (row.gan * 50 / 100).toFixed(2)));
+                    } },
             ],
             dom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
             buttons: [{
