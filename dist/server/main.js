@@ -6180,6 +6180,7 @@ var EstadadminComponent = /** @class */ (function () {
             autoWidth: !1,
             responsive: !0,
             "destroy": true,
+            "order": [[5, 'desc']],
             language: {
                 "url": "assets/Spanish.json",
                 searchPlaceholder: "Escriba parametro a filtrar..."
@@ -6257,7 +6258,7 @@ var EstadadminComponent = /** @class */ (function () {
                         return moment(data).format('YYYY/MM/DD H:mm');
                     } },
                 { title: 'Acortada', data: 'url_acortada', className: "align-middle", "render": function (data, type, row, meta) {
-                        return '/categoria' + row.categoria.categoria + '/' + data;
+                        return '/categoria/' + row.categoria.categoria + '/' + data;
                     } },
                 { title: 'Real', data: 'url_real', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
@@ -6278,12 +6279,12 @@ var EstadadminComponent = /** @class */ (function () {
             ],
             "columnDefs": [
                 { "width": "150px", "targets": 0 },
-                { "width": "200px", "targets": 1 },
-                { "width": "400px", "targets": 2 },
-                { "width": "200px", "targets": 3 },
+                { "width": "250px", "targets": 1 },
+                { "width": "500px", "targets": 2 },
+                { "width": "300px", "targets": 3 },
                 { "width": "60px", "targets": 4 },
-                { "width": "70px", "targets": 5 },
-                { "width": "70px", "targets": 5 }
+                { "width": "100px", "targets": 5 },
+                { "width": "70px", "targets": 6 }
             ],
             dom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
             buttons: [{
