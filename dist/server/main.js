@@ -6183,7 +6183,10 @@ var EstadadminComponent = /** @class */ (function () {
                         return (data != null ? '<i class="zmdi zmdi-money"></i> ' + data.toFixed(2) : 0);
                     } },
                 { title: 'A Pagar', data: 'id', className: "align-middle", "render": function (data, type, row, meta) {
-                        return (row.roles[0].name == "Administrador" ? '<i class="zmdi zmdi-money"></i> ' + row.gan.toFixed(2) : (row.roles[0].name == "Moderador" ? '<i class="zmdi zmdi-money"></i> ' + (row.gan * 60 / 100).toFixed(2) : '<i class="zmdi zmdi-money"></i> ' + (row.gan * 50 / 100).toFixed(2)));
+                        if (row.gan != null)
+                            return (row.roles[0].name == "Administrador" ? '<i class="zmdi zmdi-money"></i> ' + row.gan.toFixed(2) : (row.roles[0].name == "Moderador" ? '<i class="zmdi zmdi-money"></i> ' + (row.gan * 60 / 100).toFixed(2) : '<i class="zmdi zmdi-money"></i> ' + (row.gan * 50 / 100).toFixed(2)));
+                        else
+                            return '0';
                     } },
             ],
             dom: '<"dataTables__top"lfB>rt<"dataTables__bottom"ip><"clear">',
