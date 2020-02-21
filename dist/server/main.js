@@ -6257,13 +6257,13 @@ var EstadadminComponent = /** @class */ (function () {
                         return moment(data).format('YYYY/MM/DD H:mm');
                     } },
                 { title: 'Acortada', data: 'url_acortada', className: "align-middle", "render": function (data, type, row, meta) {
-                        return that.globals.urlShared + '/' + row.categoria.categoria + '/' + data;
-                    } },
-                { title: 'Acción', data: 'accion', className: "align-middle", "render": function (data, type, row, meta) {
-                        return data;
+                        return '/categoria' + row.categoria.categoria + '/' + data;
                     } },
                 { title: 'Real', data: 'url_real', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
+                    } },
+                { title: 'Usuario', data: 'id', className: "align-middle", "render": function (data, type, row, meta) {
+                        return row.users.nombre_apellidos;
                     } },
                 { title: 'Visitas', data: 'visitas', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
