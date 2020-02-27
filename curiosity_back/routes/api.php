@@ -36,6 +36,8 @@ Route::get('urls/analytic', 'API\UrlsController@getAnalytic')->name('getAnalytic
 Route::get('urls/monthdata', 'API\UrlsController@getMonthData')->name('getMonthData');
 Route::get('urls/checkurl/{url}', 'API\UrlsController@CheckUrl')->name('CheckUrl');
 Route::get('urls/estadadmin', 'API\UrlsController@getEstadAdmin')->name('getestadadmin');
+Route::get('urls/admin', 'API\UrlsController@getUrlsAdmin')->name('geturlsadmin');
+Route::delete('urls/del/admin/{url}', 'API\UrlsController@deleteUrlAdmin')->name('deleteurladmin');
 
 Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
 Route::post('blog/photob', 'API\BlogController@photob')->name('photob');

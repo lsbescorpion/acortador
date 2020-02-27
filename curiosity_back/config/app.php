@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'CropersViral'),
+    'name' => env('APP_NAME', 'Glova Virales'),
 
     /*
     |--------------------------------------------------------------------------
@@ -166,7 +166,7 @@ return [
          * Package Service Providers...
          */
 
-        //Stevebauman\Location\LocationServiceProvider::class,
+        Stevebauman\Location\LocationServiceProvider::class,
 
         /*
          * Application Service Providers...

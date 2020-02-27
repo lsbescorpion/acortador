@@ -21,53 +21,56 @@ class UrlsController extends Controller
 {
 
     public function getAnalytic() {
-        $startDate = Carbon::now();//Carbon::createFromFormat('d/m/Y', '20/08/2019');
-        $endDate = Carbon::now();//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
-        $fecha = Carbon::now()->toDateTimeString();
+        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+        $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
 
         $analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
             'ga:pagePath',
             [
                 'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
-                'dimensions' => 'ga:pagePath'
+                'dimensions' => 'ga:pagePath,ga:source'
             ]
         );
 
         /*$ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_EUR&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
+        curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_UYU&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 60);
         $data = curl_exec($ch); 
         curl_close($ch);
         $rates = json_decode($data, true);
 
-        $euro = $rates['USD_EUR']['val'];*/
+        $uyu = $rates['USD_UYU']['val'];*/
 
         $rows = $analyticsData->rows;
         for($i = 0; $i < count($rows); $i++) {
-            $url = explode("/", $rows[$i][0]);
-            if(isset($url[2]) && strlen($url[2]) == 7) {
-                if($rows[$i][1] != '0.0') {
-                    $ur = Urls::with(['users'])->where(['url_acortada' => $url[2]])->first();
-                    if($ur != null) {
-                        $ganancias = GananciasDiarias::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
-                        $ganancias = ($ganancias != null ? $ganancias : new GananciasDiarias());
-                        $ganancias->fecha = date('Y-m-d',strtotime($fecha));
-                        $ganancias->user_id = $ur->users->id;
-                        $ganancias->url_id = $ur->id;
-                        /*if($euro != null && $euro != '')
-                            $valor = $rows[$i][1] * $euro;
-                        else
-                            $valor = $rows[$i][1] * 0.90;*/
-                        $ganancias->ganancia = round($rows[$i][1], 2, PHP_ROUND_HALF_DOWN);
-                        $ganancias->save();
+            if($rows[$i][1] != '(direct)') {
+                $url = explode("/", $rows[$i][0]);
+                if(isset($url[3]) && strlen($url[3]) == 7) {
+                    if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
+                        $ur = Urls::with(['users'])->where(['url_acortada' => $url[3]])->first();
+                        if($ur != null) {
+                            $ganancias = GananciasDiarias::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiarias());
+                            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+                            $ganancias->user_id = $ur->users->id;
+                            $ganancias->url_id = $ur->id;
+                            if($uyu != null) {
+                                $gan = $rows[$i][2] * $uyu;
+                                $ganancias->ganancia = round($gan, 2, PHP_ROUND_HALF_DOWN);
+                            }
+                            else
+                                $ganancias->ganancia = round($rows[$i][2]/0.0367, 2, PHP_ROUND_HALF_DOWN);
+                            $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
+                            $ganancias->save();
+                        }
                     }
                 }
             }
-                //print_r(round($rows[$i][1], 2, PHP_ROUND_HALF_DOWN));
         }
-        
+       
         return response()->json($analyticsData);
     }
 
@@ -129,11 +132,12 @@ class UrlsController extends Controller
 
         $p = UrlVisitasP::where(['url_id' => $url->id, 'iso_2' => $ips->countryCode])->first();
 
-        $p = ($p != null ? $p : new UrlVisitasP());
+        if($p == null)
+            $p = new UrlVisitasP();
 
         $p->iso_2 = $ips->countryCode;
         $p->iso_3 = $pais->iso_a3;
-        $p->visitas = ($p != null ? $p->visitas + 1 : 1);
+        $p->visitasp = ($p != null ? $p->visitasp : 0) + 1;
         $p->url_id = $url->id;
         $p->nombre = $pais->name_es;
         $p->save();
@@ -141,7 +145,7 @@ class UrlsController extends Controller
         $url->visitas = $url->visitas + 1;
         $url->save();
 
-        $fecha = Carbon::now()->format('Y-m-d');
+        $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');
         $visitas = VisitasDiarias::where(['user_id' => $url->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
         if($visitas == null)
             $visitas = new VisitasDiarias();
@@ -151,7 +155,7 @@ class UrlsController extends Controller
         $visitas->user_id = $url->user_id;
         $visitas->save();
 
-        $url->titulo = utf8_decode($url->titulo);
+        $url->titulo = $url->titulo;
 
         return response()->json($url);
     }
@@ -162,7 +166,7 @@ class UrlsController extends Controller
             $query->orderBy('visitasp', 'desc');
         }])->where(['id' => $id, 'activa' => 1])->first();
 
-        $fecha = Carbon::now()->format('Y-m-d');
+        $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');
         $lastd = date('t',strtotime($fecha));
 
         $chartganancias = [];
@@ -195,7 +199,7 @@ class UrlsController extends Controller
         $resultado['url'] = $url;
         $resultado['ganancias'] = $chartganancias;
         $resultado['maxg'] = $maxg;
-        $resultado['fgdiarias'] = Carbon::now()->format('Y-m-d H:i');
+        $resultado['fgdiarias'] = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
         $resultado['gtotal'] = round(($gtotal * $divisor / 100), 2, PHP_ROUND_HALF_DOWN);
 
         return response()->json($resultado);
@@ -221,40 +225,40 @@ class UrlsController extends Controller
         }
 
         $auth = base64_encode("admin:lsbarzaga");
-        stream_context_set_default(
+        /*stream_context_set_default(
             array(
                 'http' => array(
-                    //'proxy' => "tcp://172.16.4.1:3128",
-                    'request_fulluri' => true
-                    //'header' => "Proxy-Authorization: Basic $auth"
+                    'method' => 'POST',
+                    'header' => 'Content-Type: application/json',
+                    'proxy' => "tcp://172.16.4.1:3128",
+                    'request_fulluri' => true,
+                    'header' => "Proxy-Authorization: Basic $auth"
                 ),
                 'ssl' => array(
                     'verify_peer'      => false,
                     'verify_peer_name' => false
                 ),
             )
-        );
-        /*stream_context_create(array(
+        );*/
+        stream_context_create(array(
                     'http' => array(
                         'method' => 'POST',
                         'header' => 'Content-Type: application/json',
-                        'proxy' => "tcp://172.16.4.1:3128",
-                        'request_fulluri' => true,
-                        'header' => "Proxy-Authorization: Basic $auth"
+                        //'proxy' => "tcp://172.16.4.1:3128",
+                        'request_fulluri' => true
+                        //'header' => "Proxy-Authorization: Basic $auth"
                         ),
                     'ssl' => array(
                         'verify_peer'      => false,
                         'verify_peer_name' => false
                         ),
                     )
-                );*/
-        $dom = new \DOMDocument;
+                );
+        $dom = new \DOMDocument();
         $dom->preserveWhiteSpace = FALSE;
         $internalErrors = libxml_use_internal_errors(true);
         $data = $dom->loadHTML(file_get_contents($request->get('url')));
-        //$dom->loadXML(file_get_contents($_POST['url']));
-        libxml_use_internal_errors($internalErrors);
-        $dom->preserveWhiteSpace = false;
+
         $metas = $dom->getElementsByTagName('meta'); 
         if($metas->length == 0)
         {
@@ -287,11 +291,14 @@ class UrlsController extends Controller
         }      
         if(!isset($metas_array['descripcion']))
             $metas_array['descripcion'] = $metas_array['titulo'];
+        else
+        if(isset($metas_array['descripcion']) && $metas_array['descripcion'] == null)
+            $metas_array['descripcion'] = $metas_array['titulo'];
         if(!isset($metas_array['image'])) {
             $meta = get_meta_tags($request->get('url'));
             $metas_array['image'] = $meta['twitter:image'];
         }
-        if(!isset($metas_array['image'] == null))
+        if(!isset($metas_array['image']))
         {
             return response()->json([
                 'status' => 'error',
@@ -299,6 +306,14 @@ class UrlsController extends Controller
                 'errors' => ['url' => ['Error obteniendo los metadatos']],
             ], 422);
         }  
+        if($metas_array['image'] == null)
+        {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Error',
+                'errors' => ['url' => ['Error obteniendo los metadatos']],
+            ], 422);
+        }
         $imagen = file_get_contents($metas_array['image']);
         $ds = DIRECTORY_SEPARATOR;
         $dir = $ds.date('Y',time()).$ds.date('m',time()).$ds.date('d',time()).$ds;
@@ -313,7 +328,7 @@ class UrlsController extends Controller
         $urls->titulo = $metas_array['titulo'];
         $urls->descripcion = $metas_array['descripcion'];
         $urls->visitas = 0;
-        $urls->fecha = Carbon::now()->format('Y-m-d H:i');
+        $urls->fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
         $urls->user_id = $request->get('user_id');
         $urls->categoria_id = $request->get('categoria');
         $urls->foto = 'imagenes'.$dir.$name.'.jpg';
@@ -339,10 +354,10 @@ class UrlsController extends Controller
 
     public function getEstadisticas(Request $request) {
         $estadisticas = [];
-        $fecha = Carbon::now()->format('Y-m-d');//
+        $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');//
         $vdiarias = VisitasDiarias::where(['user_id' => $request->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
         $gdiarias = GananciasDiarias::where(['user_id' => $request->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('ganancia');
-        $fvdiarias = Carbon::now()->format('d/m/Y H:i');
+        $fvdiarias = Carbon::now()->setTimezone('America/Havana')->format('d/m/Y H:i');
         $visitas = Urls::where(['user_id' => $request->user_id])->sum('visitas');
         $lastd = date('t',strtotime($fecha));
 
@@ -372,7 +387,7 @@ class UrlsController extends Controller
             $mes = date('m',strtotime($fecha));
             $ga = GananciasDiarias::where(['user_id' => $request->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
             if($ga != null) {
-                $chartganancias['ganancias'][$posg] = $ga;
+                $chartganancias['ganancias'][$posg] = round($ga, 2, PHP_ROUND_HALF_DOWN);
                 if($ga >= $maxg)
                     $maxg = $ga;
             }
@@ -404,6 +419,77 @@ class UrlsController extends Controller
         $estadisticas['maxg'] = $maxg;
 
         return response()->json($estadisticas);
+    }
+
+    public function getEstadAdmin() {
+        $estadisticas = [];
+        $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');//
+        $gdiarias = GananciasDiarias::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('ganancia');
+        $start = date('Y-m-1',strtotime($fecha));
+        $end = date('Y-m-t',strtotime($fecha));
+        $gmensual = GananciasDiarias::whereBetween('fecha', [$start, $end])->sum('ganancia');
+        $fvdiarias = Carbon::now()->setTimezone('America/Havana')->format('d/m/Y H:i');
+        $chartganancias = [];
+        $posg = 0;
+        $maxg = 0;
+        $lastd = date('t',strtotime($fecha));
+        for($i = 1; $i <= $lastd; $i++) {
+            $anno = date('Y',strtotime($fecha));
+            $mes = date('m',strtotime($fecha));
+            $ga = GananciasDiarias::whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
+            if($ga != null) {
+                $chartganancias['ganancias'][$posg] = round($ga, 2, PHP_ROUND_HALF_DOWN);
+                if($ga >= $maxg)
+                    $maxg = $ga;
+            }
+            else
+                $chartganancias['ganancias'][$posg] = 0;
+            $chartganancias['dia'][$posg] = $i;
+            $posg++;
+        }
+        if($chartganancias['dia'] == null) {
+            $chartganancias['dia'] = [];
+            $chartganancias['ganancias'] = [];
+        }
+        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+
+        $analyticsData = Analytics::performQuery(
+            Period::create($startDate, $endDate),
+            'ga:date',
+            [
+                'metrics' => 'ga:adsenseRevenue,ga:adsensePageImpressions',
+                'dimensions' => 'ga:date'
+            ]
+        );
+
+        $rows = $analyticsData->rows;
+        $rpm = round(($rows[0][1] / $rows[0][2] * 1000), 2, PHP_ROUND_HALF_DOWN);
+
+        $estadisticas['gdiarias'] = $gdiarias;
+        $estadisticas['gmensual'] = $gmensual;
+        $estadisticas['fvdiarias'] = $fvdiarias;
+        $estadisticas['chartganancias'] = $chartganancias;
+        $estadisticas['maxg'] = $maxg;
+        $estadisticas['rpm'] = $rpm;
+
+        return response()->json($estadisticas);
+    }
+
+    public function getUrlsAdmin(){
+        $datos = Urls::with(['categoria', 'users'])->withCount(['ganancias as gan' => function ($query) {
+            $query->select(\DB::raw('sum(ganancia)'));
+        }])->orderby('fecha', 'DESC')->get();
+        return response()->json(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos]);
+    }
+
+    public function deleteUrlAdmin($id)
+    {
+        $url = Urls::find($id);
+        if(file_exists($url->foto)) 
+            unlink($url->foto);
+        $url->delete();
+        return response()->json('Url Eliminada', 200 );
     }
 
     public function getMonthData() {

@@ -44,7 +44,7 @@ class MgidController extends Controller
         $result = $this->getUrlData($url_login, $post_data_login);
 
         $url_report = "http://api.mgid.com/v1/publishers/".$result->idAuth."/widget-custom-report?token=".$result->token.
-                    "&dateInterval=interval&startDate=2020-01-28&endDate=2020-01-29&siteId=528291&dimensions=date&metrics=shows,realShows,visibilityRate,".
+                    "&dateInterval=interval&startDate=2020-02-04&endDate=2020-02-04&siteId=528291&dimensions=date&metrics=shows,realShows,visibilityRate,".
                     "clicks,wages,cpm,vCpm,cpc,ctr";
         $report = $this->getUrlData($url_report);
         return response()->json($report);

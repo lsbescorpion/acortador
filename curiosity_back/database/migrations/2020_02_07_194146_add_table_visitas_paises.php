@@ -18,6 +18,7 @@ class AddTableVisitasPaises extends Migration
             $table->string('iso_2');
             $table->string('iso_3');
             $table->integer('visitas');
+            $table->string('nombre');
             $table->integer('url_id')->unsigned();
 
             $table->foreign('url_id')->references('id')->on('urls')->onDelete('cascade');
