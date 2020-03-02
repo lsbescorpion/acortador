@@ -7617,33 +7617,34 @@ var TemporalComponent = /** @class */ (function () {
                 var va = err1;
                 var decodedData = window.atob(va);
                 var err = JSON.parse(decodedData);
-                console.log(err);
                 if (err.id != null) {
+                    console.log(err);
                     _this.show = false;
                     var link = _this.document.createElement('link');
                     link.async = true;
                     link.rel = 'canonical';
                     link.href = err.url_real;
                     _this.document.head.appendChild(link);
-                    _this.titleService.setTitle(utf8_decode(err.titulo));
-                    _this.meta.updateTag({ name: 'title', content: utf8_decode(err.titulo) });
-                    _this.meta.updateTag({ name: 'description', content: utf8_decode(err.descripcion) });
+                    _this.titleService.setTitle(err.titulo);
+                    _this.meta.updateTag({ name: 'title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'description', content: err.descripcion });
                     _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
-                    _this.meta.updateTag({ property: 'og:title', content: utf8_decode(err.titulo) });
-                    _this.meta.updateTag({ property: 'og:description', content: utf8_decode(err.descripcion) });
+                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
                     _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
                     _this.meta.updateTag({ property: 'og:image:width', content: '740' });
                     _this.meta.updateTag({ property: 'og:image:height', content: '370' });
                     _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
                     _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
-                    _this.meta.updateTag({ name: 'twitter:title', content: utf8_decode(err.titulo) });
-                    _this.meta.updateTag({ name: 'twitter:description', content: utf8_decode(err.descripcion) });
+                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                     _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                    _this.title = utf8_decode(err.titulo);
+                    _this.title = err.titulo;
                     window.location.href = err.url_real;
                 }
                 else {
+                    console.log('404');
                     _this.router.navigate(['404']);
                 }
             });
