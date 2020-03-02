@@ -28,6 +28,7 @@ Route::get('users/ganancias', 'API\UsersController@getGanancias')->name('gananci
 
 Route::post('urls/acortar', 'API\UrlsController@acortar')->name('acortar');
 Route::get('urls', 'API\UrlsController@getUrls')->name('getUrls');
+Route::get('urls/pop', 'API\UrlsController@getUrlsPop')->name('getUrlsPop');
 Route::get('url/{url}', 'API\UrlsController@getUrl')->name('url');
 Route::get('url/byid/{url}', 'API\UrlsController@getUrlbyId')->name('getUrlbyId');
 Route::delete('urls/delete/{url}', 'API\UrlsController@deleteUrl')->name('deleteUrl');

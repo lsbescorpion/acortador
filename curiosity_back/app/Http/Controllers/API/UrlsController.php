@@ -205,10 +205,15 @@ class UrlsController extends Controller
 
     public function getUrls(Request $request){
         if($request->get('id') != null )
-            $datos = Urls::with(['categoria'])->where(['user_id' => $request->get('id'), 'activa' => 1])->orderby('fecha', 'DESC')->get();
+            $datos = Urls::with(['categoria', 'users'])->where(['user_id' => $request->get('id'), 'activa' => 1])->orderby('fecha', 'DESC')->get();
         else
-            $datos = Urls::with(['categoria'])->where(['activa' => 1])->orderby('fecha', 'DESC')->get();
+            $datos = Urls::with(['categoria', 'users'])->where(['activa' => 1])->orderby('fecha', 'DESC')->get();
         return response()->json(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos]);
+    }
+
+    public function getUrlsPop(){
+        $datos = Urls::with(['categoria', 'users'])->where(['activa' => 1])->orderby('visitas', 'DESC')->get();
+        return response()->json(base64_encode(json_encode($datos)));
     }
 
     public function acortar(Request $request)
@@ -242,9 +247,9 @@ class UrlsController extends Controller
                     'http' => array(
                         'method' => 'POST',
                         'header' => 'Content-Type: application/json',
-                        'proxy' => "tcp://172.16.4.1:3128",
-                        'request_fulluri' => true,
-                        'header' => "Proxy-Authorization: Basic $auth"
+                        //'proxy' => "tcp://172.16.4.1:3128",
+                        'request_fulluri' => true
+                        //'header' => "Proxy-Authorization: Basic $auth"
                         ),
                     'ssl' => array(
                         'verify_peer'      => false,
