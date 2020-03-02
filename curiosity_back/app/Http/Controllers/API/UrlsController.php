@@ -86,19 +86,19 @@ class UrlsController extends Controller
         if($agent->isRobot()) {
             $redirect = 1;
             $url->check = $redirect;
-            return response()->json($url, 500);
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         $ips = \Location::get();
         if($ips == null || $ips->countryCode == 'CU') {
             $redirect = 1;
             $url->check = $redirect;
-            return response()->json($url, 500);
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         $url->check = $redirect;
 
-        return response()->json($url);
+        return response()->json(base64_encode(json_encode($url)));
     }
  
     public function getUrl($id, Request $request)
@@ -111,21 +111,21 @@ class UrlsController extends Controller
         }
 
         if($request->get('user') != 'null') {
-            return response()->json($url, 500);
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         if(!$agent->isMobile() && !$agent->isTablet()) {
-            return response()->json($url, 500);
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         $redirect = 0;
         if($agent->isRobot()) {
-            return response()->json($url, 500);
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         $ips = \Location::get();
         if($ips == null || $ips->countryCode == 'CU') {
-            return response()->json($url, 500);
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         $pais = Paises::where(['iso_a2' => $ips->countryCode])->first();
@@ -155,9 +155,7 @@ class UrlsController extends Controller
         $visitas->user_id = $url->user_id;
         $visitas->save();
 
-        $url->titulo = $url->titulo;
-
-        return response()->json($url);
+        return response()->json(base64_encode(json_encode($url)));
     }
 
     public function getUrlbyId($id, Request $request)
@@ -202,7 +200,7 @@ class UrlsController extends Controller
         $resultado['fgdiarias'] = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
         $resultado['gtotal'] = round(($gtotal * $divisor / 100), 2, PHP_ROUND_HALF_DOWN);
 
-        return response()->json($resultado);
+        return response()->json(base64_encode(json_encode($resultado)));
     }
 
     public function getUrls(Request $request){
@@ -244,9 +242,9 @@ class UrlsController extends Controller
                     'http' => array(
                         'method' => 'POST',
                         'header' => 'Content-Type: application/json',
-                        //'proxy' => "tcp://172.16.4.1:3128",
-                        'request_fulluri' => true
-                        //'header' => "Proxy-Authorization: Basic $auth"
+                        'proxy' => "tcp://172.16.4.1:3128",
+                        'request_fulluri' => true,
+                        'header' => "Proxy-Authorization: Basic $auth"
                         ),
                     'ssl' => array(
                         'verify_peer'      => false,
@@ -418,7 +416,7 @@ class UrlsController extends Controller
         $estadisticas['max'] = $max;
         $estadisticas['maxg'] = $maxg;
 
-        return response()->json($estadisticas);
+        return response()->json(base64_encode(json_encode($estadisticas)));
     }
 
     public function getEstadAdmin() {
@@ -454,7 +452,7 @@ class UrlsController extends Controller
         $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
         $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
 
-        $analyticsData = Analytics::performQuery(
+        /*$analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
             'ga:date',
             [
@@ -464,23 +462,23 @@ class UrlsController extends Controller
         );
 
         $rows = $analyticsData->rows;
-        $rpm = round(($rows[0][1] / $rows[0][2] * 1000), 2, PHP_ROUND_HALF_DOWN);
+        $rpm = round(($rows[0][1] / $rows[0][2] * 1000), 2, PHP_ROUND_HALF_DOWN);*/
 
         $estadisticas['gdiarias'] = $gdiarias;
         $estadisticas['gmensual'] = $gmensual;
         $estadisticas['fvdiarias'] = $fvdiarias;
         $estadisticas['chartganancias'] = $chartganancias;
         $estadisticas['maxg'] = $maxg;
-        $estadisticas['rpm'] = $rpm;
+        /*$estadisticas['rpm'] = $rpm;*/
 
-        return response()->json($estadisticas);
+        return response()->json(base64_encode(json_encode($estadisticas)));
     }
 
     public function getUrlsAdmin(){
         $datos = Urls::with(['categoria', 'users'])->withCount(['ganancias as gan' => function ($query) {
             $query->select(\DB::raw('sum(ganancia)'));
         }])->orderby('fecha', 'DESC')->get();
-        return response()->json(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos]);
+        return response()->json(base64_encode(json_encode(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos])));
     }
 
     public function deleteUrlAdmin($id)
@@ -508,6 +506,6 @@ class UrlsController extends Controller
             $mensual->ganancia = round($gmensual[$i]->sum, 2, PHP_ROUND_HALF_DOWN);
             $mensual->save();
         }
-        return response()->json($gmensual);   
+        return response()->json(base64_encode(json_encode($gmensual)));   
     }
 }

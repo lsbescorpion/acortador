@@ -31,67 +31,67 @@ class BlogController extends Controller
         }
         $blog->visitas = $blog->visitas + 1;
         $blog->save();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function getBlogEdit($id)
     {
         $blog = Blog::with(['categoria','users'])->where(['id' => $id])->first();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function lastNoti3()
     {
         $blog = Blog::with(['categoria','users'])->orderby('id', 'DESC')->limit(6)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function Popular()
     {
         $blog = Blog::with(['categoria','users'])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function LastSalud()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 1])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function LastCuriosidades()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 3])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function LastManualidades()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 6])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function LastEntretenimientos()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 2])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function LastVideos()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 4])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function LastTecnologia()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 5])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->limit(4)->offset(0)->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function AllSalud()
     {
         $blog = Blog::with(['categoria','users'])->where(['categoria_id' => 1])->orderby('visitas', 'DESC')->orderby('id', 'DESC')->get();
-        return response()->json($blog);
+        return response()->json(base64_encode(json_encode($blog)));
     }
 
     public function AllGracioso()

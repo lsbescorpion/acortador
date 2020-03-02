@@ -13,7 +13,7 @@ use Carbon\Carbon;
 
 class UsersController extends Controller
 {
-    public function getUserIdent(Request $request) {
+    /*public function getUserIdent(Request $request) {
         if($request->get('ident') != null) {
             $user = User::where(['NO_IDENTIFICACION' => $request->get('ident')])->first();
             if($user != null)
@@ -34,7 +34,7 @@ class UsersController extends Controller
                 return response()->json(false);
             return response()->json(true);
         }
-    }
+    }*/
 
     public function logout(Request $request) {
 
@@ -65,7 +65,7 @@ class UsersController extends Controller
 
         $user->visitas = $visitas;
 
-        return response()->json($user);
+        return response()->json(base64_encode(json_encode($user)));
     }
 
     public function getUsers(Request $request){
@@ -193,7 +193,7 @@ class UsersController extends Controller
         $perfil->tarjeta = $request->get('tarjeta');
         $perfil->save();
 
-        return response()->json($user);
+        return response()->json(base64_encode(json_encode($user)));
     }
 
     public function photo(Request $request) {
@@ -271,6 +271,6 @@ class UsersController extends Controller
         $users = User::with('roles')->withCount(['ganancias as gan' => function ($query) {
             $query->select(\DB::raw('sum(ganancia)'));
         }])->get();
-        return response()->json(["draw"=> 1, "recordsTotal"=> count($users),"recordsFiltered"=> count($users),'data' => $users]);
+        return response()->json(base64_encode(json_encode(["draw"=> 1, "recordsTotal"=> count($users),"recordsFiltered"=> count($users),'data' => $users])));
     }
 }
