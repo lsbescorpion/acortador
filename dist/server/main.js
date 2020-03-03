@@ -7515,6 +7515,7 @@ var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@
 __webpack_require__(/*! jquery-countdown */ "jquery-countdown");
 var urls_service_1 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
 var blog_service_1 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/services/blog.service.ts");
+var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
 var $ = __webpack_require__(/*! jquery */ "jquery");
 var TemporalComponent = /** @class */ (function () {
     function TemporalComponent(route, router, urlsService, meta, titleService, globals, document, blogService) {
@@ -7577,7 +7578,7 @@ var TemporalComponent = /** @class */ (function () {
                 return __generator(this, function (_a) {
                     this.show = true;
                     va = data;
-                    decodedData = window.atob(va);
+                    decodedData = js_base64_1.Base64.decode(va);
                     da = JSON.parse(decodedData);
                     //let da: any = data;
                     setTimeout(function () {
@@ -47792,6 +47793,17 @@ module.exports = require("jquery");
 /***/ (function(module, exports) {
 
 module.exports = require("jquery-countdown");
+
+/***/ }),
+
+/***/ "js-base64":
+/*!****************************!*\
+  !*** external "js-base64" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("js-base64");
 
 /***/ }),
 
