@@ -7573,6 +7573,7 @@ var TemporalComponent = /** @class */ (function () {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
                 var da, link, that, fiveSeconds;
+                var _this = this;
                 return __generator(this, function (_a) {
                     this.show = true;
                     da = data;
@@ -7582,22 +7583,24 @@ var TemporalComponent = /** @class */ (function () {
                     link.rel = 'canonical';
                     link.href = this.url.url_real;
                     document.head.appendChild(link);
-                    this.titleService.setTitle(utf8_encode(da.titulo));
-                    this.meta.updateTag({ name: 'title', content: utf8_encode(da.titulo) });
-                    this.meta.updateTag({ name: 'description', content: utf8_encode(da.descripcion) });
-                    this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                    this.meta.updateTag({ property: 'og:title', content: utf8_encode(da.titulo) });
-                    this.meta.updateTag({ property: 'og:description', content: utf8_encode(da.descripcion) });
-                    this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
-                    this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                    this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                    this.meta.updateTag({ name: 'twitter:title', content: utf8_encode(da.titulo) });
-                    this.meta.updateTag({ name: 'twitter:description', content: utf8_encode(da.descripcion) });
-                    this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
-                    this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                    this.title = utf8_encode(da.titulo);
+                    setTimeout(function () {
+                        _this.titleService.setTitle(utf8_encode(da.titulo));
+                        _this.meta.updateTag({ name: 'title', content: utf8_encode(da.titulo) });
+                        _this.meta.updateTag({ name: 'description', content: utf8_encode(da.descripcion) });
+                        _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                        _this.meta.updateTag({ property: 'og:title', content: utf8_encode(da.titulo) });
+                        _this.meta.updateTag({ property: 'og:description', content: utf8_encode(da.descripcion) });
+                        _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                        _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                        _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                        _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                        _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                        _this.meta.updateTag({ name: 'twitter:title', content: utf8_encode(da.titulo) });
+                        _this.meta.updateTag({ name: 'twitter:description', content: utf8_encode(da.descripcion) });
+                        _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                        _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                        _this.title = utf8_encode(da.titulo);
+                    }, 1000);
                     that = this;
                     fiveSeconds = new Date().getTime() + 20000;
                     //await this.setScript();
