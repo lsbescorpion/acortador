@@ -7572,12 +7572,10 @@ var TemporalComponent = /** @class */ (function () {
         if (this.id_url != null) {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                var va, decodedData, da, link, that, fiveSeconds;
+                var da, link, that, fiveSeconds;
                 return __generator(this, function (_a) {
                     this.show = true;
-                    va = data;
-                    decodedData = window.atob(va);
-                    da = JSON.parse(decodedData);
+                    da = data;
                     this.url = da;
                     link = document.createElement('link');
                     link.async = true;
