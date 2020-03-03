@@ -7572,35 +7572,38 @@ var TemporalComponent = /** @class */ (function () {
         if (this.id_url != null) {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                var va, decodedData, da, link, that, fiveSeconds;
+                var va, decodedData, da, that, fiveSeconds;
+                var _this = this;
                 return __generator(this, function (_a) {
                     this.show = true;
                     va = data;
                     decodedData = window.atob(va);
                     da = JSON.parse(decodedData);
                     //let da: any = data;
-                    this.url = da;
-                    link = document.createElement('link');
-                    link.async = true;
-                    link.rel = 'canonical';
-                    link.href = this.url.url_real;
-                    document.head.appendChild(link);
-                    this.titleService.setTitle(da.titulo);
-                    this.meta.updateTag({ name: 'title', content: da.titulo });
-                    this.meta.updateTag({ name: 'description', content: da.descripcion });
-                    this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                    this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                    this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                    this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
-                    this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                    this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                    this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                    this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                    this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
-                    this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                    this.title = da.titulo;
+                    setTimeout(function () {
+                        _this.url = da;
+                        var link = document.createElement('link');
+                        link.async = true;
+                        link.rel = 'canonical';
+                        link.href = _this.url.url_real;
+                        document.head.appendChild(link);
+                        _this.titleService.setTitle(da.titulo);
+                        _this.meta.updateTag({ name: 'title', content: da.titulo });
+                        _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                        _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                        _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                        _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                        _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                        _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                        _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                        _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                        _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                        _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                        _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                        _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                        _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                        _this.title = da.titulo;
+                    }, 1000);
                     that = this;
                     fiveSeconds = new Date().getTime() + 20000;
                     //await this.setScript();
