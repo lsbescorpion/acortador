@@ -7618,7 +7618,6 @@ var TemporalComponent = /** @class */ (function () {
                 var decodedData = window.atob(va);
                 var err = JSON.parse(decodedData);
                 if (err.id != null) {
-                    console.log(err);
                     _this.show = false;
                     var link = _this.document.createElement('link');
                     link.async = true;
@@ -7641,10 +7640,11 @@ var TemporalComponent = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                     _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
                     _this.title = err.titulo;
-                    window.location.href = err.url_real;
+                    setTimeout(function () {
+                        window.location.href = err.url_real;
+                    }, 0);
                 }
                 else {
-                    console.log('404');
                     _this.router.navigate(['404']);
                 }
             });
