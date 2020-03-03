@@ -7572,34 +7572,32 @@ var TemporalComponent = /** @class */ (function () {
         if (this.id_url != null) {
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                var va, decodedData, da, link, that, fiveSeconds;
+                var da, link, that, fiveSeconds;
                 return __generator(this, function (_a) {
                     this.show = true;
-                    va = data;
-                    decodedData = window.atob(va);
-                    da = JSON.parse(decodedData);
+                    da = data;
                     this.url = da;
                     link = document.createElement('link');
                     link.async = true;
                     link.rel = 'canonical';
                     link.href = this.url.url_real;
                     document.head.appendChild(link);
-                    this.titleService.setTitle(utf8_decode(da.titulo));
-                    this.meta.updateTag({ name: 'title', content: utf8_decode(da.titulo) });
-                    this.meta.updateTag({ name: 'description', content: utf8_decode(da.descripcion) });
+                    this.titleService.setTitle(da.titulo);
+                    this.meta.updateTag({ name: 'title', content: da.titulo });
+                    this.meta.updateTag({ name: 'description', content: da.descripcion });
                     this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                    this.meta.updateTag({ property: 'og:title', content: utf8_decode(da.titulo) });
-                    this.meta.updateTag({ property: 'og:description', content: utf8_decode(da.descripcion) });
+                    this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                    this.meta.updateTag({ property: 'og:description', content: da.descripcion });
                     this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
                     this.meta.updateTag({ property: 'og:image:width', content: '740' });
                     this.meta.updateTag({ property: 'og:image:height', content: '370' });
                     this.meta.updateTag({ name: 'twitter:card', content: "summary" });
                     this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                    this.meta.updateTag({ name: 'twitter:title', content: utf8_decode(da.titulo) });
-                    this.meta.updateTag({ name: 'twitter:description', content: utf8_decode(da.descripcion) });
+                    this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                    this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
                     this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
                     this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                    this.title = utf8_decode(da.titulo);
+                    this.title = da.titulo;
                     that = this;
                     fiveSeconds = new Date().getTime() + 20000;
                     //await this.setScript();
@@ -7613,10 +7611,10 @@ var TemporalComponent = /** @class */ (function () {
                     }, 7000);
                     return [2 /*return*/];
                 });
-            }); }, function (err1) {
-                var va = err1;
-                var decodedData = window.atob(va);
-                var err = JSON.parse(decodedData);
+            }); }, function (err) {
+                /*let va: any = err1;
+                const decodedData = window.atob(va);
+                let err: any = JSON.parse(decodedData);*/
                 if (err.id != null) {
                     _this.show = false;
                     var link = _this.document.createElement('link');
@@ -7640,9 +7638,7 @@ var TemporalComponent = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                     _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
                     _this.title = err.titulo;
-                    setTimeout(function () {
-                        window.location.href = err.url_real;
-                    }, 0);
+                    window.location.href = err.url_real;
                 }
                 else {
                     _this.router.navigate(['404']);
