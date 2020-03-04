@@ -7541,7 +7541,6 @@ var TemporalComponent = /** @class */ (function () {
             var decodedData = js_base64_1.Base64.decode(va);
             var da = JSON.parse(decodedData);
             _this.popular = da;
-            console.log(da);
         });
     };
     TemporalComponent.prototype.ngAfterViewChecked = function () {
@@ -7572,6 +7571,7 @@ var TemporalComponent = /** @class */ (function () {
         $('body').addClass("off-canvas-sidebar");
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
+            console.log(document.referrer);
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
                 var va, decodedData, da, link, that, fiveSeconds;
