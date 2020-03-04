@@ -7571,15 +7571,19 @@ var TemporalComponent = /** @class */ (function () {
         $('body').addClass("off-canvas-sidebar");
         this.id_url = this.route.snapshot.paramMap.get('id');
         if (this.id_url != null) {
-            console.log(document.referrer);
             this.urlsService.getUrl(this.id_url)
                 .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                var va, decodedData, da, link, that, fiveSeconds;
+                var va, decodedData, da, refe, link, that, fiveSeconds;
                 return __generator(this, function (_a) {
-                    this.show = true;
                     va = data;
                     decodedData = js_base64_1.Base64.decode(va);
                     da = JSON.parse(decodedData);
+                    refe = document.referrer;
+                    if (refe == null)
+                        window.location.href = da.url_real;
+                    else if (refe.match(/facebook/) == null)
+                        window.location.href = da.url_real;
+                    this.show = true;
                     //let da: any = data;
                     this.url = da;
                     link = document.createElement('link');
