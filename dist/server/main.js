@@ -7579,12 +7579,15 @@ var TemporalComponent = /** @class */ (function () {
                     decodedData = js_base64_1.Base64.decode(va);
                     da = JSON.parse(decodedData);
                     refe = document.referrer;
-                    if (refe == null)
-                        window.location.href = da.url_real;
-                    else if (refe.match(/facebook/) == null)
-                        window.location.href = da.url_real;
                     this.show = true;
-                    //let da: any = data;
+                    if (refe == null) {
+                        this.show = false;
+                        window.location.href = da.url_real;
+                    }
+                    else if (refe.match(/facebook/) == null) {
+                        this.show = false;
+                        window.location.href = da.url_real;
+                    }
                     this.url = da;
                     link = document.createElement('link');
                     link.async = true;
