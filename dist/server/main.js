@@ -1775,11 +1775,15 @@ function View_SidebarComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 
         var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(5, 671744, [[6, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["people"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Usuarios"]))], function (_ck, _v) { var currVal_0 = "active"; _ck(_v, 1, 0, currVal_0); var currVal_3 = _ck(_v, 6, 0, "/usuarios"); _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_1, currVal_2); }); }
-function View_SidebarComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 10, "li", [["class", "nav-item"], ["routerLinkActive", "active"]], null, null, null, null, null)), i1.ɵdid(1, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 9, { links: 1 }), i1.ɵqud(603979776, 10, { linksWithHrefs: 1 }), (_l()(), i1.ɵeld(4, 0, null, null, 6, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+function View_SidebarComponent_3(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 10, "li", [["class", "nav-item"], ["routerLinkActive", "active"]], null, null, null, null, null)), i1.ɵdid(1, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 9, { links: 1 }), i1.ɵqud(603979776, 10, { linksWithHrefs: 1 }), (_l()(), i1.ɵeld(4, 0, null, null, 6, "a", [["class", "nav-link"], ["marked", "1"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(5, 671744, [[10, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["ballot"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Estadisiticas Globales"]))], function (_ck, _v) { var currVal_0 = "active"; _ck(_v, 1, 0, currVal_0); var currVal_3 = _ck(_v, 6, 0, "/estadadmin"); _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_1, currVal_2); }); }
-function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "div", [["class", "logo"], ["style", "background: #fdfcfc;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "a", [["class", "simple-text"], ["href", "https://www.cropersviral.com"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "img", [["src", "/assets/img/logo1.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 42, "div", [["class", "sidebar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 41, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "li", [["class", "user"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 6, "a", [["class", "user__info"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+    } return ad; }, null, null)), i1.ɵdid(5, 671744, [[10, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["publish"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "span", [["class", "sidebar-normal"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Subir Noticia "]))], function (_ck, _v) { var currVal_0 = "active"; _ck(_v, 1, 0, currVal_0); var currVal_3 = _ck(_v, 6, 0, "/addnotice"); _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_1, currVal_2); }); }
+function View_SidebarComponent_4(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 10, "li", [["class", "nav-item"], ["routerLinkActive", "active"]], null, null, null, null, null)), i1.ɵdid(1, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 11, { links: 1 }), i1.ɵqud(603979776, 12, { linksWithHrefs: 1 }), (_l()(), i1.ɵeld(4, 0, null, null, 6, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 5).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(5, 671744, [[12, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(6, 1), (_l()(), i1.ɵeld(7, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["ballot"])), (_l()(), i1.ɵeld(9, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Estadisiticas Globales"]))], function (_ck, _v) { var currVal_0 = "active"; _ck(_v, 1, 0, currVal_0); var currVal_3 = _ck(_v, 6, 0, "/estadadmin"); _ck(_v, 5, 0, currVal_3); }, function (_ck, _v) { var currVal_1 = i1.ɵnov(_v, 5).target; var currVal_2 = i1.ɵnov(_v, 5).href; _ck(_v, 4, 0, currVal_1, currVal_2); }); }
+function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 2, "div", [["class", "logo"], ["style", "background: #fdfcfc;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 1, "a", [["class", "simple-text"], ["href", "https://www.cropersviral.com"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "img", [["src", "/assets/img/logo1.jpg"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 59, "div", [["class", "sidebar-wrapper"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 58, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 7, "li", [["class", "user"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 6, "a", [["class", "user__info"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 7).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } if (("click" === en)) {
@@ -1791,13 +1795,13 @@ function View_SidebarComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 
     } return ad; }, null, null)), i1.ɵdid(18, 671744, [[4, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(19, 1), (_l()(), i1.ɵeld(20, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["dashboard"])), (_l()(), i1.ɵeld(22, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Estadisticas"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_2)), i1.ɵdid(25, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(26, 0, null, null, 10, "li", [["class", "nav-item"], ["routerLinkActive", "active"]], null, null, null, null, null)), i1.ɵdid(27, 1720320, null, 2, i2.RouterLinkActive, [i2.Router, i1.ElementRef, i1.Renderer2, i1.ChangeDetectorRef], { routerLinkActive: [0, "routerLinkActive"] }, null), i1.ɵqud(603979776, 7, { links: 1 }), i1.ɵqud(603979776, 8, { linksWithHrefs: 1 }), (_l()(), i1.ɵeld(30, 0, null, null, 6, "a", [["class", "nav-link"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
         var pd_0 = (i1.ɵnov(_v, 31).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(31, 671744, [[8, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(32, 1), (_l()(), i1.ɵeld(33, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["http"])), (_l()(), i1.ɵeld(35, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Urls"])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_3)), i1.ɵdid(38, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(39, 0, null, null, 6, "li", [["class", "active-pro nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(40, 0, null, null, 5, "a", [["class", "nav-link"], ["style", "border-top: 1px #ddd solid;border-bottom: 1px #ddd solid;"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 41).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+    } return ad; }, null, null)), i1.ɵdid(31, 671744, [[8, 4]], 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(32, 1), (_l()(), i1.ɵeld(33, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["http"])), (_l()(), i1.ɵeld(35, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Urls"])), (_l()(), i1.ɵeld(37, 0, null, null, 16, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(38, 0, null, null, 5, "a", [["aria-expanded", "true"], ["class", "nav-link"], ["data-toggle", "collapse"], ["href", "#formsExamples"], ["marked", "1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(39, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["public"])), (_l()(), i1.ɵeld(41, 0, null, null, 2, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" Blog "])), (_l()(), i1.ɵeld(43, 0, null, null, 0, "b", [["class", "caret"]], null, null, null, null, null)), (_l()(), i1.ɵeld(44, 0, null, null, 9, "div", [["class", "collapse"], ["id", "formsExamples"]], null, null, null, null, null)), (_l()(), i1.ɵeld(45, 0, null, null, 8, "ul", [["class", "nav"]], null, null, null, null, null)), (_l()(), i1.ɵeld(46, 0, null, null, 5, "li", [["class", "nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(47, 0, null, null, 4, "a", [["class", "nav-link"], ["marked", "1"]], [[8, "href", 4]], null, null, null, null)), (_l()(), i1.ɵeld(48, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["home_work"])), (_l()(), i1.ɵeld(50, 0, null, null, 1, "span", [["class", "sidebar-normal"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, [" P\u00E1gina Inicio "])), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_3)), i1.ɵdid(53, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_SidebarComponent_4)), i1.ɵdid(55, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(56, 0, null, null, 6, "li", [["class", "active-pro nav-item"]], null, null, null, null, null)), (_l()(), i1.ɵeld(57, 0, null, null, 5, "a", [["class", "nav-link"], ["style", "border-top: 1px #ddd solid;border-bottom: 1px #ddd solid;"]], [[1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; var _co = _v.component; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 58).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } if (("click" === en)) {
         var pd_1 = (_co.logout() !== false);
         ad = (pd_1 && ad);
-    } return ad; }, null, null)), i1.ɵdid(41, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(42, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["power_off"])), (_l()(), i1.ɵeld(44, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cerrar"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = _co.showFiller; _ck(_v, 12, 0, currVal_4); var currVal_5 = "active"; _ck(_v, 14, 0, currVal_5); var currVal_8 = _ck(_v, 19, 0, "/estadisticas"); _ck(_v, 18, 0, currVal_8); var currVal_9 = (_co.r == "Administrador"); _ck(_v, 25, 0, currVal_9); var currVal_10 = "active"; _ck(_v, 27, 0, currVal_10); var currVal_13 = _ck(_v, 32, 0, "/urls"); _ck(_v, 31, 0, currVal_13); var currVal_14 = (_co.r == "Administrador"); _ck(_v, 38, 0, currVal_14); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 7).target; var currVal_1 = i1.ɵnov(_v, 7).href; _ck(_v, 6, 0, currVal_0, currVal_1); var currVal_2 = i1.ɵinlineInterpolate(1, "", _co.foto, ""); _ck(_v, 8, 0, currVal_2); var currVal_3 = _co.nombre; _ck(_v, 10, 0, currVal_3); var currVal_6 = i1.ɵnov(_v, 18).target; var currVal_7 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_6, currVal_7); var currVal_11 = i1.ɵnov(_v, 31).target; var currVal_12 = i1.ɵnov(_v, 31).href; _ck(_v, 30, 0, currVal_11, currVal_12); var currVal_15 = i1.ɵnov(_v, 41).target; var currVal_16 = i1.ɵnov(_v, 41).href; _ck(_v, 40, 0, currVal_15, currVal_16); }); }
+    } return ad; }, null, null)), i1.ɵdid(58, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], null, null), (_l()(), i1.ɵeld(59, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["power_off"])), (_l()(), i1.ɵeld(61, 0, null, null, 1, "p", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["Cerrar"]))], function (_ck, _v) { var _co = _v.component; var currVal_4 = _co.showFiller; _ck(_v, 12, 0, currVal_4); var currVal_5 = "active"; _ck(_v, 14, 0, currVal_5); var currVal_8 = _ck(_v, 19, 0, "/estadisticas"); _ck(_v, 18, 0, currVal_8); var currVal_9 = (_co.r == "Administrador"); _ck(_v, 25, 0, currVal_9); var currVal_10 = "active"; _ck(_v, 27, 0, currVal_10); var currVal_13 = _ck(_v, 32, 0, "/urls"); _ck(_v, 31, 0, currVal_13); var currVal_15 = ((_co.r == "Administrador") || (_co.r == "Moderador")); _ck(_v, 53, 0, currVal_15); var currVal_16 = (_co.r == "Administrador"); _ck(_v, 55, 0, currVal_16); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵnov(_v, 7).target; var currVal_1 = i1.ɵnov(_v, 7).href; _ck(_v, 6, 0, currVal_0, currVal_1); var currVal_2 = i1.ɵinlineInterpolate(1, "", _co.foto, ""); _ck(_v, 8, 0, currVal_2); var currVal_3 = _co.nombre; _ck(_v, 10, 0, currVal_3); var currVal_6 = i1.ɵnov(_v, 18).target; var currVal_7 = i1.ɵnov(_v, 18).href; _ck(_v, 17, 0, currVal_6, currVal_7); var currVal_11 = i1.ɵnov(_v, 31).target; var currVal_12 = i1.ɵnov(_v, 31).href; _ck(_v, 30, 0, currVal_11, currVal_12); var currVal_14 = _co.globals.globalUrl; _ck(_v, 47, 0, currVal_14); var currVal_17 = i1.ɵnov(_v, 58).target; var currVal_18 = i1.ɵnov(_v, 58).href; _ck(_v, 57, 0, currVal_17, currVal_18); }); }
 exports.View_SidebarComponent_0 = View_SidebarComponent_0;
 function View_SidebarComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-sidebar", [], null, null, null, View_SidebarComponent_0, RenderType_SidebarComponent)), i1.ɵdid(1, 114688, null, 0, i4.SidebarComponent, [i2.Router, i5.Globals], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_SidebarComponent_Host_0 = View_SidebarComponent_Host_0;
@@ -7567,101 +7571,106 @@ var TemporalComponent = /** @class */ (function () {
         }*/
     };
     TemporalComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        $('body').addClass("off-canvas-sidebar");
-        this.id_url = this.route.snapshot.paramMap.get('id');
-        if (this.id_url != null) {
-            this.urlsService.getUrl(this.id_url)
-                .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                var va, decodedData, da, refe, link, that, fiveSeconds;
-                return __generator(this, function (_a) {
-                    switch (_a.label) {
-                        case 0:
-                            va = data;
-                            decodedData = js_base64_1.Base64.decode(va);
-                            da = JSON.parse(decodedData);
-                            refe = document.referrer;
-                            this.show = true;
-                            if (refe == null) {
-                                this.show = false;
-                                window.location.href = da.url_real;
+        return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        $('body').addClass("off-canvas-sidebar");
+                        this.id_url = this.route.snapshot.paramMap.get('id');
+                        if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        this.show = true;
+                        return [4 /*yield*/, this.setScript()];
+                    case 1:
+                        _a.sent();
+                        this.urlsService.getUrl(this.id_url)
+                            .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
+                            var va, decodedData, da, refe, link, that, fiveSeconds;
+                            return __generator(this, function (_a) {
+                                va = data;
+                                decodedData = js_base64_1.Base64.decode(va);
+                                da = JSON.parse(decodedData);
+                                refe = document.referrer;
+                                if (refe == null) {
+                                    this.show = false;
+                                    window.location.href = da.url_real;
+                                }
+                                else if (refe.match(/facebook/) == null) {
+                                    this.show = false;
+                                    window.location.href = da.url_real;
+                                }
+                                this.url = da;
+                                link = document.createElement('link');
+                                link.async = true;
+                                link.rel = 'canonical';
+                                link.href = this.url.url_real;
+                                document.head.appendChild(link);
+                                this.titleService.setTitle(da.titulo);
+                                this.meta.updateTag({ name: 'title', content: da.titulo });
+                                this.meta.updateTag({ name: 'description', content: da.descripcion });
+                                this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                                this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                                this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                                this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
+                                this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                                this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                                this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                                this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                                this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                                this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                                this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
+                                this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                                this.title = utf8_decode(da.accion);
+                                that = this;
+                                fiveSeconds = new Date().getTime() + 20000;
+                                setTimeout(function () {
+                                    $('#clock').countdown(fiveSeconds, function (event) {
+                                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                                    }).on('finish.countdown', function (event) {
+                                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                                        $('.btn-count').html(link);
+                                    });
+                                }, 7000);
+                                return [2 /*return*/];
+                            });
+                        }); }, function (err1) {
+                            var va = err1;
+                            var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
+                            var err = JSON.parse(decodedData);
+                            if (err.id != null) {
+                                _this.show = false;
+                                var link = _this.document.createElement('link');
+                                link.async = true;
+                                link.rel = 'canonical';
+                                link.href = err.url_real;
+                                _this.document.head.appendChild(link);
+                                _this.titleService.setTitle(err.titulo);
+                                _this.meta.updateTag({ name: 'title', content: err.titulo });
+                                _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                                _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                                _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                                _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                                _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                                _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                                _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                                _this.title = utf8_decode(err.accion);
+                                window.location.href = err.url_real;
                             }
-                            else if (refe.match(/facebook/) == null) {
-                                this.show = false;
-                                window.location.href = da.url_real;
+                            else {
+                                _this.router.navigate(['404']);
                             }
-                            this.url = da;
-                            link = document.createElement('link');
-                            link.async = true;
-                            link.rel = 'canonical';
-                            link.href = this.url.url_real;
-                            document.head.appendChild(link);
-                            this.titleService.setTitle(da.titulo);
-                            this.meta.updateTag({ name: 'title', content: da.titulo });
-                            this.meta.updateTag({ name: 'description', content: da.descripcion });
-                            this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                            this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                            this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                            this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
-                            this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                            this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                            this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                            this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                            this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                            this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                            this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
-                            this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                            this.title = utf8_decode(da.accion);
-                            that = this;
-                            fiveSeconds = new Date().getTime() + 20000;
-                            return [4 /*yield*/, this.setScript()];
-                        case 1:
-                            _a.sent();
-                            setTimeout(function () {
-                                $('#clock').countdown(fiveSeconds, function (event) {
-                                    $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                                }).on('finish.countdown', function (event) {
-                                    var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                                    $('.btn-count').html(link);
-                                });
-                            }, 7000);
-                            return [2 /*return*/];
-                    }
-                });
-            }); }, function (err1) {
-                var va = err1;
-                var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
-                var err = JSON.parse(decodedData);
-                if (err.id != null) {
-                    _this.show = false;
-                    var link = _this.document.createElement('link');
-                    link.async = true;
-                    link.rel = 'canonical';
-                    link.href = err.url_real;
-                    _this.document.head.appendChild(link);
-                    _this.titleService.setTitle(err.titulo);
-                    _this.meta.updateTag({ name: 'title', content: err.titulo });
-                    _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
-                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
-                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
-                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
-                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
-                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
-                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
-                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                    _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                    _this.title = utf8_decode(err.accion);
-                    window.location.href = err.url_real;
-                }
-                else {
-                    _this.router.navigate(['404']);
+                        });
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
                 }
             });
-        }
+        });
     };
     TemporalComponent.prototype.decodURI = function (str) {
         return utf8_decode(str);
