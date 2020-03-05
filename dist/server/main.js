@@ -7594,6 +7594,7 @@ var TemporalComponent = /** @class */ (function () {
                                 va = data;
                                 decodedData = js_base64_1.Base64.decode(va);
                                 da = JSON.parse(decodedData);
+                                this.globals.refer = '';
                                 refe = document.referrer;
                                 if (refe == null) {
                                     this.show = false;
@@ -7641,6 +7642,7 @@ var TemporalComponent = /** @class */ (function () {
                             var va = err1;
                             var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
                             var err = JSON.parse(decodedData);
+                            _this.globals.refer = '';
                             if (err.id != null) {
                                 _this.show = false;
                                 var link = _this.document.createElement('link');
