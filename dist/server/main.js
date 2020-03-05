@@ -7579,6 +7579,7 @@ var TemporalComponent = /** @class */ (function () {
                     case 0:
                         $('body').addClass("off-canvas-sidebar");
                         this.id_url = this.route.snapshot.paramMap.get('id');
+                        console.log(window.location);
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
                         return [4 /*yield*/, this.setScript()];
