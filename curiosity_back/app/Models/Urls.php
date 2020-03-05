@@ -31,4 +31,9 @@ class Urls extends Model
     {
         return $this->hasMany(UrlVisitasP::class, 'url_id');
     }
+
+    public function visitasr()
+    {
+        return $this->hasMany(UrlVisitaR::class, 'url_id');
+    }
 }

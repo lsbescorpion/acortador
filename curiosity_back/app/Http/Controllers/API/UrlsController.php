@@ -11,6 +11,7 @@ use App\Models\GananciasDiarias;
 use App\Models\GananciasMensuales;
 use App\Models\Paises;
 use App\Models\UrlVisitasP;
+use App\Models\UrlVisitaR;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Jenssegers\Agent\Agent;
@@ -102,12 +103,18 @@ class UrlsController extends Controller
     }
  
     public function getUrl($id, Request $request)
-    {//print_r($_SERVER["HTTP_USER_AGENT"]);
+    {
         $agent = new Agent();
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
         if($url == null) {
             return response()->json('Url no encontrada', 404);
+        }
+
+        $refer = base64_decode($request->get('r'));
+        $pos = strpos($refer, 'facebook');
+        if($pos === false) {
+            return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         if($request->get('user') != 'null') {
@@ -142,6 +149,16 @@ class UrlsController extends Controller
         $p->nombre = $pais->name_es;
         $p->save();
 
+        $re = UrlVisitaR::where(['url_id' => $url->id])->first();
+
+        if($re == null)
+            $re = new UrlVisitaR();
+
+        $re->visitasr = ($re != null ? $re->visitasp : 0) + 1;
+        $re->url_id = $url->id;
+        $re->referr = $refer;
+        $re->save();
+
         $url->visitas = $url->visitas + 1;
         $url->save();
 
@@ -160,7 +177,9 @@ class UrlsController extends Controller
 
     public function getUrlbyId($id, Request $request)
     {
-        $url = Urls::with(['categoria', 'visitasp' => function ($query) {
+        $url = Urls::with(['categoria', 'visitasr' => function ($query) {
+            $query->orderBy('visitasr', 'desc');
+        },'visitasp' => function ($query) {
             $query->orderBy('visitasp', 'desc');
         }])->where(['id' => $id, 'activa' => 1])->first();
 
@@ -212,7 +231,7 @@ class UrlsController extends Controller
     }
 
     public function getUrlsPop(){
-        $datos = Urls::with(['categoria', 'users'])->where(['activa' => 1])->orderby('visitas', 'DESC')->get();
+        $datos = Urls::with(['categoria', 'users'])->where(['activa' => 1])->orderby('visitas', 'DESC')->limit(3)->offset(0)->get();
         return response()->json(base64_encode(json_encode($datos)));
     }
 
@@ -327,9 +346,9 @@ class UrlsController extends Controller
         $urls = new Urls();
         $urls->url_real = $request->get('url');
         $urls->url_acortada = $short;
-        $urls->accion = $request->get('accion');
-        $urls->titulo = $metas_array['titulo'];
-        $urls->descripcion = $metas_array['descripcion'];
+        $urls->accion = utf8_encode($request->get('accion'));
+        $urls->titulo = utf8_decode($metas_array['titulo']);
+        $urls->descripcion = utf8_decode($metas_array['descripcion']);
         $urls->visitas = 0;
         $urls->fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
         $urls->user_id = $request->get('user_id');
@@ -340,7 +359,7 @@ class UrlsController extends Controller
         if(!is_dir('imagenes'.$dir))
             mkdir('imagenes'.$dir, 0777, true);
         file_put_contents('imagenes'.$dir.$name.'.jpg', $imagen);
-        
+
         return response()->json("Url acortada", 200);
     }
 
