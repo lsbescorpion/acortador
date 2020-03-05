@@ -7573,98 +7573,103 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var refe_1;
             var _this = this;
             return __generator(this, function (_a) {
-                $('body').addClass("off-canvas-sidebar");
-                this.id_url = this.route.snapshot.paramMap.get('id');
-                if (this.id_url != null) {
-                    this.show = true;
-                    refe_1 = document.referrer;
-                    this.urlsService.getUrl(this.id_url, js_base64_1.Base64.encode(refe_1))
-                        .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                        var va, decodedData, da, link, that, fiveSeconds;
-                        return __generator(this, function (_a) {
-                            va = data;
-                            decodedData = js_base64_1.Base64.decode(va);
-                            da = JSON.parse(decodedData);
-                            if (refe_1 == null) {
-                                this.show = false;
-                                window.location.href = da.url_real;
+                switch (_a.label) {
+                    case 0:
+                        $('body').addClass("off-canvas-sidebar");
+                        this.id_url = this.route.snapshot.paramMap.get('id');
+                        if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        this.show = true;
+                        return [4 /*yield*/, this.setScript()];
+                    case 1:
+                        _a.sent();
+                        this.urlsService.getUrl(this.id_url)
+                            .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
+                            var va, decodedData, da, refe, link, that, fiveSeconds;
+                            return __generator(this, function (_a) {
+                                va = data;
+                                decodedData = js_base64_1.Base64.decode(va);
+                                da = JSON.parse(decodedData);
+                                refe = document.referrer;
+                                if (refe == null) {
+                                    this.show = false;
+                                    window.location.href = da.url_real;
+                                }
+                                else if (refe.match(/facebook/) == null) {
+                                    this.show = false;
+                                    window.location.href = da.url_real;
+                                }
+                                this.url = da;
+                                link = document.createElement('link');
+                                link.async = true;
+                                link.rel = 'canonical';
+                                link.href = this.url.url_real;
+                                document.head.appendChild(link);
+                                this.titleService.setTitle(da.titulo);
+                                this.meta.updateTag({ name: 'title', content: da.titulo });
+                                this.meta.updateTag({ name: 'description', content: da.descripcion });
+                                this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                                this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                                this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                                this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
+                                this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                                this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                                this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                                this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                                this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                                this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                                this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
+                                this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                                this.title = utf8_decode(da.accion);
+                                that = this;
+                                fiveSeconds = new Date().getTime() + 20000;
+                                setTimeout(function () {
+                                    $('#clock').countdown(fiveSeconds, function (event) {
+                                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                                    }).on('finish.countdown', function (event) {
+                                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                                        $('.btn-count').html(link);
+                                    });
+                                }, 7000);
+                                return [2 /*return*/];
+                            });
+                        }); }, function (err1) {
+                            var va = err1;
+                            var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
+                            var err = JSON.parse(decodedData);
+                            if (err.id != null) {
+                                _this.show = false;
+                                var link = _this.document.createElement('link');
+                                link.async = true;
+                                link.rel = 'canonical';
+                                link.href = err.url_real;
+                                _this.document.head.appendChild(link);
+                                _this.titleService.setTitle(err.titulo);
+                                _this.meta.updateTag({ name: 'title', content: err.titulo });
+                                _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                                _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                                _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                                _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                                _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                                _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                                _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                                _this.title = utf8_decode(err.accion);
+                                window.location.href = err.url_real;
                             }
-                            else if (refe_1.match(/facebook/) == null) {
-                                this.show = false;
-                                window.location.href = da.url_real;
+                            else {
+                                _this.router.navigate(['404']);
                             }
-                            this.url = da;
-                            link = document.createElement('link');
-                            link.async = true;
-                            link.rel = 'canonical';
-                            link.href = this.url.url_real;
-                            document.head.appendChild(link);
-                            this.titleService.setTitle(da.titulo);
-                            this.meta.updateTag({ name: 'title', content: da.titulo });
-                            this.meta.updateTag({ name: 'description', content: da.descripcion });
-                            this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                            this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                            this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                            this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
-                            this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                            this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                            this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                            this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                            this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                            this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                            this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
-                            this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                            this.title = utf8_decode(da.accion);
-                            that = this;
-                            fiveSeconds = new Date().getTime() + 20000;
-                            setTimeout(function () {
-                                $('#clock').countdown(fiveSeconds, function (event) {
-                                    $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                                }).on('finish.countdown', function (event) {
-                                    var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                                    $('.btn-count').html(link);
-                                });
-                            }, 7000);
-                            return [2 /*return*/];
                         });
-                    }); }, function (err1) {
-                        var va = err1;
-                        var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
-                        var err = JSON.parse(decodedData);
-                        if (err.id != null) {
-                            _this.show = false;
-                            var link = _this.document.createElement('link');
-                            link.async = true;
-                            link.rel = 'canonical';
-                            link.href = err.url_real;
-                            _this.document.head.appendChild(link);
-                            _this.titleService.setTitle(err.titulo);
-                            _this.meta.updateTag({ name: 'title', content: err.titulo });
-                            _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                            _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
-                            _this.meta.updateTag({ property: 'og:title', content: err.titulo });
-                            _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
-                            _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
-                            _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                            _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                            _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                            _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
-                            _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
-                            _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
-                            _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                            _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                            _this.title = utf8_decode(err.accion);
-                            window.location.href = err.url_real;
-                        }
-                        else {
-                            _this.router.navigate(['404']);
-                        }
-                    });
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
                 }
-                return [2 /*return*/];
             });
         });
     };
@@ -8964,6 +8969,7 @@ exports.BlogService = BlogService;
 Object.defineProperty(exports, "__esModule", { value: true });
 var http_1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
 var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
+var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @angular/common/http */ "@angular/common/http");
 var i2 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
@@ -8972,9 +8978,10 @@ var UrlsService = /** @class */ (function () {
         this.http = http;
         this.globals = globals;
     }
-    UrlsService.prototype.getUrl = function (id, refer) {
+    UrlsService.prototype.getUrl = function (id) {
+        var refe = document.referrer;
         var us = JSON.parse(localStorage.getItem('currentUser'));
-        return this.http.get(this.globals.apiUrl + "/url/" + id + '?user=' + us + '&r=' + refer);
+        return this.http.get(this.globals.apiUrl + "/url/" + id + '?user=' + us + '&r=' + js_base64_1.Base64.encode(refe));
     };
     UrlsService.prototype.getCheckUrl = function (id) {
         return this.http.get(this.globals.apiUrl + "/urls/checkurl/" + id);

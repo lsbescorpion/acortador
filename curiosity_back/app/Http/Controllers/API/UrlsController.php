@@ -114,6 +114,17 @@ class UrlsController extends Controller
         $refer = base64_decode($request->get('r'));
         $pos = strpos($refer, 'facebook');
         if($pos === false) {
+            if($refer != null) {
+                $re = UrlVisitaR::where(['url_id' => $url->id, 'referr' => $refer])->first();
+
+                if($re == null)
+                    $re = new UrlVisitaR();
+
+                $re->visitasr = ($re->visitasr != null ? $re->visitasr : 0) + 1;
+                $re->url_id = $url->id;
+                $re->referr = $refer;
+                $re->save();
+            }
             return response()->json(base64_encode(json_encode($url)), 500);
         }
 
@@ -144,17 +155,17 @@ class UrlsController extends Controller
 
         $p->iso_2 = $ips->countryCode;
         $p->iso_3 = $pais->iso_a3;
-        $p->visitasp = ($p != null ? $p->visitasp : 0) + 1;
+        $p->visitasp = ($p->visitasp != null ? $p->visitasp : 0) + 1;
         $p->url_id = $url->id;
         $p->nombre = $pais->name_es;
         $p->save();
 
-        $re = UrlVisitaR::where(['url_id' => $url->id])->first();
+        $re = UrlVisitaR::where(['url_id' => $url->id, 'referr' => $refer])->first();
 
         if($re == null)
             $re = new UrlVisitaR();
 
-        $re->visitasr = ($re != null ? $re->visitasp : 0) + 1;
+        $re->visitasr = ($re->visitasr != null ? $re->visitasr : 0) + 1;
         $re->url_id = $url->id;
         $re->referr = $refer;
         $re->save();
