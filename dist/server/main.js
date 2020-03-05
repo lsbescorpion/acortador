@@ -1170,6 +1170,7 @@ var AppComponent = /** @class */ (function () {
         });
         this.cookieService.set('Cookie', 'GDPR');
         this.cookieValue = this.cookieService.get('Cookie');
+        this.globals.refer = document.referrer;
     };
     AppComponent.prototype.ngAfterViewInit = function () {
         this.runOnRouteChange();
@@ -2263,6 +2264,7 @@ var Globals = /** @class */ (function () {
         this.urlShared = 'https://shared.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
+        this.refer = '';
     }
     return Globals;
 }());
@@ -7579,8 +7581,8 @@ var TemporalComponent = /** @class */ (function () {
                     case 0:
                         $('body').addClass("off-canvas-sidebar");
                         this.id_url = this.route.snapshot.paramMap.get('id');
-                        console.log(this.document.referrer);
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        console.log(this.globals.refer);
                         this.show = true;
                         return [4 /*yield*/, this.setScript()];
                     case 1:
