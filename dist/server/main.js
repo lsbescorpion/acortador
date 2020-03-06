@@ -2351,7 +2351,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var urls_service_1 = __webpack_require__(/*! ../services/urls.service */ "./src/app/services/urls.service.ts");
-var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
 var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @angular/router */ "@angular/router");
@@ -2367,43 +2366,50 @@ var ReferGuard = /** @class */ (function () {
         this.globals = globals;
     }
     ReferGuard.prototype.canActivate = function (next, state) {
-        var _this = this;
+        console.log(1);
+        console.log(this.globals.refer);
         if (next.params.id != null) {
+            console.log(2);
             var refe = document.referrer;
-            if (refe == null || refe.match(/facebook/) == null) {
+            /*if(refe == null || refe.match(/facebook/) == null) {
                 this.urlsService.getCheckUrl(next.params.id)
-                    .subscribe(function (data) {
-                    var va = data;
-                    var decodedData = js_base64_1.Base64.decode(va);
-                    var da = JSON.parse(decodedData);
-                    var link = document.createElement('link');
-                    link.async = true;
-                    link.rel = 'canonical';
-                    link.href = da.url_real;
-                    document.head.appendChild(link);
-                    _this.titleService.setTitle(da.titulo);
-                    _this.meta.updateTag({ name: 'title', content: da.titulo });
-                    _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                    _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                    _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                    _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                    _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                    _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                    window.location.href = da.url_real;
-                }, function (err) {
-                    _this.router.navigate(['404']);
-                });
+                    .subscribe(data => {
+                        let va: any = data;
+                        let decodedData: any = Base64.decode(va);
+                        let da: any = JSON.parse(decodedData);
+
+                        let link: any = document.createElement('link');
+                        link.async = true;
+                        link.rel = 'canonical';
+                        link.href = da.url_real;
+                        document.head.appendChild(link);
+                            
+                        this.titleService.setTitle(da.titulo);
+                        this.meta.updateTag({name: 'title', content: da.titulo});
+                        this.meta.updateTag({name: 'description', content: da.descripcion});
+                        this.meta.updateTag({property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada});
+                        this.meta.updateTag({property: 'og:title', content: da.titulo});
+                        this.meta.updateTag({property: 'og:description', content: da.descripcion});
+                        this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
+                        this.meta.updateTag({property: 'og:image:width', content: '740'});
+                        this.meta.updateTag({property: 'og:image:height', content: '370'});
+
+                        this.meta.updateTag({name: 'twitter:card', content: "summary"});
+                        this.meta.updateTag({name: 'twitter:site', content: da.url_real});
+                        this.meta.updateTag({name: 'twitter:title', content: da.titulo});
+                        this.meta.updateTag({name: 'twitter:description', content: da.descripcion});
+                        this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+da.foto});
+                        this.meta.updateTag({property: 'fb:app_id', content: '650631825441426'});
+                        window.location.href = da.url_real;
+                    },
+                    err => {
+                        this.router.navigate(['404']);
+                    }
+                );
                 return false;
             }
             else
-                return true;
+            return true;*/
         }
         return true;
     };
@@ -7664,6 +7670,7 @@ var TemporalComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.setScript()];
                     case 1:
                         _a.sent();
+                        console.log(this.globals.refer);
                         this.urlsService.getUrl(this.id_url, this.globals.refer)
                             .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
                             var va, decodedData, da, refe, link, that, fiveSeconds;
@@ -7682,6 +7689,8 @@ var TemporalComponent = /** @class */ (function () {
                                     window.location.href = da.url_real;
                                 }
                                 this.url = da;
+                                console.log(3);
+                                console.log(this.globals.refer);
                                 link = document.createElement('link');
                                 link.async = true;
                                 link.rel = 'canonical';
