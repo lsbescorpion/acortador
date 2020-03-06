@@ -2349,14 +2349,22 @@ exports.AuthGuards = AuthGuards;
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var urls_service_1 = __webpack_require__(/*! ../services/urls.service */ "./src/app/services/urls.service.ts");
+var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
+var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var i2 = __webpack_require__(/*! ../services/urls.service */ "./src/app/services/urls.service.ts");
+var i3 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i4 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
 var ReferGuard = /** @class */ (function () {
-    function ReferGuard(router, urlsService) {
+    function ReferGuard(router, urlsService, meta, titleService, globals) {
         this.router = router;
         this.urlsService = urlsService;
+        this.meta = meta;
+        this.titleService = titleService;
+        this.globals = globals;
     }
     ReferGuard.prototype.canActivate = function (next, state) {
         var _this = this;
@@ -2365,8 +2373,30 @@ var ReferGuard = /** @class */ (function () {
             if (refe == null || refe.match(/facebook/) == null) {
                 this.urlsService.getCheckUrl(next.params.id)
                     .subscribe(function (data) {
-                    var da = data;
-                    window.location.href = da;
+                    var va = data;
+                    var decodedData = js_base64_1.Base64.decode(va);
+                    var da = JSON.parse(decodedData);
+                    var link = document.createElement('link');
+                    link.async = true;
+                    link.rel = 'canonical';
+                    link.href = da.url_real;
+                    document.head.appendChild(link);
+                    _this.titleService.setTitle(da.titulo);
+                    _this.meta.updateTag({ name: 'title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                    _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                    _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                    _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                    window.location.href = da.url_real;
                 }, function (err) {
                     _this.router.navigate(['404']);
                 });
@@ -2377,7 +2407,7 @@ var ReferGuard = /** @class */ (function () {
         }
         return true;
     };
-    ReferGuard.ngInjectableDef = i0.defineInjectable({ factory: function ReferGuard_Factory() { return new ReferGuard(i0.inject(i1.Router), i0.inject(i2.UrlsService)); }, token: ReferGuard, providedIn: "root" });
+    ReferGuard.ngInjectableDef = i0.defineInjectable({ factory: function ReferGuard_Factory() { return new ReferGuard(i0.inject(i1.Router), i0.inject(i2.UrlsService), i0.inject(i3.Meta), i0.inject(i3.Title), i0.inject(i4.Globals)); }, token: ReferGuard, providedIn: "root" });
     return ReferGuard;
 }());
 exports.ReferGuard = ReferGuard;
