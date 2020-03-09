@@ -7795,7 +7795,7 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow1.type = "text/javascript";
         scriptnow.innerHTML1 = '(sc_adv_out = window.sc_adv_out || []).push({id : "729445",domain : "n.ads5-adnow.com"});';
         var script1 = document.createElement('script');
-        script1.src = "http://onemboaran.com/afu.php?zoneid=3123125";
+        script1.src = "//onemboaran.com/afu.php?zoneid=3123125";
         //return new Promise(resolve => {
         setTimeout(function () {
             var bloque1 = document.getElementById('bloque1');
@@ -7803,8 +7803,8 @@ var TemporalComponent = /** @class */ (function () {
             bloque1.appendChild(script);
             var bloque2 = document.getElementById('bloque2');
             bloque2.insertBefore(scriptnow, bloque2.childNodes[0]);
-            bloque2.appendChild(script);
             bloque2.appendChild(script1);
+            bloque2.appendChild(script);
         }, 500);
         //});
     };
