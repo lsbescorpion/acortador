@@ -7666,7 +7666,7 @@ var TemporalComponent = /** @class */ (function () {
                         _a.sent();
                         this.urlsService.getUrl(this.id_url, this.globals.refer)
                             .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                            var va, decodedData, da, refe, link, that, fiveSeconds;
+                            var va, decodedData, da, refe, link, script, that, fiveSeconds;
                             return __generator(this, function (_a) {
                                 va = data;
                                 decodedData = js_base64_1.Base64.decode(va);
@@ -7687,6 +7687,11 @@ var TemporalComponent = /** @class */ (function () {
                                 link.rel = 'canonical';
                                 link.href = this.url.url_real;
                                 document.head.appendChild(link);
+                                script = document.createElement('script');
+                                script.async = true;
+                                script.src = "//onemboaran.com/apu.php?zoneid=3123141";
+                                script.type = "text/javascript";
+                                document.body.insertBefore(script, document.body.childNodes[0]);
                                 this.titleService.setTitle(da.titulo);
                                 this.meta.updateTag({ name: 'title', content: da.titulo });
                                 this.meta.updateTag({ name: 'description', content: da.descripcion });
@@ -7789,6 +7794,8 @@ var TemporalComponent = /** @class */ (function () {
         var scriptnow1 = document.createElement('script');
         scriptnow1.type = "text/javascript";
         scriptnow.innerHTML1 = '(sc_adv_out = window.sc_adv_out || []).push({id : "729445",domain : "n.ads5-adnow.com"});';
+        var script1 = document.createElement('script');
+        script1.src = "http://onemboaran.com/afu.php?zoneid=3123125";
         //return new Promise(resolve => {
         setTimeout(function () {
             var bloque1 = document.getElementById('bloque1');
@@ -7797,6 +7804,7 @@ var TemporalComponent = /** @class */ (function () {
             var bloque2 = document.getElementById('bloque2');
             bloque2.insertBefore(scriptnow, bloque2.childNodes[0]);
             bloque2.appendChild(script);
+            bloque2.appendChild(script1);
         }, 500);
         //});
     };
