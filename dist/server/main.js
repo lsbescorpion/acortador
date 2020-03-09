@@ -8149,10 +8149,10 @@ var UrlsComponent = /** @class */ (function () {
                         return that.globals.urlShared + '/' + row.categoria.categoria + '/' + data;
                     } },
                 { title: 'Acción', data: 'accion', className: "align-middle", "render": function (data, type, row, meta) {
-                        return data;
+                        return utf8_decode(data);
                     } },
                 { title: 'Real', data: 'url_real', className: "align-middle", "render": function (data, type, row, meta) {
-                        return utf8_decode(data);
+                        return data;
                     } },
                 { title: 'Visitas', data: 'visitas', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
