@@ -2259,10 +2259,10 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'http://127.0.0.1:8000/api';
-        this.urlPhoto = 'http://127.0.0.1:8000/';
-        this.globalUrl = 'http://localhost:4200';
-        this.urlShared = 'http://localhost:4200/categoria';
+        this.apiUrl = 'https://back.cropersviral.com/api';
+        this.urlPhoto = 'https://back.cropersviral.com/';
+        this.globalUrl = 'https://shared.cropersviral.com';
+        this.urlShared = 'https://shared.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
         this.refer = '';
@@ -7653,6 +7653,7 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var script;
             var _this = this;
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -7661,6 +7662,10 @@ var TemporalComponent = /** @class */ (function () {
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
+                        script = document.createElement('script');
+                        script.async = true;
+                        script.src = "https://propu.sh/pfe/current/tag.min.js?z=3123136";
+                        document.head.appendChild(script);
                         return [4 /*yield*/, this.setScript()];
                     case 1:
                         _a.sent();
