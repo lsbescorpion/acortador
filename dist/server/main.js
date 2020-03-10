@@ -7793,7 +7793,7 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "721506",domain : "n.ads5-adnow.com"});';
         var scriptnow1 = document.createElement('script');
         scriptnow1.type = "text/javascript";
-        scriptnow.innerHTML1 = '(sc_adv_out = window.sc_adv_out || []).push({id : "730444",domain : "n.ads5-adnow.com"});';
+        scriptnow1.innerHTML1 = '(sc_adv_out = window.sc_adv_out || []).push({id : "730444",domain : "n.ads5-adnow.com"});';
         //return new Promise(resolve => {
         setTimeout(function () {
             var bloque1 = document.getElementById('bloque1');
