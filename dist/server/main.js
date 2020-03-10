@@ -2261,8 +2261,8 @@ var Globals = /** @class */ (function () {
     function Globals() {
         this.apiUrl = 'https://back.cropersviral.com/api';
         this.urlPhoto = 'https://back.cropersviral.com/';
-        this.globalUrl = 'https://shared.cropersviral.com';
-        this.urlShared = 'https://shared.cropersviral.com/categoria';
+        this.globalUrl = 'https://frontapp.cropersviral.com';
+        this.urlShared = 'https://frontapp.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
         this.refer = '';
@@ -7515,7 +7515,7 @@ function View_TemporalComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0,
         var pd_0 = (i1.ɵnov(_v, 23).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
         ad = (pd_0 && ad);
     } return ad; }, null, null)), i1.ɵdid(23, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(24, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(26, 0, null, null, 4, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 3, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["contacts"])), (_l()(), i1.ɵted(30, null, [" ", ""]))], function (_ck, _v) { var currVal_4 = _ck(_v, 5, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 4, 0, currVal_4); var currVal_12 = _ck(_v, 16, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 15, 0, currVal_12); var currVal_19 = _ck(_v, 24, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 23, 0, currVal_19); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.categoria.categoria; var currVal_1 = _v.context.$implicit.titulo; var currVal_2 = i1.ɵnov(_v, 4).target; var currVal_3 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_5 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_5); var currVal_6 = _v.context.$implicit.visitas; _ck(_v, 8, 0, currVal_6); var currVal_7 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 12, 0, currVal_7); var currVal_8 = _v.context.$implicit.categoria.categoria; var currVal_9 = _v.context.$implicit.titulo; var currVal_10 = i1.ɵnov(_v, 15).target; var currVal_11 = i1.ɵnov(_v, 15).href; _ck(_v, 14, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_13 = _v.context.$implicit.titulo.substring(0, 28); _ck(_v, 17, 0, currVal_13); var currVal_14 = _v.context.$implicit.descripcion.substring(0, 171); _ck(_v, 19, 0, currVal_14); var currVal_15 = _v.context.$implicit.categoria.categoria; var currVal_16 = _v.context.$implicit.titulo; var currVal_17 = i1.ɵnov(_v, 23).target; var currVal_18 = i1.ɵnov(_v, 23).href; _ck(_v, 22, 0, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_20 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 30, 0, currVal_20); }); }
-function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 24, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 23, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 22, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 13, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "col-md-12 text-center mb-2"], ["id", "bloque2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_721506"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(7, 0, null, null, 2, "div", [["class", "col-md-8 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(9, null, ["", ""])), (_l()(), i1.ɵeld(10, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-center mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(12, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(13, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 2, "div", [["class", "col-md-12 text-center mb-2"], ["id", "bloque1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_730444"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(17, 0, null, null, 2, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(20, 0, null, null, 0, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 3, "div", [["class", "row text-left"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_TemporalComponent_2)), i1.ɵdid(23, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, [])], function (_ck, _v) { var _co = _v.component; var currVal_3 = "warn"; _ck(_v, 12, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 23, 0, i1.ɵnov(_v, 24).transform(_co.popular, 0, 3)); _ck(_v, 23, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 9, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 12).disabled || null); var currVal_2 = (i1.ɵnov(_v, 12)._animationMode === "NoopAnimations"); _ck(_v, 11, 0, currVal_1, currVal_2); }); }
+function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 18, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 17, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 16, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 7, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 2, "div", [["class", "col-md-8 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(6, null, ["", ""])), (_l()(), i1.ɵeld(7, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-center mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(9, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(10, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(14, 0, null, null, 0, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 3, "div", [["class", "row text-left"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_TemporalComponent_2)), i1.ɵdid(17, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, [])], function (_ck, _v) { var _co = _v.component; var currVal_3 = "warn"; _ck(_v, 9, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 17, 0, i1.ɵnov(_v, 18).transform(_co.popular, 0, 3)); _ck(_v, 17, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 6, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 9).disabled || null); var currVal_2 = (i1.ɵnov(_v, 9)._animationMode === "NoopAnimations"); _ck(_v, 8, 0, currVal_1, currVal_2); }); }
 function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 3, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(5, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null)], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == true); _ck(_v, 5, 0, currVal_0); }, null); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
 function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i9.TemporalComponent, [i2.ActivatedRoute, i2.Router, i10.UrlsService, i11.Meta, i11.Title, i12.Globals, i11.DOCUMENT, i13.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
@@ -7653,110 +7653,100 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var script;
             var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        $('body').addClass("off-canvas-sidebar");
-                        this.id_url = this.route.snapshot.paramMap.get('id');
-                        if (!(this.id_url != null)) return [3 /*break*/, 2];
-                        this.show = true;
-                        script = document.createElement('script');
-                        script.async = true;
-                        script.src = "https://propu.sh/pfe/current/tag.min.js?z=3123136";
-                        document.head.appendChild(script);
-                        return [4 /*yield*/, this.setScript()];
-                    case 1:
-                        _a.sent();
-                        this.urlsService.getUrl(this.id_url, this.globals.refer)
-                            .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
-                            var va, decodedData, da, refe, link, that, fiveSeconds;
-                            return __generator(this, function (_a) {
-                                va = data;
-                                decodedData = js_base64_1.Base64.decode(va);
-                                da = JSON.parse(decodedData);
-                                this.globals.refer = '';
-                                refe = document.referrer;
-                                if (refe == null) {
-                                    this.show = false;
-                                    window.location.href = da.url_real;
-                                }
-                                else if (refe.match(/facebook/) == null) {
-                                    this.show = false;
-                                    window.location.href = da.url_real;
-                                }
-                                this.url = da;
-                                link = document.createElement('link');
-                                link.async = true;
-                                link.rel = 'canonical';
-                                link.href = this.url.url_real;
-                                document.head.appendChild(link);
-                                this.titleService.setTitle(da.titulo);
-                                this.meta.updateTag({ name: 'title', content: da.titulo });
-                                this.meta.updateTag({ name: 'description', content: da.descripcion });
-                                this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-                                this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                                this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                                this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
-                                this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                                this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                                this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                                this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
-                                this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                                this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                                this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
-                                this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                                this.title = utf8_decode(da.accion);
-                                that = this;
-                                fiveSeconds = new Date().getTime() + 20000;
-                                setTimeout(function () {
-                                    $('#clock').countdown(fiveSeconds, function (event) {
-                                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                                    }).on('finish.countdown', function (event) {
-                                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                                        $('.btn-count').html(link);
-                                    });
-                                }, 7000);
-                                return [2 /*return*/];
-                            });
-                        }); }, function (err1) {
-                            var va = err1;
-                            var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
-                            var err = JSON.parse(decodedData);
-                            _this.globals.refer = '';
-                            if (err.id != null) {
-                                _this.show = false;
-                                var link = _this.document.createElement('link');
-                                link.async = true;
-                                link.rel = 'canonical';
-                                link.href = err.url_real;
-                                _this.document.head.appendChild(link);
-                                _this.titleService.setTitle(err.titulo);
-                                _this.meta.updateTag({ name: 'title', content: err.titulo });
-                                _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
-                                _this.meta.updateTag({ property: 'og:title', content: err.titulo });
-                                _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
-                                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
-                                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                                _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
-                                _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
-                                _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
-                                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                                _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
-                                _this.title = utf8_decode(err.accion);
-                                window.location.href = err.url_real;
+                $('body').addClass("off-canvas-sidebar");
+                this.id_url = this.route.snapshot.paramMap.get('id');
+                if (this.id_url != null) {
+                    this.show = true;
+                    //await this.setScript();
+                    this.urlsService.getUrl(this.id_url, this.globals.refer)
+                        .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
+                        var va, decodedData, da, refe, link, that, fiveSeconds;
+                        return __generator(this, function (_a) {
+                            va = data;
+                            decodedData = js_base64_1.Base64.decode(va);
+                            da = JSON.parse(decodedData);
+                            this.globals.refer = '';
+                            refe = document.referrer;
+                            if (refe == null) {
+                                this.show = false;
+                                window.location.href = da.url_real;
                             }
-                            else {
-                                _this.router.navigate(['404']);
+                            else if (refe.match(/facebook/) == null) {
+                                this.show = false;
+                                window.location.href = da.url_real;
                             }
+                            this.url = da;
+                            link = document.createElement('link');
+                            link.async = true;
+                            link.rel = 'canonical';
+                            link.href = this.url.url_real;
+                            document.head.appendChild(link);
+                            this.titleService.setTitle(da.titulo);
+                            this.meta.updateTag({ name: 'title', content: da.titulo });
+                            this.meta.updateTag({ name: 'description', content: da.descripcion });
+                            this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                            this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                            this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                            this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
+                            this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                            this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                            this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                            this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                            this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                            this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                            this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
+                            this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                            this.title = utf8_decode(da.accion);
+                            that = this;
+                            fiveSeconds = new Date().getTime() + 20000;
+                            setTimeout(function () {
+                                $('#clock').countdown(fiveSeconds, function (event) {
+                                    $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                                }).on('finish.countdown', function (event) {
+                                    var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                                    $('.btn-count').html(link);
+                                });
+                            }, 7000);
+                            return [2 /*return*/];
                         });
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
+                    }); }, function (err1) {
+                        var va = err1;
+                        var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
+                        var err = JSON.parse(decodedData);
+                        _this.globals.refer = '';
+                        if (err.id != null) {
+                            _this.show = false;
+                            var link = _this.document.createElement('link');
+                            link.async = true;
+                            link.rel = 'canonical';
+                            link.href = err.url_real;
+                            _this.document.head.appendChild(link);
+                            _this.titleService.setTitle(err.titulo);
+                            _this.meta.updateTag({ name: 'title', content: err.titulo });
+                            _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                            _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                            _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                            _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                            _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                            _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                            _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                            _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                            _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                            _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                            _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                            _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                            _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                            _this.title = utf8_decode(err.accion);
+                            window.location.href = err.url_real;
+                        }
+                        else {
+                            _this.router.navigate(['404']);
+                        }
+                    });
                 }
+                return [2 /*return*/];
             });
         });
     };
