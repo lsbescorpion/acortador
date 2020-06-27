@@ -2351,6 +2351,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var urls_service_1 = __webpack_require__(/*! ../services/urls.service */ "./src/app/services/urls.service.ts");
+var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
 var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
 var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
 var i1 = __webpack_require__(/*! @angular/router */ "@angular/router");
@@ -2366,48 +2367,108 @@ var ReferGuard = /** @class */ (function () {
         this.globals = globals;
     }
     ReferGuard.prototype.canActivate = function (next, state) {
-        /*if(next.params.id != null) {
-            let refe = this.globals.refer;
-            if(refe == null || refe.match(/facebook/) == null) {
-                this.urlsService.getCheckUrl(next.params.id)
-                    .subscribe(data => {
-                        let va: any = data;
-                        let decodedData: any = Base64.decode(va);
-                        let da: any = JSON.parse(decodedData);
-
-                        let link: any = document.createElement('link');
+        var _this = this;
+        if (next.params.id != null) {
+            var refe = this.globals.refer;
+            if (refe == null || refe.match(/facebook/) == null) {
+                this.urlsService.getCheckUrl(next.params.id, refe)
+                    .subscribe(function (data) {
+                    var va = data;
+                    var decodedData = js_base64_1.Base64.decode(va);
+                    var da = JSON.parse(decodedData);
+                    var link = document.createElement('link');
+                    link.async = true;
+                    link.rel = 'canonical';
+                    link.href = da.url_real;
+                    document.head.appendChild(link);
+                    _this.titleService.setTitle(da.titulo);
+                    _this.meta.updateTag({ name: 'title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                    _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                    _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                    _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                    window.location.href = da.url_real;
+                }, function (err1) {
+                    var va = err1;
+                    var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
+                    var err = JSON.parse(decodedData);
+                    if (err.id != null) {
+                        var link = document.createElement('link');
                         link.async = true;
                         link.rel = 'canonical';
-                        link.href = da.url_real;
+                        link.href = err.url_real;
                         document.head.appendChild(link);
-                            
-                        this.titleService.setTitle(da.titulo);
-                        this.meta.updateTag({name: 'title', content: da.titulo});
-                        this.meta.updateTag({name: 'description', content: da.descripcion});
-                        this.meta.updateTag({property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada});
-                        this.meta.updateTag({property: 'og:title', content: da.titulo});
-                        this.meta.updateTag({property: 'og:description', content: da.descripcion});
-                        this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
-                        this.meta.updateTag({property: 'og:image:width', content: '740'});
-                        this.meta.updateTag({property: 'og:image:height', content: '370'});
-
-                        this.meta.updateTag({name: 'twitter:card', content: "summary"});
-                        this.meta.updateTag({name: 'twitter:site', content: da.url_real});
-                        this.meta.updateTag({name: 'twitter:title', content: da.titulo});
-                        this.meta.updateTag({name: 'twitter:description', content: da.descripcion});
-                        this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+da.foto});
-                        this.meta.updateTag({property: 'fb:app_id', content: '650631825441426'});
-                        window.location.href = da.url_real;
-                    },
-                    err => {
-                        this.router.navigate(['404']);
+                        _this.titleService.setTitle(err.titulo);
+                        _this.meta.updateTag({ name: 'title', content: err.titulo });
+                        _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                        _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                        _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                        _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                        _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                        _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                        _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                        _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                        _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                        _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                        _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                        _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                        _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                        window.location.href = err.url_real;
                     }
-                );
+                    else {
+                        _this.router.navigate(['404']);
+                    }
+                });
                 return false;
             }
-            else
-            return true;
-        }*/
+            else {
+                this.urlsService.getCheckUrl(next.params.id, refe)
+                    .subscribe(function (data) {
+                    var va = data;
+                    return true;
+                }, function (err1) {
+                    var va = err1;
+                    var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
+                    var err = JSON.parse(decodedData);
+                    if (err.id != null) {
+                        var link = document.createElement('link');
+                        link.async = true;
+                        link.rel = 'canonical';
+                        link.href = err.url_real;
+                        document.head.appendChild(link);
+                        _this.titleService.setTitle(err.titulo);
+                        _this.meta.updateTag({ name: 'title', content: err.titulo });
+                        _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                        _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                        _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                        _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                        _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                        _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                        _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                        _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                        _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                        _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                        _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                        _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                        _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                        window.location.href = err.url_real;
+                    }
+                    else {
+                        _this.router.navigate(['404']);
+                    }
+                });
+                return false;
+            }
+        }
         return true;
     };
     ReferGuard.ngInjectableDef = i0.defineInjectable({ factory: function ReferGuard_Factory() { return new ReferGuard(i0.inject(i1.Router), i0.inject(i2.UrlsService), i0.inject(i3.Meta), i0.inject(i3.Title), i0.inject(i4.Globals)); }, token: ReferGuard, providedIn: "root" });
@@ -7663,7 +7724,7 @@ var TemporalComponent = /** @class */ (function () {
                 if (this.id_url != null) {
                     this.show = true;
                     //await this.setScript();
-                    console.log(js_base64_1.Base64.decode('aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL243d3RtOG9vdWk5Z2Ztci9CTk5HLTE0MC5tcDQvZmlsZQ=='));
+                    //console.log(Base64.decode('aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL243d3RtOG9vdWk5Z2Ztci9CTk5HLTE0MC5tcDQvZmlsZQ=='));
                     this.urlsService.getUrl(this.id_url, this.globals.refer)
                         .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
                         return __generator(this, function (_a) {
@@ -7695,7 +7756,7 @@ var TemporalComponent = /** @class */ (function () {
                             _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
                             _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
                             _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                            _this.meta.updateTag({ property: 'fb:app_id', content: '650631825441426' });
+                            _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
                             _this.title = utf8_decode(err.accion);
                             window.location.href = err.url_real;
                         }
@@ -9028,8 +9089,9 @@ var UrlsService = /** @class */ (function () {
         var us = JSON.parse(localStorage.getItem('currentUser'));
         return this.http.get(this.globals.apiUrl + "/url/" + id + '?user=' + us + '&r=' + js_base64_1.Base64.encode(refer));
     };
-    UrlsService.prototype.getCheckUrl = function (id) {
-        return this.http.get(this.globals.apiUrl + "/urls/checkurl/" + id);
+    UrlsService.prototype.getCheckUrl = function (id, refer) {
+        var us = JSON.parse(localStorage.getItem('currentUser'));
+        return this.http.get(this.globals.apiUrl + "/urls/checkurl/" + id + '?user=' + us + '&r=' + js_base64_1.Base64.encode(refer));
     };
     UrlsService.prototype.getUrlbyId = function (id, role) {
         return this.http.get(this.globals.apiUrl + "/url/byid/" + id + '?role=' + role);
