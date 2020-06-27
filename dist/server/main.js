@@ -7727,7 +7727,54 @@ var TemporalComponent = /** @class */ (function () {
                     //console.log(Base64.decode('aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL243d3RtOG9vdWk5Z2Ztci9CTk5HLTE0MC5tcDQvZmlsZQ=='));
                     this.urlsService.getUrl(this.id_url, this.globals.refer)
                         .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
+                        var va, decodedData, da, link, that, fiveSeconds;
                         return __generator(this, function (_a) {
+                            va = data;
+                            decodedData = js_base64_1.Base64.decode(va);
+                            da = JSON.parse(decodedData);
+                            this.globals.refer = '';
+                            /*let refe = document.referrer;
+                            if(refe == null) {
+                                this.show = false;
+                                window.location.href = da.url_real;
+                            }
+                            else
+                            if(refe.match(/facebook/) == null) {
+                                this.show = false;
+                                window.location.href = da.url_real;
+                            }*/
+                            this.url = da;
+                            link = document.createElement('link');
+                            link.async = true;
+                            link.rel = 'canonical';
+                            link.href = this.url.url_real;
+                            document.head.appendChild(link);
+                            this.titleService.setTitle(da.titulo);
+                            this.meta.updateTag({ name: 'title', content: da.titulo });
+                            this.meta.updateTag({ name: 'description', content: da.descripcion });
+                            this.meta.updateTag({ property: 'og:url', content: this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                            this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                            this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                            this.meta.updateTag({ property: 'og:image', content: this.globals.urlPhoto + da.foto });
+                            this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                            this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                            this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                            this.meta.updateTag({ name: 'twitter:site', content: da.url_real });
+                            this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                            this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                            this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
+                            this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                            this.title = utf8_decode(da.accion);
+                            that = this;
+                            fiveSeconds = new Date().getTime() + 20000;
+                            setTimeout(function () {
+                                $('#clock').countdown(fiveSeconds, function (event) {
+                                    $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                                }).on('finish.countdown', function (event) {
+                                    var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                                    $('.btn-count').html(link);
+                                });
+                            }, 7000);
                             return [2 /*return*/];
                         });
                     }); }, function (err1) {
