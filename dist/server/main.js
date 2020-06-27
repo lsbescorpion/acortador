@@ -8094,7 +8094,7 @@ var UrlsComponent = /** @class */ (function () {
                         return that.globals.urlShared + '/' + row.categoria.categoria + '/' + data;
                     } },
                 { title: 'Acción', data: 'accion', className: "align-middle", "render": function (data, type, row, meta) {
-                        return utf8_decode(data);
+                        return data;
                     } },
                 { title: 'Real', data: 'url_real', className: "align-middle", "render": function (data, type, row, meta) {
                         return data;
@@ -8103,7 +8103,7 @@ var UrlsComponent = /** @class */ (function () {
                         return data;
                     } },
                 { title: 'Opciones', data: 'id', "render": function (data, type, row, meta) {
-                        var editar = '<button date="' + utf8_decode(row.accion) + ' ' + that.globals.urlShared + '/' + row.categoria.categoria + '/' + row.url_acortada + '" title="Copiar url" data-toggle="tooltip" class="mat-icon-button mat-accent btn-copy"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">file_copy</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
+                        var editar = '<button date="' + row.accion + ' ' + that.globals.urlShared + '/' + row.categoria.categoria + '/' + row.url_acortada + '" title="Copiar url" data-toggle="tooltip" class="mat-icon-button mat-accent btn-copy"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">file_copy</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
                         var eliminar = '<button date="' + data + '" title="Eliminar url" data-toggle="tooltip" class="mat-icon-button mat-accent btn-delete"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">delete_sweep</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
                         var view = '<button date="' + data + '" title="Mostrar datos url" data-toggle="tooltip" class="mat-icon-button mat-accent btn-show"><span class="mat-button-wrapper"><mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">visibility</mat-icon></span><div class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple="" ng-reflect-centered="true" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><div class="mat-button-focus-overlay"></div></button>';
                         return editar + eliminar + view;
