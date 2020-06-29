@@ -7692,7 +7692,7 @@ var TemporalComponent = /** @class */ (function () {
             _this.popular = da;
         });
     };
-    TemporalComponent.prototype.ngAfterViewChecked = function () {
+    TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
@@ -7704,7 +7704,7 @@ var TemporalComponent = /** @class */ (function () {
             });
         });
     };
-    TemporalComponent.prototype.ngOnInit = function () {
+    TemporalComponent.prototype.ngAfterViewChecked = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
