@@ -7692,19 +7692,30 @@ var TemporalComponent = /** @class */ (function () {
             _this.popular = da;
         });
     };
-    TemporalComponent.prototype.ngOnInit = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.setScript()];
-                    case 1:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
-            });
-        });
-    };
     TemporalComponent.prototype.ngAfterViewChecked = function () {
+        /*const anchors = document.getElementsByTagName('a');
+        for (let i = 0; i < anchors.length; i++) {
+            let valores = anchors[i].href.split('/');
+            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
+                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+                const p = new RegExp(a.split('').join('|'), 'g')
+
+                let fin = anchors[i].title.toString().toLowerCase()
+                    .replace(/\s+/g, '-') // Replace spaces with -
+                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+                    .replace(/&/g, '-and-') // Replace & with 'and'
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+                    .replace(/^-+/, '') // Trim - from start of text
+                    .replace(/-+$/, '') // Trim - from end of text
+                if(fin != '') {
+                    anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
+                }
+            }
+        }*/
+    };
+    TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -7712,6 +7723,7 @@ var TemporalComponent = /** @class */ (function () {
                 this.id_url = this.route.snapshot.paramMap.get('id');
                 if (this.id_url != null) {
                     this.show = true;
+                    this.setScript();
                     //console.log(Base64.decode('aHR0cHM6Ly93d3cubWVkaWFmaXJlLmNvbS9maWxlL243d3RtOG9vdWk5Z2Ztci9CTk5HLTE0MC5tcDQvZmlsZQ=='));
                     this.urlsService.getUrl(this.id_url, this.globals.refer)
                         .subscribe(function (data) { return __awaiter(_this, void 0, void 0, function () {
@@ -7720,7 +7732,6 @@ var TemporalComponent = /** @class */ (function () {
                             va = data;
                             decodedData = js_base64_1.Base64.decode(va);
                             da = JSON.parse(decodedData);
-                            this.globals.refer = '';
                             refe = this.globals.refer;
                             if (refe == null) {
                                 this.show = false;
@@ -7730,6 +7741,7 @@ var TemporalComponent = /** @class */ (function () {
                                 this.show = false;
                                 window.location.href = da.url_real;
                             }
+                            this.globals.refer = '';
                             this.url = da;
                             link = document.createElement('link');
                             link.async = true;
@@ -7835,12 +7847,12 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow.type = "text/javascript";
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
         //return new Promise(resolve => {
-        setTimeout(function () {
-            var bloque1 = document.getElementById('bloque1');
-            //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
-            bloque1.appendChild(scriptnow);
-            bloque1.appendChild(script);
-        }, 500);
+        //setTimeout(() => {
+        var bloque1 = document.getElementById('bloque1');
+        //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
+        bloque1.appendChild(scriptnow);
+        bloque1.appendChild(script);
+        //}, 500);
         //});
     };
     TemporalComponent.prototype.onFinished = function () {
