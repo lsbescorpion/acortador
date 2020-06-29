@@ -7693,28 +7693,16 @@ var TemporalComponent = /** @class */ (function () {
         });
     };
     TemporalComponent.prototype.ngAfterViewChecked = function () {
-        this.setScript();
-        /*const anchors = document.getElementsByTagName('a');
-        for (let i = 0; i < anchors.length; i++) {
-            let valores = anchors[i].href.split('/');
-            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
-                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-                const p = new RegExp(a.split('').join('|'), 'g')
-
-                let fin = anchors[i].title.toString().toLowerCase()
-                    .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-                    .replace(/&/g, '-and-') // Replace & with 'and'
-                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
-                    .replace(/^-+/, '') // Trim - from start of text
-                    .replace(/-+$/, '') // Trim - from end of text
-                if(fin != '') {
-                    anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
+        return __awaiter(this, void 0, void 0, function () {
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.setScript()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/];
                 }
-            }
-        }*/
+            });
+        });
     };
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -7847,12 +7835,12 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow.type = "text/javascript";
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
         //return new Promise(resolve => {
-        //setTimeout(() => {
-        var bloque1 = document.getElementById('bloque1');
-        //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
-        bloque1.appendChild(scriptnow);
-        bloque1.appendChild(script);
-        //}, 500);
+        setTimeout(function () {
+            var bloque1 = document.getElementById('bloque1');
+            //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
+            bloque1.appendChild(scriptnow);
+            bloque1.appendChild(script);
+        }, 500);
         //});
     };
     TemporalComponent.prototype.onFinished = function () {
