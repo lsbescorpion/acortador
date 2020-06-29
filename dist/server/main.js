@@ -2431,7 +2431,7 @@ var ReferGuard = /** @class */ (function () {
                 return false;
             }
             else {
-                var valor = this.urlsService.getCheckUrl(next.params.id, refe)
+                this.urlsService.getCheckUrl(next.params.id, refe)
                     .subscribe(function (data) {
                     var va = data;
                     return true;
@@ -2461,13 +2461,14 @@ var ReferGuard = /** @class */ (function () {
                         _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                         _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
                         window.location.href = err.url_real;
+                        return false;
                     }
                     else {
                         _this.router.navigate(['404']);
                     }
                     return false;
                 });
-                return valor;
+                return true;
             }
         }
         return false;
