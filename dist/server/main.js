@@ -2397,6 +2397,7 @@ var ReferGuard = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                     _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
                     window.location.href = da.url_real;
+                    return false;
                 }, function (err1) {
                     var va = err1;
                     var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
@@ -2467,7 +2468,7 @@ var ReferGuard = /** @class */ (function () {
                     }
                     return false;
                 });
-                return true;
+                return false;
             }
         }
         return true;
