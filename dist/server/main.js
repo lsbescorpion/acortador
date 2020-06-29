@@ -7851,12 +7851,16 @@ var TemporalComponent = /** @class */ (function () {
         var scriptnow = document.createElement('script');
         scriptnow.type = "text/javascript";
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
-        return new Promise(function (resolve) {
-            //var bloque2 = document.getElementById('bloque2');
-            //document.body.insertBefore(scriptnow, bloque2.childNodes[0]);
-            document.body.appendChild(scriptnow);
-            document.body.appendChild(script);
-        });
+        //return new Promise(resolve => {
+        /*var bloque1 = document.getElementById('bloque1');
+        bloque1.insertBefore(scriptnow1, bloque1.childNodes[0]);
+        bloque1.appendChild(script);
+
+        var bloque2 = document.getElementById('bloque2');
+        bloque2.insertBefore(scriptnow, bloque2.childNodes[0]);*/
+        document.body.appendChild(scriptnow);
+        document.body.appendChild(script);
+        //});
     };
     TemporalComponent.prototype.onFinished = function () {
         /*var link = '<a href="'+this.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
