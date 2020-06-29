@@ -2431,7 +2431,7 @@ var ReferGuard = /** @class */ (function () {
                 return false;
             }
             else {
-                this.urlsService.getCheckUrl(next.params.id, refe)
+                var valor = this.urlsService.getCheckUrl(next.params.id, refe)
                     .subscribe(function (data) {
                     var va = data;
                     return true;
@@ -2467,6 +2467,7 @@ var ReferGuard = /** @class */ (function () {
                     }
                     return false;
                 });
+                return valor;
             }
         }
         return false;
