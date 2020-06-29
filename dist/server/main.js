@@ -7847,9 +7847,11 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow.type = "text/javascript";
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
         //return new Promise(resolve => {
-        var bloque1 = document.getElementById('bloque1');
-        bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
-        bloque1.appendChild(script);
+        setTimeout(function () {
+            var bloque1 = document.getElementById('bloque1');
+            bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
+            bloque1.appendChild(script);
+        }, 500);
         /*var bloque2 = document.getElementById('bloque2');
         bloque2.insertBefore(scriptnow, bloque2.childNodes[0]);*/
         //});
