@@ -7852,8 +7852,9 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow.type = "text/javascript";
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
         return new Promise(function (resolve) {
-            var bloque2 = document.getElementById('bloque2');
-            document.body.insertBefore(scriptnow, bloque2.childNodes[0]);
+            //var bloque2 = document.getElementById('bloque2');
+            //document.body.insertBefore(scriptnow, bloque2.childNodes[0]);
+            document.body.appendChild(scriptnow);
             document.body.appendChild(script);
         });
     };
