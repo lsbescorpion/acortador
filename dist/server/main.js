@@ -2397,7 +2397,6 @@ var ReferGuard = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                     _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
                     window.location.href = da.url_real;
-                    return false;
                 }, function (err1) {
                     var va = err1;
                     var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
@@ -2468,10 +2467,9 @@ var ReferGuard = /** @class */ (function () {
                     }
                     return false;
                 });
-                return false;
             }
         }
-        return true;
+        return false;
     };
     ReferGuard.ngInjectableDef = i0.defineInjectable({ factory: function ReferGuard_Factory() { return new ReferGuard(i0.inject(i1.Router), i0.inject(i2.UrlsService), i0.inject(i3.Meta), i0.inject(i3.Title), i0.inject(i4.Globals)); }, token: ReferGuard, providedIn: "root" });
     return ReferGuard;
