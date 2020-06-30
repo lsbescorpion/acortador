@@ -2259,10 +2259,10 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'https://back.siteshealtall.com/api';
-        this.urlPhoto = 'https://back.siteshealtall.com/';
-        this.globalUrl = 'https://shared.siteshealtall.com';
-        this.urlShared = 'https://shared.siteshealtall.com/categoria';
+        this.apiUrl = 'http://127.0.0.1:8000/api';
+        this.urlPhoto = 'http://127.0.0.1:8000/';
+        this.globalUrl = 'http://localhost:4200';
+        this.urlShared = 'http://localhost:4200/categoria';
         this.isLogued = false;
         this.role = '';
         this.refer = '';
@@ -7554,14 +7554,14 @@ exports.ShowurlComponent = ShowurlComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./temporal.component.scss.shim.ngstyle */ "./src/app/pages/temporal/temporal.component.scss.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
-var i4 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
-var i5 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i6 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i7 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i8 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i9 = __webpack_require__(/*! ./temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
+var i2 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
+var i3 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i4 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i5 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i6 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i7 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i8 = __webpack_require__(/*! ./temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
+var i9 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var i10 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
 var i11 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
 var i12 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
@@ -7569,22 +7569,12 @@ var i13 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/serv
 var styles_TemporalComponent = [i0.styles];
 var RenderType_TemporalComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_TemporalComponent, data: {} });
 exports.RenderType_TemporalComponent = RenderType_TemporalComponent;
-function View_TemporalComponent_2(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 30, "div", [["class", "col-md-4 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 29, "div", [["class", "card card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 7, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 6, "a", [], [[1, "categoria", 0], [8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "200"], ["width", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 2, "div", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, [" ", " "])), (_l()(), i1.ɵeld(9, 0, null, null, 0, "i", [["class", "zmdi zmdi-eye"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(12, null, ["", ""])), (_l()(), i1.ɵeld(13, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 3, "a", [], [[1, "categoria", 0], [8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(15, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(16, 1), (_l()(), i1.ɵted(17, null, ["", ".."])), (_l()(), i1.ɵeld(18, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, [" ", "... "])), (_l()(), i1.ɵeld(20, 0, null, null, 10, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 3, "a", [["class", "btn btn-primary"]], [[1, "categoria", 0], [8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
-        var pd_0 = (i1.ɵnov(_v, 23).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
-        ad = (pd_0 && ad);
-    } return ad; }, null, null)), i1.ɵdid(23, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(24, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(26, 0, null, null, 4, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 3, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["contacts"])), (_l()(), i1.ɵted(30, null, [" ", ""]))], function (_ck, _v) { var currVal_4 = _ck(_v, 5, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 4, 0, currVal_4); var currVal_12 = _ck(_v, 16, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 15, 0, currVal_12); var currVal_19 = _ck(_v, 24, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 23, 0, currVal_19); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.categoria.categoria; var currVal_1 = _v.context.$implicit.titulo; var currVal_2 = i1.ɵnov(_v, 4).target; var currVal_3 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_5 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_5); var currVal_6 = _v.context.$implicit.visitas; _ck(_v, 8, 0, currVal_6); var currVal_7 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 12, 0, currVal_7); var currVal_8 = _v.context.$implicit.categoria.categoria; var currVal_9 = _v.context.$implicit.titulo; var currVal_10 = i1.ɵnov(_v, 15).target; var currVal_11 = i1.ɵnov(_v, 15).href; _ck(_v, 14, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_13 = _v.context.$implicit.titulo.substring(0, 28); _ck(_v, 17, 0, currVal_13); var currVal_14 = _v.context.$implicit.descripcion.substring(0, 171); _ck(_v, 19, 0, currVal_14); var currVal_15 = _v.context.$implicit.categoria.categoria; var currVal_16 = _v.context.$implicit.titulo; var currVal_17 = i1.ɵnov(_v, 23).target; var currVal_18 = i1.ɵnov(_v, 23).href; _ck(_v, 22, 0, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_20 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 30, 0, currVal_20); }); }
-function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 20, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 19, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 18, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 9, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_774147"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(6, 0, null, null, 2, "div", [["class", "col-md-8 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, ["", ""])), (_l()(), i1.ɵeld(9, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-center mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(11, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(12, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 2, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(16, 0, null, null, 0, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 3, "div", [["class", "row text-left"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_TemporalComponent_2)), i1.ɵdid(19, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, [])], function (_ck, _v) { var _co = _v.component; var currVal_3 = "warn"; _ck(_v, 11, 0, currVal_3); var currVal_4 = i1.ɵunv(_v, 19, 0, i1.ɵnov(_v, 20).transform(_co.popular, 0, 3)); _ck(_v, 19, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.title; _ck(_v, 8, 0, currVal_0); var currVal_1 = (i1.ɵnov(_v, 11).disabled || null); var currVal_2 = (i1.ɵnov(_v, 11)._animationMode === "NoopAnimations"); _ck(_v, 10, 0, currVal_1, currVal_2); }); }
-function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 3, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(5, 16384, null, 0, i3.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(6, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == true); _ck(_v, 5, 0, currVal_0); }, null); }
+function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 22, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 21, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 20, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 14, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 0, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_774147"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 0, "div", [["id", "M602552ScriptRootC944395"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 11, "div", [["class", "row col-md-12 mb-3 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 2, "div", [["class", "col-md-4 text-right"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "div", [["class", "fileinput-new thumbnail"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 0, "img", [["alt", "..."], ["height", "150"], ["width", "150"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 7, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(13, null, ["", ""])), (_l()(), i1.ɵeld(14, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-left mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(16, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(17, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 2, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(21, 0, null, null, 0, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 0, "div", [["id", "M602552ScriptRootC944410"]], null, null, null, null, null))], function (_ck, _v) { var currVal_4 = "warn"; _ck(_v, 16, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = i1.ɵinlineInterpolate(1, "", _co.foto, ""); _ck(_v, 9, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 13, 0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 16).disabled || null); var currVal_3 = (i1.ɵnov(_v, 16)._animationMode === "NoopAnimations"); _ck(_v, 15, 0, currVal_2, currVal_3); }); }
+function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 4, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 3, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 2, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 1, null, View_TemporalComponent_1)), i1.ɵdid(5, 16384, null, 0, i7.NgIf, [i1.ViewContainerRef, i1.TemplateRef], { ngIf: [0, "ngIf"] }, null), (_l()(), i1.ɵeld(6, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_0 = (_co.show == true); _ck(_v, 5, 0, currVal_0); }, null); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
-function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i9.TemporalComponent, [i2.ActivatedRoute, i2.Router, i10.UrlsService, i11.Meta, i11.Title, i12.Globals, i11.DOCUMENT, i13.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i8.TemporalComponent, [i9.ActivatedRoute, i9.Router, i10.UrlsService, i11.Meta, i11.Title, i12.Globals, i11.DOCUMENT, i13.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TemporalComponent_Host_0 = View_TemporalComponent_Host_0;
-var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i9.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
+var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i8.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
 exports.TemporalComponentNgFactory = TemporalComponentNgFactory;
 
 
@@ -7681,6 +7671,7 @@ var TemporalComponent = /** @class */ (function () {
         this.show = false;
         this.id_url = null;
         this.popular = [];
+        this.foto = "";
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
@@ -7768,6 +7759,7 @@ var TemporalComponent = /** @class */ (function () {
                                 this.meta.updateTag({ name: 'twitter:image', content: this.globals.urlPhoto + da.foto });
                                 this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
                                 this.title = da.accion;
+                                this.foto = this.globals.urlPhoto + da.foto;
                                 that = this;
                                 fiveSeconds = new Date().getTime() + 20000;
                                 setTimeout(function () {
@@ -7831,20 +7823,13 @@ var TemporalComponent = /** @class */ (function () {
         script.async = true;
         script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         let scriptnow: any = document.createElement('script');
-        scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
-
-        let script1: any = document.createElement('script');
-        script1.async = true;
-        script1.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-        let scriptnow1: any = document.createElement('script');
-        scriptnow1.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';
-        let script: any = document.createElement('script');
-        script.async = true;
-        script.src = "https://jsc.mgid.com/c/r/cropersviral.com.797649.js";
-
-        let script1: any = document.createElement('script');
-        script1.async = true;
-        script1.src = "https://jsc.mgid.com/c/r/cropersviral.com.797653.js";*/
+        scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';*/
+        var scriptmgid1 = document.createElement('script');
+        scriptmgid1 = true;
+        scriptmgid1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.944395.js";
+        var scriptmgid2 = document.createElement('script');
+        scriptmgid2.async = true;
+        scriptmgid2.src = "https://jsc.mgid.com/s/i/siteshealtall.com.944410.js";
         var script = document.createElement('script');
         script.type = "text/javascript";
         script.src = "//st-n.ads5-adnow.com/js/a.js";
@@ -7853,6 +7838,8 @@ var TemporalComponent = /** @class */ (function () {
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
         var bloque1 = document.getElementById('bloque1');
         //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
+        bloque1.appendChild(scriptmgid2);
+        bloque1.appendChild(scriptmgid1);
         bloque1.appendChild(scriptnow);
         bloque1.appendChild(script);
         return new Promise(function (resolve) {
