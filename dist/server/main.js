@@ -7851,14 +7851,14 @@ var TemporalComponent = /** @class */ (function () {
         var scriptnow = document.createElement('script');
         scriptnow.type = "text/javascript";
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
+        var bloque1 = document.getElementById('bloque1');
+        //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
+        bloque1.appendChild(scriptnow);
+        bloque1.appendChild(script);
         return new Promise(function (resolve) {
-            //setTimeout(() => {
-            var bloque1 = document.getElementById('bloque1');
-            //bloque1.insertBefore(scriptnow, bloque1.childNodes[0]);
-            bloque1.appendChild(scriptnow);
-            bloque1.appendChild(script);
-            resolve();
-            //}, 500);
+            setTimeout(function () {
+                resolve();
+            }, 1000);
         });
     };
     TemporalComponent.prototype.onFinished = function () {
