@@ -7854,13 +7854,14 @@ var TemporalComponent = /** @class */ (function () {
         var bloque1 = document.getElementById('65821-1');
         bloque1.appendChild(script);
         bloque1.appendChild(script1);
-        var script2 = document.createElement('script');
+        /*let script2: any = document.createElement('script');
         script2.src = "//ads.themoneytizer.com/s/gen.js?type=28";
-        var script3 = document.createElement('script');
+        let script3: any = document.createElement('script');
         script3.src = "//ads.themoneytizer.com/s/requestform.js?siteId=65821&formatId=28";
+
         var bloque2 = document.getElementById('65821-28');
         bloque2.appendChild(script2);
-        bloque2.appendChild(script3);
+        bloque2.appendChild(script3);*/
         return new Promise(function (resolve) {
             setTimeout(function () {
                 resolve();
