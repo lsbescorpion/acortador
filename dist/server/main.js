@@ -7532,39 +7532,6 @@ var TemporalComponent = /** @class */ (function () {
         this.foto = "";
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
-        var _this = this;
-        this.urlsService.getUrlPop()
-            .subscribe(function (data) {
-            var va = data;
-            var decodedData = js_base64_1.Base64.decode(va);
-            var da = JSON.parse(decodedData);
-            _this.popular = da;
-        });
-    };
-    TemporalComponent.prototype.ngAfterViewChecked = function () {
-        /*const anchors = document.getElementsByTagName('a');
-        for (let i = 0; i < anchors.length; i++) {
-            let valores = anchors[i].href.split('/');
-            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
-                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-                const p = new RegExp(a.split('').join('|'), 'g')
-
-                let fin = anchors[i].title.toString().toLowerCase()
-                    .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-                    .replace(/&/g, '-and-') // Replace & with 'and'
-                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
-                    .replace(/^-+/, '') // Trim - from start of text
-                    .replace(/-+$/, '') // Trim - from end of text
-                if(fin != '') {
-                    anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
-                }
-            }
-        }*/
-    };
-    TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
             var _this = this;
             return __generator(this, function (_a) {
@@ -7665,10 +7632,43 @@ var TemporalComponent = /** @class */ (function () {
                             }
                         });
                         _a.label = 2;
-                    case 2: return [2 /*return*/];
+                    case 2:
+                        this.urlsService.getUrlPop()
+                            .subscribe(function (data) {
+                            var va = data;
+                            var decodedData = js_base64_1.Base64.decode(va);
+                            var da = JSON.parse(decodedData);
+                            _this.popular = da;
+                        });
+                        return [2 /*return*/];
                 }
             });
         });
+    };
+    TemporalComponent.prototype.ngAfterViewChecked = function () {
+        /*const anchors = document.getElementsByTagName('a');
+        for (let i = 0; i < anchors.length; i++) {
+            let valores = anchors[i].href.split('/');
+            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
+                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
+                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
+                const p = new RegExp(a.split('').join('|'), 'g')
+
+                let fin = anchors[i].title.toString().toLowerCase()
+                    .replace(/\s+/g, '-') // Replace spaces with -
+                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
+                    .replace(/&/g, '-and-') // Replace & with 'and'
+                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
+                    .replace(/^-+/, '') // Trim - from start of text
+                    .replace(/-+$/, '') // Trim - from end of text
+                if(fin != '') {
+                    anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
+                }
+            }
+        }*/
+    };
+    TemporalComponent.prototype.ngOnInit = function () {
     };
     TemporalComponent.prototype.decodURI = function (str) {
         return utf8_decode(str);
