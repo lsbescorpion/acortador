@@ -2261,8 +2261,8 @@ var Globals = /** @class */ (function () {
     function Globals() {
         this.apiUrl = 'https://back.siteshealtall.com/api';
         this.urlPhoto = 'https://back.siteshealtall.com/';
-        this.globalUrl = 'https://www.siteshealtall.com';
-        this.urlShared = 'https://www.siteshealtall.com/categoria';
+        this.globalUrl = 'https://shared.siteshealtall.com';
+        this.urlShared = 'https://shared.siteshealtall.com/categoria';
         this.isLogued = false;
         this.role = '';
         this.refer = '';
