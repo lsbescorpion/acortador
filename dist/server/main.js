@@ -7568,7 +7568,7 @@ var i12 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/serv
 var styles_TemporalComponent = [i0.styles];
 var RenderType_TemporalComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_TemporalComponent, data: {} });
 exports.RenderType_TemporalComponent = RenderType_TemporalComponent;
-function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 27, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 26, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 25, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 24, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 23, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 22, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 16, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "div", [["class", "col-md-10 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 0, "div", [["id", "55399-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 11, "div", [["class", "row col-md-12 mb-3 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "div", [["class", "col-md-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 1, "div", [["class", "fileinput-new thumbnail"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 0, "img", [["alt", "..."], ["height", "150"], ["width", "150"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 7, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(17, null, ["", ""])), (_l()(), i1.ɵeld(18, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-center mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(20, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(21, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 1, "div", [["class", "col-md-10 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 0, "div", [["id", "55399-19"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 2, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(27, 0, null, null, 0, "div", [["class", "col-md-10 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 0, "div", [["id", "55399-1"], ["style", "text-align: center;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var currVal_4 = "warn"; _ck(_v, 20, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.foto; _ck(_v, 13, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 17, 0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 20).disabled || null); var currVal_3 = (i1.ɵnov(_v, 20)._animationMode === "NoopAnimations"); _ck(_v, 19, 0, currVal_2, currVal_3); }); }
+function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 27, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 26, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 25, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 24, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 23, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 22, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 16, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 0, "div", [["id", "55399-11"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 11, "div", [["class", "row col-md-12 mb-3 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 2, "div", [["class", "col-md-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 1, "div", [["class", "fileinput-new thumbnail"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 0, "img", [["alt", "..."], ["height", "150"], ["width", "150"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 7, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(17, null, ["", ""])), (_l()(), i1.ɵeld(18, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-center mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(19, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(20, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(21, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 0, "div", [["id", "55399-31"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(27, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 0, "div", [["id", "55399-28"], ["style", "text-align: center;"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var currVal_4 = "warn"; _ck(_v, 20, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.foto; _ck(_v, 13, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 17, 0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 20).disabled || null); var currVal_3 = (i1.ɵnov(_v, 20)._animationMode === "NoopAnimations"); _ck(_v, 19, 0, currVal_2, currVal_3); }); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
 function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i7.TemporalComponent, [i8.ActivatedRoute, i8.Router, i9.UrlsService, i10.Meta, i10.Title, i11.Globals, i10.DOCUMENT, i12.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TemporalComponent_Host_0 = View_TemporalComponent_Host_0;
@@ -7826,45 +7826,25 @@ var TemporalComponent = /** @class */ (function () {
         script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         let scriptnow: any = document.createElement('script');
         scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';*/
-        /*let scriptmgid1: any = document.createElement('script');
-        scriptmgid1.async = true;
-        scriptmgid1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.944395.js";
-
-        let scriptmgid2: any = document.createElement('script');
-        scriptmgid2.async = true;
-        scriptmgid2.src = "https://jsc.mgid.com/s/i/siteshealtall.com.944410.js";
-
-        let script: any = document.createElement('script');
-        script.type = "text/javascript";
-        script.src = "//st-n.ads5-adnow.com/js/a.js";
-        let scriptnow: any = document.createElement('script');
-        scriptnow.type = "text/javascript";
-        scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "774147",domain : "n.ads5-adnow.com"});';
-
-        var bloque1 = document.getElementById('bloque1');
-        bloque1.appendChild(scriptmgid2);
-        bloque1.appendChild(scriptmgid1);
-        bloque1.appendChild(scriptnow);
-        bloque1.appendChild(script);*/
         var script = document.createElement('script');
-        script.src = "//ads.themoneytizer.com/s/gen.js?type=2";
+        script.src = "//ads.themoneytizer.com/s/gen.js?type=11";
         var script1 = document.createElement('script');
-        script1.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=2";
-        var bloque1 = document.getElementById('55399-2');
+        script1.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=11";
+        var bloque1 = document.getElementById('55399-11');
         bloque1.appendChild(script);
         bloque1.appendChild(script1);
         var script2 = document.createElement('script');
-        script2.src = "//ads.themoneytizer.com/s/gen.js?type=19";
+        script2.src = "//ads.themoneytizer.com/s/gen.js?type=31";
         var script3 = document.createElement('script');
-        script3.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=19";
-        var bloque2 = document.getElementById('55399-19');
+        script3.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=31";
+        var bloque2 = document.getElementById('55399-31');
         bloque2.appendChild(script2);
         bloque2.appendChild(script3);
         var script4 = document.createElement('script');
-        script4.src = "//ads.themoneytizer.com/s/gen.js?type=1";
+        script4.src = "//ads.themoneytizer.com/s/gen.js?type=28";
         var script5 = document.createElement('script');
-        script5.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=1";
-        var bloque3 = document.getElementById('55399-1');
+        script5.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=28";
+        var bloque3 = document.getElementById('55399-28');
         bloque3.appendChild(script4);
         bloque3.appendChild(script5);
         return new Promise(function (resolve) {
