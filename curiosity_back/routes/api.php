@@ -39,6 +39,8 @@ Route::get('urls/checkurl/{url}', 'API\UrlsController@CheckUrl')->name('CheckUrl
 Route::get('urls/estadadmin', 'API\UrlsController@getEstadAdmin')->name('getestadadmin');
 Route::get('urls/admin', 'API\UrlsController@getUrlsAdmin')->name('geturlsadmin');
 Route::delete('urls/del/admin/{url}', 'API\UrlsController@deleteUrlAdmin')->name('deleteurladmin');
+Route::get('urls/visitas/{url}', 'API\UrlsController@setVisitas')->name('setVisitas');
+Route::post('urls/cpm', 'API\UrlsController@Cpm')->name('cpm');
 
 Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
 Route::post('blog/photob', 'API\BlogController@photob')->name('photob');

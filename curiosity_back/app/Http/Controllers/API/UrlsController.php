@@ -7,11 +7,13 @@ use App\Models\User;
 use App\Models\Urls;
 use App\Models\Categoria;
 use App\Models\VisitasDiarias;
+use App\Models\VisitasDiariasUrl;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasMensuales;
 use App\Models\Paises;
 use App\Models\UrlVisitasP;
 use App\Models\UrlVisitaR;
+use App\Models\CPM;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Jenssegers\Agent\Agent;
@@ -22,18 +24,18 @@ class UrlsController extends Controller
 {
 
     public function getAnalytic() {
-        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
-        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+        /*$startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();*/
         $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
 
-        $analyticsData = Analytics::performQuery(
+        /*$analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
             'ga:pagePath',
             [
                 'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
                 'dimensions' => 'ga:pagePath,ga:source'
             ]
-        );
+        );*/
 
         /*$ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_UYU&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
@@ -45,8 +47,8 @@ class UrlsController extends Controller
 
         $uyu = $rates['USD_UYU']['val'];*/
 
-        $rows = $analyticsData->rows;
-        for($i = 0; $i < count($rows); $i++) {
+        //$rows = $analyticsData->rows;
+        /*for($i = 0; $i < count($rows); $i++) {
             if($rows[$i][1] != '(direct)') {
                 $url = explode("/", $rows[$i][0]);
                 if(isset($url[3]) && strlen($url[3]) == 7) {
@@ -70,9 +72,20 @@ class UrlsController extends Controller
                     }
                 }
             }
+        }*/
+        $visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
+        $cpm = CPM::find(1);
+        for($i = 0; $i < count($visitas); $i++) {
+            $ganancias = GananciasDiarias::where(['user_id' => $visitas[$i]->user_id, 'url_id' => $visitas[$i]->url_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiarias());
+            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+            $ganancias->user_id = $visitas[$i]->user_id;
+            $ganancias->url_id = $visitas[$i]->url_id;
+            $ganancias->ganancia = round($visitas[$i]->visitas/$cpm->cpm, 2, PHP_ROUND_HALF_DOWN);
+            $ganancias->save();
         }
-       
-        return response()->json($analyticsData);
+        return response()->json("Update data");
+        //return response()->json($analyticsData);
     }
 
     public function CheckUrl($id) {
@@ -113,7 +126,7 @@ class UrlsController extends Controller
 
         $refer = base64_decode($request->get('r'));
         $pos = strpos($refer, 'facebook');
-        if($pos === false) {
+        /*if($pos === false) {
             if($refer != null) {
                 $re = UrlVisitaR::where(['url_id' => $url->id, 'referr' => $refer])->first();
 
@@ -168,9 +181,9 @@ class UrlsController extends Controller
         $re->visitasr = ($re->visitasr != null ? $re->visitasr : 0) + 1;
         $re->url_id = $url->id;
         $re->referr = $refer;
-        $re->save();
+        $re->save();*/
 
-        $url->visitas = $url->visitas + 1;
+        /*$url->visitas = $url->visitas + 1;
         $url->save();
 
         $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');
@@ -181,9 +194,38 @@ class UrlsController extends Controller
         $visitas->visitas = ($visitas->visitas != null ? $visitas->visitas : 0) + 1;
         $visitas->fecha = $fecha;
         $visitas->user_id = $url->user_id;
-        $visitas->save();
+        $visitas->save();*/
 
         return response()->json(base64_encode(json_encode($url)));
+    }
+
+    public function setVisitas($id, Request $request) {
+        $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');
+
+        $url = Urls::where(['url_acortada' => $id, 'activa' => 1])->first();
+
+        $url->visitas = $url->visitas + 1;
+        $url->save();
+
+        $visitas = VisitasDiarias::where(['user_id' => $url->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+        if($visitas == null)
+            $visitas = new VisitasDiarias();
+
+        $visitas->visitas = ($visitas->visitas != null ? $visitas->visitas : 0) + 1;
+        $visitas->fecha = $fecha;
+        $visitas->user_id = $url->user_id;
+        $visitas->save();
+
+        $visitasu = VisitasDiariasUrl::where(['user_id' => $url->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+        if($visitasu == null)
+            $visitasu = new VisitasDiariasUrl();
+
+        $visitasu->visitas = ($visitasu->visitas != null ? $visitasu->visitas : 0) + 1;
+        $visitasu->fecha = $fecha;
+        $visitasu->user_id = $url->user_id;
+        $visitasu->url_id = $url->id;
+        $visitasu->save();
+        return response()->json("Update Visitas");
     }
 
     public function getUrlbyId($id, Request $request)
@@ -244,6 +286,13 @@ class UrlsController extends Controller
     public function getUrlsPop(){
         $datos = Urls::with(['categoria', 'users'])->where(['activa' => 1])->orderby('visitas', 'DESC')->limit(3)->offset(0)->get();
         return response()->json(base64_encode(json_encode($datos)));
+    }
+
+    public function Cpm(Request $request) {
+        $cpm = CPM::find(1);
+        $cpm->cpm = $request->get('cpm');
+        $cpm->save();
+        return response()->json($cpm);
     }
 
     public function acortar(Request $request)
