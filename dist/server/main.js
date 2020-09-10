@@ -2432,8 +2432,7 @@ var ReferGuard = /** @class */ (function () {
                         window.location.href = err.url_real;
                     }
                     else {
-                        console.log(err);
-                        //this.router.navigate(['404']);
+                        _this.router.navigate(['404']);
                     }
                     return rxjs_1.of(false);
                 }));
@@ -8195,8 +8194,7 @@ var TemporalComponent = /** @class */ (function () {
                     resolve();
                 }
                 else {
-                    //this.router.navigate(['404']);
-                    console.log(err);
+                    _this.router.navigate(['404']);
                     resolve();
                 }
             });
