@@ -8195,7 +8195,8 @@ var TemporalComponent = /** @class */ (function () {
                     resolve();
                 }
                 else {
-                    _this.router.navigate(['404']);
+                    //this.router.navigate(['404']);
+                    console.log(err);
                     resolve();
                 }
             });
