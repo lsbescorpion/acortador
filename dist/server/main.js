@@ -6560,11 +6560,9 @@ var EstadadminComponent = /** @class */ (function () {
             return false;
         }
         else {
-            console.log($('#cpm').val());
             this.urlsService.SetCpm($('#cpm').val())
                 .subscribe(function (data) {
                 var da = data;
-                console.log(da);
             });
         }
     };
@@ -8133,12 +8131,12 @@ var TemporalComponent = /** @class */ (function () {
                 var link = document.createElement('link');
                 link.async = true;
                 link.rel = 'canonical';
-                link.href = _this.url.url_real;
+                link.href = da.url_real; //this.url.url_real;
                 document.head.appendChild(link);
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                _this.meta.updateTag({ property: 'og:url', content: da.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
                 _this.meta.updateTag({ property: 'og:title', content: da.titulo });
                 _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
                 _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
