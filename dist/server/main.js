@@ -2401,7 +2401,7 @@ var ReferGuard = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
                     _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                    _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                    //this.meta.updateTag({property: 'fb:app_id', content: '263899851348916'});
                     window.location.href = da.url_real;
                     return false;
                 }), operators_1.catchError(function (err1) {
@@ -2428,7 +2428,7 @@ var ReferGuard = /** @class */ (function () {
                         _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
                         _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
                         _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                        _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                        //this.meta.updateTag({property: 'fb:app_id', content: '263899851348916'});
                         window.location.href = err.url_real;
                     }
                     else {
@@ -2465,7 +2465,7 @@ var ReferGuard = /** @class */ (function () {
                         _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
                         _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
                         _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                        _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                        //this.meta.updateTag({property: 'fb:app_id', content: '263899851348916'});
                         window.location.href = err.url_real;
                     }
                     else {
@@ -8147,7 +8147,7 @@ var TemporalComponent = /** @class */ (function () {
                 _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
                 _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
                 _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                //this.meta.updateTag({property: 'fb:app_id', content: '263899851348916'});
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
                 var that = _this;
@@ -8187,7 +8187,7 @@ var TemporalComponent = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
                     _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                    _this.meta.updateTag({ property: 'fb:app_id', content: '263899851348916' });
+                    //this.meta.updateTag({property: 'fb:app_id', content: '263899851348916'});
                     _this.title = err.accion;
                     window.location.href = err.url_real;
                     resolve();
