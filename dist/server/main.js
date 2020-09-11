@@ -6329,6 +6329,7 @@ var EstadadminComponent = /** @class */ (function () {
             _this.gdiarias = da.gdiarias.toFixed(2);
             _this.fvdiarias = da.fvdiarias;
             _this.rpm = da.rpm;
+            $('#cpm').val(da.cpm.cpm);
             var dataGananciasChart = {
                 labels: da.chartganancias.dia,
                 series: [
