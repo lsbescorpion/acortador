@@ -2377,31 +2377,7 @@ var ReferGuard = /** @class */ (function () {
         if (next.params.id != null) {
             var refe = this.globals.refer;
             if (refe.match(/facebook/) != null) {
-                return this.urlsService.getMiddle(next.params.id).pipe(operators_1.map(function (data) {
-                    var va = data;
-                    var decodedData = js_base64_1.Base64.decode(va);
-                    var da = JSON.parse(decodedData);
-                    var link = document.createElement('link');
-                    link.async = true;
-                    link.rel = 'canonical';
-                    link.href = da.url_real;
-                    document.head.prepend(link);
-                    _this.titleService.setTitle(da.titulo);
-                    _this.meta.updateTag({ name: 'title', content: da.titulo });
-                    _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                    _this.meta.updateTag({ property: 'og:url', content: da.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
-                    _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                    _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    _this.meta.updateTag({ name: 'twitter:site', content: da.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
-                    _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                    _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                    return true;
-                }));
+                return true;
             }
             else {
                 return this.urlsService.getMiddle(next.params.id).pipe(operators_1.map(function (data) {
@@ -2428,7 +2404,7 @@ var ReferGuard = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                     window.location.href = da.url_real;
-                    return false;
+                    return true;
                 }));
             }
         }
