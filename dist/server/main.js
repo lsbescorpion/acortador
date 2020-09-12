@@ -2377,7 +2377,31 @@ var ReferGuard = /** @class */ (function () {
         if (next.params.id != null) {
             var refe = this.globals.refer;
             if (refe.match(/facebook/) != null) {
-                return true;
+                return this.urlsService.getMiddle(next.params.id).pipe(operators_1.map(function (data) {
+                    var va = data;
+                    var decodedData = js_base64_1.Base64.decode(va);
+                    var da = JSON.parse(decodedData);
+                    var link = document.createElement('link');
+                    link.async = true;
+                    link.rel = 'canonical';
+                    link.href = da.url_real;
+                    document.head.prepend(link);
+                    _this.titleService.setTitle(da.titulo);
+                    _this.meta.updateTag({ name: 'title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:url', content: da.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
+                    _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: da.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
+                    _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                    return true;
+                }));
             }
             else {
                 return this.urlsService.getMiddle(next.params.id).pipe(operators_1.map(function (data) {
@@ -7950,18 +7974,20 @@ var TemporalComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         this.id_url = this.route.snapshot.paramMap.get('id');
-                        if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        if (!(this.id_url != null)) return [3 /*break*/, 3];
                         this.show = true;
-                        this.setScript();
-                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                        return [4 /*yield*/, this.setScript()];
                     case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                    case 2:
                         _a.sent();
                         this.urlsService.setVisita(this.id_url)
                             .subscribe(function (data) {
                             var va = data;
                         });
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
                 }
             });
         });
@@ -7992,12 +8018,12 @@ var TemporalComponent = /** @class */ (function () {
         script2.async = true;
         script2.src = "https://jsc.mgid.com/r/s/rsaludables.com.1001450.js";
         this.document.head.appendChild(script2);
-        /*let promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
+        var promise = new Promise(function (resolve, reject) {
+            setTimeout(function () {
                 resolve();
             }, 3000);
         });
-        return promise;*/
+        return promise;
     };
     TemporalComponent.prototype.getUrl = function (id_url, refer) {
         var _this = this;
