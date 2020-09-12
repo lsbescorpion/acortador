@@ -7872,18 +7872,19 @@ var TemporalComponent = /** @class */ (function () {
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                this.id_url = this.route.snapshot.paramMap.get('id');
-                if (this.id_url != null) {
-                    this.show = true;
-                    //await this.setScript();
-                    console.log(this.globals.refer);
-                    this.getUrl(this.id_url, this.globals.refer);
-                    /*this.urlsService.setVisita(this.id_url)
-                        .subscribe(data => {
-                            let va: any = data;
-                        });*/
+                switch (_a.label) {
+                    case 0:
+                        this.id_url = this.route.snapshot.paramMap.get('id');
+                        if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        this.show = true;
+                        //await this.setScript();
+                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                    case 1:
+                        //await this.setScript();
+                        _a.sent();
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
                 }
-                return [2 /*return*/];
             });
         });
     };
@@ -7957,94 +7958,93 @@ var TemporalComponent = /** @class */ (function () {
         var script = document.createElement('script');
         script.src = "https://cdn.siteswithcontent.com/js/push/subscribe.js?v=1.1.0";
         document.head.appendChild(script);
-        //let promise = new Promise((resolve, reject) => {
-        this.urlsService.getUrl(id_url, refer)
-            //.toPromise()
-            .subscribe(function (data) {
-            var va = data;
-            var decodedData = js_base64_1.Base64.decode(va); //new Buffer(base64, 'base64').toString('ascii');//window.atob(va);
-            var da = JSON.parse(decodedData);
-            var refe = refer;
-            _this.url = da;
-            var link = document.createElement('link');
-            link.async = true;
-            link.rel = 'canonical';
-            link.href = _this.url.url_real;
-            document.head.appendChild(link);
-            _this.titleService.setTitle(da.titulo);
-            _this.meta.updateTag({ name: 'title', content: da.titulo });
-            _this.meta.updateTag({ name: 'description', content: da.descripcion });
-            _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-            _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-            _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-            _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-            _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-            _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-            _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-            _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
-            _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-            _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-            _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-            _this.title = da.accion;
-            _this.foto = _this.globals.urlPhoto + da.foto;
-            /*if(refe == null) {
-                this.show = false;
-                window.location.href = da.url_real;
-            }
-            else
-            if(refe.match(/facebook/) == null) {
-                this.show = false;
-                window.location.href = da.url_real;
-            }*/
-            _this.globals.refer = '';
-            var that = _this;
-            var fiveSeconds = new Date().getTime() + 20000;
-            setTimeout(function () {
-                $('#clock').countdown(fiveSeconds, function (event) {
-                    $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
-                }).on('finish.countdown', function (event) {
-                    var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
-                    $('.btn-count').html(link);
-                });
-            }, 7000);
-            //resolve();
-        }, function (err1) {
-            var va = err1;
-            var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
-            var err = JSON.parse(decodedData);
-            _this.globals.refer = '';
-            if (err.id != null) {
-                _this.show = false;
-                var link = _this.document.createElement('link');
+        var promise = new Promise(function (resolve, reject) {
+            _this.urlsService.getUrl(id_url, refer)
+                .toPromise()
+                .then(function (data) {
+                var va = data;
+                var decodedData = js_base64_1.Base64.decode(va); //new Buffer(base64, 'base64').toString('ascii');//window.atob(va);
+                var da = JSON.parse(decodedData);
+                var refe = refer;
+                _this.url = da;
+                var link = document.createElement('link');
                 link.async = true;
                 link.rel = 'canonical';
-                link.href = err.url_real;
+                link.href = _this.url.url_real;
                 document.head.appendChild(link);
-                _this.titleService.setTitle(err.titulo);
-                _this.meta.updateTag({ name: 'title', content: err.titulo });
-                _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
-                _this.meta.updateTag({ property: 'og:title', content: err.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                _this.titleService.setTitle(da.titulo);
+                _this.meta.updateTag({ name: 'title', content: da.titulo });
+                _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
                 _this.meta.updateTag({ property: 'og:image:width', content: '740' });
                 _this.meta.updateTag({ property: 'og:image:height', content: '370' });
                 _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
-                _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
-                _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
-                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
-                _this.title = err.accion;
-                window.location.href = err.url_real;
-                //resolve();
-            }
-            else {
-                _this.router.navigate(['404']);
-                //resolve();
-            }
+                _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                _this.title = da.accion;
+                _this.foto = _this.globals.urlPhoto + da.foto;
+                if (refe == null) {
+                    _this.show = false;
+                    window.location.href = da.url_real;
+                }
+                else if (refe.match(/facebook/) == null) {
+                    _this.show = false;
+                    window.location.href = da.url_real;
+                }
+                _this.globals.refer = '';
+                var that = _this;
+                var fiveSeconds = new Date().getTime() + 20000;
+                setTimeout(function () {
+                    $('#clock').countdown(fiveSeconds, function (event) {
+                        $(this).html("Por favor espere: " + event.strftime('%S') + " Generando enlace");
+                    }).on('finish.countdown', function (event) {
+                        var link = '<a href="' + that.url.url_real + '" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
+                        $('.btn-count').html(link);
+                    });
+                }, 7000);
+                resolve();
+            }, function (err1) {
+                var va = err1;
+                var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
+                var err = JSON.parse(decodedData);
+                _this.globals.refer = '';
+                if (err.id != null) {
+                    _this.show = false;
+                    var link = _this.document.createElement('link');
+                    link.async = true;
+                    link.rel = 'canonical';
+                    link.href = err.url_real;
+                    document.head.appendChild(link);
+                    _this.titleService.setTitle(err.titulo);
+                    _this.meta.updateTag({ name: 'title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                    _this.title = err.accion;
+                    window.location.href = err.url_real;
+                    resolve();
+                }
+                else {
+                    _this.router.navigate(['404']);
+                    resolve();
+                }
+            });
         });
-        /*});
-        return promise;*/
+        return promise;
     };
     TemporalComponent.prototype.onFinished = function () {
         /*var link = '<a href="'+this.url.url_real+'" style="color: #FFFFFF;">Acceder al artículo completo aquí</a>';
