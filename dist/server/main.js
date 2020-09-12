@@ -2373,11 +2373,11 @@ var ReferGuard = /** @class */ (function () {
     ReferGuard.prototype.canActivate = function (next, state) {
         if (next.params.id != null) {
             var refe = this.globals.refer;
-            if (refe.match(/facebookexternalhit/) != null || refe.match(/externalhit/) != null) {
-                return false;
+            if (refe.match(/facebook/) != null) {
+                return true;
             }
             else {
-                return true;
+                return false;
             }
         }
     };
