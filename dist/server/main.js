@@ -7872,17 +7872,24 @@ var TemporalComponent = /** @class */ (function () {
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
-                this.id_url = this.route.snapshot.paramMap.get('id');
-                if (this.id_url != null) {
-                    this.show = true;
-                    //await this.setScript();
-                    this.getUrl(this.id_url, this.globals.refer);
-                    this.urlsService.setVisita(this.id_url)
-                        .subscribe(function (data) {
-                        var va = data;
-                    });
+                switch (_a.label) {
+                    case 0:
+                        this.id_url = this.route.snapshot.paramMap.get('id');
+                        if (!(this.id_url != null)) return [3 /*break*/, 3];
+                        this.show = true;
+                        return [4 /*yield*/, this.setScript()];
+                    case 1:
+                        _a.sent();
+                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                    case 2:
+                        _a.sent();
+                        this.urlsService.setVisita(this.id_url)
+                            .subscribe(function (data) {
+                            var va = data;
+                        });
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
                 }
-                return [2 /*return*/];
             });
         });
     };
