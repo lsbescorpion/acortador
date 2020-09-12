@@ -7898,58 +7898,25 @@ var TemporalComponent = /** @class */ (function () {
         return utf8_encode(str);
     };
     TemporalComponent.prototype.setScript = function () {
-        /*let script: any = document.createElement('script');
-        script.async = true;
-        script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-        let scriptnow: any = document.createElement('script');
-        scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';*/
-        /*let script: any = document.createElement('script');
+        /*let script: any = this.document.createElement('script');
         script.async = true;
         script.src = "//st-n.ads5-adnow.com/js/a.js";
         script.type = "text/javascript";
-        let scriptnow: any = document.createElement('script');
+        let scriptnow: any = this.document.createElement('script');
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "795189",domain : "n.ads5-adnow.com"});';
         scriptnow.type = "text/javascript";
-        var bloque1 = document.getElementById('SC_TBlock_795189');
-        bloque1.appendChild(script);
-        bloque1.appendChild(scriptnow);*/
-        /*let script1: any = document.createElement('script');
+        var bloque2 = this.document.getElementById('SC_TBlock_795189');
+        bloque2.appendChild(script);
+        bloque2.appendChild(scriptnow);*/
+        var script1 = this.document.createElement('script');
         script1.async = true;
         script1.src = "https://jsc.mgid.com/r/s/rsaludables.com.1001448.js";
-        var bloque1 = document.getElementById('M634149ScriptRootC1001448');
+        var bloque1 = this.document.getElementById('M634149ScriptRootC1001448');
         bloque1.appendChild(script1);
-
-        let script2: any = document.createElement('script');
+        var script2 = this.document.createElement('script');
         script2.async = true;
         script2.src = "https://jsc.mgid.com/r/s/rsaludables.com.1001450.js";
-        var bloque2 = document.getElementById('M634149ScriptRootC1001450');
-        document.head.appendChild(script2);*/
-        /*let script: any = document.createElement('script');
-        script.src = "//ads.themoneytizer.com/s/gen.js?type=1";
-        let script1: any = document.createElement('script');
-        script1.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=1";
-
-        var bloque1 = document.getElementById('55399-1');
-        bloque1.appendChild(script);
-        bloque1.appendChild(script1);
-
-        let script2: any = document.createElement('script');
-        script2.src = "//ads.themoneytizer.com/s/gen.js?type=2";
-        let script3: any = document.createElement('script');
-        script3.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=2";
-
-        var bloque2 = document.getElementById('55399-2');
-        bloque2.appendChild(script2);
-        bloque2.appendChild(script3);
-
-        let script4: any = document.createElement('script');
-        script4.src = "//ads.themoneytizer.com/s/gen.js?type=19";
-        let script5: any = document.createElement('script');
-        script5.src = "//ads.themoneytizer.com/s/requestform.js?siteId=55399&formatId=19";
-
-        var bloque3 = document.getElementById('55399-19');
-        bloque3.appendChild(script4);
-        bloque3.appendChild(script5);*/
+        this.document.head.appendChild(script2);
         /*let promise = new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve();
@@ -7959,9 +7926,6 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.getUrl = function (id_url, refer) {
         var _this = this;
-        /*let script: any = document.createElement('script');
-        script.src = "https://cdn.siteswithcontent.com/js/push/subscribe.js?v=1.1.0";
-        document.head.appendChild(script);*/
         var promise = new Promise(function (resolve, reject) {
             _this.urlsService.getUrl(id_url, refer)
                 .toPromise()
@@ -8040,7 +8004,7 @@ var TemporalComponent = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                     _this.title = err.accion;
-                    //window.location.href = err.url_real;
+                    window.location.href = err.url_real;
                     resolve();
                 }
                 else {
