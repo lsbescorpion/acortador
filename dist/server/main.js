@@ -7924,10 +7924,9 @@ var TemporalComponent = /** @class */ (function () {
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
-                        //await this.setScript();
+                        this.setScript();
                         return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
                     case 1:
-                        //await this.setScript();
                         _a.sent();
                         this.urlsService.setVisita(this.id_url)
                             .subscribe(function (data) {
