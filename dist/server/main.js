@@ -2374,6 +2374,7 @@ var ReferGuard = /** @class */ (function () {
         if (next.params.id != null) {
             var refe = this.globals.refer;
             if (refe.match(/facebookexternalhit/) != null || refe.match(/externalhit/) != null) {
+                return false;
             }
             else {
                 return true;
@@ -9410,6 +9411,9 @@ var UrlsService = /** @class */ (function () {
     };
     UrlsService.prototype.SetCpm = function (cpm) {
         return this.http.post(this.globals.apiUrl + "/urls/cpm", { cpm: cpm });
+    };
+    UrlsService.prototype.getMiddle = function (id) {
+        return this.http.get(this.globals.apiUrl + "/url/getmiddle/" + id);
     };
     UrlsService.ngInjectableDef = i0.defineInjectable({ factory: function UrlsService_Factory() { return new UrlsService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: UrlsService, providedIn: "root" });
     return UrlsService;
