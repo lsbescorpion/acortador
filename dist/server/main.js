@@ -7875,15 +7875,20 @@ var TemporalComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         this.id_url = this.route.snapshot.paramMap.get('id');
-                        if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        if (!(this.id_url != null)) return [3 /*break*/, 3];
                         this.show = true;
-                        //await this.setScript();
-                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                        return [4 /*yield*/, this.setScript()];
                     case 1:
-                        //await this.setScript();
                         _a.sent();
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
+                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                    case 2:
+                        _a.sent();
+                        this.urlsService.setVisita(this.id_url)
+                            .subscribe(function (data) {
+                            var va = data;
+                        });
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
                 }
             });
         });
@@ -7967,11 +7972,11 @@ var TemporalComponent = /** @class */ (function () {
                 var da = JSON.parse(decodedData);
                 var refe = refer;
                 _this.url = da;
-                var link = document.createElement('link');
+                var link = _this.document.createElement('link');
                 link.async = true;
                 link.rel = 'canonical';
                 link.href = _this.url.url_real;
-                document.head.appendChild(link);
+                _this.document.head.appendChild(link);
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.descripcion });
