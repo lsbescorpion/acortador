@@ -7898,16 +7898,16 @@ var TemporalComponent = /** @class */ (function () {
         return utf8_encode(str);
     };
     TemporalComponent.prototype.setScript = function () {
-        /*let script: any = this.document.createElement('script');
+        var script = this.document.createElement('script');
         script.async = true;
         script.src = "//st-n.ads5-adnow.com/js/a.js";
         script.type = "text/javascript";
-        let scriptnow: any = this.document.createElement('script');
+        var scriptnow = this.document.createElement('script');
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "795189",domain : "n.ads5-adnow.com"});';
         scriptnow.type = "text/javascript";
         var bloque2 = this.document.getElementById('SC_TBlock_795189');
         bloque2.appendChild(script);
-        bloque2.appendChild(scriptnow);*/
+        bloque2.appendChild(scriptnow);
         var script1 = this.document.createElement('script');
         script1.async = true;
         script1.src = "https://jsc.mgid.com/r/s/rsaludables.com.1001448.js";
