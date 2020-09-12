@@ -7903,16 +7903,16 @@ var TemporalComponent = /** @class */ (function () {
         script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
         let scriptnow: any = document.createElement('script');
         scriptnow.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({});';*/
-        var script = document.createElement('script');
+        /*let script: any = document.createElement('script');
         script.async = true;
         script.src = "//st-n.ads5-adnow.com/js/a.js";
         script.type = "text/javascript";
-        var scriptnow = document.createElement('script');
+        let scriptnow: any = document.createElement('script');
         scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "795189",domain : "n.ads5-adnow.com"});';
         scriptnow.type = "text/javascript";
         var bloque1 = document.getElementById('SC_TBlock_795189');
         bloque1.appendChild(script);
-        bloque1.appendChild(scriptnow);
+        bloque1.appendChild(scriptnow);*/
         /*let script1: any = document.createElement('script');
         script1.async = true;
         script1.src = "https://jsc.mgid.com/r/s/rsaludables.com.1001448.js";
@@ -8001,7 +8001,6 @@ var TemporalComponent = /** @class */ (function () {
                     this.show = false;
                     window.location.href = da.url_real;
                 }*/
-                console.log(refe);
                 _this.globals.refer = '';
                 var that = _this;
                 var fiveSeconds = new Date().getTime() + 20000;
@@ -8015,7 +8014,6 @@ var TemporalComponent = /** @class */ (function () {
                 }, 7000);
                 resolve();
             }, function (err1) {
-                console.log(refer);
                 var va = err1;
                 var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
                 var err = JSON.parse(decodedData);
