@@ -2403,6 +2403,7 @@ var ReferGuard = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
                     _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                    window.location.href = da.url_real;
                     return false;
                 }));
             }
