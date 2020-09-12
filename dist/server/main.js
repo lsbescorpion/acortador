@@ -7958,8 +7958,8 @@ var TemporalComponent = /** @class */ (function () {
         document.head.appendChild(script);
         var promise = new Promise(function (resolve, reject) {
             _this.urlsService.getUrl(id_url, refer)
-                //.toPromise()
-                .subscribe(function (data) {
+                .toPromise()
+                .then(function (data) {
                 var va = data;
                 var decodedData = js_base64_1.Base64.decode(va); //new Buffer(base64, 'base64').toString('ascii');//window.atob(va);
                 var da = JSON.parse(decodedData);
@@ -7973,7 +7973,7 @@ var TemporalComponent = /** @class */ (function () {
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                _this.meta.updateTag({ property: 'og:url', content: _this.url.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
                 _this.meta.updateTag({ property: 'og:title', content: da.titulo });
                 _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
                 _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
@@ -8021,7 +8021,7 @@ var TemporalComponent = /** @class */ (function () {
                     _this.titleService.setTitle(err.titulo);
                     _this.meta.updateTag({ name: 'title', content: err.titulo });
                     _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada });
+                    _this.meta.updateTag({ property: 'og:url', content: err.url_real /*this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada*/ });
                     _this.meta.updateTag({ property: 'og:title', content: err.titulo });
                     _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
                     _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
