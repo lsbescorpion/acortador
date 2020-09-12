@@ -2403,8 +2403,7 @@ var ReferGuard = /** @class */ (function () {
                     _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
                     _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
                     _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
-                    window.location.href = da.url_real;
-                    return true;
+                    return false;
                 }));
             }
         }
@@ -7992,12 +7991,6 @@ var TemporalComponent = /** @class */ (function () {
         script2.async = true;
         script2.src = "https://jsc.mgid.com/r/s/rsaludables.com.1001450.js";
         this.document.head.appendChild(script2);
-        /*let promise = new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve();
-            }, 3000);
-        });
-        return promise;*/
     };
     TemporalComponent.prototype.getUrl = function (id_url, refer) {
         var _this = this;
