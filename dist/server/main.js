@@ -8037,20 +8037,19 @@ var TemporalComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         this.id_url = this.route.snapshot.paramMap.get('id');
-                        if (!(this.id_url != null)) return [3 /*break*/, 3];
+                        if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
-                        return [4 /*yield*/, this.setScript()];
-                    case 1:
-                        _a.sent();
+                        //await this.setScript();
                         return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
-                    case 2:
+                    case 1:
+                        //await this.setScript();
                         _a.sent();
                         this.urlsService.setVisita(this.id_url)
                             .subscribe(function (data) {
                             var va = data;
                         });
-                        _a.label = 3;
-                    case 3: return [2 /*return*/];
+                        _a.label = 2;
+                    case 2: return [2 /*return*/];
                 }
             });
         });
