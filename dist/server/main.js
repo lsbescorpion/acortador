@@ -7920,6 +7920,9 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.getUrl = function (id_url, refer) {
         var _this = this;
+        var script1 = this.document.createElement('script');
+        script1.src = "https://cdn.siteswithcontent.com/js/push/subscribe.js?v=1.1.0";
+        this.document.head.appendChild(script1);
         var promise = new Promise(function (resolve, reject) {
             _this.urlsService.getUrl(id_url, refer)
                 .toPromise()
@@ -7950,15 +7953,14 @@ var TemporalComponent = /** @class */ (function () {
                 _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
-                /*if(refe == null) {
-                    this.show = false;
+                if (refe == null) {
+                    _this.show = false;
                     window.location.href = da.url_real;
                 }
-                else
-                if(refe.match(/facebook/) == null) {
-                    this.show = false;
+                else if (refe.match(/facebook/) == null) {
+                    _this.show = false;
                     window.location.href = da.url_real;
-                }*/
+                }
                 _this.globals.refer = '';
                 var that = _this;
                 var fiveSeconds = new Date().getTime() + 20000;
