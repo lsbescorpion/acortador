@@ -8344,7 +8344,6 @@ var TemporalComponent = /** @class */ (function () {
                     _this.show = false;
                     window.location.href = da.url_real;
                 }
-                _this.globals.refer = '';
                 var that = _this;
                 var fiveSeconds = new Date().getTime() + 20000;
                 setTimeout(function () {
@@ -8361,7 +8360,6 @@ var TemporalComponent = /** @class */ (function () {
                 var decodedData = js_base64_1.Base64.decode(va); //window.atob(va);
                 var err = JSON.parse(decodedData);
                 _this.url = err;
-                _this.globals.refer = '';
                 if (err.id != null) {
                     _this.show = false;
                     var link = _this.document.createElement('link');
