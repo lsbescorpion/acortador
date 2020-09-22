@@ -1362,35 +1362,36 @@ var i70 = __webpack_require__(/*! ./pages/urls/urls.component */ "./src/app/page
 var i71 = __webpack_require__(/*! ./pages/showurl/showurl.component */ "./src/app/pages/showurl/showurl.component.ts");
 var i72 = __webpack_require__(/*! ./pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
 var i73 = __webpack_require__(/*! ./pages/estadadmin/estadadmin.component */ "./src/app/pages/estadadmin/estadadmin.component.ts");
-var i74 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
-var i75 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
-var i76 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
-var i77 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
-var i78 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
-var i79 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
-var i80 = __webpack_require__(/*! ./pages/blog/adduser/adduser.component */ "./src/app/pages/blog/adduser/adduser.component.ts");
-var i81 = __webpack_require__(/*! ./pages/error/error.component */ "./src/app/pages/error/error.component.ts");
-var i82 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i83 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i84 = __webpack_require__(/*! @angular/material/form-field */ "@angular/material/form-field");
-var i85 = __webpack_require__(/*! @angular/cdk/text-field */ "@angular/cdk/text-field");
-var i86 = __webpack_require__(/*! @angular/material/input */ "@angular/material/input");
-var i87 = __webpack_require__(/*! @angular/cdk/portal */ "@angular/cdk/portal");
-var i88 = __webpack_require__(/*! @angular/cdk/scrolling */ "@angular/cdk/scrolling");
-var i89 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i90 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
-var i91 = __webpack_require__(/*! @angular/material/slide-toggle */ "@angular/material/slide-toggle");
-var i92 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
-var i93 = __webpack_require__(/*! @angular/material/badge */ "@angular/material/badge");
-var i94 = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
-var i95 = __webpack_require__(/*! @agm/core/core.module */ "@agm/core/core.module");
-var i96 = __webpack_require__(/*! @angular/material/tabs */ "@angular/material/tabs");
-var i97 = __webpack_require__(/*! @angular/material/progress-bar */ "@angular/material/progress-bar");
-var i98 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
-var i99 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
-var i100 = __webpack_require__(/*! ng2-slim-loading-bar */ "ng2-slim-loading-bar");
-var i101 = __webpack_require__(/*! @angular/cdk/keycodes */ "@angular/cdk/keycodes");
-var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.TooltipComponentNgFactory, i5.MatSnackBarContainerNgFactory, i5.SimpleSnackBarNgFactory, i6.LoginComponentNgFactory, i7.HomeComponentNgFactory, i8.TemporalComponentNgFactory, i9.NoticiaComponentNgFactory, i10.InfoComponentNgFactory, i11.ContactComponentNgFactory, i12.EstadisticasComponentNgFactory, i13.UsuariosComponentNgFactory, i14.PerfilComponentNgFactory, i15.UrlsComponentNgFactory, i16.ShowurlComponentNgFactory, i17.AddnoticeComponentNgFactory, i18.EstadadminComponentNgFactory, i19.CatsaludComponentNgFactory, i20.CatgraciosoComponentNgFactory, i21.CatcuriosiComponentNgFactory, i22.CatvideoComponentNgFactory, i23.CattecnoComponentNgFactory, i24.CatmanualComponentNgFactory, i25.AdduserComponentNgFactory, i26.ErrorComponentNgFactory, i27.AlertcopyComponentNgFactory, i28.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_s, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i29.NgLocalization, i29.NgLocaleLocalization, [i0.LOCALE_ID, [2, i29.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_q, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_r, []), i0.ɵmpd(4608, i30.DomSanitizer, i30.ɵDomSanitizerImpl, [i29.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i30.DomSanitizer]), i0.ɵmpd(4608, i30.HAMMER_GESTURE_CONFIG, i31.GestureConfig, [[2, i31.MAT_HAMMER_OPTIONS], [2, i31.MatCommonModule]]), i0.ɵmpd(5120, i30.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i30.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i30.ɵKeyEventsPlugin(p1_0), new i30.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i32.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i29.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i29.DOCUMENT, i29.DOCUMENT, i30.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i30.HAMMER_LOADER], i30.DOCUMENT]), i0.ɵmpd(4608, i30.EventManager, i30.EventManager, [i30.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i30.ɵDomSharedStylesHost, i30.ɵDomSharedStylesHost, [i29.DOCUMENT]), i0.ɵmpd(4608, i30.ɵDomRendererFactory2, i30.ɵDomRendererFactory2, [i30.EventManager, i30.ɵDomSharedStylesHost, i0.APP_ID]), i0.ɵmpd(4608, i32.ɵangular_packages_platform_server_platform_server_c, i32.ɵangular_packages_platform_server_platform_server_c, [i30.DOCUMENT, [2, i30.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i30.ɵSharedStylesHost, null, [i32.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i32.ɵServerRendererFactory2, i32.ɵServerRendererFactory2, [i30.EventManager, i0.NgZone, i30.DOCUMENT, i30.ɵSharedStylesHost]), i0.ɵmpd(4608, i33.AnimationDriver, i33.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i33.ɵAnimationStyleNormalizer, i34.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(4608, i33.ɵAnimationEngine, i34.ɵInjectableAnimationEngine, [i29.DOCUMENT, i33.AnimationDriver, i33.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i32.ɵangular_packages_platform_server_platform_server_a, [i32.ɵServerRendererFactory2, i33.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i35.AnimationBuilder, i34.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i30.DOCUMENT]), i0.ɵmpd(4608, i36.ɵangular_packages_forms_forms_j, i36.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(4608, i36.FormBuilder, i36.FormBuilder, []), i0.ɵmpd(4608, i37.HttpXsrfTokenExtractor, i37.ɵangular_packages_common_http_http_g, [i29.DOCUMENT, i0.PLATFORM_ID, i37.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i37.ɵangular_packages_common_http_http_h, i37.ɵangular_packages_common_http_http_h, [i37.HttpXsrfTokenExtractor, i37.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i37.HTTP_INTERCEPTORS, function (p0_0, p2_0, p2_1) { return [p0_0, new i38.JwtInterceptor(), new i39.ErrorInterceptor(p2_0, p2_1)]; }, [i37.ɵangular_packages_common_http_http_h, i40.AuthenticationService, i41.Router]), i0.ɵmpd(4608, i37.XhrFactory, i32.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i37.HttpXhrBackend, i37.HttpXhrBackend, [i37.XhrFactory]), i0.ɵmpd(6144, i37.HttpBackend, null, [i37.HttpXhrBackend]), i0.ɵmpd(5120, i37.HttpHandler, i32.ɵangular_packages_platform_server_platform_server_h, [i37.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i37.HttpClient, i37.HttpClient, [i37.HttpHandler]), i0.ɵmpd(4608, i37.ɵangular_packages_common_http_http_d, i37.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i42.MutationObserverFactory, i42.MutationObserverFactory, []), i0.ɵmpd(4608, i31.ErrorStateMatcher, i31.ErrorStateMatcher, []), i0.ɵmpd(4608, i43.Overlay, i43.Overlay, [i43.ScrollStrategyOptions, i43.OverlayContainer, i0.ComponentFactoryResolver, i43.OverlayPositionBuilder, i43.OverlayKeyboardDispatcher, i0.Injector, i0.NgZone, i29.DOCUMENT, i44.Directionality, [2, i29.Location]]), i0.ɵmpd(5120, i43.ɵc, i43.ɵd, [i43.Overlay]), i0.ɵmpd(5120, i45.MAT_SELECT_SCROLL_STRATEGY, i45.MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY, [i43.Overlay]), i0.ɵmpd(5120, i46.MAT_TOOLTIP_SCROLL_STRATEGY, i46.MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, [i43.Overlay]), i0.ɵmpd(4608, i47.SlimLoadingBarService, i47.SlimLoadingBarService, []), i0.ɵmpd(4608, i48.ɵb, i48.ɵb, [i29.DOCUMENT]), i0.ɵmpd(5120, i41.ActivatedRoute, i41.ɵangular_packages_router_router_g, [i41.Router]), i0.ɵmpd(4608, i41.NoPreloading, i41.NoPreloading, []), i0.ɵmpd(6144, i41.PreloadingStrategy, null, [i41.NoPreloading]), i0.ɵmpd(135680, i41.RouterPreloader, i41.RouterPreloader, [i41.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i41.PreloadingStrategy]), i0.ɵmpd(4608, i41.PreloadAllModules, i41.PreloadAllModules, []), i0.ɵmpd(4608, i29.ViewportScroller, i29.ɵNullViewportScroller, []), i0.ɵmpd(5120, i41.ɵangular_packages_router_router_n, i41.ɵangular_packages_router_router_c, [i41.Router, i29.ViewportScroller, i41.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i41.ROUTER_INITIALIZER, i41.ɵangular_packages_router_router_j, [i41.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i41.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i49.WindowRef, i49.WindowRef, []), i0.ɵmpd(4608, i49.DocumentRef, i49.DocumentRef, []), i0.ɵmpd(4608, i50.MapsAPILoader, i51.LazyMapsAPILoader, [[2, i51.LAZY_MAPS_API_CONFIG], i49.WindowRef, i49.DocumentRef]), i0.ɵmpd(5120, i52.MetaLoader, i53.ɵ0, []), i0.ɵmpd(4608, i52.MetaService, i52.MetaService, [i52.MetaLoader, i30.Title, i30.Meta]), i0.ɵmpd(4608, i52.MetaGuard, i52.MetaGuard, [i52.MetaService]), i0.ɵmpd(4608, i54.Globals, i54.Globals, []), i0.ɵmpd(4608, i55.CookieService, i55.CookieService, [i29.DOCUMENT, i0.PLATFORM_ID]), i0.ɵmpd(4608, i56.BrowserXhr, i32.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i56.ResponseOptions, i56.BaseResponseOptions, []), i0.ɵmpd(4608, i56.XSRFStrategy, i32.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i56.XHRBackend, i56.XHRBackend, [i56.BrowserXhr, i56.ResponseOptions, i56.XSRFStrategy]), i0.ɵmpd(4608, i56.RequestOptions, i56.BaseRequestOptions, []), i0.ɵmpd(5120, i56.Http, i32.ɵangular_packages_platform_server_platform_server_g, [i56.XHRBackend, i56.RequestOptions]), i0.ɵmpd(1073742336, i29.CommonModule, i29.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i30.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i41.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(256, i0.APP_ID, "SitesHealtAll", []), i0.ɵmpd(2048, i30.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(512, i41.ɵangular_packages_router_router_h, i41.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p1_1, p1_2, p2_0) { return [i30.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i30.ɵangular_packages_platform_browser_platform_browser_h(p1_0, p1_1, p1_2), i41.ɵangular_packages_router_router_i(p2_0)]; }, [[2, i0.NgProbeToken], i30.ɵTRANSITION_ID, i29.DOCUMENT, i0.Injector, i41.ɵangular_packages_router_router_h]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i30.BrowserModule, i30.BrowserModule, [[3, i30.BrowserModule]]), i0.ɵmpd(1073742336, i34.BrowserAnimationsModule, i34.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i57.AdsenseModule, i57.AdsenseModule, []), i0.ɵmpd(1073742336, i36.ɵangular_packages_forms_forms_bc, i36.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i36.FormsModule, i36.FormsModule, []), i0.ɵmpd(1073742336, i36.ReactiveFormsModule, i36.ReactiveFormsModule, []), i0.ɵmpd(1073742336, i37.HttpClientXsrfModule, i37.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i37.HttpClientModule, i37.HttpClientModule, []), i0.ɵmpd(1024, i41.ɵangular_packages_router_router_a, i41.ɵangular_packages_router_router_e, [[3, i41.Router]]), i0.ɵmpd(512, i41.UrlSerializer, i41.DefaultUrlSerializer, []), i0.ɵmpd(512, i41.ChildrenOutletContexts, i41.ChildrenOutletContexts, []), i0.ɵmpd(256, i41.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i29.LocationStrategy, i41.ɵangular_packages_router_router_d, [i29.PlatformLocation, [2, i29.APP_BASE_HREF], i41.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i29.Location, i29.Location, [i29.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i58.ModuleMapNgFactoryLoader, [i0.Compiler, i58.MODULE_MAP]), i0.ɵmpd(1024, i41.ROUTES, function () { return [[{ path: "login", component: i59.LoginComponent }, { path: "", redirectTo: "home", pathMatch: "full" }, { path: "home", component: i60.HomeComponent }, { path: "temporal", component: i61.TemporalComponent }, { path: "noticia", component: i62.NoticiaComponent }, { path: "info", component: i63.InfoComponent }, { path: "contact", component: i64.ContactComponent }, { path: "estadisticas", component: i65.EstadisticasComponent, canActivate: [i66.AuthGuards], data: i67.ɵ0 }, { path: "usuarios", component: i68.UsuariosComponent, canActivate: [i66.AuthGuards], data: i67.ɵ1 }, { path: "perfil", component: i69.PerfilComponent, canActivate: [i66.AuthGuards], data: i67.ɵ2 }, { path: "urls", component: i70.UrlsComponent, canActivate: [i66.AuthGuards], data: i67.ɵ3 }, { path: "showurl/:id", component: i71.ShowurlComponent, canActivate: [i66.AuthGuards], data: i67.ɵ4 }, { path: "addnotice", component: i72.AddnoticeComponent, canActivate: [i66.AuthGuards], data: i67.ɵ5 }, { path: "estadadmin", component: i73.EstadadminComponent, canActivate: [i66.AuthGuards], data: i67.ɵ6 }, { path: "categoria/salud/:id", component: i61.TemporalComponent }, { path: "categoria/entretenimiento/:id", component: i61.TemporalComponent }, { path: "categoria/curiosidades/:id", component: i61.TemporalComponent }, { path: "categoria/videos/:id", component: i61.TemporalComponent }, { path: "categoria/tecnologia/:id", component: i61.TemporalComponent }, { path: "categoria/manualidades/:id", component: i61.TemporalComponent }, { path: "salud/:id", component: i62.NoticiaComponent }, { path: "entretenimiento/:id", component: i62.NoticiaComponent }, { path: "curiosidades/:id", component: i62.NoticiaComponent }, { path: "videos/:id", component: i62.NoticiaComponent }, { path: "tecnologia/:id", component: i62.NoticiaComponent }, { path: "manualidades/:id", component: i62.NoticiaComponent }, { path: "salud", component: i74.CatsaludComponent }, { path: "entretenimiento", component: i75.CatgraciosoComponent }, { path: "curiosidades", component: i76.CatcuriosiComponent }, { path: "videos", component: i77.CatvideoComponent }, { path: "tecnologia", component: i78.CattecnoComponent }, { path: "manualidades", component: i79.CatmanualComponent }, { path: "adduser", component: i80.AdduserComponent }, { path: "404", component: i81.ErrorComponent }, { path: "**", redirectTo: "404" }]]; }, []), i0.ɵmpd(1024, i41.Router, i41.ɵangular_packages_router_router_f, [i0.ApplicationRef, i41.UrlSerializer, i41.ChildrenOutletContexts, i29.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i41.ROUTES, i41.ROUTER_CONFIGURATION, [2, i41.UrlHandlingStrategy], [2, i41.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i41.RouterModule, i41.RouterModule, [[2, i41.ɵangular_packages_router_router_a], [2, i41.Router]]), i0.ɵmpd(1073742336, i44.BidiModule, i44.BidiModule, []), i0.ɵmpd(1073742336, i31.MatCommonModule, i31.MatCommonModule, [[2, i31.MATERIAL_SANITY_CHECKS], [2, i30.HAMMER_LOADER]]), i0.ɵmpd(1073742336, i82.PlatformModule, i82.PlatformModule, []), i0.ɵmpd(1073742336, i31.MatRippleModule, i31.MatRippleModule, []), i0.ɵmpd(1073742336, i83.MatButtonModule, i83.MatButtonModule, []), i0.ɵmpd(1073742336, i42.ObserversModule, i42.ObserversModule, []), i0.ɵmpd(1073742336, i84.MatFormFieldModule, i84.MatFormFieldModule, []), i0.ɵmpd(1073742336, i85.TextFieldModule, i85.TextFieldModule, []), i0.ɵmpd(1073742336, i86.MatInputModule, i86.MatInputModule, []), i0.ɵmpd(1073742336, i87.PortalModule, i87.PortalModule, []), i0.ɵmpd(1073742336, i88.ScrollingModule, i88.ScrollingModule, []), i0.ɵmpd(1073742336, i43.OverlayModule, i43.OverlayModule, []), i0.ɵmpd(1073742336, i31.MatPseudoCheckboxModule, i31.MatPseudoCheckboxModule, []), i0.ɵmpd(1073742336, i31.MatOptionModule, i31.MatOptionModule, []), i0.ɵmpd(1073742336, i45.MatSelectModule, i45.MatSelectModule, []), i0.ɵmpd(1073742336, i89.A11yModule, i89.A11yModule, []), i0.ɵmpd(1073742336, i46.MatTooltipModule, i46.MatTooltipModule, []), i0.ɵmpd(1073742336, i90.MatIconModule, i90.MatIconModule, []), i0.ɵmpd(1073742336, i91.MatSlideToggleModule, i91.MatSlideToggleModule, []), i0.ɵmpd(1073742336, i92.MatChipsModule, i92.MatChipsModule, []), i0.ɵmpd(1073742336, i93.MatBadgeModule, i93.MatBadgeModule, []), i0.ɵmpd(1073742336, i94.ComponentsModule, i94.ComponentsModule, []), i0.ɵmpd(1073742336, i95.AgmCoreModule, i95.AgmCoreModule, []), i0.ɵmpd(1073742336, i96.MatTabsModule, i96.MatTabsModule, []), i0.ɵmpd(1073742336, i97.MatProgressBarModule, i97.MatProgressBarModule, []), i0.ɵmpd(1073742336, i98.MatProgressSpinnerModule, i98.MatProgressSpinnerModule, []), i0.ɵmpd(1073742336, i99.MatSnackBarModule, i99.MatSnackBarModule, []), i0.ɵmpd(1073742336, i52.MetaModule, i52.MetaModule, [[3, i52.MetaModule]]), i0.ɵmpd(1073742336, i100.SlimLoadingBarModule, i100.SlimLoadingBarModule, []), i0.ɵmpd(1073742336, i48.NgxTweetModule, i48.NgxTweetModule, []), i0.ɵmpd(1073742336, i53.AppModule, i53.AppModule, [i0.PLATFORM_ID, i0.APP_ID]), i0.ɵmpd(1073742336, i56.HttpModule, i56.HttpModule, []), i0.ɵmpd(1073742336, i34.NoopAnimationsModule, i34.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i32.ServerModule, i32.ServerModule, []), i0.ɵmpd(1073742336, i58.ModuleMapLoaderModule, i58.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i34.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i37.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i37.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i92.MAT_CHIPS_DEFAULT_OPTIONS, { separatorKeyCodes: [i101.ENTER] }, []), i0.ɵmpd(256, i57.ADSENSE_TOKEN, { adClient: "ca-pub-4607014230623673", adSlot: 4808134978 }, []), i0.ɵmpd(256, i51.LAZY_MAPS_API_CONFIG, { apiKey: "YOUR_GOOGLE_MAPS_API_KEY" }, [])]); });
+var i74 = __webpack_require__(/*! ./guard/refer.guard */ "./src/app/guard/refer.guard.ts");
+var i75 = __webpack_require__(/*! ./pages/blog/catsalud/catsalud.component */ "./src/app/pages/blog/catsalud/catsalud.component.ts");
+var i76 = __webpack_require__(/*! ./pages/blog/catgracioso/catgracioso.component */ "./src/app/pages/blog/catgracioso/catgracioso.component.ts");
+var i77 = __webpack_require__(/*! ./pages/blog/catcuriosi/catcuriosi.component */ "./src/app/pages/blog/catcuriosi/catcuriosi.component.ts");
+var i78 = __webpack_require__(/*! ./pages/blog/catvideo/catvideo.component */ "./src/app/pages/blog/catvideo/catvideo.component.ts");
+var i79 = __webpack_require__(/*! ./pages/blog/cattecno/cattecno.component */ "./src/app/pages/blog/cattecno/cattecno.component.ts");
+var i80 = __webpack_require__(/*! ./pages/blog/catmanual/catmanual.component */ "./src/app/pages/blog/catmanual/catmanual.component.ts");
+var i81 = __webpack_require__(/*! ./pages/blog/adduser/adduser.component */ "./src/app/pages/blog/adduser/adduser.component.ts");
+var i82 = __webpack_require__(/*! ./pages/error/error.component */ "./src/app/pages/error/error.component.ts");
+var i83 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i84 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i85 = __webpack_require__(/*! @angular/material/form-field */ "@angular/material/form-field");
+var i86 = __webpack_require__(/*! @angular/cdk/text-field */ "@angular/cdk/text-field");
+var i87 = __webpack_require__(/*! @angular/material/input */ "@angular/material/input");
+var i88 = __webpack_require__(/*! @angular/cdk/portal */ "@angular/cdk/portal");
+var i89 = __webpack_require__(/*! @angular/cdk/scrolling */ "@angular/cdk/scrolling");
+var i90 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i91 = __webpack_require__(/*! @angular/material/icon */ "@angular/material/icon");
+var i92 = __webpack_require__(/*! @angular/material/slide-toggle */ "@angular/material/slide-toggle");
+var i93 = __webpack_require__(/*! @angular/material/chips */ "@angular/material/chips");
+var i94 = __webpack_require__(/*! @angular/material/badge */ "@angular/material/badge");
+var i95 = __webpack_require__(/*! ./components/components.module */ "./src/app/components/components.module.ts");
+var i96 = __webpack_require__(/*! @agm/core/core.module */ "@agm/core/core.module");
+var i97 = __webpack_require__(/*! @angular/material/tabs */ "@angular/material/tabs");
+var i98 = __webpack_require__(/*! @angular/material/progress-bar */ "@angular/material/progress-bar");
+var i99 = __webpack_require__(/*! @angular/material/progress-spinner */ "@angular/material/progress-spinner");
+var i100 = __webpack_require__(/*! @angular/material/snack-bar */ "@angular/material/snack-bar");
+var i101 = __webpack_require__(/*! ng2-slim-loading-bar */ "ng2-slim-loading-bar");
+var i102 = __webpack_require__(/*! @angular/cdk/keycodes */ "@angular/cdk/keycodes");
+var AppServerModuleNgFactory = i0.ɵcmf(i1.AppServerModule, [i2.AppComponent], function (_l) { return i0.ɵmod([i0.ɵmpd(512, i0.ComponentFactoryResolver, i0.ɵCodegenComponentFactoryResolver, [[8, [i3.ɵEmptyOutletComponentNgFactory, i4.TooltipComponentNgFactory, i5.MatSnackBarContainerNgFactory, i5.SimpleSnackBarNgFactory, i6.LoginComponentNgFactory, i7.HomeComponentNgFactory, i8.TemporalComponentNgFactory, i9.NoticiaComponentNgFactory, i10.InfoComponentNgFactory, i11.ContactComponentNgFactory, i12.EstadisticasComponentNgFactory, i13.UsuariosComponentNgFactory, i14.PerfilComponentNgFactory, i15.UrlsComponentNgFactory, i16.ShowurlComponentNgFactory, i17.AddnoticeComponentNgFactory, i18.EstadadminComponentNgFactory, i19.CatsaludComponentNgFactory, i20.CatgraciosoComponentNgFactory, i21.CatcuriosiComponentNgFactory, i22.CatvideoComponentNgFactory, i23.CattecnoComponentNgFactory, i24.CatmanualComponentNgFactory, i25.AdduserComponentNgFactory, i26.ErrorComponentNgFactory, i27.AlertcopyComponentNgFactory, i28.AppComponentNgFactory]], [3, i0.ComponentFactoryResolver], i0.NgModuleRef]), i0.ɵmpd(5120, i0.LOCALE_ID, i0.ɵangular_packages_core_core_s, [[3, i0.LOCALE_ID]]), i0.ɵmpd(4608, i29.NgLocalization, i29.NgLocaleLocalization, [i0.LOCALE_ID, [2, i29.ɵangular_packages_common_common_a]]), i0.ɵmpd(5120, i0.IterableDiffers, i0.ɵangular_packages_core_core_q, []), i0.ɵmpd(5120, i0.KeyValueDiffers, i0.ɵangular_packages_core_core_r, []), i0.ɵmpd(4608, i30.DomSanitizer, i30.ɵDomSanitizerImpl, [i29.DOCUMENT]), i0.ɵmpd(6144, i0.Sanitizer, null, [i30.DomSanitizer]), i0.ɵmpd(4608, i30.HAMMER_GESTURE_CONFIG, i31.GestureConfig, [[2, i31.MAT_HAMMER_OPTIONS], [2, i31.MatCommonModule]]), i0.ɵmpd(5120, i30.EVENT_MANAGER_PLUGINS, function (p0_0, p0_1, p0_2, p1_0, p2_0, p2_1, p2_2, p2_3, p3_0) { return [new i30.ɵDomEventsPlugin(p0_0, p0_1, p0_2), new i30.ɵKeyEventsPlugin(p1_0), new i30.ɵHammerGesturesPlugin(p2_0, p2_1, p2_2, p2_3), new i32.ɵangular_packages_platform_server_platform_server_d(p3_0)]; }, [i29.DOCUMENT, i0.NgZone, i0.PLATFORM_ID, i29.DOCUMENT, i29.DOCUMENT, i30.HAMMER_GESTURE_CONFIG, i0.ɵConsole, [2, i30.HAMMER_LOADER], i30.DOCUMENT]), i0.ɵmpd(4608, i30.EventManager, i30.EventManager, [i30.EVENT_MANAGER_PLUGINS, i0.NgZone]), i0.ɵmpd(135680, i30.ɵDomSharedStylesHost, i30.ɵDomSharedStylesHost, [i29.DOCUMENT]), i0.ɵmpd(4608, i30.ɵDomRendererFactory2, i30.ɵDomRendererFactory2, [i30.EventManager, i30.ɵDomSharedStylesHost, i0.APP_ID]), i0.ɵmpd(4608, i32.ɵangular_packages_platform_server_platform_server_c, i32.ɵangular_packages_platform_server_platform_server_c, [i30.DOCUMENT, [2, i30.ɵTRANSITION_ID]]), i0.ɵmpd(6144, i30.ɵSharedStylesHost, null, [i32.ɵangular_packages_platform_server_platform_server_c]), i0.ɵmpd(4608, i32.ɵServerRendererFactory2, i32.ɵServerRendererFactory2, [i30.EventManager, i0.NgZone, i30.DOCUMENT, i30.ɵSharedStylesHost]), i0.ɵmpd(4608, i33.AnimationDriver, i33.ɵNoopAnimationDriver, []), i0.ɵmpd(5120, i33.ɵAnimationStyleNormalizer, i34.ɵangular_packages_platform_browser_animations_animations_b, []), i0.ɵmpd(4608, i33.ɵAnimationEngine, i34.ɵInjectableAnimationEngine, [i29.DOCUMENT, i33.AnimationDriver, i33.ɵAnimationStyleNormalizer]), i0.ɵmpd(5120, i0.RendererFactory2, i32.ɵangular_packages_platform_server_platform_server_a, [i32.ɵServerRendererFactory2, i33.ɵAnimationEngine, i0.NgZone]), i0.ɵmpd(4352, i0.Testability, null, []), i0.ɵmpd(4608, i35.AnimationBuilder, i34.ɵBrowserAnimationBuilder, [i0.RendererFactory2, i30.DOCUMENT]), i0.ɵmpd(4608, i36.ɵangular_packages_forms_forms_j, i36.ɵangular_packages_forms_forms_j, []), i0.ɵmpd(4608, i36.FormBuilder, i36.FormBuilder, []), i0.ɵmpd(4608, i37.HttpXsrfTokenExtractor, i37.ɵangular_packages_common_http_http_g, [i29.DOCUMENT, i0.PLATFORM_ID, i37.ɵangular_packages_common_http_http_e]), i0.ɵmpd(4608, i37.ɵangular_packages_common_http_http_h, i37.ɵangular_packages_common_http_http_h, [i37.HttpXsrfTokenExtractor, i37.ɵangular_packages_common_http_http_f]), i0.ɵmpd(5120, i37.HTTP_INTERCEPTORS, function (p0_0, p2_0, p2_1) { return [p0_0, new i38.JwtInterceptor(), new i39.ErrorInterceptor(p2_0, p2_1)]; }, [i37.ɵangular_packages_common_http_http_h, i40.AuthenticationService, i41.Router]), i0.ɵmpd(4608, i37.XhrFactory, i32.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i37.HttpXhrBackend, i37.HttpXhrBackend, [i37.XhrFactory]), i0.ɵmpd(6144, i37.HttpBackend, null, [i37.HttpXhrBackend]), i0.ɵmpd(5120, i37.HttpHandler, i32.ɵangular_packages_platform_server_platform_server_h, [i37.HttpBackend, i0.Injector]), i0.ɵmpd(4608, i37.HttpClient, i37.HttpClient, [i37.HttpHandler]), i0.ɵmpd(4608, i37.ɵangular_packages_common_http_http_d, i37.ɵangular_packages_common_http_http_d, []), i0.ɵmpd(4608, i42.MutationObserverFactory, i42.MutationObserverFactory, []), i0.ɵmpd(4608, i31.ErrorStateMatcher, i31.ErrorStateMatcher, []), i0.ɵmpd(4608, i43.Overlay, i43.Overlay, [i43.ScrollStrategyOptions, i43.OverlayContainer, i0.ComponentFactoryResolver, i43.OverlayPositionBuilder, i43.OverlayKeyboardDispatcher, i0.Injector, i0.NgZone, i29.DOCUMENT, i44.Directionality, [2, i29.Location]]), i0.ɵmpd(5120, i43.ɵc, i43.ɵd, [i43.Overlay]), i0.ɵmpd(5120, i45.MAT_SELECT_SCROLL_STRATEGY, i45.MAT_SELECT_SCROLL_STRATEGY_PROVIDER_FACTORY, [i43.Overlay]), i0.ɵmpd(5120, i46.MAT_TOOLTIP_SCROLL_STRATEGY, i46.MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, [i43.Overlay]), i0.ɵmpd(4608, i47.SlimLoadingBarService, i47.SlimLoadingBarService, []), i0.ɵmpd(4608, i48.ɵb, i48.ɵb, [i29.DOCUMENT]), i0.ɵmpd(5120, i41.ActivatedRoute, i41.ɵangular_packages_router_router_g, [i41.Router]), i0.ɵmpd(4608, i41.NoPreloading, i41.NoPreloading, []), i0.ɵmpd(6144, i41.PreloadingStrategy, null, [i41.NoPreloading]), i0.ɵmpd(135680, i41.RouterPreloader, i41.RouterPreloader, [i41.Router, i0.NgModuleFactoryLoader, i0.Compiler, i0.Injector, i41.PreloadingStrategy]), i0.ɵmpd(4608, i41.PreloadAllModules, i41.PreloadAllModules, []), i0.ɵmpd(4608, i29.ViewportScroller, i29.ɵNullViewportScroller, []), i0.ɵmpd(5120, i41.ɵangular_packages_router_router_n, i41.ɵangular_packages_router_router_c, [i41.Router, i29.ViewportScroller, i41.ROUTER_CONFIGURATION]), i0.ɵmpd(5120, i41.ROUTER_INITIALIZER, i41.ɵangular_packages_router_router_j, [i41.ɵangular_packages_router_router_h]), i0.ɵmpd(5120, i0.APP_BOOTSTRAP_LISTENER, function (p0_0) { return [p0_0]; }, [i41.ROUTER_INITIALIZER]), i0.ɵmpd(4608, i49.WindowRef, i49.WindowRef, []), i0.ɵmpd(4608, i49.DocumentRef, i49.DocumentRef, []), i0.ɵmpd(4608, i50.MapsAPILoader, i51.LazyMapsAPILoader, [[2, i51.LAZY_MAPS_API_CONFIG], i49.WindowRef, i49.DocumentRef]), i0.ɵmpd(5120, i52.MetaLoader, i53.ɵ0, []), i0.ɵmpd(4608, i52.MetaService, i52.MetaService, [i52.MetaLoader, i30.Title, i30.Meta]), i0.ɵmpd(4608, i52.MetaGuard, i52.MetaGuard, [i52.MetaService]), i0.ɵmpd(4608, i54.Globals, i54.Globals, []), i0.ɵmpd(4608, i55.CookieService, i55.CookieService, [i29.DOCUMENT, i0.PLATFORM_ID]), i0.ɵmpd(4608, i56.BrowserXhr, i32.ɵangular_packages_platform_server_platform_server_e, []), i0.ɵmpd(4608, i56.ResponseOptions, i56.BaseResponseOptions, []), i0.ɵmpd(4608, i56.XSRFStrategy, i32.ɵangular_packages_platform_server_platform_server_f, []), i0.ɵmpd(4608, i56.XHRBackend, i56.XHRBackend, [i56.BrowserXhr, i56.ResponseOptions, i56.XSRFStrategy]), i0.ɵmpd(4608, i56.RequestOptions, i56.BaseRequestOptions, []), i0.ɵmpd(5120, i56.Http, i32.ɵangular_packages_platform_server_platform_server_g, [i56.XHRBackend, i56.RequestOptions]), i0.ɵmpd(1073742336, i29.CommonModule, i29.CommonModule, []), i0.ɵmpd(1024, i0.ErrorHandler, i30.ɵangular_packages_platform_browser_platform_browser_a, []), i0.ɵmpd(1024, i0.NgProbeToken, function () { return [i41.ɵangular_packages_router_router_b()]; }, []), i0.ɵmpd(256, i0.APP_ID, "SitesHealtAll", []), i0.ɵmpd(2048, i30.ɵTRANSITION_ID, null, [i0.APP_ID]), i0.ɵmpd(512, i41.ɵangular_packages_router_router_h, i41.ɵangular_packages_router_router_h, [i0.Injector]), i0.ɵmpd(1024, i0.APP_INITIALIZER, function (p0_0, p1_0, p1_1, p1_2, p2_0) { return [i30.ɵangular_packages_platform_browser_platform_browser_j(p0_0), i30.ɵangular_packages_platform_browser_platform_browser_h(p1_0, p1_1, p1_2), i41.ɵangular_packages_router_router_i(p2_0)]; }, [[2, i0.NgProbeToken], i30.ɵTRANSITION_ID, i29.DOCUMENT, i0.Injector, i41.ɵangular_packages_router_router_h]), i0.ɵmpd(512, i0.ApplicationInitStatus, i0.ApplicationInitStatus, [[2, i0.APP_INITIALIZER]]), i0.ɵmpd(131584, i0.ApplicationRef, i0.ApplicationRef, [i0.NgZone, i0.ɵConsole, i0.Injector, i0.ErrorHandler, i0.ComponentFactoryResolver, i0.ApplicationInitStatus]), i0.ɵmpd(1073742336, i0.ApplicationModule, i0.ApplicationModule, [i0.ApplicationRef]), i0.ɵmpd(1073742336, i30.BrowserModule, i30.BrowserModule, [[3, i30.BrowserModule]]), i0.ɵmpd(1073742336, i34.BrowserAnimationsModule, i34.BrowserAnimationsModule, []), i0.ɵmpd(1073742336, i57.AdsenseModule, i57.AdsenseModule, []), i0.ɵmpd(1073742336, i36.ɵangular_packages_forms_forms_bc, i36.ɵangular_packages_forms_forms_bc, []), i0.ɵmpd(1073742336, i36.FormsModule, i36.FormsModule, []), i0.ɵmpd(1073742336, i36.ReactiveFormsModule, i36.ReactiveFormsModule, []), i0.ɵmpd(1073742336, i37.HttpClientXsrfModule, i37.HttpClientXsrfModule, []), i0.ɵmpd(1073742336, i37.HttpClientModule, i37.HttpClientModule, []), i0.ɵmpd(1024, i41.ɵangular_packages_router_router_a, i41.ɵangular_packages_router_router_e, [[3, i41.Router]]), i0.ɵmpd(512, i41.UrlSerializer, i41.DefaultUrlSerializer, []), i0.ɵmpd(512, i41.ChildrenOutletContexts, i41.ChildrenOutletContexts, []), i0.ɵmpd(256, i41.ROUTER_CONFIGURATION, {}, []), i0.ɵmpd(1024, i29.LocationStrategy, i41.ɵangular_packages_router_router_d, [i29.PlatformLocation, [2, i29.APP_BASE_HREF], i41.ROUTER_CONFIGURATION]), i0.ɵmpd(512, i29.Location, i29.Location, [i29.LocationStrategy]), i0.ɵmpd(512, i0.Compiler, i0.Compiler, []), i0.ɵmpd(512, i0.NgModuleFactoryLoader, i58.ModuleMapNgFactoryLoader, [i0.Compiler, i58.MODULE_MAP]), i0.ɵmpd(1024, i41.ROUTES, function () { return [[{ path: "login", component: i59.LoginComponent }, { path: "", redirectTo: "estadisticas", pathMatch: "full" }, { path: "home", component: i60.HomeComponent }, { path: "temporal", component: i61.TemporalComponent }, { path: "noticia", component: i62.NoticiaComponent }, { path: "info", component: i63.InfoComponent }, { path: "contact", component: i64.ContactComponent }, { path: "estadisticas", component: i65.EstadisticasComponent, canActivate: [i66.AuthGuards], data: i67.ɵ0 }, { path: "usuarios", component: i68.UsuariosComponent, canActivate: [i66.AuthGuards], data: i67.ɵ1 }, { path: "perfil", component: i69.PerfilComponent, canActivate: [i66.AuthGuards], data: i67.ɵ2 }, { path: "urls", component: i70.UrlsComponent, canActivate: [i66.AuthGuards], data: i67.ɵ3 }, { path: "showurl/:id", component: i71.ShowurlComponent, canActivate: [i66.AuthGuards], data: i67.ɵ4 }, { path: "addnotice", component: i72.AddnoticeComponent, canActivate: [i66.AuthGuards], data: i67.ɵ5 }, { path: "estadadmin", component: i73.EstadadminComponent, canActivate: [i66.AuthGuards], data: i67.ɵ6 }, { path: "categoria/salud/:id", component: i61.TemporalComponent, canActivate: [i74.ReferGuard] }, { path: "categoria/entretenimiento/:id", component: i61.TemporalComponent, canActivate: [i74.ReferGuard] }, { path: "categoria/curiosidades/:id", component: i61.TemporalComponent, canActivate: [i74.ReferGuard] }, { path: "categoria/videos/:id", component: i61.TemporalComponent, canActivate: [i74.ReferGuard] }, { path: "categoria/tecnologia/:id", component: i61.TemporalComponent, canActivate: [i74.ReferGuard] }, { path: "categoria/manualidades/:id", component: i61.TemporalComponent, canActivate: [i74.ReferGuard] }, { path: "salud/:id", component: i62.NoticiaComponent }, { path: "entretenimiento/:id", component: i62.NoticiaComponent }, { path: "curiosidades/:id", component: i62.NoticiaComponent }, { path: "videos/:id", component: i62.NoticiaComponent }, { path: "tecnologia/:id", component: i62.NoticiaComponent }, { path: "manualidades/:id", component: i62.NoticiaComponent }, { path: "salud", component: i75.CatsaludComponent }, { path: "entretenimiento", component: i76.CatgraciosoComponent }, { path: "curiosidades", component: i77.CatcuriosiComponent }, { path: "videos", component: i78.CatvideoComponent }, { path: "tecnologia", component: i79.CattecnoComponent }, { path: "manualidades", component: i80.CatmanualComponent }, { path: "adduser", component: i81.AdduserComponent }, { path: "404", component: i82.ErrorComponent }, { path: "**", redirectTo: "404" }]]; }, []), i0.ɵmpd(1024, i41.Router, i41.ɵangular_packages_router_router_f, [i0.ApplicationRef, i41.UrlSerializer, i41.ChildrenOutletContexts, i29.Location, i0.Injector, i0.NgModuleFactoryLoader, i0.Compiler, i41.ROUTES, i41.ROUTER_CONFIGURATION, [2, i41.UrlHandlingStrategy], [2, i41.RouteReuseStrategy]]), i0.ɵmpd(1073742336, i41.RouterModule, i41.RouterModule, [[2, i41.ɵangular_packages_router_router_a], [2, i41.Router]]), i0.ɵmpd(1073742336, i44.BidiModule, i44.BidiModule, []), i0.ɵmpd(1073742336, i31.MatCommonModule, i31.MatCommonModule, [[2, i31.MATERIAL_SANITY_CHECKS], [2, i30.HAMMER_LOADER]]), i0.ɵmpd(1073742336, i83.PlatformModule, i83.PlatformModule, []), i0.ɵmpd(1073742336, i31.MatRippleModule, i31.MatRippleModule, []), i0.ɵmpd(1073742336, i84.MatButtonModule, i84.MatButtonModule, []), i0.ɵmpd(1073742336, i42.ObserversModule, i42.ObserversModule, []), i0.ɵmpd(1073742336, i85.MatFormFieldModule, i85.MatFormFieldModule, []), i0.ɵmpd(1073742336, i86.TextFieldModule, i86.TextFieldModule, []), i0.ɵmpd(1073742336, i87.MatInputModule, i87.MatInputModule, []), i0.ɵmpd(1073742336, i88.PortalModule, i88.PortalModule, []), i0.ɵmpd(1073742336, i89.ScrollingModule, i89.ScrollingModule, []), i0.ɵmpd(1073742336, i43.OverlayModule, i43.OverlayModule, []), i0.ɵmpd(1073742336, i31.MatPseudoCheckboxModule, i31.MatPseudoCheckboxModule, []), i0.ɵmpd(1073742336, i31.MatOptionModule, i31.MatOptionModule, []), i0.ɵmpd(1073742336, i45.MatSelectModule, i45.MatSelectModule, []), i0.ɵmpd(1073742336, i90.A11yModule, i90.A11yModule, []), i0.ɵmpd(1073742336, i46.MatTooltipModule, i46.MatTooltipModule, []), i0.ɵmpd(1073742336, i91.MatIconModule, i91.MatIconModule, []), i0.ɵmpd(1073742336, i92.MatSlideToggleModule, i92.MatSlideToggleModule, []), i0.ɵmpd(1073742336, i93.MatChipsModule, i93.MatChipsModule, []), i0.ɵmpd(1073742336, i94.MatBadgeModule, i94.MatBadgeModule, []), i0.ɵmpd(1073742336, i95.ComponentsModule, i95.ComponentsModule, []), i0.ɵmpd(1073742336, i96.AgmCoreModule, i96.AgmCoreModule, []), i0.ɵmpd(1073742336, i97.MatTabsModule, i97.MatTabsModule, []), i0.ɵmpd(1073742336, i98.MatProgressBarModule, i98.MatProgressBarModule, []), i0.ɵmpd(1073742336, i99.MatProgressSpinnerModule, i99.MatProgressSpinnerModule, []), i0.ɵmpd(1073742336, i100.MatSnackBarModule, i100.MatSnackBarModule, []), i0.ɵmpd(1073742336, i52.MetaModule, i52.MetaModule, [[3, i52.MetaModule]]), i0.ɵmpd(1073742336, i101.SlimLoadingBarModule, i101.SlimLoadingBarModule, []), i0.ɵmpd(1073742336, i48.NgxTweetModule, i48.NgxTweetModule, []), i0.ɵmpd(1073742336, i53.AppModule, i53.AppModule, [i0.PLATFORM_ID, i0.APP_ID]), i0.ɵmpd(1073742336, i56.HttpModule, i56.HttpModule, []), i0.ɵmpd(1073742336, i34.NoopAnimationsModule, i34.NoopAnimationsModule, []), i0.ɵmpd(1073742336, i32.ServerModule, i32.ServerModule, []), i0.ɵmpd(1073742336, i58.ModuleMapLoaderModule, i58.ModuleMapLoaderModule, []), i0.ɵmpd(1073742336, i1.AppServerModule, i1.AppServerModule, []), i0.ɵmpd(256, i0.ɵAPP_ROOT, true, []), i0.ɵmpd(256, i34.ANIMATION_MODULE_TYPE, "NoopAnimations", []), i0.ɵmpd(256, i37.ɵangular_packages_common_http_http_e, "XSRF-TOKEN", []), i0.ɵmpd(256, i37.ɵangular_packages_common_http_http_f, "X-XSRF-TOKEN", []), i0.ɵmpd(256, i93.MAT_CHIPS_DEFAULT_OPTIONS, { separatorKeyCodes: [i102.ENTER] }, []), i0.ɵmpd(256, i57.ADSENSE_TOKEN, { adClient: "ca-pub-4607014230623673", adSlot: 4808134978 }, []), i0.ɵmpd(256, i51.LAZY_MAPS_API_CONFIG, { apiKey: "YOUR_GOOGLE_MAPS_API_KEY" }, [])]); });
 exports.AppServerModuleNgFactory = AppServerModuleNgFactory;
 
 
@@ -2266,10 +2267,10 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'https://en.paracubafb.com/api';
-        this.urlPhoto = 'https://en.paracubafb.com/';
-        this.globalUrl = 'https://paracubafb.com';
-        this.urlShared = 'https://paracubafb.com/categoria';
+        this.apiUrl = 'https://back.cropersviral.com/api';
+        this.urlPhoto = 'https://back.cropersviral.com/';
+        this.globalUrl = 'https://remedios.cropersviral.com';
+        this.urlShared = 'https://remedios.cropersviral.com/categoria';
         this.isLogued = false;
         this.role = '';
         this.refer = '';
@@ -2342,6 +2343,119 @@ var AuthGuards = /** @class */ (function () {
     return AuthGuards;
 }());
 exports.AuthGuards = AuthGuards;
+
+
+/***/ }),
+
+/***/ "./src/app/guard/refer.guard.ts":
+/*!**************************************!*\
+  !*** ./src/app/guard/refer.guard.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var rxjs_1 = __webpack_require__(/*! rxjs */ "rxjs");
+var platform_browser_1 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var operators_1 = __webpack_require__(/*! rxjs/operators */ "rxjs/operators");
+var urls_service_1 = __webpack_require__(/*! ../services/urls.service */ "./src/app/services/urls.service.ts");
+var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
+var globals_1 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
+var i0 = __webpack_require__(/*! @angular/core */ "@angular/core");
+var i1 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i2 = __webpack_require__(/*! ../services/urls.service */ "./src/app/services/urls.service.ts");
+var i3 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i4 = __webpack_require__(/*! ../globals */ "./src/app/globals.ts");
+var ReferGuard = /** @class */ (function () {
+    function ReferGuard(router, urlsService, meta, titleService, globals) {
+        this.router = router;
+        this.urlsService = urlsService;
+        this.meta = meta;
+        this.titleService = titleService;
+        this.globals = globals;
+    }
+    ReferGuard.prototype.canActivate = function (next, state) {
+        var _this = this;
+        if (next.params.id != null) {
+            var refe = this.globals.refer;
+            var referr = this.globals.referr;
+            if (referr == null || referr == '' || refe == null || refe == '') {
+                return this.urlsService.getMiddle(next.params.id).pipe(operators_1.map(function (data) {
+                    var va = data;
+                    var decodedData = js_base64_1.Base64.decode(va);
+                    var da = JSON.parse(decodedData);
+                    var link = document.createElement('link');
+                    link.async = true;
+                    link.rel = 'canonical';
+                    link.href = da.url_real;
+                    document.head.prepend(link);
+                    _this.titleService.setTitle(da.titulo);
+                    _this.meta.updateTag({ name: 'title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                    _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                    _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                    //window.location.href = da.url_real;
+                    _this.router.navigate(['404']);
+                    return false;
+                }), operators_1.catchError(function (err1) {
+                    _this.router.navigate(['404']);
+                    return rxjs_1.of(false);
+                }));
+            }
+            else {
+                if (refe.match(/facebook/) != null) {
+                    return true;
+                }
+                else {
+                    return this.urlsService.getMiddle(next.params.id).pipe(operators_1.map(function (data) {
+                        var va = data;
+                        var decodedData = js_base64_1.Base64.decode(va);
+                        var da = JSON.parse(decodedData);
+                        var link = document.createElement('link');
+                        link.async = true;
+                        link.rel = 'canonical';
+                        link.href = da.url_real;
+                        document.head.prepend(link);
+                        _this.titleService.setTitle(da.titulo);
+                        _this.meta.updateTag({ name: 'title', content: da.titulo });
+                        _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                        _this.meta.updateTag({ property: 'og:url', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                        _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                        _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                        _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                        _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                        _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                        _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                        _this.meta.updateTag({ name: 'twitter:site', content: _this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada });
+                        _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                        _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                        _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                        window.location.href = da.url_real;
+                        return false;
+                    }), operators_1.catchError(function (err1) {
+                        _this.router.navigate(['404']);
+                        return rxjs_1.of(false);
+                    }));
+                }
+            }
+        }
+    };
+    ReferGuard.ngInjectableDef = i0.defineInjectable({ factory: function ReferGuard_Factory() { return new ReferGuard(i0.inject(i1.Router), i0.inject(i2.UrlsService), i0.inject(i3.Meta), i0.inject(i3.Title), i0.inject(i4.Globals)); }, token: ReferGuard, providedIn: "root" });
+    return ReferGuard;
+}());
+exports.ReferGuard = ReferGuard;
 
 
 /***/ }),
@@ -8086,25 +8200,36 @@ exports.ShowurlComponent = ShowurlComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var i0 = __webpack_require__(/*! ./temporal.component.scss.shim.ngstyle */ "./src/app/pages/temporal/temporal.component.scss.shim.ngstyle.js");
 var i1 = __webpack_require__(/*! @angular/core */ "@angular/core");
-var i2 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
-var i3 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
-var i4 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
-var i5 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
-var i6 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
-var i7 = __webpack_require__(/*! ./temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
-var i8 = __webpack_require__(/*! @angular/router */ "@angular/router");
-var i9 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
-var i10 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
-var i11 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
-var i12 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/services/blog.service.ts");
+var i2 = __webpack_require__(/*! @angular/router */ "@angular/router");
+var i3 = __webpack_require__(/*! @angular/common */ "@angular/common");
+var i4 = __webpack_require__(/*! ../../../../node_modules/@angular/material/button/typings/index.ngfactory */ "./node_modules/@angular/material/button/typings/index.ngfactory.js");
+var i5 = __webpack_require__(/*! @angular/material/button */ "@angular/material/button");
+var i6 = __webpack_require__(/*! @angular/cdk/platform */ "@angular/cdk/platform");
+var i7 = __webpack_require__(/*! @angular/cdk/a11y */ "@angular/cdk/a11y");
+var i8 = __webpack_require__(/*! @angular/platform-browser/animations */ "@angular/platform-browser/animations");
+var i9 = __webpack_require__(/*! ./temporal.component */ "./src/app/pages/temporal/temporal.component.ts");
+var i10 = __webpack_require__(/*! ../../services/urls.service */ "./src/app/services/urls.service.ts");
+var i11 = __webpack_require__(/*! @angular/platform-browser */ "@angular/platform-browser");
+var i12 = __webpack_require__(/*! ../../globals */ "./src/app/globals.ts");
+var i13 = __webpack_require__(/*! ../../services/blog.service */ "./src/app/services/blog.service.ts");
 var styles_TemporalComponent = [i0.styles];
 var RenderType_TemporalComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_TemporalComponent, data: {} });
 exports.RenderType_TemporalComponent = RenderType_TemporalComponent;
-function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 28, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "div", [["id", "M539567ScriptRootC979366"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 26, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 25, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 24, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 23, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 22, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 16, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_750988"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(12, 0, null, null, 11, "div", [["class", "row col-md-12 mb-3 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 2, "div", [["class", "col-md-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "fileinput-new thumbnail"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 0, "img", [["alt", "..."], ["height", "150"], ["width", "150"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 7, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, ["", ""])), (_l()(), i1.ɵeld(20, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-left mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(22, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(23, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 0, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(28, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 0, "div", [["id", "M539567ScriptRootC917293"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var currVal_4 = "warn"; _ck(_v, 22, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.foto; _ck(_v, 15, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 19, 0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 22).disabled || null); var currVal_3 = (i1.ɵnov(_v, 22)._animationMode === "NoopAnimations"); _ck(_v, 21, 0, currVal_2, currVal_3); }); }
+function View_TemporalComponent_1(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 30, "div", [["class", "col-md-4 ml-auto mr-auto"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 29, "div", [["class", "card card-blog"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 7, "div", [["class", "card-header card-header-image"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 6, "a", [], [[1, "categoria", 0], [8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 4).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(4, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(5, 1), (_l()(), i1.ɵeld(6, 0, null, null, 0, "img", [["class", "img"], ["height", "200"], ["width", "200"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 2, "div", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵted(8, null, [" ", " "])), (_l()(), i1.ɵeld(9, 0, null, null, 0, "i", [["class", "zmdi zmdi-eye"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 9, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 1, "h6", [["class", "card-category text-info"]], null, null, null, null, null)), (_l()(), i1.ɵted(12, null, ["", ""])), (_l()(), i1.ɵeld(13, 0, null, null, 4, "h4", [["class", "card-title"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 3, "a", [], [[1, "categoria", 0], [8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(15, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(16, 1), (_l()(), i1.ɵted(17, null, ["", ".."])), (_l()(), i1.ɵeld(18, 0, null, null, 1, "div", [["class", "card-description"]], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, [" ", "... "])), (_l()(), i1.ɵeld(20, 0, null, null, 10, "div", [["class", "card-footer"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 4, "div", [["class", "price"]], null, null, null, null, null)), (_l()(), i1.ɵeld(22, 0, null, null, 3, "a", [["class", "btn btn-primary"]], [[1, "categoria", 0], [8, "title", 0], [1, "target", 0], [8, "href", 4]], [[null, "click"]], function (_v, en, $event) { var ad = true; if (("click" === en)) {
+        var pd_0 = (i1.ɵnov(_v, 23).onClick($event.button, $event.ctrlKey, $event.metaKey, $event.shiftKey) !== false);
+        ad = (pd_0 && ad);
+    } return ad; }, null, null)), i1.ɵdid(23, 671744, null, 0, i2.RouterLinkWithHref, [i2.Router, i2.ActivatedRoute, i3.LocationStrategy], { routerLink: [0, "routerLink"] }, null), i1.ɵpad(24, 1), (_l()(), i1.ɵted(-1, null, ["Leer mas..."])), (_l()(), i1.ɵeld(26, 0, null, null, 4, "div", [["class", "stats"]], null, null, null, null, null)), (_l()(), i1.ɵeld(27, 0, null, null, 3, "p", [["class", "card-category"]], null, null, null, null, null)), (_l()(), i1.ɵeld(28, 0, null, null, 1, "i", [["class", "material-icons"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["contacts"])), (_l()(), i1.ɵted(30, null, [" ", ""]))], function (_ck, _v) { var currVal_4 = _ck(_v, 5, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 4, 0, currVal_4); var currVal_12 = _ck(_v, 16, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 15, 0, currVal_12); var currVal_19 = _ck(_v, 24, 0, ((("/categoria/" + _v.context.$implicit.categoria.categoria) + "/") + _v.context.$implicit.url_acortada)); _ck(_v, 23, 0, currVal_19); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _v.context.$implicit.categoria.categoria; var currVal_1 = _v.context.$implicit.titulo; var currVal_2 = i1.ɵnov(_v, 4).target; var currVal_3 = i1.ɵnov(_v, 4).href; _ck(_v, 3, 0, currVal_0, currVal_1, currVal_2, currVal_3); var currVal_5 = (_co.globals.urlPhoto + _v.context.$implicit.foto); _ck(_v, 6, 0, currVal_5); var currVal_6 = _v.context.$implicit.visitas; _ck(_v, 8, 0, currVal_6); var currVal_7 = (_v.context.$implicit.categoria.categoria || _co.uppercase); _ck(_v, 12, 0, currVal_7); var currVal_8 = _v.context.$implicit.categoria.categoria; var currVal_9 = _v.context.$implicit.titulo; var currVal_10 = i1.ɵnov(_v, 15).target; var currVal_11 = i1.ɵnov(_v, 15).href; _ck(_v, 14, 0, currVal_8, currVal_9, currVal_10, currVal_11); var currVal_13 = _v.context.$implicit.titulo.substring(0, 28); _ck(_v, 17, 0, currVal_13); var currVal_14 = _v.context.$implicit.descripcion.substring(0, 171); _ck(_v, 19, 0, currVal_14); var currVal_15 = _v.context.$implicit.categoria.categoria; var currVal_16 = _v.context.$implicit.titulo; var currVal_17 = i1.ɵnov(_v, 23).target; var currVal_18 = i1.ɵnov(_v, 23).href; _ck(_v, 22, 0, currVal_15, currVal_16, currVal_17, currVal_18); var currVal_20 = _v.context.$implicit.users.nombre_apellidos; _ck(_v, 30, 0, currVal_20); }); }
+function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 32, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "div", [["id", "M539567ScriptRootC979366"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 30, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 29, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 28, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 27, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 26, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 16, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"], ["id", "ads1"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 0, "ins", [["class", "adsbygoogle"], ["data-ad-client", "ca-pub-5964039152082324"], ["data-ad-format", "auto"], ["data-ad-slot", "7055732511"], ["data-full-width-responsive", "true"], ["style", "display:block"]], null, null, null, null, null)), (_l()(), i1.ɵeld(11, 0, null, null, 11, "div", [["class", "row col-md-12 mb-3 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(12, 0, null, null, 2, "div", [["class", "col-md-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 1, "div", [["class", "fileinput-new thumbnail"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 0, "img", [["alt", "..."], ["height", "150"], ["width", "150"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 7, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(18, null, ["", ""])), (_l()(), i1.ɵeld(19, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-left mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(20, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i4.View_MatButton_0, i4.RenderType_MatButton)), i1.ɵdid(21, 180224, null, 0, i5.MatButton, [i1.ElementRef, i6.Platform, i7.FocusMonitor, [2, i8.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(22, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(23, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"], ["id", "ads2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 0, "ins", [["class", "adsbygoogle"], ["data-ad-client", "ca-pub-5964039152082324"], ["data-ad-format", "auto"], ["data-ad-slot", "5044662757"], ["data-full-width-responsive", "true"], ["style", "display:block"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(28, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"], ["id", "ads3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 0, "ins", [["class", "adsbygoogle"], ["data-ad-client", "ca-pub-5964039152082324"], ["data-ad-format", "auto"], ["data-ad-slot", "3211856277"], ["data-full-width-responsive", "true"], ["style", "display:block"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 3, "div", [["class", "row text-left"]], null, null, null, null, null)), (_l()(), i1.ɵand(16777216, null, null, 2, null, View_TemporalComponent_1)), i1.ɵdid(32, 278528, null, 0, i3.NgForOf, [i1.ViewContainerRef, i1.TemplateRef, i1.IterableDiffers], { ngForOf: [0, "ngForOf"] }, null), i1.ɵpid(0, i3.SlicePipe, []), (_l()(), i1.ɵeld(34, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var _co = _v.component; var currVal_4 = "warn"; _ck(_v, 21, 0, currVal_4); var currVal_5 = i1.ɵunv(_v, 32, 0, i1.ɵnov(_v, 33).transform(_co.popular, 0, 3)); _ck(_v, 32, 0, currVal_5); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.foto; _ck(_v, 14, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 18, 0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 21).disabled || null); var currVal_3 = (i1.ɵnov(_v, 21)._animationMode === "NoopAnimations"); _ck(_v, 20, 0, currVal_2, currVal_3); }); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
-function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i7.TemporalComponent, [i8.ActivatedRoute, i8.Router, i9.UrlsService, i10.Meta, i10.Title, i11.Globals, i10.DOCUMENT, i12.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i9.TemporalComponent, [i2.ActivatedRoute, i2.Router, i10.UrlsService, i11.Meta, i11.Title, i12.Globals, i11.DOCUMENT, i13.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TemporalComponent_Host_0 = View_TemporalComponent_Host_0;
-var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i7.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
+var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i9.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
 exports.TemporalComponentNgFactory = TemporalComponentNgFactory;
 
 
@@ -8205,8 +8330,16 @@ var TemporalComponent = /** @class */ (function () {
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
         return __awaiter(this, void 0, void 0, function () {
+            var _this = this;
             return __generator(this, function (_a) {
                 $('body').addClass("off-canvas-sidebar");
+                this.urlsService.getUrlPop()
+                    .subscribe(function (data) {
+                    var va = data;
+                    var decodedData = js_base64_1.Base64.decode(va);
+                    var da = JSON.parse(decodedData);
+                    _this.popular = da;
+                });
                 return [2 /*return*/];
             });
         });
@@ -8236,24 +8369,18 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var d;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
-                        d = this.globals.referr + "::" + this.globals.refer;
+                        /*let d: any = this.globals.referr + "::" + this.globals.refer;
                         this.urlsService.getAgent(d)
-                            .subscribe(function (data) {
-                            var da = data;
-                            console.log(da);
-                        });
-                        if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '')
-                            this.setScript();
-                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
-                    case 1:
-                        _a.sent();
+                            .subscribe(data => {
+                                let da: any = data;
+                                console.log(da);
+                            })*/
                         if (this.globals.refer == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
@@ -8262,6 +8389,20 @@ var TemporalComponent = /** @class */ (function () {
                             this.show = false;
                             window.location.href = this.url.url_real;
                         }
+                        if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '') {
+                            this.setScript();
+                        }
+                        if (this.globals.refer == null) {
+                            this.show = false;
+                            window.location.href = this.url.url_real;
+                        }
+                        else if (this.globals.refer.match(/facebook/) == null) {
+                            this.show = false;
+                            window.location.href = this.url.url_real;
+                        }
+                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                    case 1:
+                        _a.sent();
                         if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '') {
                             this.urlsService.setVisita(this.id_url)
                                 .subscribe(function (data) {
@@ -8282,30 +8423,20 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.setScript = function () {
         var script = this.document.createElement('script');
-        script.async = true;
-        script.src = "//st-n.ads5-adnow.com/js/a.js";
-        script.type = "text/javascript";
-        var scriptnow = this.document.createElement('script');
-        scriptnow.innerHTML = '(sc_adv_out = window.sc_adv_out || []).push({id : "750988",domain : "n.ads5-adnow.com"});';
-        scriptnow.type = "text/javascript";
-        var bloque2 = this.document.getElementById('SC_TBlock_750988');
-        bloque2.appendChild(script);
-        bloque2.appendChild(scriptnow);
+        script.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({})';
+        var bloque = this.document.getElementById('ads1');
+        bloque.appendChild(script);
         var script1 = this.document.createElement('script');
-        script1.async = true;
-        script1.src = "https://jsc.mgid.com/p/a/paracubafb.com.917293.js";
-        var bloque1 = this.document.getElementById('M539567ScriptRootC917293');
+        script1.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({})';
+        var bloque1 = this.document.getElementById('ads2');
         bloque1.appendChild(script1);
         var script2 = this.document.createElement('script');
-        script2.async = true;
-        script2.src = "https://jsc.mgid.com/p/a/paracubafb.com.979366.js";
-        this.document.head.appendChild(script2);
+        script2.innerHTML = '(adsbygoogle = window.adsbygoogle || []).push({})';
+        var bloque2 = this.document.getElementById('ads3');
+        bloque2.appendChild(script2);
     };
     TemporalComponent.prototype.getUrl = function (id_url, refer) {
         var _this = this;
-        /*let script1: any = this.document.createElement('script');
-        script1.src = "https://cdn.siteswithcontent.com/js/push/subscribe.js?v=1.1.0";
-        this.document.head.appendChild(script1);*/
         var promise = new Promise(function (resolve, reject) {
             _this.urlsService.getUrl(id_url, refer)
                 .toPromise()
@@ -9402,6 +9533,7 @@ exports.UsuariosComponent = UsuariosComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = __webpack_require__(/*! @angular/router */ "@angular/router");
 var auth_guard_1 = __webpack_require__(/*! ../guard/auth.guard */ "./src/app/guard/auth.guard.ts");
+var refer_guard_1 = __webpack_require__(/*! ../guard/refer.guard */ "./src/app/guard/refer.guard.ts");
 var home_component_1 = __webpack_require__(/*! ../pages/blog/home/home.component */ "./src/app/pages/blog/home/home.component.ts");
 var addnotice_component_1 = __webpack_require__(/*! ../pages/blog/addnotice/addnotice.component */ "./src/app/pages/blog/addnotice/addnotice.component.ts");
 var noticia_component_1 = __webpack_require__(/*! ../pages/blog/noticia/noticia.component */ "./src/app/pages/blog/noticia/noticia.component.ts");
@@ -9436,7 +9568,7 @@ Configuración de las Rutas del APP
 **********************************/
 var appRoutes = [
     { path: 'login', component: login_component_1.LoginComponent },
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: '', redirectTo: 'estadisticas', pathMatch: 'full' },
     { path: 'home', component: home_component_1.HomeComponent },
     { path: 'temporal', component: temporal_component_1.TemporalComponent },
     { path: 'noticia', component: noticia_component_1.NoticiaComponent },
@@ -9449,12 +9581,12 @@ var appRoutes = [
     { path: 'showurl/:id', component: showurl_component_1.ShowurlComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ4 },
     { path: 'addnotice', component: addnotice_component_1.AddnoticeComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ5 },
     { path: 'estadadmin', component: estadadmin_component_1.EstadadminComponent, canActivate: [auth_guard_1.AuthGuards], data: ɵ6 },
-    { path: 'categoria/salud/:id', component: temporal_component_1.TemporalComponent /*, canActivate: [ReferGuard]*/ },
-    { path: 'categoria/entretenimiento/:id', component: temporal_component_1.TemporalComponent /*, canActivate: [ReferGuard]*/ },
-    { path: 'categoria/curiosidades/:id', component: temporal_component_1.TemporalComponent /*, canActivate: [ReferGuard]*/ },
-    { path: 'categoria/videos/:id', component: temporal_component_1.TemporalComponent /*, canActivate: [ReferGuard]*/ },
-    { path: 'categoria/tecnologia/:id', component: temporal_component_1.TemporalComponent /*, canActivate: [ReferGuard]*/ },
-    { path: 'categoria/manualidades/:id', component: temporal_component_1.TemporalComponent /*, canActivate: [ReferGuard]*/ },
+    { path: 'categoria/salud/:id', component: temporal_component_1.TemporalComponent, canActivate: [refer_guard_1.ReferGuard] },
+    { path: 'categoria/entretenimiento/:id', component: temporal_component_1.TemporalComponent, canActivate: [refer_guard_1.ReferGuard] },
+    { path: 'categoria/curiosidades/:id', component: temporal_component_1.TemporalComponent, canActivate: [refer_guard_1.ReferGuard] },
+    { path: 'categoria/videos/:id', component: temporal_component_1.TemporalComponent, canActivate: [refer_guard_1.ReferGuard] },
+    { path: 'categoria/tecnologia/:id', component: temporal_component_1.TemporalComponent, canActivate: [refer_guard_1.ReferGuard] },
+    { path: 'categoria/manualidades/:id', component: temporal_component_1.TemporalComponent, canActivate: [refer_guard_1.ReferGuard] },
     { path: 'salud/:id', component: noticia_component_1.NoticiaComponent },
     { path: 'entretenimiento/:id', component: noticia_component_1.NoticiaComponent },
     { path: 'curiosidades/:id', component: noticia_component_1.NoticiaComponent },

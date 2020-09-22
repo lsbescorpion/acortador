@@ -14,6 +14,7 @@ use App\Models\Paises;
 use App\Models\UrlVisitasP;
 use App\Models\UrlVisitaR;
 use App\Models\CPM;
+use App\Models\Referr;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Jenssegers\Agent\Agent;
@@ -24,18 +25,18 @@ class UrlsController extends Controller
 {
 
     public function getAnalytic() {
-        /*$startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
-        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();*/
+        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
         $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
 
-        /*$analyticsData = Analytics::performQuery(
+        $analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
             'ga:pagePath',
             [
                 'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
                 'dimensions' => 'ga:pagePath,ga:source'
             ]
-        );*/
+        );
 
         /*$ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_UYU&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
@@ -47,8 +48,8 @@ class UrlsController extends Controller
 
         $uyu = $rates['USD_UYU']['val'];*/
 
-        //$rows = $analyticsData->rows;
-        /*for($i = 0; $i < count($rows); $i++) {
+        $rows = $analyticsData->rows;
+        for($i = 0; $i < count($rows); $i++) {
             if($rows[$i][1] != '(direct)') {
                 $url = explode("/", $rows[$i][0]);
                 if(isset($url[3]) && strlen($url[3]) == 7) {
@@ -60,20 +61,20 @@ class UrlsController extends Controller
                             $ganancias->fecha = date('Y-m-d',strtotime($fecha));
                             $ganancias->user_id = $ur->users->id;
                             $ganancias->url_id = $ur->id;
-                            if($uyu != null) {
+                            /*if($uyu != null) {
                                 $gan = $rows[$i][2] * $uyu;
                                 $ganancias->ganancia = round($gan, 2, PHP_ROUND_HALF_DOWN);
                             }
                             else
-                                $ganancias->ganancia = round($rows[$i][2]/0.0367, 2, PHP_ROUND_HALF_DOWN);
+                                $ganancias->ganancia = round($rows[$i][2]/0.0367, 2, PHP_ROUND_HALF_DOWN);*/
                             $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
                             $ganancias->save();
                         }
                     }
                 }
             }
-        }*/
-        $visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
+        }
+        /*$visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
         $cpm = CPM::find(1);
         for($i = 0; $i < count($visitas); $i++) {
             $ganancias = GananciasDiarias::where(['user_id' => $visitas[$i]->user_id, 'url_id' => $visitas[$i]->url_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
@@ -81,11 +82,11 @@ class UrlsController extends Controller
             $ganancias->fecha = date('Y-m-d',strtotime($fecha));
             $ganancias->user_id = $visitas[$i]->user_id;
             $ganancias->url_id = $visitas[$i]->url_id;
-            $ganancias->ganancia = round($visitas[$i]->visitas/$cpm->cpm, 2, PHP_ROUND_HALF_DOWN);
+            $ganancias->ganancia = round(($visitas[$i]->visitas*$cpm->cpm)/1000, 2, PHP_ROUND_HALF_DOWN);
             $ganancias->save();
-        }
-        return response()->json("Update data");
-        //return response()->json($analyticsData);
+        }*/
+        //return response()->json("Update data");
+        return response()->json($analyticsData);
     }
 
     public function CheckUrl($id) {
@@ -93,26 +94,35 @@ class UrlsController extends Controller
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
         if($url == null) {
-            return response()->json('Url no encontrada', 404);
+            return response()->json('Url no 1', 404);
         }
 
         $redirect = 0;
         if($agent->isRobot()) {
-            $redirect = 1;
-            $url->check = $redirect;
             return response()->json(base64_encode(json_encode($url)), 500);
         }
 
         $ips = \Location::get();
         if($ips == null || $ips->countryCode == 'CU') {
-            $redirect = 1;
-            $url->check = $redirect;
             return response()->json(base64_encode(json_encode($url)), 500);
         }
 
-        $url->check = $redirect;
-
         return response()->json(base64_encode(json_encode($url)));
+    }
+
+    public function getmiddle($id, Request $request) {
+        $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
+        if($url == null) {
+            return response()->json('Url no no encontrada', 404);
+        }
+        return response()->json(base64_encode(json_encode($url)));
+    }
+
+    public function getAgent(Request $request) {
+        $ref = new Referr();
+        $ref->referr = $request->get('agent');
+        $ref->save();
+        return response()->json('Agent');
     }
  
     public function getUrl($id, Request $request)
@@ -121,12 +131,12 @@ class UrlsController extends Controller
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
         if($url == null) {
-            return response()->json('Url no encontrada', 404);
+            return response()->json('Url no no encontrada', 404);
         }
 
         $refer = base64_decode($request->get('r'));
         $pos = strpos($refer, 'facebook');
-        /*if($pos === false) {
+        if($pos === false) {
             if($refer != null) {
                 $re = UrlVisitaR::where(['url_id' => $url->id, 'referr' => $refer])->first();
 
@@ -158,7 +168,6 @@ class UrlsController extends Controller
         if($ips == null || $ips->countryCode == 'CU') {
             return response()->json(base64_encode(json_encode($url)), 500);
         }
-
         $pais = Paises::where(['iso_a2' => $ips->countryCode])->first();
 
         $p = UrlVisitasP::where(['url_id' => $url->id, 'iso_2' => $ips->countryCode])->first();
@@ -181,7 +190,7 @@ class UrlsController extends Controller
         $re->visitasr = ($re->visitasr != null ? $re->visitasr : 0) + 1;
         $re->url_id = $url->id;
         $re->referr = $refer;
-        $re->save();*/
+        $re->save();
 
         /*$url->visitas = $url->visitas + 1;
         $url->save();
@@ -216,7 +225,7 @@ class UrlsController extends Controller
         $visitas->user_id = $url->user_id;
         $visitas->save();
 
-        $visitasu = VisitasDiariasUrl::where(['user_id' => $url->user_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+        $visitasu = VisitasDiariasUrl::where(['user_id' => $url->user_id, 'url_id' => $url->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
         if($visitasu == null)
             $visitasu = new VisitasDiariasUrl();
 
@@ -339,7 +348,50 @@ class UrlsController extends Controller
         $dom = new \DOMDocument();
         $dom->preserveWhiteSpace = FALSE;
         $internalErrors = libxml_use_internal_errors(true);
-        $data = $dom->loadHTML(file_get_contents($request->get('url')));
+        if(strpos($request->get('url'), "youtube.com") != false) {
+            $ini = strpos($request->get('url'), 'watch?v=');
+            $ini += strlen('watch?v=');
+            $len = strlen($request->get('url'));
+            $body = substr($request->get('url'), $ini, $len);
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_URL, "https://www.googleapis.com/youtube/v3/videos?id=".$body."&key=AIzaSyA_-PSjDLMR3WH1-AqRC5s8Q0aDF-EeU24&part=snippet");
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+
+            $result = json_decode(curl_exec($ch));
+            $imagen = file_get_contents($result->items[0]->snippet->thumbnails->high->url);
+
+            $ds = DIRECTORY_SEPARATOR;
+            $dir = $ds.date('Y',time()).$ds.date('m',time()).$ds.date('d',time()).$ds;
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $name = substr(str_shuffle($characters),1,20);
+            //$short = substr(md5(time().$request->get('url')), 1, 10);
+            $short = md5(time().$request->get('url'));
+
+            $urls = new Urls();
+            $urls->url_real = $request->get('url');
+            $urls->url_acortada = $short;
+            $urls->accion = utf8_encode($request->get('accion'));
+            $urls->titulo = utf8_decode($result->items[0]->snippet->title);
+            $urls->descripcion = utf8_decode($result->items[0]->snippet->description);
+            $urls->visitas = 0;
+            $urls->fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
+            $urls->user_id = $request->get('user_id');
+            $urls->categoria_id = $request->get('categoria');
+            $urls->foto = 'imagenes'.$dir.$name.'.jpg';
+            $urls->activa = 1;
+            $urls->save();
+            if(!is_dir('imagenes'.$dir))
+                mkdir('imagenes'.$dir, 0777, true);
+            file_put_contents('imagenes'.$dir.$name.'.jpg', $imagen);
+
+            return response()->json("Url acortada", 200);
+        }
+        else
+            $data = $dom->loadHTML(file_get_contents($request->get('url')));
 
         $metas = $dom->getElementsByTagName('meta'); 
         if($metas->length == 0)
@@ -401,7 +453,8 @@ class UrlsController extends Controller
         $dir = $ds.date('Y',time()).$ds.date('m',time()).$ds.date('d',time()).$ds;
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $name = substr(str_shuffle($characters),1,20);
-        $short = substr(md5(time().$request->get('url')), 1, 7);
+        //$short = substr(md5(time().$request->get('url')), 1, 10);
+        $short = md5(time().$request->get('url'));
 
         $urls = new Urls();
         $urls->url_real = $request->get('url');
@@ -547,12 +600,14 @@ class UrlsController extends Controller
 
         $rows = $analyticsData->rows;
         $rpm = round(($rows[0][1] / $rows[0][2] * 1000), 2, PHP_ROUND_HALF_DOWN);*/
+        $cpm = CPM::find(1);
 
         $estadisticas['gdiarias'] = $gdiarias;
         $estadisticas['gmensual'] = $gmensual;
         $estadisticas['fvdiarias'] = $fvdiarias;
         $estadisticas['chartganancias'] = $chartganancias;
         $estadisticas['maxg'] = $maxg;
+        $estadisticas['cpm'] = $cpm;
         /*$estadisticas['rpm'] = $rpm;*/
 
         return response()->json(base64_encode(json_encode($estadisticas)));
