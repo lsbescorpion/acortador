@@ -7978,7 +7978,6 @@ var RankingComponent = /** @class */ (function () {
             var decodedData = window.atob(va);
             var users = JSON.parse(decodedData);
             _this.visitas = users;
-            console.log(_this.visitas);
         }, function (error) {
         });
     };
