@@ -25,11 +25,11 @@ class UrlsController extends Controller
 {
 
     public function getAnalytic() {
-        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
-        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+        /*$startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();*/
         $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
 
-        $analyticsData = Analytics::performQuery(
+        /*$analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
             'ga:pagePath',
             [
@@ -38,7 +38,7 @@ class UrlsController extends Controller
             ]
         );
 
-        /*$ch = curl_init();
+        $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_UYU&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_TIMEOUT, 60);
@@ -46,7 +46,7 @@ class UrlsController extends Controller
         curl_close($ch);
         $rates = json_decode($data, true);
 
-        $uyu = $rates['USD_UYU']['val'];*/
+        $uyu = $rates['USD_UYU']['val'];
 
         $rows = $analyticsData->rows;
         for($i = 0; $i < count($rows); $i++) {
@@ -61,20 +61,14 @@ class UrlsController extends Controller
                             $ganancias->fecha = date('Y-m-d',strtotime($fecha));
                             $ganancias->user_id = $ur->users->id;
                             $ganancias->url_id = $ur->id;
-                            /*if($uyu != null) {
-                                $gan = $rows[$i][2] * $uyu;
-                                $ganancias->ganancia = round($gan, 2, PHP_ROUND_HALF_DOWN);
-                            }
-                            else
-                                $ganancias->ganancia = round($rows[$i][2]/0.0367, 2, PHP_ROUND_HALF_DOWN);*/
                             $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
                             $ganancias->save();
                         }
                     }
                 }
             }
-        }
-        /*$visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
+        }*/
+        $visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
         $cpm = CPM::find(1);
         for($i = 0; $i < count($visitas); $i++) {
             $ganancias = GananciasDiarias::where(['user_id' => $visitas[$i]->user_id, 'url_id' => $visitas[$i]->url_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
@@ -84,9 +78,9 @@ class UrlsController extends Controller
             $ganancias->url_id = $visitas[$i]->url_id;
             $ganancias->ganancia = round(($visitas[$i]->visitas*$cpm->cpm)/1000, 2, PHP_ROUND_HALF_DOWN);
             $ganancias->save();
-        }*/
-        //return response()->json("Update data");
-        return response()->json($analyticsData);
+        }
+        return response()->json("Update data");
+        //return response()->json($analyticsData);
     }
 
     public function CheckUrl($id) {
@@ -94,7 +88,7 @@ class UrlsController extends Controller
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
 
         if($url == null) {
-            return response()->json('Url no 1', 404);
+            return response()->json('Url no encontrada', 404);
         }
 
         $redirect = 0;
@@ -102,10 +96,10 @@ class UrlsController extends Controller
             return response()->json(base64_encode(json_encode($url)), 500);
         }
 
-        $ips = \Location::get();
+        /*$ips = \Location::get();
         if($ips == null || $ips->countryCode == 'CU') {
             return response()->json(base64_encode(json_encode($url)), 500);
-        }
+        }*/
 
         return response()->json(base64_encode(json_encode($url)));
     }
