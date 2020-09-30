@@ -24,6 +24,8 @@ Route::post('user/photo', 'API\UsersController@photo')->name('photo');
 Route::get('user/removephoto', 'API\UsersController@removePhoto')->name('removephoto');
 Route::get('usr/remphotos', 'API\UsersController@remPhotos')->name('remphotos');
 Route::get('users/ganancias', 'API\UsersController@getGanancias')->name('ganancias');
+Route::post('users/adduser', 'API\UsersController@AddUser')->name('AddUser');
+Route::get('users/ranking', 'API\UsersController@ranking')->name('ranking');
 
 
 Route::post('urls/acortar', 'API\UrlsController@acortar')->name('acortar');
@@ -41,6 +43,8 @@ Route::get('urls/admin', 'API\UrlsController@getUrlsAdmin')->name('geturlsadmin'
 Route::delete('urls/del/admin/{url}', 'API\UrlsController@deleteUrlAdmin')->name('deleteurladmin');
 Route::get('urls/visitas/{url}', 'API\UrlsController@setVisitas')->name('setVisitas');
 Route::post('urls/cpm', 'API\UrlsController@Cpm')->name('cpm');
+Route::get('url/getmiddle/{url}', 'API\UrlsController@getmiddle')->name('getmiddle');
+Route::get('urls/agent', 'API\UrlsController@getAgent')->name('getAgent');
 
 Route::get('blogs', 'API\BlogController@getBlogs')->name('getBlogs');
 Route::post('blog/photob', 'API\BlogController@photob')->name('photob');

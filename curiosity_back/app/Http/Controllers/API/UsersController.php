@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Perfil;
 use App\Models\Urls;
+use App\Models\VisitasDiarias;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -13,29 +14,6 @@ use Carbon\Carbon;
 
 class UsersController extends Controller
 {
-    /*public function getUserIdent(Request $request) {
-        if($request->get('ident') != null) {
-            $user = User::where(['NO_IDENTIFICACION' => $request->get('ident')])->first();
-            if($user != null)
-                return response()->json(false);
-            return response()->json(true);
-        }
-        else
-        if($request->get('user') != null) {
-            $user = User::where(['USUARIO' => $request->get('user')])->first();
-            if($user != null)
-                return response()->json(false);
-            return response()->json(true);
-        }
-        else
-        if($request->get('correo') != null) {
-            $user = User::where(['CORREO' => $request->get('correo')])->first();
-            if($user != null)
-                return response()->json(false);
-            return response()->json(true);
-        }
-    }*/
-
     public function logout(Request $request) {
 
     }
@@ -272,5 +250,45 @@ class UsersController extends Controller
             $query->select(\DB::raw('sum(ganancia)'));
         }])->get();
         return response()->json(base64_encode(json_encode(["draw"=> 1, "recordsTotal"=> count($users),"recordsFiltered"=> count($users),'data' => $users])));
+    }
+
+    public function AddUser(Request $request)
+    {
+        $user = new User();
+        $user->password = Hash::make($request->get('password'));
+        $user->correo = $request->get('correo');
+        $user->nombre_apellidos = $request->get('nombre_apellidos');
+        $user->perfil_fb = $request->get('perfil_fb');
+        $user->activo = 1;
+
+        $user->save();
+        $user->assignRole("Usuarios");
+
+        if ($handle = opendir('temp')) {
+            while (false !== ($entry = readdir($handle))) {
+                if ($entry != "." && $entry != "..") {
+                    $ds = DIRECTORY_SEPARATOR; 
+                    $storeFolder = 'photos';  
+                    $fileMoved = rename('temp'.$ds.$entry, $storeFolder.$ds."ID(".$user->id.")".$entry);
+                    $user->foto = $entry;
+                    $user->foto_size = filesize($storeFolder.$ds."ID(".$user->id.")".$entry);
+                    $user->save();
+                }
+            }
+            closedir($handle);
+        }
+        
+        return response()->json('Usuario creado', 200 );
+    }
+
+    public function ranking()
+    {
+        $start = date('Y-m-01', time());//'2020-03-01';
+        $end = date('Y-m-t', time());
+        $visitas = VisitasDiarias::join('user', 'visitas_diarias.user_id', '=', 'user.id')->selectRaw("user.*")
+                    ->selectRaw("SUM(visitas) as visitasum")->whereBetween('fecha', [$start, $end])->groupBy('user_id')
+                    ->orderby('visitasum', 'desc')->get();
+
+        return response()->json(base64_encode(json_encode($visitas)));
     }
 }
