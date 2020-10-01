@@ -6688,8 +6688,9 @@ var EstadadminComponent = /** @class */ (function () {
                         return (data != null ? '<i class="zmdi zmdi-money"></i> ' + data.toFixed(2) : 0);
                     } },
                 { title: 'A Pagar', data: 'id', className: "align-middle", "render": function (data, type, row, meta) {
+                        //return (row.roles[0].name == "Administrador" ? '<i class="zmdi zmdi-money"></i> '+ row.gan.toFixed(2) : (row.roles[0].name == "Moderador" ? '<i class="zmdi zmdi-money"></i> '+ (row.gan * 60 / 100).toFixed(2) : '<i class="zmdi zmdi-money"></i> '+ (row.gan * 50 / 100).toFixed(2)));
                         if (row.gan != null)
-                            return (row.roles[0].name == "Administrador" ? '<i class="zmdi zmdi-money"></i> ' + row.gan.toFixed(2) : (row.roles[0].name == "Moderador" ? '<i class="zmdi zmdi-money"></i> ' + (row.gan * 60 / 100).toFixed(2) : '<i class="zmdi zmdi-money"></i> ' + (row.gan * 50 / 100).toFixed(2)));
+                            return '<i class="zmdi zmdi-money"></i> ' + row.gan.toFixed(2);
                         else
                             return '0';
                     } },
@@ -6983,8 +6984,10 @@ var EstadisticasComponent = /** @class */ (function () {
             _this.vdiarias = (da.vdiarias != null ? da.vdiarias.visitas : 0);
             _this.fvdiarias = da.fvdiarias;
             _this.visitas = da.visitas;
-            _this.gdiarias = (da.gdiarias * divisor / 100).toFixed(2);
-            _this.gmensual = (da.gmensual * divisor / 100).toFixed(2);
+            /*this.gdiarias = (da.gdiarias * divisor / 100).toFixed(2);
+            this.gmensual = (da.gmensual * divisor / 100).toFixed(2);*/
+            _this.gdiarias = da.gdiarias.toFixed(2);
+            _this.gmensual = da.gmensual.toFixed(2);
             var dataCompletedTasksChart = {
                 labels: da.chartdias.dia,
                 series: [
