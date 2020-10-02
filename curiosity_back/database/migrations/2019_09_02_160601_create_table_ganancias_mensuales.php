@@ -16,7 +16,7 @@ class CreateTableGananciasMensuales extends Migration
         Schema::create('ganancias_mensuales', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->double('ganancia');
-            $table->integer('mes');
+            $table->string('mes');
             $table->integer('anno');
             $table->integer('pagado');
             $table->integer('user_id')->unsigned();

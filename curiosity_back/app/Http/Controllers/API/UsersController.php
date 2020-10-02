@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Perfil;
 use App\Models\Urls;
 use App\Models\VisitasDiarias;
+use App\Models\GananciasMensuales;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -48,7 +49,7 @@ class UsersController extends Controller
 
     public function getUsers(Request $request){
         $datos = User::with(['roles'])->orderby('id', 'ASC')->get();
-        return response()->json(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos]);
+        return response()->json(base64_encode(json_encode(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos])));
     }
 
     public function updateUser(Request $request, $id)
@@ -169,6 +170,8 @@ class UsersController extends Controller
         $perfil->banco = $request->get('metodo');
         $perfil->moneda = $request->get('metodo');
         $perfil->tarjeta = $request->get('tarjeta');
+        $perfil->telefono = $request->get('telefono');
+        $perfil->paypal = $request->get('paypal');
         $perfil->save();
 
         return response()->json(base64_encode(json_encode($user)));
@@ -290,5 +293,10 @@ class UsersController extends Controller
                     ->orderby('visitasum', 'desc')->get();
 
         return response()->json(base64_encode(json_encode($visitas)));
+    }
+
+    public function GananciaMenuales(Request $request) {
+        $mensuales = GananciasMensuales::where(['user_id' => $request->get('id')])->get();
+        return response()->json(base64_encode(json_encode(["draw"=> 1, "recordsTotal"=> count($mensuales),"recordsFiltered"=> count($mensuales),'data' => $mensuales])));
     }
 }

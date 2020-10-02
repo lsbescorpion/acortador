@@ -149,9 +149,9 @@ class UrlsController extends Controller
             return response()->json(base64_encode(json_encode($url)), 500);
         }
 
-        if(!$agent->isMobile() && !$agent->isTablet()) {
+        /*if(!$agent->isMobile() && !$agent->isTablet()) {
             return response()->json(base64_encode(json_encode($url)), 500);
-        }
+        }*/
 
         $redirect = 0;
         if($agent->isRobot()) {
@@ -159,9 +159,9 @@ class UrlsController extends Controller
         }
 
         $ips = \Location::get();
-        if($ips == null || $ips->countryCode == 'CU') {
+        /*if($ips == null || $ips->countryCode == 'CU') {
             return response()->json(base64_encode(json_encode($url)), 500);
-        }
+        }*/
         $pais = Paises::where(['iso_a2' => $ips->countryCode])->first();
 
         $p = UrlVisitasP::where(['url_id' => $url->id, 'iso_2' => $ips->countryCode])->first();
@@ -250,8 +250,9 @@ class UrlsController extends Controller
             $mes = date('m',strtotime($fecha));
             $ga = GananciasDiarias::where(['url_id' => $id])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->first();
             if($ga != null) {
-                $divisor = ($request->get('role') == 'Administrador' ? 100 : ($request->get('role') == 'Moderador' ? 60 : 50));
-                $chartganancias['ganancias'][$posg] = round(($ga->ganancia * $divisor / 100), 2, PHP_ROUND_HALF_DOWN);
+                /*$divisor = ($request->get('role') == 'Administrador' ? 100 : ($request->get('role') == 'Moderador' ? 60 : 50));
+                $chartganancias['ganancias'][$posg] = round(($ga->ganancia * $divisor / 100), 2, PHP_ROUND_HALF_DOWN);*/
+                $chartganancias['ganancias'][$posg] = round($ga->ganancia, 2, PHP_ROUND_HALF_DOWN);
                 if($ga->ganancia >= $maxg)
                     $maxg = $ga->ganancia;
             }
@@ -273,7 +274,8 @@ class UrlsController extends Controller
         $resultado['ganancias'] = $chartganancias;
         $resultado['maxg'] = $maxg;
         $resultado['fgdiarias'] = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
-        $resultado['gtotal'] = round(($gtotal * $divisor / 100), 2, PHP_ROUND_HALF_DOWN);
+        //$resultado['gtotal'] = round(($gtotal * $divisor / 100), 2, PHP_ROUND_HALF_DOWN);
+        $resultado['gtotal'] = round($gtotal, 2, PHP_ROUND_HALF_DOWN);
 
         return response()->json(base64_encode(json_encode($resultado)));
     }
@@ -283,7 +285,7 @@ class UrlsController extends Controller
             $datos = Urls::with(['categoria', 'users'])->where(['user_id' => $request->get('id'), 'activa' => 1])->orderby('fecha', 'DESC')->get();
         else
             $datos = Urls::with(['categoria', 'users'])->where(['activa' => 1])->orderby('fecha', 'DESC')->get();
-        return response()->json(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos]);
+        return response()->json(base64_encode(json_encode(["draw"=> 1, "recordsTotal"=> count($datos),"recordsFiltered"=> count($datos),'data' => $datos])));
     }
 
     public function getUrlsPop(){
@@ -368,9 +370,9 @@ class UrlsController extends Controller
             $urls = new Urls();
             $urls->url_real = $request->get('url');
             $urls->url_acortada = $short;
-            $urls->accion = utf8_encode($request->get('accion'));
-            $urls->titulo = utf8_decode($result->items[0]->snippet->title);
-            $urls->descripcion = utf8_decode($result->items[0]->snippet->description);
+            $urls->accion = $request->get('accion');//utf8_encode($request->get('accion'));
+            $urls->titulo = $result->items[0]->snippet->title;//utf8_decode($result->items[0]->snippet->title);
+            $urls->descripcion = $result->items[0]->snippet->title;//utf8_decode($result->items[0]->snippet->description);
             $urls->visitas = 0;
             $urls->fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
             $urls->user_id = $request->get('user_id');
@@ -453,9 +455,9 @@ class UrlsController extends Controller
         $urls = new Urls();
         $urls->url_real = $request->get('url');
         $urls->url_acortada = $short;
-        $urls->accion = utf8_encode($request->get('accion'));
-        $urls->titulo = utf8_decode($metas_array['titulo']);
-        $urls->descripcion = utf8_decode($metas_array['descripcion']);
+        $urls->accion = $request->get('accion');//utf8_encode($request->get('accion'));
+        $urls->titulo = $metas_array['titulo'];//utf8_decode($metas_array['titulo']);
+        $urls->descripcion = $metas_array['descripcion'];//utf8_decode($metas_array['descripcion']);
         $urls->visitas = 0;
         $urls->fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d H:i');
         $urls->user_id = $request->get('user_id');

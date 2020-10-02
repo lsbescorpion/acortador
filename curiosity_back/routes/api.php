@@ -26,6 +26,7 @@ Route::get('usr/remphotos', 'API\UsersController@remPhotos')->name('remphotos');
 Route::get('users/ganancias', 'API\UsersController@getGanancias')->name('ganancias');
 Route::post('users/adduser', 'API\UsersController@AddUser')->name('AddUser');
 Route::get('users/ranking', 'API\UsersController@ranking')->name('ranking');
+Route::get('users/menusal', 'API\UsersController@GananciaMenuales')->name('menusal');
 
 
 Route::post('urls/acortar', 'API\UrlsController@acortar')->name('acortar');
