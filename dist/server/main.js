@@ -8557,7 +8557,7 @@ var RenderType_TemporalComponent = i1.ɵcrt({ encapsulation: 0, styles: styles_T
 exports.RenderType_TemporalComponent = RenderType_TemporalComponent;
 function View_TemporalComponent_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 0, "div", [["id", "bloque"]], null, null, null, null, null)), (_l()(), i1.ɵeld(1, 0, null, null, 28, "div", [["class", "wrapper wrapper-full-page"]], null, null, null, null, null)), (_l()(), i1.ɵeld(2, 0, null, null, 0, "div", [["id", "M539567ScriptRootC979366"]], null, null, null, null, null)), (_l()(), i1.ɵeld(3, 0, null, null, 26, "div", [["class", "page-header pricing-page header-filter"], ["filter-color", "black"]], null, null, null, null, null)), (_l()(), i1.ɵeld(4, 0, null, null, 25, "div", [["class", "container"]], null, null, null, null, null)), (_l()(), i1.ɵeld(5, 0, null, null, 24, "div", [["class", "main-content"], ["id", "foco"]], null, null, null, null, null)), (_l()(), i1.ɵeld(6, 0, null, null, 23, "div", [["class", "card"]], null, null, null, null, null)), (_l()(), i1.ɵeld(7, 0, null, null, 22, "div", [["class", "card-body"]], null, null, null, null, null)), (_l()(), i1.ɵeld(8, 0, null, null, 16, "div", [["class", "row"]], null, null, null, null, null)), (_l()(), i1.ɵeld(9, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(10, 0, null, null, 1, "div", [["class", "SC_TBlock"], ["id", "SC_TBlock_750988"]], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["loading..."])), (_l()(), i1.ɵeld(12, 0, null, null, 11, "div", [["class", "row col-md-12 mb-3 mt-3"]], null, null, null, null, null)), (_l()(), i1.ɵeld(13, 0, null, null, 2, "div", [["class", "col-md-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(14, 0, null, null, 1, "div", [["class", "fileinput-new thumbnail"]], null, null, null, null, null)), (_l()(), i1.ɵeld(15, 0, null, null, 0, "img", [["alt", "..."], ["height", "150"], ["width", "150"]], [[8, "src", 4]], null, null, null, null)), (_l()(), i1.ɵeld(16, 0, null, null, 7, "div", [["class", "col-md-8"]], null, null, null, null, null)), (_l()(), i1.ɵeld(17, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-left"]], null, null, null, null, null)), (_l()(), i1.ɵeld(18, 0, null, null, 1, "h4", [], null, null, null, null, null)), (_l()(), i1.ɵted(19, null, ["", ""])), (_l()(), i1.ɵeld(20, 0, null, null, 3, "div", [["class", "col-md-12 mb-2 text-left mb-2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(21, 0, null, null, 2, "button", [["class", "btn-count"], ["color", "warn"], ["mat-flat-button", ""], ["type", "button"]], [[8, "disabled", 0], [2, "_mat-animation-noopable", null]], null, null, i2.View_MatButton_0, i2.RenderType_MatButton)), i1.ɵdid(22, 180224, null, 0, i3.MatButton, [i1.ElementRef, i4.Platform, i5.FocusMonitor, [2, i6.ANIMATION_MODULE_TYPE]], { color: [0, "color"] }, null), (_l()(), i1.ɵeld(23, 0, null, 0, 0, "div", [["id", "clock"]], null, null, null, null, null)), (_l()(), i1.ɵeld(24, 0, null, null, 0, "div", [["class", "col-md-12 ml-auto mr-auto mb-1 mt-2 text-center"], ["id", "div2"]], null, null, null, null, null)), (_l()(), i1.ɵeld(25, 0, null, null, 2, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(26, 0, null, null, 1, "h2", [], null, null, null, null, null)), (_l()(), i1.ɵted(-1, null, ["CONTENIDO MAS POPULAR EN EL SISTEMA"])), (_l()(), i1.ɵeld(28, 0, null, null, 1, "div", [["class", "col-md-12 ml-auto mr-auto mb-4 text-center"]], null, null, null, null, null)), (_l()(), i1.ɵeld(29, 0, null, null, 0, "div", [["id", "M539567ScriptRootC917293"]], null, null, null, null, null)), (_l()(), i1.ɵeld(30, 0, null, null, 0, "div", [["id", "bloque1"]], null, null, null, null, null))], function (_ck, _v) { var currVal_4 = "warn"; _ck(_v, 22, 0, currVal_4); }, function (_ck, _v) { var _co = _v.component; var currVal_0 = _co.foto; _ck(_v, 15, 0, currVal_0); var currVal_1 = _co.title; _ck(_v, 19, 0, currVal_1); var currVal_2 = (i1.ɵnov(_v, 22).disabled || null); var currVal_3 = (i1.ɵnov(_v, 22)._animationMode === "NoopAnimations"); _ck(_v, 21, 0, currVal_2, currVal_3); }); }
 exports.View_TemporalComponent_0 = View_TemporalComponent_0;
-function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 12697600, null, 0, i7.TemporalComponent, [i8.ActivatedRoute, i8.Router, i9.UrlsService, i10.Meta, i10.Title, i11.Globals, i10.DOCUMENT, i12.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
+function View_TemporalComponent_Host_0(_l) { return i1.ɵvid(0, [(_l()(), i1.ɵeld(0, 0, null, null, 1, "app-temporal", [], null, null, null, View_TemporalComponent_0, RenderType_TemporalComponent)), i1.ɵdid(1, 4308992, null, 0, i7.TemporalComponent, [i8.ActivatedRoute, i8.Router, i9.UrlsService, i10.Meta, i10.Title, i11.Globals, i10.DOCUMENT, i12.BlogService], null, null)], function (_ck, _v) { _ck(_v, 1, 0); }, null); }
 exports.View_TemporalComponent_Host_0 = View_TemporalComponent_Host_0;
 var TemporalComponentNgFactory = i1.ɵccf("app-temporal", i7.TemporalComponent, View_TemporalComponent_Host_0, {}, {}, []);
 exports.TemporalComponentNgFactory = TemporalComponentNgFactory;
@@ -8659,35 +8659,15 @@ var TemporalComponent = /** @class */ (function () {
         this.foto = "";
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                $('body').addClass("off-canvas-sidebar");
-                return [2 /*return*/];
-            });
-        });
-    };
-    TemporalComponent.prototype.ngAfterViewChecked = function () {
-        /*const anchors = document.getElementsByTagName('a');
-        for (let i = 0; i < anchors.length; i++) {
-            let valores = anchors[i].href.split('/');
-            if(Number.isInteger(parseInt(valores[valores.length - 1]))) {
-                const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-                const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-                const p = new RegExp(a.split('').join('|'), 'g')
-
-                let fin = anchors[i].title.toString().toLowerCase()
-                    .replace(/\s+/g, '-') // Replace spaces with -
-                    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-                    .replace(/&/g, '-and-') // Replace & with 'and'
-                    .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-                    .replace(/\-\-+/g, '-') // Replace multiple - with single -
-                    .replace(/^-+/, '') // Trim - from start of text
-                    .replace(/-+$/, '') // Trim - from end of text
-                if(fin != '') {
-                    anchors[i].setAttribute('href', '/' + $(anchors[i]).attr('categoria') + '/' + fin);
-                }
-            }
-        }*/
+        $('body').addClass("off-canvas-sidebar");
+        console.log(1);
+        /*this.urlsService.getUrlPop()
+            .subscribe(data => {
+                let va: any = data;
+                const decodedData = Base64.decode(va);
+                let da: any = JSON.parse(decodedData);
+                this.popular = da;
+            })*/
     };
     TemporalComponent.prototype.ngOnInit = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -8695,6 +8675,7 @@ var TemporalComponent = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        console.log(2);
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
@@ -8702,7 +8683,6 @@ var TemporalComponent = /** @class */ (function () {
                         this.urlsService.getAgent(d)
                             .subscribe(function (data) {
                             var da = data;
-                            console.log(da);
                         });
                         if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '')
                             this.setScript();
@@ -8763,9 +8743,6 @@ var TemporalComponent = /** @class */ (function () {
     };
     TemporalComponent.prototype.getUrl = function (id_url, refer) {
         var _this = this;
-        /*let script1: any = this.document.createElement('script');
-        script1.src = "https://cdn.siteswithcontent.com/js/push/subscribe.js?v=1.1.0";
-        this.document.head.appendChild(script1);*/
         var promise = new Promise(function (resolve, reject) {
             _this.urlsService.getUrl(id_url, refer)
                 .toPromise()
@@ -8781,20 +8758,19 @@ var TemporalComponent = /** @class */ (function () {
                 link.setAttribute('href', this.url.url_real);*/
                 $('link[rel="canonical"]').attr('href', _this.url.url_real);
                 _this.titleService.setTitle(da.titulo);
-                /*this.meta.updateTag({name: 'title', content: da.titulo});
-                this.meta.updateTag({name: 'description', content: da.descripcion});
-                this.meta.updateTag({property: 'og:url', content: this.url.url_real});
-                this.meta.updateTag({property: 'og:title', content: da.titulo});
-                this.meta.updateTag({property: 'og:description', content: da.descripcion});
-                this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
-                this.meta.updateTag({property: 'og:image:width', content: '740'});
-                this.meta.updateTag({property: 'og:image:height', content: '370'});
-
-                this.meta.updateTag({name: 'twitter:card', content: "summary"});
-                this.meta.updateTag({name: 'twitter:site', content: this.url.url_real});
-                this.meta.updateTag({name: 'twitter:title', content: da.titulo});
-                this.meta.updateTag({name: 'twitter:description', content: da.descripcion});
-                this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+da.foto});*/
+                _this.meta.updateTag({ name: 'title', content: da.titulo });
+                _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                //this.meta.updateTag({property: 'og:url', content: this.url.url_real});
+                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                _this.meta.updateTag({ name: 'twitter:site', content: _this.url.url_real });
+                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
+                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
+                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
                 if (refe == null) {
@@ -8829,20 +8805,19 @@ var TemporalComponent = /** @class */ (function () {
                     link.setAttribute('href', err.url_real);*/
                     $('link[rel="canonical"]').attr('href', err.url_real);
                     _this.titleService.setTitle(err.titulo);
-                    /*this.meta.updateTag({name: 'title', content: err.titulo});
-                    this.meta.updateTag({name: 'description', content: err.descripcion});
-                    this.meta.updateTag({property: 'og:url', content: err.url_real});
-                    this.meta.updateTag({property: 'og:title', content: err.titulo});
-                    this.meta.updateTag({property: 'og:description', content: err.descripcion});
-                    this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+err.foto});
-                    this.meta.updateTag({property: 'og:image:width', content: '740'});
-                    this.meta.updateTag({property: 'og:image:height', content: '370'});
-
-                    this.meta.updateTag({name: 'twitter:card', content: "summary"});
-                    this.meta.updateTag({name: 'twitter:site', content: err.url_real});
-                    this.meta.updateTag({name: 'twitter:title', content: err.titulo});
-                    this.meta.updateTag({name: 'twitter:description', content: err.descripcion});
-                    this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+err.foto});*/
+                    _this.meta.updateTag({ name: 'title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'description', content: err.descripcion });
+                    //this.meta.updateTag({property: 'og:url', content: err.url_real});
+                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
+                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
+                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
+                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
+                    _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
+                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
+                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
+                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                     _this.title = err.accion;
                     window.location.href = err.url_real;
                     resolve();
