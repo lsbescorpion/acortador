@@ -8750,20 +8750,14 @@ var TemporalComponent = /** @class */ (function () {
                 var da = JSON.parse(decodedData);
                 var refe = refer;
                 _this.url = da;
-                /*let link: any = this.document.createElement('link');
-                link.setAttribute('rel', 'canonical');
-                this.document.head.appendChild(link);
-                link.setAttribute('href', this.url.url_real);*/
                 $('head').append('<link rel="canonical" href="' + _this.url.url_real + '">');
                 $('head').append('<meta property="og:url" content="' + _this.url.url_real + '" />');
-                //$('link[rel="canonical"]').attr('href',this.url.url_real);
+                $('head').append('<meta property="og:title" content="' + da.titulo + '" />');
+                $('head').append('<meta property="og:description" content="' + da.descripcion + '" />');
+                $('head').append('<meta property="og:image" content="' + _this.globals.urlPhoto + da.foto + '" />');
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                //this.meta.updateTag({property: 'og:url', content: this.url.url_real});
-                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
                 _this.meta.updateTag({ property: 'og:image:width', content: '740' });
                 _this.meta.updateTag({ property: 'og:image:height', content: '370' });
                 _this.title = da.accion;
@@ -8794,20 +8788,14 @@ var TemporalComponent = /** @class */ (function () {
                 _this.url = err;
                 if (err.id != null) {
                     _this.show = false;
-                    /*let link: any = this.document.createElement('link');
-                    link.setAttribute('rel', 'canonical');
-                    this.document.head.appendChild(link);
-                    link.setAttribute('href', err.url_real);*/
-                    //$('link[rel="canonical"]').attr('href',err.url_real);
                     $('head').append('<link rel="canonical" href="' + err.url_real + '">');
                     $('head').append('<meta property="og:url" content="' + err.url_real + '" />');
+                    $('head').append('<meta property="og:title" content="' + err.titulo + '" />');
+                    $('head').append('<meta property="og:description" content="' + err.descripcion + '" />');
+                    $('head').append('<meta property="og:image" content="' + _this.globals.urlPhoto + err.foto + '" />');
                     _this.titleService.setTitle(err.titulo);
                     _this.meta.updateTag({ name: 'title', content: err.titulo });
                     _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                    //this.meta.updateTag({property: 'og:url', content: err.url_real});
-                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
-                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
-                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
                     _this.meta.updateTag({ property: 'og:image:width', content: '740' });
                     _this.meta.updateTag({ property: 'og:image:height', content: '370' });
                     _this.title = err.accion;
