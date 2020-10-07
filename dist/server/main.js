@@ -8756,7 +8756,8 @@ var TemporalComponent = /** @class */ (function () {
                 link.setAttribute('rel', 'canonical');
                 this.document.head.appendChild(link);
                 link.setAttribute('href', this.url.url_real);*/
-                $('link[rel="canonical"]').attr('href', _this.url.url_real);
+                $('head').append('<link rel="canonical" href="' + _this.url.url_real + '">');
+                //$('link[rel="canonical"]').attr('href',this.url.url_real);
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.descripcion });
@@ -8803,7 +8804,8 @@ var TemporalComponent = /** @class */ (function () {
                     link.setAttribute('rel', 'canonical');
                     this.document.head.appendChild(link);
                     link.setAttribute('href', err.url_real);*/
-                    $('link[rel="canonical"]').attr('href', err.url_real);
+                    //$('link[rel="canonical"]').attr('href',err.url_real);
+                    $('head').append('<link rel="canonical" href="' + err.url_real + '">');
                     _this.titleService.setTitle(err.titulo);
                     _this.meta.updateTag({ name: 'title', content: err.titulo });
                     _this.meta.updateTag({ name: 'description', content: err.descripcion });
