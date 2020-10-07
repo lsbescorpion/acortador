@@ -8755,11 +8755,18 @@ var TemporalComponent = /** @class */ (function () {
         script2.async = true;
         script2.src = "https://jsc.mgid.com/p/a/paracubafb.com.979366.js";
         this.document.head.appendChild(script2);
-        /*let script3: any = this.document.createElement('script');
+        var script3 = this.document.createElement('script');
         script3.src = "https://apis.google.com/js/platform.js";
         var bloque3 = this.document.getElementById('div2');
         bloque3.appendChild(script3);
-        let script4: any = this.document.createElement('div');
+        var script6 = this.document.createElement('script');
+        script6.async = true;
+        script6.defer = true;
+        script6.crossorigin = "anonymous";
+        script6.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=962722547576860&autoLogAppEvents=1";
+        script6.nonce = "bCUPezyi";
+        bloque3.appendChild(script6);
+        /*let script4: any = this.document.createElement('div');
         bloque3.appendChild(script4);
         $(script4).addClass("g-ytsubscribe");
         $(script4).attr('data-channelid',"UCr5i3ARAGYnFNHZu4HHXyJQ");
@@ -8768,13 +8775,6 @@ var TemporalComponent = /** @class */ (function () {
         let script5: any = this.document.createElement('div');
         script5.id = "fb-root";
         bloque3.appendChild(script5);
-        let script6: any = this.document.createElement('script');
-        script6.async = true;
-        script6.defer = true;
-        script6.crossorigin = "anonymous";
-        script6.src = "https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v8.0&appId=962722547576860&autoLogAppEvents=1";
-        script6.nonce = "bCUPezyi";
-        bloque3.appendChild(script6);
         let script7: any = this.document.createElement('div');
         bloque3.appendChild(script7);
         $(script7).addClass("fb-group");
@@ -8796,7 +8796,6 @@ var TemporalComponent = /** @class */ (function () {
                 var refe = refer;
                 _this.url = da;
                 var link = _this.document.createElement('link');
-                link.setAttribute('async', true);
                 link.setAttribute('rel', 'canonical');
                 _this.document.head.appendChild(link);
                 link.setAttribute('href', _this.url.url_real);
@@ -8843,7 +8842,6 @@ var TemporalComponent = /** @class */ (function () {
                 if (err.id != null) {
                     _this.show = false;
                     var link = _this.document.createElement('link');
-                    link.setAttribute('async', true);
                     link.setAttribute('rel', 'canonical');
                     _this.document.head.appendChild(link);
                     link.setAttribute('href', err.url_real);
