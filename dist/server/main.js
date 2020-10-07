@@ -8780,19 +8780,20 @@ var TemporalComponent = /** @class */ (function () {
                 _this.document.head.appendChild(link);
                 link.setAttribute('href', _this.url.url_real);
                 _this.titleService.setTitle(da.titulo);
-                _this.meta.updateTag({ name: 'title', content: da.titulo });
-                _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:url', content: _this.url.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
-                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                _this.meta.updateTag({ name: 'twitter:site', content: _this.url.url_real /*this.globals.urlShared + "/" + da.categoria.categoria + "/" + da.url_acortada*/ });
-                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
+                /*this.meta.updateTag({name: 'title', content: da.titulo});
+                this.meta.updateTag({name: 'description', content: da.descripcion});
+                this.meta.updateTag({property: 'og:url', content: this.url.url_real});
+                this.meta.updateTag({property: 'og:title', content: da.titulo});
+                this.meta.updateTag({property: 'og:description', content: da.descripcion});
+                this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
+                this.meta.updateTag({property: 'og:image:width', content: '740'});
+                this.meta.updateTag({property: 'og:image:height', content: '370'});
+
+                this.meta.updateTag({name: 'twitter:card', content: "summary"});
+                this.meta.updateTag({name: 'twitter:site', content: this.url.url_real});
+                this.meta.updateTag({name: 'twitter:title', content: da.titulo});
+                this.meta.updateTag({name: 'twitter:description', content: da.descripcion});
+                this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+da.foto});*/
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
                 if (refe == null) {
@@ -8826,19 +8827,20 @@ var TemporalComponent = /** @class */ (function () {
                     _this.document.head.appendChild(link);
                     link.setAttribute('href', err.url_real);
                     _this.titleService.setTitle(err.titulo);
-                    _this.meta.updateTag({ name: 'title', content: err.titulo });
-                    _this.meta.updateTag({ name: 'description', content: err.descripcion });
-                    _this.meta.updateTag({ property: 'og:url', content: err.url_real /*this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada*/ });
-                    _this.meta.updateTag({ property: 'og:title', content: err.titulo });
-                    _this.meta.updateTag({ property: 'og:description', content: err.descripcion });
-                    _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
-                    _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                    _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    _this.meta.updateTag({ name: 'twitter:site', content: err.url_real /*this.globals.urlShared + "/" + err.categoria.categoria + "/" + err.url_acortada*/ });
-                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
-                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
-                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
+                    /*this.meta.updateTag({name: 'title', content: err.titulo});
+                    this.meta.updateTag({name: 'description', content: err.descripcion});
+                    this.meta.updateTag({property: 'og:url', content: err.url_real});
+                    this.meta.updateTag({property: 'og:title', content: err.titulo});
+                    this.meta.updateTag({property: 'og:description', content: err.descripcion});
+                    this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+err.foto});
+                    this.meta.updateTag({property: 'og:image:width', content: '740'});
+                    this.meta.updateTag({property: 'og:image:height', content: '370'});
+
+                    this.meta.updateTag({name: 'twitter:card', content: "summary"});
+                    this.meta.updateTag({name: 'twitter:site', content: err.url_real});
+                    this.meta.updateTag({name: 'twitter:title', content: err.titulo});
+                    this.meta.updateTag({name: 'twitter:description', content: err.descripcion});
+                    this.meta.updateTag({name: 'twitter:image', content: this.globals.urlPhoto+err.foto});*/
                     _this.title = err.accion;
                     window.location.href = err.url_real;
                     resolve();
