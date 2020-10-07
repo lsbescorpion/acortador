@@ -2287,8 +2287,8 @@ var Globals = /** @class */ (function () {
     function Globals() {
         this.apiUrl = 'https://en.paracubafb.com/api';
         this.urlPhoto = 'https://en.paracubafb.com/';
-        this.globalUrl = 'https://paracubafb.com';
-        this.urlShared = 'https://paracubafb.com/categoria';
+        this.globalUrl = 'https://www.paracubafb.com';
+        this.urlShared = 'https://www.paracubafb.com/categoria';
         this.isLogued = false;
         this.role = '';
         this.refer = '';
