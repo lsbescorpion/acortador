@@ -8775,10 +8775,11 @@ var TemporalComponent = /** @class */ (function () {
                 var da = JSON.parse(decodedData);
                 var refe = refer;
                 _this.url = da;
-                var link = _this.document.createElement('link');
+                /*let link: any = this.document.createElement('link');
                 link.setAttribute('rel', 'canonical');
-                _this.document.head.appendChild(link);
-                link.setAttribute('href', _this.url.url_real);
+                this.document.head.appendChild(link);
+                link.setAttribute('href', this.url.url_real);*/
+                $('link[rel="canonical"]').attr('href', _this.url.url_real);
                 _this.titleService.setTitle(da.titulo);
                 /*this.meta.updateTag({name: 'title', content: da.titulo});
                 this.meta.updateTag({name: 'description', content: da.descripcion});
@@ -8822,10 +8823,11 @@ var TemporalComponent = /** @class */ (function () {
                 _this.url = err;
                 if (err.id != null) {
                     _this.show = false;
-                    var link = _this.document.createElement('link');
+                    /*let link: any = this.document.createElement('link');
                     link.setAttribute('rel', 'canonical');
-                    _this.document.head.appendChild(link);
-                    link.setAttribute('href', err.url_real);
+                    this.document.head.appendChild(link);
+                    link.setAttribute('href', err.url_real);*/
+                    $('link[rel="canonical"]').attr('href', err.url_real);
                     _this.titleService.setTitle(err.titulo);
                     /*this.meta.updateTag({name: 'title', content: err.titulo});
                     this.meta.updateTag({name: 'description', content: err.descripcion});
