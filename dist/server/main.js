@@ -8660,7 +8660,6 @@ var TemporalComponent = /** @class */ (function () {
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
         $('body').addClass("off-canvas-sidebar");
-        console.log(1);
         /*this.urlsService.getUrlPop()
             .subscribe(data => {
                 let va: any = data;
@@ -8675,7 +8674,6 @@ var TemporalComponent = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        console.log(2);
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
@@ -8757,6 +8755,7 @@ var TemporalComponent = /** @class */ (function () {
                 this.document.head.appendChild(link);
                 link.setAttribute('href', this.url.url_real);*/
                 $('head').append('<link rel="canonical" href="' + _this.url.url_real + '">');
+                $('head').append('<meta property="og:url" content="' + _this.url.url_real + '" />');
                 //$('link[rel="canonical"]').attr('href',this.url.url_real);
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
@@ -8767,11 +8766,6 @@ var TemporalComponent = /** @class */ (function () {
                 _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
                 _this.meta.updateTag({ property: 'og:image:width', content: '740' });
                 _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                _this.meta.updateTag({ name: 'twitter:site', content: _this.url.url_real });
-                _this.meta.updateTag({ name: 'twitter:title', content: da.titulo });
-                _this.meta.updateTag({ name: 'twitter:description', content: da.descripcion });
-                _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + da.foto });
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
                 if (refe == null) {
@@ -8806,6 +8800,7 @@ var TemporalComponent = /** @class */ (function () {
                     link.setAttribute('href', err.url_real);*/
                     //$('link[rel="canonical"]').attr('href',err.url_real);
                     $('head').append('<link rel="canonical" href="' + err.url_real + '">');
+                    $('head').append('<meta property="og:url" content="' + err.url_real + '" />');
                     _this.titleService.setTitle(err.titulo);
                     _this.meta.updateTag({ name: 'title', content: err.titulo });
                     _this.meta.updateTag({ name: 'description', content: err.descripcion });
@@ -8815,11 +8810,6 @@ var TemporalComponent = /** @class */ (function () {
                     _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + err.foto });
                     _this.meta.updateTag({ property: 'og:image:width', content: '740' });
                     _this.meta.updateTag({ property: 'og:image:height', content: '370' });
-                    _this.meta.updateTag({ name: 'twitter:card', content: "summary" });
-                    _this.meta.updateTag({ name: 'twitter:site', content: err.url_real });
-                    _this.meta.updateTag({ name: 'twitter:title', content: err.titulo });
-                    _this.meta.updateTag({ name: 'twitter:description', content: err.descripcion });
-                    _this.meta.updateTag({ name: 'twitter:image', content: _this.globals.urlPhoto + err.foto });
                     _this.title = err.accion;
                     window.location.href = err.url_real;
                     resolve();
