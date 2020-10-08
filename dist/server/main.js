@@ -8643,6 +8643,7 @@ var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
 var $ = __webpack_require__(/*! jquery */ "jquery");
 var TemporalComponent = /** @class */ (function () {
     function TemporalComponent(route, router, urlsService, meta, titleService, globals, document, blogService) {
+        var _this = this;
         this.route = route;
         this.router = router;
         this.urlsService = urlsService;
@@ -8657,6 +8658,28 @@ var TemporalComponent = /** @class */ (function () {
         this.id_url = null;
         this.popular = [];
         this.foto = "";
+        var url_id = this.route.snapshot.paramMap.get('id');
+        if (url_id != null) {
+            this.urlsService.getMiddle(url_id)
+                .subscribe(function (data) {
+                var va = data;
+                var decodedData = js_base64_1.Base64.decode(va); //new Buffer(base64, 'base64').toString('ascii');//window.atob(va);
+                var da = JSON.parse(decodedData);
+                $('head').prepend('<link rel="canonical" href="' + da.url_real + '">');
+                $('head').prepend('<meta property="og:url" content="' + da.url_real + '" />');
+                _this.titleService.setTitle(da.titulo);
+                _this.meta.updateTag({ name: 'title', content: da.titulo });
+                _this.meta.updateTag({ name: 'description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
+                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
+                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
+                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
+                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                _this.title = da.accion;
+            }, function (err1) {
+                _this.router.navigate(['404']);
+            });
+        }
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
         $('body').addClass("off-canvas-sidebar");
@@ -8750,16 +8773,16 @@ var TemporalComponent = /** @class */ (function () {
                 var da = JSON.parse(decodedData);
                 var refe = refer;
                 _this.url = da;
-                $('head').prepend('<link rel="canonical" href="' + _this.url.url_real + '">');
-                $('head').prepend('<meta property="og:url" content="' + _this.url.url_real + '" />');
-                _this.titleService.setTitle(da.titulo);
-                _this.meta.updateTag({ name: 'title', content: da.titulo });
-                _this.meta.updateTag({ name: 'description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:title', content: da.titulo });
-                _this.meta.updateTag({ property: 'og:description', content: da.descripcion });
-                _this.meta.updateTag({ property: 'og:image', content: _this.globals.urlPhoto + da.foto });
-                _this.meta.updateTag({ property: 'og:image:width', content: '740' });
-                _this.meta.updateTag({ property: 'og:image:height', content: '370' });
+                /*$('head').prepend('<link rel="canonical" href="'+this.url.url_real+'">');
+                $('head').prepend('<meta property="og:url" content="'+this.url.url_real+'" />');
+                this.titleService.setTitle(da.titulo);
+                this.meta.updateTag({name: 'title', content: da.titulo});
+                this.meta.updateTag({name: 'description', content: da.descripcion});
+                this.meta.updateTag({property: 'og:title', content: da.titulo});
+                this.meta.updateTag({property: 'og:description', content: da.descripcion});
+                this.meta.updateTag({property: 'og:image', content: this.globals.urlPhoto+da.foto});
+                this.meta.updateTag({property: 'og:image:width', content: '740'});
+                this.meta.updateTag({property: 'og:image:height', content: '370'});*/
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
                 if (refe == null) {
