@@ -1162,7 +1162,6 @@ var AppComponent = /** @class */ (function () {
         this.visible = true;
         this.close = new core_1.EventEmitter();
         this.router.events.subscribe(function (event) {
-            console.log(_this.router.url);
             _this.navigationInterceptor(event);
         });
     }
@@ -8644,7 +8643,6 @@ var js_base64_1 = __webpack_require__(/*! js-base64 */ "js-base64");
 var $ = __webpack_require__(/*! jquery */ "jquery");
 var TemporalComponent = /** @class */ (function () {
     function TemporalComponent(route, router, urlsService, meta, titleService, globals, document, blogService) {
-        var _this = this;
         this.route = route;
         this.router = router;
         this.urlsService = urlsService;
@@ -8659,10 +8657,12 @@ var TemporalComponent = /** @class */ (function () {
         this.id_url = null;
         this.popular = [];
         this.foto = "";
+    }
+    TemporalComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        $('body').addClass("off-canvas-sidebar");
         var url_id = this.route.snapshot.paramMap.get('id');
-        console.log(1);
         if (url_id != null) {
-            console.log(2);
             this.urlsService.getMiddle(url_id)
                 .subscribe(function (data) {
                 var va = data;
@@ -8683,10 +8683,6 @@ var TemporalComponent = /** @class */ (function () {
                 _this.router.navigate(['404']);
             });
         }
-    }
-    TemporalComponent.prototype.ngAfterViewInit = function () {
-        console.log(3);
-        $('body').addClass("off-canvas-sidebar");
         /*this.urlsService.getUrlPop()
             .subscribe(data => {
                 let va: any = data;
@@ -8701,7 +8697,6 @@ var TemporalComponent = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        console.log(4);
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
