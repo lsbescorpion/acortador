@@ -1162,6 +1162,7 @@ var AppComponent = /** @class */ (function () {
         this.visible = true;
         this.close = new core_1.EventEmitter();
         this.router.events.subscribe(function (event) {
+            console.log(_this.router.url);
             _this.navigationInterceptor(event);
         });
     }
@@ -8659,14 +8660,16 @@ var TemporalComponent = /** @class */ (function () {
         this.popular = [];
         this.foto = "";
         var url_id = this.route.snapshot.paramMap.get('id');
+        console.log(1);
         if (url_id != null) {
+            console.log(2);
             this.urlsService.getMiddle(url_id)
                 .subscribe(function (data) {
                 var va = data;
                 var decodedData = js_base64_1.Base64.decode(va); //new Buffer(base64, 'base64').toString('ascii');//window.atob(va);
                 var da = JSON.parse(decodedData);
-                $('head').prepend('<link rel="canonical" href="' + da.url_real + '">');
-                $('head').prepend('<meta property="og:url" content="' + da.url_real + '" />');
+                $('link[rel="canonical"]').attr('href', da.url_real);
+                $('meta[property="og:url"]').attr('content', da.url_real);
                 _this.titleService.setTitle(da.titulo);
                 _this.meta.updateTag({ name: 'title', content: da.titulo });
                 _this.meta.updateTag({ name: 'description', content: da.descripcion });
@@ -8682,6 +8685,7 @@ var TemporalComponent = /** @class */ (function () {
         }
     }
     TemporalComponent.prototype.ngAfterViewInit = function () {
+        console.log(3);
         $('body').addClass("off-canvas-sidebar");
         /*this.urlsService.getUrlPop()
             .subscribe(data => {
@@ -8697,6 +8701,7 @@ var TemporalComponent = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
+                        console.log(4);
                         this.id_url = this.route.snapshot.paramMap.get('id');
                         if (!(this.id_url != null)) return [3 /*break*/, 2];
                         this.show = true;
@@ -8710,14 +8715,15 @@ var TemporalComponent = /** @class */ (function () {
                         return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
                     case 1:
                         _a.sent();
-                        if (this.globals.refer == null) {
+                        /*if(this.globals.refer == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
                         }
-                        else if (this.globals.refer.match(/facebook/) == null) {
+                        else
+                        if(this.globals.refer.match(/facebook/) == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
-                        }
+                        }*/
                         if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '') {
                             this.urlsService.setVisita(this.id_url)
                                 .subscribe(function (data) {
@@ -8785,14 +8791,15 @@ var TemporalComponent = /** @class */ (function () {
                 this.meta.updateTag({property: 'og:image:height', content: '370'});*/
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
-                if (refe == null) {
-                    _this.show = false;
+                /*if(refe == null) {
+                    this.show = false;
                     window.location.href = da.url_real;
                 }
-                else if (refe.match(/facebook/) == null) {
-                    _this.show = false;
+                else
+                if(refe.match(/facebook/) == null) {
+                    this.show = false;
                     window.location.href = da.url_real;
-                }
+                }*/
                 var that = _this;
                 var fiveSeconds = new Date().getTime() + 20000;
                 setTimeout(function () {
