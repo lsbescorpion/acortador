@@ -8698,18 +8698,20 @@ var TemporalComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         this.id_url = this.route.snapshot.paramMap.get('id');
-                        if (!(this.id_url != null)) return [3 /*break*/, 2];
+                        if (!(this.id_url != null)) return [3 /*break*/, 3];
                         this.show = true;
                         d = this.globals.referr + "::" + this.globals.refer;
                         this.urlsService.getAgent(d)
                             .subscribe(function (data) {
                             var da = data;
                         });
-                        if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '')
-                            this.setScript();
+                        this.setScript();
+                        if (!(this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '')) return [3 /*break*/, 2];
                         return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
                     case 1:
                         _a.sent();
+                        _a.label = 2;
+                    case 2:
                         /*if(this.globals.refer == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
@@ -8725,8 +8727,8 @@ var TemporalComponent = /** @class */ (function () {
                                 var va = data;
                             });
                         }
-                        _a.label = 2;
-                    case 2: return [2 /*return*/];
+                        _a.label = 3;
+                    case 3: return [2 /*return*/];
                 }
             });
         });
@@ -8750,8 +8752,8 @@ var TemporalComponent = /** @class */ (function () {
         bloque2.appendChild(scriptnow);*/
         var script1 = this.document.createElement('script');
         script1.async = true;
-        script1.src = "https://jsc.mgid.com/p/a/paracubafb.com.1021364.js";
-        var bloque1 = this.document.getElementById('M539567ScriptRootC1021364');
+        script1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1023541.js";
+        var bloque1 = this.document.getElementById('M602552ScriptRootC1023541');
         bloque1.appendChild(script1);
         var script2 = this.document.createElement('script');
         script2.async = true;
