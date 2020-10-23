@@ -10361,7 +10361,7 @@ var UrlsService = /** @class */ (function () {
         return this.http.get(this.globals.apiUrl + "/url/getmiddle/" + id);
     };
     UrlsService.prototype.getOther = function () {
-        return this.http.get(this.globals.apiUrl + "/url/getother");
+        return this.http.get(this.globals.apiUrl + "/urls/getother");
     };
     UrlsService.ngInjectableDef = i0.defineInjectable({ factory: function UrlsService_Factory() { return new UrlsService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: UrlsService, providedIn: "root" });
     return UrlsService;
