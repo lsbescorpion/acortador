@@ -8658,7 +8658,7 @@ var TemporalComponent = /** @class */ (function () {
         this.popular = [];
         this.foto = "";
     }
-    TemporalComponent.prototype.ngAfterViewInit = function () {
+    TemporalComponent.prototype.ngOnInit = function () {
         var _this = this;
         $('body').addClass("off-canvas-sidebar");
         var url_id = this.route.snapshot.paramMap.get('id');
@@ -8691,27 +8691,29 @@ var TemporalComponent = /** @class */ (function () {
                 this.popular = da;
             })*/
     };
-    TemporalComponent.prototype.ngOnInit = function () {
+    TemporalComponent.prototype.ngAfterViewInit = function () {
         return __awaiter(this, void 0, void 0, function () {
             var d;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
                         this.id_url = this.route.snapshot.paramMap.get('id');
-                        if (!(this.id_url != null)) return [3 /*break*/, 3];
+                        if (!(this.id_url != null)) return [3 /*break*/, 4];
                         this.show = true;
                         d = this.globals.referr + "::" + this.globals.refer;
                         this.urlsService.getAgent(d)
                             .subscribe(function (data) {
                             var da = data;
                         });
-                        this.setScript();
-                        if (!(this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '')) return [3 /*break*/, 2];
-                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
+                        return [4 /*yield*/, this.setScript()];
                     case 1:
                         _a.sent();
-                        _a.label = 2;
+                        if (!(this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '')) return [3 /*break*/, 3];
+                        return [4 /*yield*/, this.getUrl(this.id_url, this.globals.refer)];
                     case 2:
+                        _a.sent();
+                        _a.label = 3;
+                    case 3:
                         /*if(this.globals.refer == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
@@ -8727,8 +8729,8 @@ var TemporalComponent = /** @class */ (function () {
                                 var va = data;
                             });
                         }
-                        _a.label = 3;
-                    case 3: return [2 /*return*/];
+                        _a.label = 4;
+                    case 4: return [2 /*return*/];
                 }
             });
         });
@@ -8740,6 +8742,7 @@ var TemporalComponent = /** @class */ (function () {
         return utf8_encode(str);
     };
     TemporalComponent.prototype.setScript = function () {
+        var _this = this;
         /*let script: any = this.document.createElement('script');
         script.async = true;
         script.src = "//st-n.ads5-adnow.com/js/a.js";
@@ -8750,16 +8753,20 @@ var TemporalComponent = /** @class */ (function () {
         var bloque2 = this.document.getElementById('SC_TBlock_750988');
         bloque2.appendChild(script);
         bloque2.appendChild(scriptnow);*/
-        var script1 = this.document.createElement('script');
-        script1.async = true;
-        script1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1024042.js";
-        var bloque1 = this.document.getElementById('M602552ScriptRootC1024042');
-        bloque1.appendChild(script1);
-        var script2 = this.document.createElement('script');
-        script2.async = true;
-        script2.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1023540.js";
-        var bloque2 = this.document.getElementById('M602552ScriptRootC1023540');
-        bloque2.appendChild(script2);
+        var promise = new Promise(function (resolve, reject) {
+            var script1 = _this.document.createElement('script');
+            script1.async = true;
+            script1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1024042.js";
+            var bloque1 = _this.document.getElementById('M602552ScriptRootC1024042');
+            bloque1.appendChild(script1);
+            var script2 = _this.document.createElement('script');
+            script2.async = true;
+            script2.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1023540.js";
+            var bloque2 = _this.document.getElementById('M602552ScriptRootC1023540');
+            bloque2.appendChild(script2);
+            resolve();
+        });
+        return promise;
         /*$('#div2').append('<script src="https://apis.google.com/js/platform.js"></script>');
         $('#div2').append('<div class="g-ytsubscribe" data-channelid="UCr5i3ARAGYnFNHZu4HHXyJQ" data-layout="full" data-count="default"></div>');
         $('#div2').append('<div id="fb-root"></div>');
