@@ -8714,15 +8714,14 @@ var TemporalComponent = /** @class */ (function () {
                         _a.sent();
                         _a.label = 3;
                     case 3:
-                        /*if(this.globals.refer == null) {
+                        if (this.globals.refer == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
                         }
-                        else
-                        if(this.globals.refer.match(/facebook/) == null) {
+                        else if (this.globals.refer.match(/facebook/) == null) {
                             this.show = false;
                             window.location.href = this.url.url_real;
-                        }*/
+                        }
                         if (this.globals.referr != null && this.globals.referr != '' && this.globals.refer != null && this.globals.refer != '') {
                             this.urlsService.setVisita(this.id_url)
                                 .subscribe(function (data) {
@@ -8800,15 +8799,14 @@ var TemporalComponent = /** @class */ (function () {
                 this.meta.updateTag({property: 'og:image:height', content: '370'});*/
                 _this.title = da.accion;
                 _this.foto = _this.globals.urlPhoto + da.foto;
-                /*if(refe == null) {
-                    this.show = false;
+                if (refe == null) {
+                    _this.show = false;
                     window.location.href = da.url_real;
                 }
-                else
-                if(refe.match(/facebook/) == null) {
-                    this.show = false;
+                else if (refe.match(/facebook/) == null) {
+                    _this.show = false;
                     window.location.href = da.url_real;
-                }*/
+                }
                 var that = _this;
                 var fiveSeconds = new Date().getTime() + 20000;
                 setTimeout(function () {
