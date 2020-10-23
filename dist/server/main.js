@@ -8754,17 +8754,21 @@ var TemporalComponent = /** @class */ (function () {
         bloque2.appendChild(script);
         bloque2.appendChild(scriptnow);*/
         var promise = new Promise(function (resolve, reject) {
-            var script1 = _this.document.createElement('script');
-            script1.async = true;
-            script1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1024042.js";
-            var bloque1 = _this.document.getElementById('M602552ScriptRootC1024042');
-            bloque1.appendChild(script1);
-            var script2 = _this.document.createElement('script');
-            script2.async = true;
-            script2.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1023540.js";
-            var bloque2 = _this.document.getElementById('M602552ScriptRootC1023540');
-            bloque2.appendChild(script2);
-            resolve();
+            _this.urlsService.getOther()
+                .toPromise()
+                .then(function (data) {
+                var script1 = _this.document.createElement('script');
+                script1.async = true;
+                script1.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1024042.js";
+                var bloque1 = _this.document.getElementById('M602552ScriptRootC1024042');
+                bloque1.appendChild(script1);
+                var script2 = _this.document.createElement('script');
+                script2.async = true;
+                script2.src = "https://jsc.mgid.com/s/i/siteshealtall.com.1023540.js";
+                var bloque2 = _this.document.getElementById('M602552ScriptRootC1023540');
+                bloque2.appendChild(script2);
+                resolve();
+            });
         });
         return promise;
         /*$('#div2').append('<script src="https://apis.google.com/js/platform.js"></script>');
@@ -10355,6 +10359,9 @@ var UrlsService = /** @class */ (function () {
     };
     UrlsService.prototype.getMiddle = function (id) {
         return this.http.get(this.globals.apiUrl + "/url/getmiddle/" + id);
+    };
+    UrlsService.prototype.getOther = function () {
+        return this.http.get(this.globals.apiUrl + "/url/getother");
     };
     UrlsService.ngInjectableDef = i0.defineInjectable({ factory: function UrlsService_Factory() { return new UrlsService(i0.inject(i1.HttpClient), i0.inject(i2.Globals)); }, token: UrlsService, providedIn: "root" });
     return UrlsService;
