@@ -2285,8 +2285,8 @@ exports.DashboardComponent = DashboardComponent;
 Object.defineProperty(exports, "__esModule", { value: true });
 var Globals = /** @class */ (function () {
     function Globals() {
-        this.apiUrl = 'https://back.cropersviral.com/api';
-        this.urlPhoto = 'https://back.cropersviral.com/';
+        this.apiUrl = 'https://back.siteshealtall.com/api';
+        this.urlPhoto = 'https://back.siteshealtall.com/';
         this.globalUrl = 'https://shared.siteshealtall.com';
         this.urlShared = 'https://shared.siteshealtall.com/categoria';
         this.isLogued = false;
