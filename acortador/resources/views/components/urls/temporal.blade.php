@@ -86,6 +86,7 @@
             </div>
         </div>
     </div>
+    <div id="redirect"></div>
     <script src="{{asset('assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/js/core/popper.min.js')}}" type="text/javascript"></script>
     <script src="{{asset('assets/js/core/bootstrap-material-design.min.js')}}" type="text/javascript"></script>
@@ -110,6 +111,11 @@
             $('#btn-submit').text("Ir a la Noticia");
             $('#btn-submit').attr('disabled', false);
             $('#btn-submit').attr('href', url.url_real);
+        });
+        var minuto = new Date().getTime() + 90000;
+        $('#redirect').countdown(minuto, function(event) {
+        }).on('finish.countdown', function(event) {
+            window.location = url.url_real;
         });
     });
     </script>
