@@ -39,6 +39,7 @@
 	<div class="row">
 		<div class="col-md-10 ml-auto mr-auto">
 			<h2 class="title">Salud</h2>
+			@if(count($salud) > 0)
 			<div class="card card-plain card-blog">
 				<div class="row">
 					<div class="col-md-5">
@@ -66,6 +67,8 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
+	        @if(count($salud) > 1)
 	        <div class="card card-plain card-blog">
 	            <div class="row">
 	                <div class="col-md-7">
@@ -96,6 +99,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
 	    </div>
 	</div>
 	<div class="row">
@@ -136,6 +140,7 @@
 	<div class="row">
 		<div class="col-md-10 ml-auto mr-auto">
 			<h2 class="title">Curiosidades</h2>
+			@if(count($curiosidades) > 0)
 			<div class="card card-plain card-blog">
 				<div class="row">
 					<div class="col-md-5">
@@ -163,6 +168,8 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
+	        @if(count($curiosidades) > 1)
 	        <div class="card card-plain card-blog">
 	            <div class="row">
 	                <div class="col-md-7">
@@ -193,6 +200,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
 	    </div>
 	</div>
 	<div class="row">
@@ -233,6 +241,7 @@
 	<div class="row">
 		<div class="col-md-10 ml-auto mr-auto">
 			<h2 class="title">Manualidades</h2>
+			@if(count($manuales) > 0)
 			<div class="card card-plain card-blog">
 				<div class="row">
 					<div class="col-md-5">
@@ -260,6 +269,8 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
+	        @if(count($manuales) > 1)
 	        <div class="card card-plain card-blog">
 	            <div class="row">
 	                <div class="col-md-7">
@@ -288,6 +299,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
 	    </div>
 	</div>
 	<div class="row">
@@ -328,6 +340,7 @@
 	<div class="row">
 		<div class="col-md-10 ml-auto mr-auto">
 			<h2 class="title">Entretenimientos</h2>
+			@if(count($entres) > 0)
 			<div class="card card-plain card-blog">
 				<div class="row">
 					<div class="col-md-5">
@@ -355,6 +368,8 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
+	        @if(count($entres) > 1)
 	        <div class="card card-plain card-blog">
 	            <div class="row">
 	                <div class="col-md-7">
@@ -382,6 +397,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
 	    </div>
 	</div>
 	<div class="row">
@@ -422,6 +438,7 @@
 	<div class="row">
 		<div class="col-md-10 ml-auto mr-auto">
 			<h2 class="title">Videos</h2>
+			@if(count($videos) > 0)
 			<div class="card card-plain card-blog">
 				<div class="row">
 					<div class="col-md-5">
@@ -449,6 +466,8 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
+	        @if(count($videos) > 1)
 	        <div class="card card-plain card-blog">
 	            <div class="row">
 	                <div class="col-md-7">
@@ -477,6 +496,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
 	    </div>
 	</div>
 	<div class="row">
@@ -517,6 +537,7 @@
 	<div class="row">
 		<div class="col-md-10 ml-auto mr-auto">
 			<h2 class="title">Tecnología</h2>
+			@if(count($tecnos) > 0)
 			<div class="card card-plain card-blog">
 				<div class="row">
 					<div class="col-md-5">
@@ -544,6 +565,8 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
+	        @if(count($tecnos) > 1)
 	        <div class="card card-plain card-blog">
 	            <div class="row">
 	                <div class="col-md-7">
@@ -572,6 +595,7 @@
 	                </div>
 	            </div>
 	        </div>
+	        @endif
 	    </div>
 	</div>
 	<div class="row">
