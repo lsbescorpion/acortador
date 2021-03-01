@@ -35,7 +35,6 @@
 
     gtag('config', 'UA-169044892-1');
   </script>
-
 </head>
 
 <body class="signup-page sidebar-collapse">
