@@ -398,6 +398,10 @@
 		<!--end: Datatable-->
 	</div>
 </div>
+<form id="formdelete" action="{{action('UsersController@deleteUrl')}}" method="POST">
+@csrf
+<input type="hidden" name="url_id" id="url_id">
+</form>
 @include('components.user.sticky')
 @endsection
 @section('script')
@@ -481,6 +485,10 @@ jQuery(document).ready(function() {
                	},
            	}
 		],
+	});
+	$(document).on('click', '.delete-url', function() {
+		$('#url_id').val($(this).attr('dato'));
+		$('#formdelete').submit();
 	});
 	$('#roles, #estado').selectpicker();
 	var datatable = $('#kt_datatable').KTDatatable({

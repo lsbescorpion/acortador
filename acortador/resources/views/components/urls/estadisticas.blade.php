@@ -143,7 +143,7 @@
                 <div class="col-md-1 text-left">{{$vp->visitasp}}</div>
                 <div class="col-md-5 text-left" style="margin-top: 5px;">
                     <div class="progress" style="height: 10px;">
-                        <div class="progress-bar progress-bar-danger align-middle" role="progressbar" style="width: {{round((($vp->visitasp * 100) / $url->visitas), 0).'%'}}">{{round((($vp->visitasp * 100) / $url.visitas), 0)}}%</div>
+                        <div class="progress-bar progress-bar-danger align-middle" role="progressbar" style="width: {{round((($vp->visitasp * 100) / $url->visitas), 0).'%'}}">{{round((($vp->visitasp * 100) / $url->visitas), 0)}}%</div>
                     </div>
                 </div>
                 @endforeach

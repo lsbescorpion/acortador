@@ -457,5 +457,11 @@ class UsersController extends Controller{
         //return response()->json($analyticsData);
     }
 
+    public function deleteUrl(Request $request) {
+        $url = Urls::find($request->get('url_id'));
+        $url->delete();
+        return redirect()->route('estadisticasAdmin');
+    }
+
 }
 

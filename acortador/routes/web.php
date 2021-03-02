@@ -58,6 +58,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:Administrador']
 	Route::post('deleteuser', 'UsersController@deleteUser')->name('deleteUser');
 	Route::get('estadisticas', 'UsersController@estadisticasAdmin')->name('estadisticasAdmin');
 	Route::get('analytic', 'UsersController@getAnalytic')->name('getAnalytic');
+	Route::post('deleteurl', 'UsersController@deleteUrl')->name('deleteUrl');
 });
 
 Route::group(['prefix' => 'client', 'middleware' => ['auth']], function () {
