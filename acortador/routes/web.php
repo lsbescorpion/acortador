@@ -59,6 +59,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','role:Administrador']
 	Route::get('estadisticas', 'UsersController@estadisticasAdmin')->name('estadisticasAdmin');
 	Route::get('analytic', 'UsersController@getAnalytic')->name('getAnalytic');
 	Route::post('deleteurl', 'UsersController@deleteUrl')->name('deleteUrl');
+	Route::post('updatecpm', 'UsersController@updateCpm')->name('updateCpm');
 });
 
 Route::group(['prefix' => 'client', 'middleware' => ['auth']], function () {

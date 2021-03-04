@@ -398,6 +398,13 @@ class UsersController extends Controller{
     	return view('components.user.estadisticas', compact('estadisticas', 'users', 'urls'));
     }
 
+    public function updateCpm(Request $request) {
+        $cpm = CPM::find(1);
+        $cpm->cpm = $request->get('cpm_valor');
+        $cpm->save();
+        return redirect()->route('estadisticasAdmin');
+    }
+
     public function getAnalytic() {
         /*$startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
         $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();*/

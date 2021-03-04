@@ -402,11 +402,133 @@
 @csrf
 <input type="hidden" name="url_id" id="url_id">
 </form>
+<div id="cpm" class="offcanvas offcanvas-right p-10">
+    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-15" kt-hidden-height="46" style="">
+        <h4 class="font-weight-bold m-0">Actualizar CPM</h4>
+        <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="cpm_close">
+            <i dato="new_service" class="ki ki-close icon-xs text-muted"></i>
+        </a>
+    </div>
+    <div class="offcanvas-content">
+        <div class="offcanvas-wrapper mb-5">
+        	<form class="form" id="form_save_user" action="{{action('UsersController@updateCpm')}}" method="POST">
+			@csrf
+            <div class="scroll scroll-pull" data-scroll="true" data-wheel-propagation="true" style="height: 250px;">
+                <div class="form-group">
+					<label>CPM Actual</label>
+					<div class="input-group input-group-solid">
+						<input type="text" class="form-control" placeholder="CPM" name="cpm_valor" id="cpm_valor" value="{{$estadisticas['cpm']->cpm}}" required>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<span class="svg-icon svg-icon-2x"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Shopping\Dollar.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+								    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								        <rect x="0" y="0" width="24" height="24"/>
+								        <rect fill="#000000" opacity="0.3" x="11.5" y="2" width="2" height="4" rx="1"/>
+								        <rect fill="#000000" opacity="0.3" x="11.5" y="16" width="2" height="5" rx="1"/>
+								        <path d="M15.493,8.044 C15.2143319,7.68933156 14.8501689,7.40750104 14.4005,7.1985 C13.9508311,6.98949895 13.5170021,6.885 13.099,6.885 C12.8836656,6.885 12.6651678,6.90399981 12.4435,6.942 C12.2218322,6.98000019 12.0223342,7.05283279 11.845,7.1605 C11.6676658,7.2681672 11.5188339,7.40749914 11.3985,7.5785 C11.2781661,7.74950085 11.218,7.96799867 11.218,8.234 C11.218,8.46200114 11.2654995,8.65199924 11.3605,8.804 C11.4555005,8.95600076 11.5948324,9.08899943 11.7785,9.203 C11.9621676,9.31700057 12.1806654,9.42149952 12.434,9.5165 C12.6873346,9.61150047 12.9723317,9.70966616 13.289,9.811 C13.7450023,9.96300076 14.2199975,10.1308324 14.714,10.3145 C15.2080025,10.4981676 15.6576646,10.7419985 16.063,11.046 C16.4683354,11.3500015 16.8039987,11.7268311 17.07,12.1765 C17.3360013,12.6261689 17.469,13.1866633 17.469,13.858 C17.469,14.6306705 17.3265014,15.2988305 17.0415,15.8625 C16.7564986,16.4261695 16.3733357,16.8916648 15.892,17.259 C15.4106643,17.6263352 14.8596698,17.8986658 14.239,18.076 C13.6183302,18.2533342 12.97867,18.342 12.32,18.342 C11.3573285,18.342 10.4263378,18.1741683 9.527,17.8385 C8.62766217,17.5028317 7.88033631,17.0246698 7.285,16.404 L9.413,14.238 C9.74233498,14.6433354 10.176164,14.9821653 10.7145,15.2545 C11.252836,15.5268347 11.7879973,15.663 12.32,15.663 C12.5606679,15.663 12.7949989,15.6376669 13.023,15.587 C13.2510011,15.5363331 13.4504991,15.4540006 13.6215,15.34 C13.7925009,15.2259994 13.9286662,15.0740009 14.03,14.884 C14.1313338,14.693999 14.182,14.4660013 14.182,14.2 C14.182,13.9466654 14.1186673,13.7313342 13.992,13.554 C13.8653327,13.3766658 13.6848345,13.2151674 13.4505,13.0695 C13.2161655,12.9238326 12.9248351,12.7908339 12.5765,12.6705 C12.2281649,12.5501661 11.8323355,12.420334 11.389,12.281 C10.9583312,12.141666 10.5371687,11.9770009 10.1255,11.787 C9.71383127,11.596999 9.34650161,11.3531682 9.0235,11.0555 C8.70049838,10.7578318 8.44083431,10.3968355 8.2445,9.9725 C8.04816568,9.54816454 7.95,9.03200304 7.95,8.424 C7.95,7.67666293 8.10199848,7.03700266 8.406,6.505 C8.71000152,5.97299734 9.10899753,5.53600171 9.603,5.194 C10.0970025,4.85199829 10.6543302,4.60183412 11.275,4.4435 C11.8956698,4.28516587 12.5226635,4.206 13.156,4.206 C13.9160038,4.206 14.6918294,4.34533194 15.4835,4.624 C16.2751706,4.90266806 16.9686637,5.31433061 17.564,5.859 L15.493,8.044 Z" fill="#000000"/>
+								    </g>
+								</svg><!--end::Svg Icon--></span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="form-group text-left">
+	                <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
+	                    Actualizar
+	                </button>
+	            </div>
+            </div>
+        	</form>
+        </div>
+    </div>
+</div>
 @include('components.user.sticky')
 @endsection
 @section('script')
 <script type="text/javascript">
+var Templates = function() {
+    var _body;
+    var _element;
+    var _offcanvasObject;
+    
+    var _init = function(icon,close) {
+        _offcanvasObject = new KTOffcanvas(_element, {
+            overlay: false,
+            baseClass: 'offcanvas',
+            placement: 'right',
+            closeBy: close,
+            toggleBy: icon
+        });
+
+        var header = KTUtil.find(_element, '.offcanvas-header');
+        var content = KTUtil.find(_element, '.offcanvas-content');
+        var wrapper = KTUtil.find(_element, '.offcanvas-wrapper');
+        var footer = KTUtil.find(_element, '.offcanvas-footer');
+
+        KTUtil.scrollInit(wrapper, {
+            disableForMobile: true,
+            resetHeightOnDestroy: false,
+            handleWindowResize: false,
+            height: function() {
+                var height = parseInt(KTUtil.getViewPort().height);
+
+                if (header) {
+                    height = height - parseInt(KTUtil.actualHeight(header));
+                    height = height - parseInt(KTUtil.css(header, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(header, 'marginBottom'));
+                }
+
+                if (content) {
+                    height = height - parseInt(KTUtil.css(content, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(content, 'marginBottom'));
+                }
+
+                if (wrapper) {
+                    height = height - parseInt(KTUtil.css(wrapper, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(wrapper, 'marginBottom'));
+                }
+
+                if (footer) {
+                    height = height - parseInt(KTUtil.actualHeight(footer));
+                    height = height - parseInt(KTUtil.css(footer, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(footer, 'marginBottom'));
+                }
+
+                height = height - parseInt(KTUtil.css(_element, 'paddingTop'));
+                height = height - parseInt(KTUtil.css(_element, 'paddingBottom'));
+
+                height = height - 2;
+
+                return height;
+            }
+        });
+
+        if (typeof offcanvas !== 'undefined' && offcanvas.length === 0) {
+            offcanvas.on('hide', function() {
+                var expires = new Date(new Date().getTime() + 60 * 60 * 1000); // expire in 60 minutes from now
+                KTCookie.setCookie('kt_demo_panel_shown', 1, {expires: expires});
+            });
+        }
+    }
+
+    return {
+        init: function(id,icon,close) {
+            _element = KTUtil.getById(id);
+            if (!_element) {
+                return;
+            }
+
+            _init(icon,close);
+
+        }
+    };
+}();
+
+if (typeof module !== 'undefined') {
+    module.exports = Templates;
+}
 jQuery(document).ready(function() {
+	Templates.init('cpm','cpm_icon', 'cpm_close');
 	var datatable_url = $('#datatable_url').KTDatatable({
 		data: {
 			saveState: {cookie: false},
@@ -480,6 +602,9 @@ jQuery(document).ready(function() {
 							        <path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3"/>\
 							    </g>\
 							</svg>\
+						</a>\
+						<a href="#" class="btn btn-icon btn-hover-primary btn-sm mr-3 estad-url" dato="'+row.Opciones+'" data-toogle="tooltip" title="Eliminar Url" data-original-title="Estadistica Url">\
+		                    <i class="flaticon2-line-chart icon-xl text-primary"></i>\
 						</a>';
 						return acciones;
                	},
@@ -488,6 +613,11 @@ jQuery(document).ready(function() {
 	});
 	$(document).on('click', '.delete-url', function() {
 		$('#url_id').val($(this).attr('dato'));
+		$('#formdelete').submit();
+	});
+	$(document).on('click', '.estad-url', function() {
+		$('#url_id').val($(this).attr('dato'));
+		$('#formdelete').attr('action', "{{route('getEstaditicasUrl')}}");
 		$('#formdelete').submit();
 	});
 	$('#roles, #estado').selectpicker();
@@ -619,7 +749,7 @@ jQuery(document).ready(function() {
     });
 	var ganancias = {!! json_encode($estadisticas['chartganancias']['ganancias']) !!};
 	var ganancias_dia = {!! json_encode($estadisticas['chartganancias']['dia']) !!};
-	var max = {!! json_encode($estadisticas['max']) !!};
+	var maxg = {!! json_encode($estadisticas['maxg']) !!};
 	var element = document.getElementById("chart_ganancias");
 	var height = parseInt(KTUtil.css(element, 'height'));
 	var color = KTUtil.hasAttr(element, 'data-color') ? KTUtil.attr(element, 'data-color') : 'primary';
@@ -698,7 +828,7 @@ jQuery(document).ready(function() {
 		},
 		yaxis: {
 			min: 0,
-			max: (max == 0 ? 1 : max),
+			max: (maxg == 0 ? 1 : maxg),
 			labels: {
 				show: false,
 				style: {
@@ -752,7 +882,7 @@ jQuery(document).ready(function() {
 
 	var visitas = {!! json_encode($estadisticas['chartdias']['visitas']) !!};
 	var visitas_dia = {!! json_encode($estadisticas['chartdias']['dia']) !!};
-	var maxg = {!! json_encode($estadisticas['maxg']) !!};
+	var max = {!! json_encode($estadisticas['max']) !!};
 	var element1 = document.getElementById("chart_visitas");
 	if (!element1) {
 		return;
@@ -829,7 +959,7 @@ jQuery(document).ready(function() {
 		},
 		yaxis: {
 			min: 0,
-			max: (maxg == 0 ? 1 : maxg),
+			max: (max == 0 ? 1 : max),
 			labels: {
 				show: false,
 				style: {
