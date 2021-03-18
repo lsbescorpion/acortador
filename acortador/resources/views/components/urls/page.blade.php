@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="listado">
-	@if(count($urls) == 0)
+
 	<div class="card card-custom gutter-b">
         <div class="card-body">
 			<div class="alert alert-custom alert-default mb-0" role="alert">
@@ -21,7 +21,7 @@
 			</div>
         </div>
 	</div>
-	@endif
+
 	
 </div>
 <div class="card card-custom">
