@@ -1,105 +1,29 @@
 @extends('app')
 
 @section('content')
-<div class="row mb-5">
-    <div class="col-md-6">
-        <div class="card card-custom mb-5">
-            <div class="card-header flex-wrap border-0 pb-0">
-                <div class="card-title">
-                    <h3 class="card-label">
-                        Acortar Urls
-                    </h3>
-                </div>
-            </div>
-            <div class="card-body pt-0 pb-0">
-                <form class="form" id="form_save_user_1" action="{{action('UrlsController@acortarUrl')}}" method="POST">
-                @csrf
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Url de la Noticia</label>
-                                <div class="input-group input-group-solid">
-                                    <input type="text" class="form-control" placeholder="Url" name="url" required>
-                                    <div class="input-group-append">
-                                        <span class="input-group-text">
-                                            <i class="la la-anchor icon-2x"></i>
-                                        </span>
-                                    </div>
-                                </div>
-                                <span class="form-text text-muted">Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/</span>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="">Categoría</label>
-                                <select class="form-control form-control-solid select2" name="categoria" id="categoria" required>
-                                    <option value=""></option>
-                                    <option value="1">Salud</option>
-                                    <option value="2">Entretenimiento</option>
-                                    <option value="3">Curiosidades</option>
-                                    <option value="4">Video</option>
-                                    <option value="5">Tecnología</option>
-                                    <option value="6">Manualidades</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="">Llamada de Acción</label>
-                        <textarea rows="4" name="accion" id="accion" class="form-control form-control-solid" required></textarea>
-                    </div>
-                    <div class="form-group text-left">
-                        <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
-                            ACORTAR
-                        </button>
-                    </div>
-                </form>
-            </div>
+<div id="listado">
+	@if(count($urls) == 0)
+	<div class="card card-custom gutter-b">
+        <div class="card-body">
+			<div class="alert alert-custom alert-default mb-0" role="alert">
+				<div class="alert-icon">
+					<span class="svg-icon svg-icon-warning svg-icon-xl"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Tools\Road-Cone.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+						<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+							<rect x="0" y="0" width="24" height="24"/>
+							<path d="M14.8520384,9 L15.7780576,12 L8.22196243,12 L9.14797495,9 L14.8520384,9 Z M13.9260192,6 L10.0739875,6 L10.7050601,3.95551581 C10.8804029,3.38745846 11.4054966,3 12,3 C12.5945036,3 13.1195978,3.38745798 13.2949418,3.95551522 L13.9260192,6 Z M16.7040768,15 L17.9387691,19 L6.06126654,19 L7.2959499,15 L16.7040768,15 Z" fill="#000000"/>
+							<rect fill="#000000" opacity="0.3" x="3" y="20" width="18" height="2" rx="1"/>
+						</g>
+					</svg><!--end::Svg Icon--></span>
+				</div>
+				<div class="alert-text">
+					No existen Urls acortadas aun
+				</div>
+			</div>
         </div>
-    </div>
-    <div class="col-md-6">
-        <div class="card card-custom">
-            <div class="card-header flex-wrap border-0 pb-0">
-                <div class="card-title">
-                    <h3 class="card-label">
-                        Filtrar Urls
-                    </h3>
-                </div>
-            </div>
-            <div class="card-body pt-0 pb-0">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label class="">Contenido</label>
-                            <input type="text" name="contenido" id="contenido" class="form-control form-control-solid" placeholder="Contenido"/>
-                            <span class="form-text text-muted">Url real, llamada de acción.</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label class="">Categoria</label>
-                            <select class="form-control form-control-solid select2" name="categoria_search" id="categoria_search" multiple>
-                                <option value="1">Salud</option>
-                                <option value="2">Entretenimiento</option>
-                                <option value="3">Curiosidades</option>
-                                <option value="4">Video</option>
-                                <option value="5">Tecnología</option>
-                                <option value="6">Manualidades</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <label class="">Fecha de acortada</label>
-                            <input type="text" class="form-control" placeholder="Fecha de acortada" id="fechaa"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	</div>
+	@endif
+	
 </div>
-
 <div class="card card-custom">
     <div class="card-body py-7">
         <!--begin::Pagination-->
@@ -113,6 +37,92 @@
 <input type="hidden" name="url_id" id="url_id">
 </form>
 
+<div id="filter" class="offcanvas offcanvas-right p-10">
+    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-15" kt-hidden-height="46" style="">
+        <h4 class="font-weight-bold m-0">Filtrar Urls</h4>
+        <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="filter_close">
+            <i dato="filter" class="ki ki-close icon-xs text-muted"></i>
+        </a>
+    </div>
+    <div class="offcanvas-content">
+        <div class="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y">
+            <div class="scroll scroll-pull" data-scroll="true" data-wheel-propagation="true" style="height: 600px;">
+                <div class="form-group">
+                    <label class="">Contenido</label>
+                    <input type="text" name="contenido" id="contenido" class="form-control form-control-solid" placeholder="Contenido"/>
+                    <span class="form-text text-muted">Url real, llamada de acción.</span>
+                </div>
+                <div class="form-group">
+                    <label class="">Categoria</label>
+                    <select class="form-control form-control-solid select2" name="categoria_search" id="categoria_search" multiple>
+                        <option value="1">Salud</option>
+                        <option value="2">Entretenimiento</option>
+                        <option value="3">Curiosidades</option>
+                        <option value="4">Video</option>
+                        <option value="5">Tecnología</option>
+                        <option value="6">Manualidades</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="">Fecha de acortada</label>
+                    <input type="text" class="form-control" placeholder="Fecha de acortada" id="fechaa"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="acortar" class="offcanvas offcanvas-right p-10">
+    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-15" kt-hidden-height="46" style="">
+        <h4 class="font-weight-bold m-0">Acortar Url</h4>
+        <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="acortar_close">
+            <i dato="new_service" class="ki ki-close icon-xs text-muted"></i>
+        </a>
+    </div>
+    <div class="offcanvas-content">
+        <div class="offcanvas-wrapper mb-5">
+        	<form class="form" id="form_save_user" action="{{action('UrlsController@acortarUrl')}}" method="POST">
+			@csrf
+            <div class="scroll scroll-pull" data-scroll="true" data-wheel-propagation="true" style="height: 450px;">
+                <div class="form-group">
+					<label>Url de la Noticia</label>
+					<div class="input-group input-group-solid">
+						<input type="text" class="form-control" placeholder="Url" name="url" required>
+						<div class="input-group-append">
+							<span class="input-group-text">
+								<i class="la la-anchor icon-2x"></i>
+							</span>
+						</div>
+					</div>
+					<span class="form-text text-muted">Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/
+</span>
+				</div>
+				<div class="form-group">
+                    <label class="">Categoría</label>
+                    <select class="form-control form-control-solid select2" name="categoria" id="categoria" required>
+                    	<option value=""></option>
+                        <option value="1">Salud</option>
+                        <option value="2">Entretenimiento</option>
+                        <option value="3">Curiosidades</option>
+                        <option value="4">Video</option>
+                        <option value="5">Tecnología</option>
+                        <option value="6">Manualidades</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="">Llamada de Acción</label>
+                    <textarea rows="4" name="accion" id="accion" class="form-control form-control-solid" required></textarea>
+                </div>
+				<div class="form-group text-left">
+	                <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
+	                    ACORTAR
+	                </button>
+	            </div>
+            </div>
+        	</form>
+        </div>
+    </div>
+</div>
+@include('components.urls.sticky')
 @endsection
 @section('script')
 <script src="{{ asset('js/pagination.js') }}"></script>
@@ -124,7 +134,7 @@ $('#categoria_search').select2({
     placeholder: "Seleccione la Categoría"
 });
 $('#fechaa').datepicker({
-	orientation: "bottom left",
+	orientation: "top left",
 	todayHighlight: true,
 	autoclose: true,
 	clearBtn: true
@@ -183,6 +193,8 @@ $(document).on('click', '.btn-view', function () {
 });
 jQuery(document).ready(function() {
 	var urls = {!! json_encode($urls) !!};
+	Templates.init('filter','filter_icon', 'filter_close');
+	Templates.init('acortar','acortar_icon', 'acortar_close');
     window.tp = new Pagination('#tablePaging', {
         itemsCount: urls.length,
         pageSize: 10,
@@ -206,7 +218,87 @@ jQuery(document).ready(function() {
         }
     });
 });
+var Templates = function() {
+    var _body;
+    var _element;
+    var _offcanvasObject;
+    
+    var _init = function(icon,close) {
+        _offcanvasObject = new KTOffcanvas(_element, {
+            overlay: false,
+            baseClass: 'offcanvas',
+            placement: 'right',
+            closeBy: close,
+            toggleBy: icon
+        });
 
+        var header = KTUtil.find(_element, '.offcanvas-header');
+        var content = KTUtil.find(_element, '.offcanvas-content');
+        var wrapper = KTUtil.find(_element, '.offcanvas-wrapper');
+        var footer = KTUtil.find(_element, '.offcanvas-footer');
+
+        KTUtil.scrollInit(wrapper, {
+            disableForMobile: true,
+            resetHeightOnDestroy: false,
+            handleWindowResize: false,
+            height: function() {
+                var height = parseInt(KTUtil.getViewPort().height);
+
+                if (header) {
+                    height = height - parseInt(KTUtil.actualHeight(header));
+                    height = height - parseInt(KTUtil.css(header, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(header, 'marginBottom'));
+                }
+
+                if (content) {
+                    height = height - parseInt(KTUtil.css(content, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(content, 'marginBottom'));
+                }
+
+                if (wrapper) {
+                    height = height - parseInt(KTUtil.css(wrapper, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(wrapper, 'marginBottom'));
+                }
+
+                if (footer) {
+                    height = height - parseInt(KTUtil.actualHeight(footer));
+                    height = height - parseInt(KTUtil.css(footer, 'marginTop'));
+                    height = height - parseInt(KTUtil.css(footer, 'marginBottom'));
+                }
+
+                height = height - parseInt(KTUtil.css(_element, 'paddingTop'));
+                height = height - parseInt(KTUtil.css(_element, 'paddingBottom'));
+
+                height = height - 2;
+
+                return height;
+            }
+        });
+
+        if (typeof offcanvas !== 'undefined' && offcanvas.length === 0) {
+            offcanvas.on('hide', function() {
+                var expires = new Date(new Date().getTime() + 60 * 60 * 1000); // expire in 60 minutes from now
+                KTCookie.setCookie('kt_demo_panel_shown', 1, {expires: expires});
+            });
+        }
+    }
+
+    return {
+        init: function(id,icon,close) {
+            _element = KTUtil.getById(id);
+            if (!_element) {
+                return;
+            }
+
+            _init(icon,close);
+
+        }
+    };
+}();
+
+if (typeof module !== 'undefined') {
+    module.exports = Templates;
+}
 $('#categoria_search').on('select2:select', function (e) {
     var arr_cat = [];
     $("#categoria_search option:selected").each(function() {
