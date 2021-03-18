@@ -61,9 +61,6 @@
 									    </g>
 									</svg><!--end::Svg Icon--></span>{{$url->fecha}}
 	                            </div>
-                                <div class="text-muted font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
-                                    <i class="la la-anchor icon-md mr-1"></i> {{asset('')."publica/".$url->categoria->categoria."/".$url->url_acortada}}
-                                </div>
                             </div>
                             <!--end::Contacts-->
                         </div>
