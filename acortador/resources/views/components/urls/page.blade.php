@@ -102,13 +102,7 @@
 	                    <!--end::Progress-->
 	                </div>
 
-	                <div class="d-flex align-items-center flex-wrap justify-content-between">
-                    <!--begin::Description-->
-	                    <div class="flex-grow-1 font-weight-bold text-muted py-2 py-lg-2 mr-5">
-	                        <i class="la la-anchor icon-md mr-1"></i> {{asset('')."publica/".$url->categoria->categoria."/".$url->url_acortada}}
-	                    </div>
-	                    <!--end::Description-->
-	                </div>
+
 
                 </div>
                 <!--end::Info-->
