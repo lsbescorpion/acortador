@@ -84,7 +84,31 @@
                     </div>
                     <!--end::Title-->
 
-        
+                    <div class="d-flex align-items-center flex-wrap justify-content-between">
+                    <!--begin::Description-->
+	                    <div class="flex-grow-1 font-weight-bold text-dark-50 py-2 py-lg-2 mr-5">
+	                        {{$url->descripcion}}
+	                    </div>
+	                    <!--end::Description-->
+
+	                    <!--begin::Progress-->
+	                    <div class="d-flex mt-4 mt-sm-0">
+	                        <span class="font-weight-bold mr-4">CPM</span>
+	                        <div class="progress progress-xs mt-2 mb-2 flex-shrink-0 w-150px w-xl-250px">
+	                            <div class="progress-bar bg-success" role="progressbar" style="width: 63%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+	                        </div>
+	                        <span class="font-weight-bolder text-dark ml-4">{{($url->visitas > 0 ? round((1000 * $url->ganancias / $url->visitas), 2) : 0)}}</span>
+	                    </div>
+	                    <!--end::Progress-->
+	                </div>
+
+	                <div class="d-flex align-items-center flex-wrap justify-content-between">
+                    <!--begin::Description-->
+	                    <div class="flex-grow-1 font-weight-bold text-muted py-2 py-lg-2 mr-5">
+	                        <i class="la la-anchor icon-md mr-1"></i> {{asset('')."publica/".$url->categoria->categoria."/".$url->url_acortada}}
+	                    </div>
+	                    <!--end::Description-->
+	                </div>
 
                 </div>
                 <!--end::Info-->
