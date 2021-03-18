@@ -1,53 +1,104 @@
 @extends('app')
 
 @section('content')
-<div class="card card-custom mb-5">
-    <div class="card-body">
-        <form class="form" id="form_save_user_1" action="{{action('UrlsController@acortarUrl')}}" method="POST">
-        @csrf
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Url de la Noticia</label>
-                        <div class="input-group input-group-solid">
-                            <input type="text" class="form-control" placeholder="Url" name="url" required>
-                            <div class="input-group-append">
-                                <span class="input-group-text">
-                                    <i class="la la-anchor icon-2x"></i>
-                                </span>
+<div class="row mb-5">
+    <div class="col-md-6">
+        <div class="card card-custom mb-5">
+            <div class="card-header flex-wrap border-0 pb-0">
+                <div class="card-title">
+                    <h3 class="card-label">
+                        Acortar Urls
+                    </h3>
+                </div>
+            </div>
+            <div class="card-body pt-0 pb-0">
+                <form class="form" id="form_save_user_1" action="{{action('UrlsController@acortarUrl')}}" method="POST">
+                @csrf
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Url de la Noticia</label>
+                                <div class="input-group input-group-solid">
+                                    <input type="text" class="form-control" placeholder="Url" name="url" required>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="la la-anchor icon-2x"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <span class="form-text text-muted">Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/</span>
                             </div>
                         </div>
-                        <span class="form-text text-muted">Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/</span>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="row col-md-12">Categoría</label>
+                                <select class="form-control form-control-solid select2 col-md-10" name="categoria" id="categoria" required>
+                                    <option value=""></option>
+                                    <option value="1">Salud</option>
+                                    <option value="2">Entretenimiento</option>
+                                    <option value="3">Curiosidades</option>
+                                    <option value="4">Video</option>
+                                    <option value="5">Tecnología</option>
+                                    <option value="6">Manualidades</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
                     <div class="form-group">
-                        <label class="row col-md-12">Categoría</label>
-                        <select class="form-control form-control-solid select2 col-md-10" name="categoria" id="categoria" required>
-                            <option value=""></option>
-                            <option value="1">Salud</option>
-                            <option value="2">Entretenimiento</option>
-                            <option value="3">Curiosidades</option>
-                            <option value="4">Video</option>
-                            <option value="5">Tecnología</option>
-                            <option value="6">Manualidades</option>
-                        </select>
+                        <label class="">Llamada de Acción</label>
+                        <textarea rows="4" name="accion" id="accion" class="form-control form-control-solid" required></textarea>
+                    </div>
+                    <div class="form-group text-left">
+                        <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
+                            ACORTAR
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-custom">
+            <div class="card-header flex-wrap border-0 pb-0">
+                <div class="card-title">
+                    <h3 class="card-label">
+                        Filtrar Urls
+                    </h3>
+                </div>
+            </div>
+            <div class="card-body pt-0 pb-0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="">Contenido</label>
+                            <input type="text" name="contenido" id="contenido" class="form-control form-control-solid" placeholder="Contenido"/>
+                            <span class="form-text text-muted">Url real, llamada de acción.</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="">Categoria</label>
+                            <select class="form-control form-control-solid select2" name="categoria_search" id="categoria_search" multiple>
+                                <option value="1">Salud</option>
+                                <option value="2">Entretenimiento</option>
+                                <option value="3">Curiosidades</option>
+                                <option value="4">Video</option>
+                                <option value="5">Tecnología</option>
+                                <option value="6">Manualidades</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="">Fecha de acortada</label>
+                            <input type="text" class="form-control" placeholder="Fecha de acortada" id="fechaa"/>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <label class="">Llamada de Acción</label>
-                <textarea rows="4" name="accion" id="accion" class="form-control form-control-solid" required></textarea>
-            </div>
-            <div class="form-group text-left">
-                <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
-                    ACORTAR
-                </button>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
-
 <div id="listado">
 	@if(count($urls) == 0)
 	<div class="card card-custom gutter-b">
@@ -223,31 +274,11 @@
     <div class="offcanvas-content">
         <div class="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y">
             <div class="scroll scroll-pull" data-scroll="true" data-wheel-propagation="true" style="height: 600px;">
-                <div class="form-group">
-                    <label class="">Contenido</label>
-                    <input type="text" name="contenido" id="contenido" class="form-control form-control-solid" placeholder="Contenido"/>
-                    <span class="form-text text-muted">Url real, llamada de acción.</span>
-                </div>
-                <div class="form-group">
-                    <label class="">Categoria</label>
-                    <select class="form-control form-control-solid select2" name="categoria_search" id="categoria_search" multiple>
-                        <option value="1">Salud</option>
-                        <option value="2">Entretenimiento</option>
-                        <option value="3">Curiosidades</option>
-                        <option value="4">Video</option>
-                        <option value="5">Tecnología</option>
-                        <option value="6">Manualidades</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="">Fecha de acortada</label>
-                    <input type="text" class="form-control" placeholder="Fecha de acortada" id="fechaa"/>
-                </div>
+                
             </div>
         </div>
     </div>
 </div>
-@include('components.urls.sticky')
 @endsection
 @section('script')
 <script src="{{ asset('js/pagination.js') }}"></script>
