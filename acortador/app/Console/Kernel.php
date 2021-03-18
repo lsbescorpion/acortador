@@ -7,6 +7,10 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use App\Models\VisitasDiariasUrl;
 use App\Models\CPM;
 use App\Models\GananciasDiarias;
+use App\Models\GananciasDiariasAdsense;
+use Carbon\Carbon;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class Kernel extends ConsoleKernel
 {
@@ -41,6 +45,41 @@ class Kernel extends ConsoleKernel
                     $ganancias->url_id = $visitas[$i]->url_id;
                     $ganancias->ganancia = round(($visitas[$i]->visitas*$cpm->cpm)/1000, 2, PHP_ROUND_HALF_DOWN);
                     $ganancias->save();
+                }
+            }
+        })
+        ->everyMinute()
+        ->runInBackground();
+        $schedule->call(function () {
+            $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+            $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+            $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
+            $analyticsData = Analytics::performQuery(
+                Period::create($startDate, $endDate),
+                'ga:pagePath',
+                [
+                    'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
+                    'dimensions' => 'ga:pagePath,ga:source',
+                    'filters' => 'ga:pagePath=@publica'
+                ]
+            );
+            $rows = $analyticsData->rows;
+            for($i = 0; $i < count($rows); $i++) {
+                if(strpos($rows[$i][1], 'direct') === false) {
+                    $url = explode("/", $rows[$i][0]);
+                    $id = explode("?", $url[2]);
+                    if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
+                        $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
+                        if($ur != null) {
+                            $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
+                            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+                            $ganancias->user_id = $ur->users->id;
+                            $ganancias->url_id = $ur->id;
+                            $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
+                            $ganancias->save();
+                        }
+                    }
                 }
             }
         })

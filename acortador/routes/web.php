@@ -20,6 +20,7 @@ Route::group(['prefix' => ''], function () {
 	Route::post('/logout', 'AuthController@logout')->middleware(['auth'])->name('logout');
 	Route::get('/app/dashboard', 'AuthController@DashBoard')->middleware(['auth'])->name('DashBoard');
 	Route::get('/404', 'AuthController@Error404')->name('Error404');
+	Route::get('/getadsense', 'UsersController@getAdsense')->name('getAdsense');
 });
 
 Route::group(['prefix' => 'blog'], function () {

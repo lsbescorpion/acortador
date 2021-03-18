@@ -9,6 +9,7 @@ use App\Models\Urls;
 use App\Models\VisitasDiarias;
 use App\Models\VisitasDiariasUrl;
 use App\Models\GananciasDiarias;
+use App\Models\GananciasDiariasAdsense;
 use App\Models\GananciasMensuales;
 use App\Models\CPM;
 use Illuminate\Support\Facades\Hash;
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Carbon\Carbon;
+use Analytics;
+use Spatie\Analytics\Period;
 
 class UsersController extends Controller{
 
@@ -295,8 +298,8 @@ class UsersController extends Controller{
     }
 
     public function Ranking() {
-    	$start = '2020-01-01';//date('Y-m-01', time());//'2020-03-01';
-        $end = '2020-12-31';//date('Y-m-t', time());
+    	$start = date('Y-m-01', time());//'2020-03-01';
+        $end = date('Y-m-t', time());
     	$users = User::addSelect([
     		'visitasd' => VisitasDiarias::selectRaw('sum(visitas) as total')
     		->whereColumn('user_id', 'user.id')
@@ -364,17 +367,6 @@ class UsersController extends Controller{
         $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
         $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
 
-        /*$analyticsData = Analytics::performQuery(
-            Period::create($startDate, $endDate),
-            'ga:date',
-            [
-                'metrics' => 'ga:adsenseRevenue,ga:adsensePageImpressions',
-                'dimensions' => 'ga:date'
-            ]
-        );
-
-        $rows = $analyticsData->rows;
-        $rpm = round(($rows[0][1] / $rows[0][2] * 1000), 2, PHP_ROUND_HALF_DOWN);*/
         $cpm = CPM::find(1);
 
         $users = User::with('roles')->withCount(['ganancias as gan' => function ($query) use($start, $end) {
@@ -406,62 +398,57 @@ class UsersController extends Controller{
     }
 
     public function getAnalytic() {
-        /*$startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
-        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();*/
         $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
+        $visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
+        $cpm = CPM::find(1);
+        for($i = 0; $i < count($visitas); $i++) {
+            $ga = round(($visitas[$i]->visitas*$cpm->cpm)/1000, 2, PHP_ROUND_HALF_DOWN);
+            if($ga > 0 ) {
+                $ganancias = GananciasDiarias::where(['user_id' => $visitas[$i]->user_id, 'url_id' => $visitas[$i]->url_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                $ganancias = ($ganancias != null ? $ganancias : new GananciasDiarias());
+                $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+                $ganancias->user_id = $visitas[$i]->user_id;
+                $ganancias->url_id = $visitas[$i]->url_id;
+                $ganancias->ganancia = round(($visitas[$i]->visitas*$cpm->cpm)/1000, 2, PHP_ROUND_HALF_DOWN);
+                $ganancias->save();
+            }
+        }
+        return redirect()->route('estadisticasAdmin');
+        //return response()->json($analyticsData);
+    }
 
-        /*$analyticsData = Analytics::performQuery(
+    public function getAdsense() {
+        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
+        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+        $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
+        $analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
             'ga:pagePath',
             [
                 'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
-                'dimensions' => 'ga:pagePath,ga:source'
+                'dimensions' => 'ga:pagePath,ga:source',
+                'filters' => 'ga:pagePath=@publica'
             ]
         );
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL,'https://free.currconv.com/api/v7/convert?q=USD_UYU&compact=y&apiKey=abbb5bcd94ffcb4df7ca');
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
-        $data = curl_exec($ch); 
-        curl_close($ch);
-        $rates = json_decode($data, true);
-
-        $uyu = $rates['USD_UYU']['val'];
-
         $rows = $analyticsData->rows;
         for($i = 0; $i < count($rows); $i++) {
-            if($rows[$i][1] != '(direct)') {
+            if(strpos($rows[$i][1], 'direct') === false) {
                 $url = explode("/", $rows[$i][0]);
-                if(isset($url[3]) && strlen($url[3]) == 7) {
-                    if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
-                        $ur = Urls::with(['users'])->where(['url_acortada' => $url[3]])->first();
-                        if($ur != null) {
-                            $ganancias = GananciasDiarias::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
-                            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiarias());
-                            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
-                            $ganancias->user_id = $ur->users->id;
-                            $ganancias->url_id = $ur->id;
-                            $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
-                            $ganancias->save();
-                        }
+                $id = explode("?", $url[2]);
+                if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
+                    $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
+                    if($ur != null) {
+                        $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                        $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
+                        $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+                        $ganancias->user_id = $ur->users->id;
+                        $ganancias->url_id = $ur->id;
+                        $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
+                        $ganancias->save();
                     }
                 }
             }
-        }*/
-        $visitas = VisitasDiariasUrl::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->get();
-        $cpm = CPM::find(1);
-        for($i = 0; $i < count($visitas); $i++) {
-            $ganancias = GananciasDiarias::where(['user_id' => $visitas[$i]->user_id, 'url_id' => $visitas[$i]->url_id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
-            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiarias());
-            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
-            $ganancias->user_id = $visitas[$i]->user_id;
-            $ganancias->url_id = $visitas[$i]->url_id;
-            $ganancias->ganancia = round(($visitas[$i]->visitas*$cpm->cpm)/1000, 2, PHP_ROUND_HALF_DOWN);
-            $ganancias->save();
         }
-        return redirect()->route('estadisticasAdmin');
-        //return response()->json($analyticsData);
     }
 
     public function deleteUrl(Request $request) {
