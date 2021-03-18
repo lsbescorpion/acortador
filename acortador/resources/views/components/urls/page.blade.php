@@ -36,13 +36,63 @@
                 <!--end::Pic-->
 
                 <!--begin: Info-->
-                
+                <div class="flex-grow-1">
+                    <!--begin::Title-->
+                    <div class="d-flex align-items-center justify-content-between flex-wrap mt-2">
+                        <!--begin::User-->
+                        <div class="mr-3">
+                            <div class="d-flex align-items-center mr-3">
+                                <div class="d-flex align-items-center text-dark font-size-h5 font-weight-bold mr-3">
+                                    {{$url->titulo}}
+                                </div>
+                                <span class="label label-light-success label-inline font-weight-bolder mr-1">{{$url->categoria->categoria}}</span>
+                            </div>
+
+                            <!--begin::Contacts-->
+                            <div class="d-flex flex-wrap my-2">
+                                <div class="text-muted font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2">
+									<span class="svg-icon svg-icon-md mr-3"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Home\Timer.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+									    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									        <rect x="0" y="0" width="24" height="24"/>
+									        <path d="M12,21 C7.581722,21 4,17.418278 4,13 C4,8.581722 7.581722,5 12,5 C16.418278,5 20,8.581722 20,13 C20,17.418278 16.418278,21 12,21 Z" fill="#000000" opacity="0.3"/>
+									        <path d="M13,5.06189375 C12.6724058,5.02104333 12.3386603,5 12,5 C11.6613397,5 11.3275942,5.02104333 11,5.06189375 L11,4 L10,4 C9.44771525,4 9,3.55228475 9,3 C9,2.44771525 9.44771525,2 10,2 L14,2 C14.5522847,2 15,2.44771525 15,3 C15,3.55228475 14.5522847,4 14,4 L13,4 L13,5.06189375 Z" fill="#000000"/>
+									        <path d="M16.7099142,6.53272645 L17.5355339,5.70710678 C17.9260582,5.31658249 18.5592232,5.31658249 18.9497475,5.70710678 C19.3402718,6.09763107 19.3402718,6.73079605 18.9497475,7.12132034 L18.1671361,7.90393167 C17.7407802,7.38854954 17.251061,6.92750259 16.7099142,6.53272645 Z" fill="#000000"/>
+									        <path d="M11.9630156,7.5 L12.0369844,7.5 C12.2982526,7.5 12.5154733,7.70115317 12.5355117,7.96165175 L12.9585886,13.4616518 C12.9797677,13.7369807 12.7737386,13.9773481 12.4984096,13.9985272 C12.4856504,13.9995087 12.4728582,14 12.4600614,14 L11.5399386,14 C11.2637963,14 11.0399386,13.7761424 11.0399386,13.5 C11.0399386,13.4872031 11.0404299,13.4744109 11.0414114,13.4616518 L11.4644883,7.96165175 C11.4845267,7.70115317 11.7017474,7.5 11.9630156,7.5 Z" fill="#000000"/>
+									    </g>
+									</svg><!--end::Svg Icon--></span>{{$url->fecha}}
+	                            </div>
+                            </div>
+                            <!--end::Contacts-->
+                        </div>
+                        <!--begin::User-->
+
+                        <!--begin::Actions-->
+                        <div class="my-lg-0 my-1">
+                        	<a href="#" class="btn btn-icon btn-primary btn-sm mr-2 btn-copy" date="{{$url->accion." ".asset('')."publica/".$url->categoria->categoria."/".$url->url_acortada}}" data-toggle="tooltip" title="" data-placement="top" data-original-title="Copiar Url Acortada">
+                            	<i class="flaticon2-copy"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-icon btn-primary btn-sm mr-2 btn-view" date="{{$url->id}}" data-toggle="tooltip" title="" data-placement="top" data-original-title="Estadisticas Url">
+                            	<i class="flaticon2-line-chart"></i>
+                            </a>
+
+                            <a href="#" class="btn btn-icon btn-primary btn-sm btn-delete" date="{{$url->id}}" data-toggle="tooltip" title="" data-placement="top" data-original-title="Eliminar Url">
+                            	<i class="flaticon-delete"></i>
+                            </a>
+                        </div>
+                        <!--end::Actions-->
+                    </div>
+                    <!--end::Title-->
+
+        
+
+                </div>
                 <!--end::Info-->
             </div>
             <!--end::Top-->
             <div class="separator separator-solid my-7"></div>
             <!--begin::Bottom-->
-            <div class="d-flex align-items-center flex-wrap mt-5">
+            <div class="d-flex align-items-center flex-wrap">
                 <!--begin: Item-->
                	<div class="d-flex align-items-center mr-20 my-1">
 	                <span class="mr-4">
