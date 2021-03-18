@@ -1,6 +1,53 @@
 @extends('app')
 
 @section('content')
+<div class="card card-custom mb-5">
+    <div class="card-body">
+        <form class="form" id="form_save_user_1" action="{{action('UrlsController@acortarUrl')}}" method="POST">
+        @csrf
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Url de la Noticia</label>
+                        <div class="input-group input-group-solid">
+                            <input type="text" class="form-control" placeholder="Url" name="url" required>
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="la la-anchor icon-2x"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="form-text text-muted">Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="row col-md-12">Categoría</label>
+                        <select class="form-control form-control-solid select2 col-md-10" name="categoria" id="categoria" required>
+                            <option value=""></option>
+                            <option value="1">Salud</option>
+                            <option value="2">Entretenimiento</option>
+                            <option value="3">Curiosidades</option>
+                            <option value="4">Video</option>
+                            <option value="5">Tecnología</option>
+                            <option value="6">Manualidades</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="">Llamada de Acción</label>
+                <textarea rows="4" name="accion" id="accion" class="form-control form-control-solid" required></textarea>
+            </div>
+            <div class="form-group text-left">
+                <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
+                    ACORTAR
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
 <div id="listado">
 	@if(count($urls) == 0)
 	<div class="card card-custom gutter-b">
@@ -86,7 +133,7 @@
 
                     <div class="d-flex align-items-center flex-wrap justify-content-between">
                     <!--begin::Description-->
-	                    <div class="flex-grow-1 font-weight-bold text-dark-50 py-2 py-lg-2 mr-5">
+	                    <div class="mr-5">
 	                        {{$url->descripcion}}
 	                    </div>
 	                    <!--end::Description-->
@@ -200,57 +247,6 @@
         </div>
     </div>
 </div>
-<div id="acortar" class="offcanvas offcanvas-right p-10">
-    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-15" kt-hidden-height="46" style="">
-        <h4 class="font-weight-bold m-0">Acortar Url</h4>
-        <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="acortar_close">
-            <i dato="new_service" class="ki ki-close icon-xs text-muted"></i>
-        </a>
-    </div>
-    <div class="offcanvas-content">
-        <div class="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y">
-        	<form class="form" id="form_save_user" action="{{action('UrlsController@acortarUrl')}}" method="POST">
-			@csrf
-            <div class="scroll scroll-pull" data-scroll="true" data-wheel-propagation="true" style="height: 600px;">
-                <div class="form-group">
-					<label>Url de la Noticia</label>
-					<div class="input-group input-group-solid">
-						<input type="text" class="form-control" placeholder="Url" name="url" required>
-						<div class="input-group-append">
-							<span class="input-group-text">
-								<i class="la la-anchor icon-2x"></i>
-							</span>
-						</div>
-					</div>
-					<span class="form-text text-muted">Ejemplo: https://rolloid.net/sabias-las-hojas-laurel-tienen-estos-beneficios-relajantes-2/
-</span>
-				</div>
-				<div class="form-group">
-                    <label class="">Categoría</label>
-                    <select class="form-control form-control-solid select2" name="categoria" id="categoria" required>
-                    	<option value=""></option>
-                        <option value="1">Salud</option>
-                        <option value="2">Entretenimiento</option>
-                        <option value="3">Curiosidades</option>
-                        <option value="4">Video</option>
-                        <option value="5">Tecnología</option>
-                        <option value="6">Manualidades</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label class="">Llamada de Acción</label>
-                    <textarea rows="4" name="accion" id="accion" class="form-control form-control-solid" required></textarea>
-                </div>
-				<div class="form-group text-right">
-	                <button type="submit" class="btn btn-primary font-weight-bolder text-uppercase px-9 py-4 submit-data">
-	                    ACORTAR
-	                </button>
-	            </div>
-            </div>
-        	</form>
-        </div>
-    </div>
-</div>
 @include('components.urls.sticky')
 @endsection
 @section('script')
@@ -323,7 +319,6 @@ $(document).on('click', '.btn-view', function () {
 jQuery(document).ready(function() {
 	var urls = {!! json_encode($urls) !!};
 	Templates.init('filter','filter_icon', 'filter_close');
-	Templates.init('acortar','acortar_icon', 'acortar_close');
     window.tp = new Pagination('#tablePaging', {
         itemsCount: urls.length,
         pageSize: 10,
