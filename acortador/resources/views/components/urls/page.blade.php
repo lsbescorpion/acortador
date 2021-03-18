@@ -2,7 +2,7 @@
 
 @section('content')
 <div id="listado">
-
+	@if(count($urls) == 0)
 	<div class="card card-custom gutter-b">
         <div class="card-body">
 			<div class="alert alert-custom alert-default mb-0" role="alert">
@@ -21,8 +21,63 @@
 			</div>
         </div>
 	</div>
+	@endif
+	@foreach($urls as $url)
+    <div class="card card-custom gutter-b item-urls">
+        <div class="card-body" style="padding: 1.5rem 1.5rem;">
+            <!--begin::Top-->
+            <div class="d-flex">
+                <!--begin::Pic-->
+                <div class="flex-shrink-0 mr-7">
+                    <div class="symbol symbol-50 symbol-lg-120">
+                        <img alt="Pic" src="{{asset('').'img'.$url->foto}}">
+                    </div>
+                </div>
+                <!--end::Pic-->
 
-	
+                <!--begin: Info-->
+                
+                <!--end::Info-->
+            </div>
+            <!--end::Top-->
+            <div class="separator separator-solid my-7"></div>
+            <!--begin::Bottom-->
+            <div class="d-flex align-items-center flex-wrap mt-5">
+                <!--begin: Item-->
+               	<div class="d-flex align-items-center mr-20 my-1">
+	                <span class="mr-4">
+	                    <i class="flaticon-piggy-bank icon-2x text-muted font-weight-bold"></i>
+	                </span>
+	                <div class="d-flex flex-column text-dark-75">
+	                    <span class="font-weight-bolder font-size-sm">Ganancias</span>
+	                    <span class="font-weight-bolder font-size-h5"><span class="text-dark-50 font-weight-bold">$ </span>{{($url->ganancias != null ? $url->ganancias : 0)}}</span>
+	                </div>
+	            </div>
+
+	            <div class="d-flex align-items-center mr-20 my-1">
+	                <span class="mr-4">
+	                    <span class="svg-icon svg-icon-2x"><!--begin::Svg Icon | path:assets/media/svg/icons/Media/Equalizer.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+						    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <rect x="0" y="0" width="24" height="24"></rect>
+						        <rect fill="#000000" opacity="0.3" x="13" y="4" width="3" height="16" rx="1.5"></rect>
+						        <rect fill="#000000" x="8" y="9" width="3" height="11" rx="1.5"></rect>
+						        <rect fill="#000000" x="18" y="11" width="3" height="9" rx="1.5"></rect>
+						        <rect fill="#000000" x="3" y="13" width="3" height="7" rx="1.5"></rect>
+						    </g>
+						</svg><!--end::Svg Icon--></span>
+	                </span>
+	                <div class="d-flex flex-column text-dark-75">
+	                    <span class="font-weight-bolder font-size-sm">Visitas</span>
+	                    <span class="font-weight-bolder font-size-h5">{{$url->visitas}}</span>
+	                </div>
+	            </div>
+                <!--end: Item-->
+            </div>
+
+            <!--end::Bottom-->
+        </div>
+    </div>
+    @endforeach
 </div>
 <div class="card card-custom">
     <div class="card-body py-7">

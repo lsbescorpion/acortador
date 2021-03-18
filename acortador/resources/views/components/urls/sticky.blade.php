@@ -1,5 +1,5 @@
 <ul class="sticky-toolbar nav flex-column pl-2 pr-2 pt-3 pb-3 mt-4" id="sticky-toolbar">
-	<!--li class="nav-item mb-2" dato="acortar" id="acortar_icon" data-toggle="tooltip" title="" data-placement="left" data-original-title="Acortar Url">
+	<li class="nav-item mb-2" dato="acortar" id="acortar_icon" data-toggle="tooltip" title="" data-placement="left" data-original-title="Acortar Url">
 		<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-icon-primary btn-hover-primary">
 			<span class="svg-icon svg-icon-md menu-icon"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 			    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -9,7 +9,7 @@
 			    </g>
 			</svg></span>
 		</a>
-	</li-->
+	</li>
 	<li class="nav-item mb-2" dato="filter" id="filter_icon" data-toggle="tooltip" title="" data-placement="left" data-original-title="Filtrar urls">
 		<a class="btn btn-sm btn-icon btn-bg-light btn-icon-primary btn-hover-primary" href="#">
 			<span class="svg-icon svg-icon-md menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Text\Filter.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
