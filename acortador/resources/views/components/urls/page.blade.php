@@ -31,8 +31,8 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label class="row col-md-12">Categoría</label>
-                                <select class="form-control form-control-solid select2 col-md-10" name="categoria" id="categoria" required>
+                                <label class="">Categoría</label>
+                                <select class="form-control form-control-solid select2" name="categoria" id="categoria" required>
                                     <option value=""></option>
                                     <option value="1">Salud</option>
                                     <option value="2">Entretenimiento</option>
@@ -264,21 +264,6 @@
 <input type="hidden" name="url_id" id="url_id">
 </form>
 
-<div id="filter" class="offcanvas offcanvas-right p-10">
-    <div class="offcanvas-header d-flex align-items-center justify-content-between pb-15" kt-hidden-height="46" style="">
-        <h4 class="font-weight-bold m-0">Filtrar Urls</h4>
-        <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="filter_close">
-            <i dato="filter" class="ki ki-close icon-xs text-muted"></i>
-        </a>
-    </div>
-    <div class="offcanvas-content">
-        <div class="offcanvas-wrapper mb-5 scroll-pull scroll ps ps--active-y">
-            <div class="scroll scroll-pull" data-scroll="true" data-wheel-propagation="true" style="height: 600px;">
-                
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
 @section('script')
 <script src="{{ asset('js/pagination.js') }}"></script>
@@ -349,7 +334,6 @@ $(document).on('click', '.btn-view', function () {
 });
 jQuery(document).ready(function() {
 	var urls = {!! json_encode($urls) !!};
-	Templates.init('filter','filter_icon', 'filter_close');
     window.tp = new Pagination('#tablePaging', {
         itemsCount: urls.length,
         pageSize: 10,
@@ -373,87 +357,7 @@ jQuery(document).ready(function() {
         }
     });
 });
-var Templates = function() {
-    var _body;
-    var _element;
-    var _offcanvasObject;
-    
-    var _init = function(icon,close) {
-        _offcanvasObject = new KTOffcanvas(_element, {
-            overlay: false,
-            baseClass: 'offcanvas',
-            placement: 'right',
-            closeBy: close,
-            toggleBy: icon
-        });
 
-        var header = KTUtil.find(_element, '.offcanvas-header');
-        var content = KTUtil.find(_element, '.offcanvas-content');
-        var wrapper = KTUtil.find(_element, '.offcanvas-wrapper');
-        var footer = KTUtil.find(_element, '.offcanvas-footer');
-
-        KTUtil.scrollInit(wrapper, {
-            disableForMobile: true,
-            resetHeightOnDestroy: false,
-            handleWindowResize: false,
-            height: function() {
-                var height = parseInt(KTUtil.getViewPort().height);
-
-                if (header) {
-                    height = height - parseInt(KTUtil.actualHeight(header));
-                    height = height - parseInt(KTUtil.css(header, 'marginTop'));
-                    height = height - parseInt(KTUtil.css(header, 'marginBottom'));
-                }
-
-                if (content) {
-                    height = height - parseInt(KTUtil.css(content, 'marginTop'));
-                    height = height - parseInt(KTUtil.css(content, 'marginBottom'));
-                }
-
-                if (wrapper) {
-                    height = height - parseInt(KTUtil.css(wrapper, 'marginTop'));
-                    height = height - parseInt(KTUtil.css(wrapper, 'marginBottom'));
-                }
-
-                if (footer) {
-                    height = height - parseInt(KTUtil.actualHeight(footer));
-                    height = height - parseInt(KTUtil.css(footer, 'marginTop'));
-                    height = height - parseInt(KTUtil.css(footer, 'marginBottom'));
-                }
-
-                height = height - parseInt(KTUtil.css(_element, 'paddingTop'));
-                height = height - parseInt(KTUtil.css(_element, 'paddingBottom'));
-
-                height = height - 2;
-
-                return height;
-            }
-        });
-
-        if (typeof offcanvas !== 'undefined' && offcanvas.length === 0) {
-            offcanvas.on('hide', function() {
-                var expires = new Date(new Date().getTime() + 60 * 60 * 1000); // expire in 60 minutes from now
-                KTCookie.setCookie('kt_demo_panel_shown', 1, {expires: expires});
-            });
-        }
-    }
-
-    return {
-        init: function(id,icon,close) {
-            _element = KTUtil.getById(id);
-            if (!_element) {
-                return;
-            }
-
-            _init(icon,close);
-
-        }
-    };
-}();
-
-if (typeof module !== 'undefined') {
-    module.exports = Templates;
-}
 $('#categoria_search').on('select2:select', function (e) {
     var arr_cat = [];
     $("#categoria_search option:selected").each(function() {
