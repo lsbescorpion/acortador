@@ -25,7 +25,7 @@
                 <tbody>
                 	@foreach($users as $user)
                     <tr>
-                        <td class="pl-0 py-8">
+                        <td class="pl-0 py-8 col-md-8">
                             <div class="d-flex align-items-center">
                                 <div class="symbol symbol-50 symbol-light mr-4">
                                     <span class="symbol-label">
@@ -34,11 +34,11 @@
                                 </div>
                                 <div>
                                     <a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">{{$user->nombre_apellidos}}</a>
-                                    <span class="text-muted font-weight-bold d-block">{{$user->correo}}</span>
+                                    <span class="text-muted font-weight-bold d-block"></span>
                                 </div>
                             </div>
                         </td>
-                        <td>
+                        <td class="col-md-4">
                             <span class="text-muted font-weight-bold">
                                 {{$user->visitasd}}
                             </span>
