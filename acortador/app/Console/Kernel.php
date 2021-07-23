@@ -63,7 +63,7 @@ class Kernel extends ConsoleKernel
                 [
                     'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
                     'dimensions' => 'ga:pagePath,ga:source',
-                    'filters' => 'ga:pagePath=@publica'
+                    'filters' => 'ga:pagePath=@publica;ga:source=@facebook'
                 ]
             );
             $rows = $analyticsData->rows;
@@ -71,16 +71,18 @@ class Kernel extends ConsoleKernel
                 for($i = 0; $i < count($rows); $i++) {
                     if(strpos($rows[$i][1], 'direct') === false) {
                         $url = explode("/", $rows[$i][0]);
-                        $id = explode("?", $url[2]);
-                        if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
+                        $id = explode("?", $url[3]);
+                        if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2]) && $rows[$i][2] >= 0.01) {
                             $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
                             if($ur != null) {
-                                $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                                $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id, 'url' => $rows[$i][0], 'referr' => $rows[$i][1]])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
                                 $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
                                 $ganancias->fecha = date('Y-m-d',strtotime($fecha));
                                 $ganancias->user_id = $ur->users->id;
                                 $ganancias->url_id = $ur->id;
                                 $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
+                                $ganancias->url = $rows[$i][0];
+                                $ganancias->referr = $rows[$i][1];
                                 $ganancias->save();
                             }
                         }
@@ -118,7 +120,7 @@ class Kernel extends ConsoleKernel
             $gmensual = GananciasDiariasAdsense::groupBy('user_id')->selectRaw('user_id, sum(ganancia) as sum')->whereBetween('fecha', [$start, $end])->get();
             for($i = 0; $i < count($gmensual); $i++) {
                 $mensual = GananciasMensualesAdsense::where(['user_id' => $gmensual[$i]->user_id, 'mes' => $mes, 'anno' => $anno])->first();
-                $mensual = ($mensual != null ? $mensual : new GananciasMensuales());
+                $mensual = ($mensual != null ? $mensual : new GananciasMensualesAdsense());
                 $mensual->mes = $mes;
                 $mensual->anno = $anno;
                 $mensual->pagado = 0;
