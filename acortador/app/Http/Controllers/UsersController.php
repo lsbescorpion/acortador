@@ -457,5 +457,23 @@ class UsersController extends Controller{
         return redirect()->route('estadisticasAdmin');
     }
 
+    public function getMonthData() {
+        $mes = date("m",strtotime("-1 month"));
+        $anno = date("Y",strtotime("-1 month"));
+        $start = date("Y-m-1 H:i:s",strtotime("-1 month"));  
+        $end = date("Y-m-t H:i:s",strtotime("-1 month"));
+        $gmensual = GananciasDiarias::groupBy('user_id')->selectRaw('user_id, sum(ganancia) as sum')->whereBetween('fecha', [$start, $end])->get();
+        for($i = 0; $i < count($gmensual); $i++) {
+            $mensual = GananciasMensuales::where(['user_id' => $gmensual[$i]->user_id, 'mes' => $mes, 'anno' => $anno])->first();
+            $mensual = ($mensual != null ? $mensual : new GananciasMensuales());
+            $mensual->mes = $mes;
+            $mensual->anno = $anno;
+            $mensual->pagado = 0;
+            $mensual->user_id = $gmensual[$i]->user_id;
+            $mensual->ganancia = round($gmensual[$i]->sum, 2, PHP_ROUND_HALF_DOWN);
+            $mensual->save();
+        }  
+    }
+
 }
 

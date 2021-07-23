@@ -8,9 +8,11 @@ use App\Models\VisitasDiariasUrl;
 use App\Models\CPM;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasDiariasAdsense;
+use App\Models\GananciasMensuales;
 use Carbon\Carbon;
 use Analytics;
 use Spatie\Analytics\Period;
+use App\Models\Urls;
 
 class Kernel extends ConsoleKernel
 {
@@ -64,28 +66,49 @@ class Kernel extends ConsoleKernel
                 ]
             );
             $rows = $analyticsData->rows;
-            for($i = 0; $i < count($rows); $i++) {
-                if(strpos($rows[$i][1], 'direct') === false) {
-                    $url = explode("/", $rows[$i][0]);
-                    $id = explode("?", $url[2]);
-                    if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
-                        $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
-                        if($ur != null) {
-                            $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
-                            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
-                            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
-                            $ganancias->user_id = $ur->users->id;
-                            $ganancias->url_id = $ur->id;
-                            $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
-                            $ganancias->save();
+            if($rows != null && count($rows) > 0) {
+                for($i = 0; $i < count($rows); $i++) {
+                    if(strpos($rows[$i][1], 'direct') === false) {
+                        $url = explode("/", $rows[$i][0]);
+                        $id = explode("?", $url[2]);
+                        if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
+                            $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
+                            if($ur != null) {
+                                $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                                $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
+                                $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+                                $ganancias->user_id = $ur->users->id;
+                                $ganancias->url_id = $ur->id;
+                                $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
+                                $ganancias->save();
+                            }
                         }
                     }
                 }
             }
         })
-        ->everyMinute()
+        ->everyThirtyMinutes()
         ->runInBackground();
         //everyTwoMinutes()
+        $schedule->call(function () {
+            $mes = date("m",strtotime("-1 month"));
+            $anno = date("Y",strtotime("-1 month"));
+            $start = date("Y-m-1 H:i:s",strtotime("-1 month"));  
+            $end = date("Y-m-t H:i:s",strtotime("-1 month"));
+            $gmensual = GananciasDiarias::groupBy('user_id')->selectRaw('user_id, sum(ganancia) as sum')->whereBetween('fecha', [$start, $end])->get();
+            for($i = 0; $i < count($gmensual); $i++) {
+                $mensual = GananciasMensuales::where(['user_id' => $gmensual[$i]->user_id, 'mes' => $mes, 'anno' => $anno])->first();
+                $mensual = ($mensual != null ? $mensual : new GananciasMensuales());
+                $mensual->mes = $mes;
+                $mensual->anno = $anno;
+                $mensual->pagado = 0;
+                $mensual->user_id = $gmensual[$i]->user_id;
+                $mensual->ganancia = round($gmensual[$i]->sum, 2, PHP_ROUND_HALF_DOWN);
+                $mensual->save();
+            }
+        })
+        ->monthlyOn(1, '02:00')
+        ->runInBackground();
     }
 
     /**
