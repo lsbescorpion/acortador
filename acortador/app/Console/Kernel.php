@@ -9,6 +9,7 @@ use App\Models\CPM;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasDiariasAdsense;
 use App\Models\GananciasMensuales;
+use App\Models\GananciasMensualesAdsense;
 use Carbon\Carbon;
 use Analytics;
 use Spatie\Analytics\Period;
@@ -108,6 +109,25 @@ class Kernel extends ConsoleKernel
             }
         })
         ->monthlyOn(1, '02:00')
+        ->runInBackground();
+        $schedule->call(function () {
+            $mes = date("m",strtotime("-1 month"));
+            $anno = date("Y",strtotime("-1 month"));
+            $start = date("Y-m-1 H:i:s",strtotime("-1 month"));  
+            $end = date("Y-m-t H:i:s",strtotime("-1 month"));
+            $gmensual = GananciasDiariasAdsense::groupBy('user_id')->selectRaw('user_id, sum(ganancia) as sum')->whereBetween('fecha', [$start, $end])->get();
+            for($i = 0; $i < count($gmensual); $i++) {
+                $mensual = GananciasMensualesAdsense::where(['user_id' => $gmensual[$i]->user_id, 'mes' => $mes, 'anno' => $anno])->first();
+                $mensual = ($mensual != null ? $mensual : new GananciasMensuales());
+                $mensual->mes = $mes;
+                $mensual->anno = $anno;
+                $mensual->pagado = 0;
+                $mensual->user_id = $gmensual[$i]->user_id;
+                $mensual->ganancia = round($gmensual[$i]->sum, 2, PHP_ROUND_HALF_DOWN);
+                $mensual->save();
+            }
+        })
+        ->monthlyOn(1, '03:00')
         ->runInBackground();
     }
 
