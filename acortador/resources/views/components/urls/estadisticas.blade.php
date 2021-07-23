@@ -408,7 +408,7 @@ jQuery(document).ready(function() {
             },
             y: {
                 formatter: function(val) {
-                    return "$" + val
+                    return val
                 }
             }
         },
