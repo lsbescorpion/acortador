@@ -313,11 +313,11 @@ class UsersController extends Controller{
     public function estadisticasAdmin() {
     	$estadisticas = [];
         $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');//
-        $gdiarias = GananciasDiarias::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('ganancia');
+        $gdiarias = GananciasDiariasAdsense::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('ganancia');
         $vdiarias = VisitasDiarias::whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('visitas');
         $start = date('Y-m-1',strtotime($fecha));
         $end = date('Y-m-t',strtotime($fecha));
-        $gmensual = GananciasDiarias::whereBetween('fecha', [$start, $end])->sum('ganancia');
+        $gmensual = GananciasDiariasAdsense::whereBetween('fecha', [$start, $end])->sum('ganancia');
         $vmensual = VisitasDiarias::whereBetween('fecha', [$start, $end])->sum('visitas');
         $fvdiarias = Carbon::now()->setTimezone('America/Havana')->format('d/m/Y H:i');
         $chartganancias = [];
@@ -327,7 +327,7 @@ class UsersController extends Controller{
         $anno = date('Y',strtotime($fecha));
 		$mes = date('m',strtotime($fecha));
         for($i = 1; $i <= $lastd; $i++) {
-            $ga = GananciasDiarias::whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
+            $ga = GananciasDiariasAdsense::whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
             if($ga != null) {
                 $chartganancias['ganancias'][$posg] = round($ga, 2, PHP_ROUND_HALF_DOWN);
                 if($ga >= $maxg)
