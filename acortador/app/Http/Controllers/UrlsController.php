@@ -216,9 +216,9 @@ class UrlsController extends Controller
         for($i = 1; $i <= $lastd; $i++) {
             $anno = date('Y',strtotime($fecha));
             $mes = date('m',strtotime($fecha));
-            $ga = GananciasDiarias::where(['url_id' => $request->get('url_id')])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->first();
+            $ga = GananciasDiariasAdsense::where(['url_id' => $request->get('url_id')])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->first();
             if($ga != null) {
-                $chartganancias['ganancias'][$posg] = round($ga->ganancia, 2, PHP_ROUND_HALF_DOWN);
+                $chartganancias['ganancias'][$posg] = ($user->roles[0]->name ==  "Administrador" ? round($ga->ganancia, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($ga->ganancia*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($ga->ganancia*50)/100, 2, PHP_ROUND_HALF_DOWN)));
                 if($ga->ganancia >= $maxg)
                     $maxg = $ga->ganancia;
             }
@@ -256,7 +256,7 @@ class UrlsController extends Controller
             $chartdias['visitas'] = [];
         }
 
-        $gtotal = GananciasDiarias::where(['url_id' => $request->get('url_id')])->sum('ganancia');
+        $gtotal = GananciasDiariasAdsense::where(['url_id' => $request->get('url_id')])->sum('ganancia');
 
         return view('components.urls.estadisticas', compact('chartganancias', 'maxg', 'gtotal', 'url', 'chartdias', 'max'));
     }
