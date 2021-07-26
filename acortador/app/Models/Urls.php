@@ -36,4 +36,9 @@ class Urls extends Model
     {
         return $this->hasMany(UrlVisitaR::class, 'url_id');
     }
+
+    public function gananciasadsense()
+    {
+        return $this->hasMany(GananciasDiariasAdsense::class, 'url_id');
+    }
 }

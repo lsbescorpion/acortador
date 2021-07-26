@@ -199,6 +199,7 @@ jQuery(document).ready(function() {
 	var ganancias = {!! json_encode($estadisticas['chartganancias']['ganancias']) !!};
 	var ganancias_dia = {!! json_encode($estadisticas['chartganancias']['dia']) !!};
 	var max = {!! json_encode($estadisticas['max']) !!};
+	var maxg = {!! json_encode($estadisticas['maxg']) !!};
 	var element = document.getElementById("chart_ganancias");
 	var height = parseInt(KTUtil.css(element, 'height'));
 	var color = KTUtil.hasAttr(element, 'data-color') ? KTUtil.attr(element, 'data-color') : 'primary';
@@ -277,7 +278,7 @@ jQuery(document).ready(function() {
 		},
 		yaxis: {
 			min: 0,
-			max: (max == 0 ? 1 : max),
+			max: (maxg == 0 ? 1 : maxg),
 			labels: {
 				show: false,
 				style: {
@@ -331,7 +332,6 @@ jQuery(document).ready(function() {
 
 	var visitas = {!! json_encode($estadisticas['chartdias']['visitas']) !!};
 	var visitas_dia = {!! json_encode($estadisticas['chartdias']['dia']) !!};
-	var maxg = {!! json_encode($estadisticas['maxg']) !!};
 	var element1 = document.getElementById("chart_visitas");
 	if (!element1) {
 		return;
@@ -408,7 +408,7 @@ jQuery(document).ready(function() {
 		},
 		yaxis: {
 			min: 0,
-			max: (maxg == 0 ? 1 : maxg),
+			max: (max == 0 ? 1 : max),
 			labels: {
 				show: false,
 				style: {
@@ -446,7 +446,7 @@ jQuery(document).ready(function() {
 			},
 			y: {
 				formatter: function(val) {
-					return "$" + val
+					return val
 				}
 			}
 		},

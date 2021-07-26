@@ -11,6 +11,7 @@ use App\Models\VisitasDiariasUrl;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasDiariasAdsense;
 use App\Models\GananciasMensuales;
+use App\Models\GananciasMensualesAdsense;
 use App\Models\CPM;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -292,8 +293,8 @@ class UsersController extends Controller{
 
 	public function GananciaMenuales() {
 		$user = Auth::user();
-        $mensuales = GananciasMensuales::where(['user_id' => $user->id])->orderBy('anno', 'desc')->orderBy('mes', 'desc')->get();
-        $annomin = GananciasMensuales::where(['user_id' => $user->id])->min('anno');
+        $mensuales = GananciasMensualesAdsense::where(['user_id' => $user->id])->orderBy('anno', 'desc')->orderBy('mes', 'desc')->get();
+        $annomin = GananciasMensualesAdsense::where(['user_id' => $user->id])->min('anno');
         return view('components.user.pagomensual', compact('mensuales', 'annomin'));
     }
 
@@ -418,8 +419,8 @@ class UsersController extends Controller{
     }
 
     public function getAdsense() {
-        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');
-        $endDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '20/08/2019');//Carbon::now();
+        $startDate = Carbon::now()->setTimezone('America/Havana');//Carbon::createFromFormat('d/m/Y', '18/06/2021');
+        $endDate = Carbon::now()->setTimezone('America/Havana');
         $fecha = Carbon::now()->setTimezone('America/Havana')->toDateTimeString();
         $analyticsData = Analytics::performQuery(
             Period::create($startDate, $endDate),
@@ -427,24 +428,28 @@ class UsersController extends Controller{
             [
                 'metrics' => 'ga:adsenseRevenue,ga:adsenseAdsClicks,ga:adsenseCTR,ga:adsenseCoverage',
                 'dimensions' => 'ga:pagePath,ga:source',
-                'filters' => 'ga:pagePath=@publica'
+                'filters' => 'ga:pagePath=@publica;ga:source=@facebook'
             ]
         );
         $rows = $analyticsData->rows;
-        for($i = 0; $i < count($rows); $i++) {
-            if(strpos($rows[$i][1], 'direct') === false) {
-                $url = explode("/", $rows[$i][0]);
-                $id = explode("?", $url[2]);
-                if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2])) {
-                    $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
-                    if($ur != null) {
-                        $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
-                        $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
-                        $ganancias->fecha = date('Y-m-d',strtotime($fecha));
-                        $ganancias->user_id = $ur->users->id;
-                        $ganancias->url_id = $ur->id;
-                        $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
-                        $ganancias->save();
+        if($rows != null) {
+            for($i = 0; $i < count($rows); $i++) {
+                if(strpos($rows[$i][1], 'direct') === false && strpos($rows[$i][1], 'facebook') > 0) {
+                    $url = explode("/", $rows[$i][0]);
+                    $id = explode("?", $url[3]);
+                    if($rows[$i][2] != '0.0' && is_numeric($rows[$i][2]) && $rows[$i][2] >= 0.01) {
+                        $ur = Urls::with(['users'])->where(['url_acortada' => $id[0]])->first();
+                        if($ur != null) {
+                            $ganancias = GananciasDiariasAdsense::where(['user_id' => $ur->users->id, 'url_id' => $ur->id, 'url' => $rows[$i][0], 'referr' => $rows[$i][1]])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
+                            $ganancias = ($ganancias != null ? $ganancias : new GananciasDiariasAdsense());
+                            $ganancias->fecha = date('Y-m-d',strtotime($fecha));
+                            $ganancias->user_id = $ur->users->id;
+                            $ganancias->url_id = $ur->id;
+                            $ganancias->ganancia = round($rows[$i][2], 2, PHP_ROUND_HALF_DOWN);
+                            $ganancias->url = $rows[$i][0];
+                            $ganancias->referr = $rows[$i][1];
+                            $ganancias->save();
+                        }
                     }
                 }
             }

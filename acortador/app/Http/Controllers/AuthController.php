@@ -10,6 +10,7 @@ use App\Models\VisitasDiarias;
 use App\Models\VisitasDiariasUrl;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasMensuales;
+use App\Models\GananciasDiariasAdsense;
 use App\Models\Paises;
 use App\Models\UrlVisitasP;
 use App\Models\UrlVisitaR;
@@ -65,15 +66,15 @@ class AuthController extends Controller
         $user = Auth::user();
         $estadisticas = [];
         $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');//
-        $vdiarias = VisitasDiarias::where(['user_id' => $user->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->first();
-        $gdiarias = GananciasDiarias::where(['user_id' => $user->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('ganancia');
+        $vdiarias = VisitasDiarias::where(['user_id' => $user->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('visitas');
+        $gdiarias = GananciasDiariasAdsense::where(['user_id' => $user->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($fecha)))->sum('ganancia');
         $fvdiarias = Carbon::now()->setTimezone('America/Havana')->format('d/m/Y H:i');
         $visitas = Urls::where(['user_id' => $user->id])->sum('visitas');
         $lastd = date('t',strtotime($fecha));
 
         $start = date('Y-m-1',strtotime($fecha));
         $end = date('Y-m-t',strtotime($fecha));
-        $gmensual = GananciasDiarias::where(['user_id' => $user->id])->whereBetween('fecha', [$start, $end])->sum('ganancia');
+        $gmensual = GananciasDiariasAdsense::where(['user_id' => $user->id])->whereBetween('fecha', [$start, $end])->sum('ganancia');
 
         $chartdias = [];
         $pos = 0;
@@ -98,9 +99,9 @@ class AuthController extends Controller
         for($i = 1; $i <= $lastd; $i++) {
             $anno = date('Y',strtotime($fecha));
             $mes = date('m',strtotime($fecha));
-            $ga = GananciasDiarias::where(['user_id' => $user->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
+            $ga = GananciasDiariasAdsense::where(['user_id' => $user->id])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
             if($ga != null) {
-                $chartganancias['ganancias'][$posg] = round($ga, 2, PHP_ROUND_HALF_DOWN);
+                $chartganancias['ganancias'][$posg] = ($user->roles[0]->name ==  "Administrador" ? round($ga, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($ga*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($ga*50)/100, 2, PHP_ROUND_HALF_DOWN)));
                 if($ga >= $maxg)
                     $maxg = $ga;
             }
@@ -120,14 +121,14 @@ class AuthController extends Controller
             $chartganancias['ganancias'] = [];
         }
 
-        $max = VisitasDiarias::where(['user_id' => $user->id])->max('visitas');
+        $max = VisitasDiarias::where(['user_id' => $user->id])->whereBetween('fecha', [$start, $end])->max('visitas');
         $estadisticas['vdiarias'] = $vdiarias;
         $estadisticas['fvdiarias'] = $fvdiarias;
         $estadisticas['visitas'] = $visitas;
         $estadisticas['chartdias'] = $chartdias;
         $estadisticas['chartganancias'] = $chartganancias;
-        $estadisticas['gdiarias'] = $gdiarias;
-        $estadisticas['gmensual'] = $gmensual;
+        $estadisticas['gdiarias'] = ($user->roles[0]->name ==  "Administrador" ? round($gdiarias, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($gdiarias*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($gdiarias*50)/100, 2, PHP_ROUND_HALF_DOWN)));
+        $estadisticas['gmensual'] = ($user->roles[0]->name ==  "Administrador" ? round($gmensual, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($gmensual*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($gmensual*50)/100, 2, PHP_ROUND_HALF_DOWN)));
         $estadisticas['max'] = $max;
         $estadisticas['maxg'] = $maxg;
         $estadisticas['visitas_total'] = $visitas_total;

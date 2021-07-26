@@ -29,11 +29,11 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169044892-1"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'UA-169044892-1');
+      gtag('config', 'UA-169044892-1');
   </script>
 </head>
 
@@ -45,34 +45,40 @@
                 <div class="col-md-12 ml-auto mr-auto">
                     <div class="card card-signup">
                         <div class="card-body">
-                            <div class="col-md-12 mb-2" id="M656852ScriptRootC1095648">
+                            <div class="col-md-12 mb-2" id="M656852ScriptRootC1131960">
                             </div>
-                            <script src="https://jsc.mgid.com/e/l/elchago.com.1095648.js" async></script>
-                            <div class="col-md-12 mb-2" id="adsense1">
+                            <script src="https://jsc.mgid.com/e/l/elchago.com.1131960.js" async></script>
+                            <div class="col-md-12 mb-3" id="adsense1">
                                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                 <!-- arriba -->
                                 <ins class="adsbygoogle"
-                                     style="display:block"
-                                     data-ad-client="ca-pub-1646364465251426"
-                                     data-ad-slot="8465768443"
-                                     data-ad-format="auto"
-                                     data-full-width-responsive="true"></ins>
+                                   style="display:inline-block;width:300px;height:250px"
+                                   data-ad-client="ca-pub-1646364465251426"
+                                   data-ad-slot="8465768443"></ins>
                                 <script>
                                      (adsbygoogle = window.adsbygoogle || []).push({});
                                 </script>
                             </div>
-                            <div id="clock" class="card-title text-center mb-2">
-                                <a href="#" id="btn-submit" class="btn btn-primary card-title"></a>
+                            <div class="col-md-12 mb-3">
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <img src="{{$url->foto_real}}" alt="Image" class="img-raised rounded img-fluid">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="card-title text-left mb-2">{{$url->descripcion}}</div>
+                                        <div id="clock" class="card-title text-center mb-2">
+                                            <a href="#" id="btn-submit" class="btn btn-primary card-title"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-12 mb-2" id="adsense2">
                               <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                               <!-- abajo -->
                               <ins class="adsbygoogle"
-                                   style="display:block"
+                                   style="display:inline-block;width:300px;height:250px"
                                    data-ad-client="ca-pub-1646364465251426"
-                                   data-ad-slot="7891053370"
-                                   data-ad-format="auto"
-                                   data-full-width-responsive="true"></ins>
+                                   data-ad-slot="7891053370"></ins>
                               <script>
                                    (adsbygoogle = window.adsbygoogle || []).push({});
                               </script>

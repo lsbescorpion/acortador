@@ -70,7 +70,7 @@
 		</div>
 		<!--begin: Datatable-->
 		@php 
-		setlocale(LC_ALL, 'es_ES.utf8');
+		setlocale(LC_TIME, 'es_ES.utf8');
 		\Carbon\Carbon::setLocale('es');
 		\Carbon\CarbonInterval::setLocale('es');
 		@endphp
@@ -88,7 +88,7 @@
 					@foreach($mensuales as $mensual)
 					<tr>
 						<td>{{$mensual->ganancia}}</td>
-						<td>{{\Carbon\Carbon::parse(date('Y', time())."-".$mensual->mes."-01")->formatLocalized('%B')}}</td>
+						<td>{{\Carbon\Carbon::parse(date('Y', time())."-".$mensual->mes."-01")->locale('fr_FR')->monthName}}</td>
 						<td>{{$mensual->anno}}</td>
 						<td>{{$mensual->pagado}}</td>
 					</tr>

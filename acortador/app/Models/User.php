@@ -44,6 +44,11 @@ class User extends Authenticatable
         return $this->hasMany(GananciasDiarias::class, 'user_id');
     }
 
+    public function adsense()
+    {
+        return $this->hasMany(GananciasDiariasAdsense::class, 'user_id');
+    }
+
     public function blog()
     {
         return $this->hasMany(Blog::class, 'user_id');

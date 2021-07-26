@@ -160,7 +160,7 @@
 jQuery(document).ready(function() {
     var ganancias = {!! json_encode($chartganancias['ganancias']) !!};
     var ganancias_dia = {!! json_encode($chartganancias['dia']) !!};
-    var max = {!! json_encode($maxg) !!};
+    var maxg = {!! json_encode($maxg) !!};
     var element = document.getElementById("chart_ganancias");
     var visitas = {!! json_encode($chartdias['visitas']) !!};
     var visitas_dia = {!! json_encode($chartdias['dia']) !!};
@@ -243,7 +243,7 @@ jQuery(document).ready(function() {
         },
         yaxis: {
             min: 0,
-            max: (max == 0 ? 1 : max),
+            max: (maxg == 0 ? 1 : maxg),
             labels: {
                 show: false,
                 style: {

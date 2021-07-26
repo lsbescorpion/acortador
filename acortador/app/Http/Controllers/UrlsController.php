@@ -10,6 +10,7 @@ use App\Models\VisitasDiarias;
 use App\Models\VisitasDiariasUrl;
 use App\Models\GananciasDiarias;
 use App\Models\GananciasMensuales;
+use App\Models\GananciasDiariasAdsense;
 use App\Models\Paises;
 use App\Models\UrlVisitasP;
 use App\Models\UrlVisitaR;
@@ -28,7 +29,7 @@ class UrlsController extends Controller
     public function listUrls() {
     	$user = Auth::user();
     	$urls = Urls::with(['categoria'])->addSelect([
-    		'ganancias' => GananciasDiarias::selectRaw('sum(ganancia) as total')
+    		'gananciasadsense' => GananciasDiariasAdsense::selectRaw('sum(ganancia) as total')
     		->whereColumn('url_id', 'urls.id')
     		->groupBy('url_id')
      	])->where(['activa' => 1, 'user_id' => $user->id])->orderby('fecha', 'DESC')->get();
@@ -284,7 +285,7 @@ class UrlsController extends Controller
     	return response()->json($urls);
     }
 
-    public function getUrl($id) {
+    public function getUrl($id, Request $request) {
         $user = Auth::user();
         $agent = new Agent();
         $url = Urls::with(['categoria','ganancias'])->where(['url_acortada' => $id, 'activa' => 1])->first();
@@ -298,22 +299,23 @@ class UrlsController extends Controller
             'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)',
             'Facebot',
             'facebot',
+            'facebook',
         ];
 
         $dd = new DeviceDetector($_SERVER['HTTP_USER_AGENT']);
         $dd->parse();
 
         if($dd->isBot()) {
-          $botInfo = $dd->getBot();
-          if(strpos(strtolower($botInfo), 'facebook') === false)
+          /*$botInfo = $dd->getBot();
+          if(strpos(strtolower($botInfo['name']), 'facebook') === false)*/
             return redirect()->away($url->url_real);
         }
 
-        if(!str_contains(strtolower($_SERVER['HTTP_USER_AGENT']), $crawlers)) {
+        /*if(!str_contains(strtolower($_SERVER['HTTP_USER_AGENT']), $crawlers[4]) && !str_contains(strtolower($_SERVER['HTTP_USER_AGENT']), $crawlers[0]) && !str_contains(strtolower($_SERVER['HTTP_USER_AGENT']), $crawlers[1]) && !str_contains(strtolower($_SERVER['HTTP_USER_AGENT']), $crawlers[2]) && !str_contains(strtolower($_SERVER['HTTP_USER_AGENT']), $crawlers[3])) {
             return redirect()->away($url->url_real);
-        }
+        }*/
 
-        if($user != 'null') {
+        if($user != null) {
             return redirect()->away($url->url_real);
         }
 
@@ -321,9 +323,13 @@ class UrlsController extends Controller
             return redirect()->away($url->url_real);
         }
 
+        if($dd->getDeviceName() != 'smartphone' && $dd->getDeviceName() != 'tablet') {
+            return redirect()->away($url->url_real);
+        }
+
         if($agent->isRobot()) {
-            $robot = $agent->robot();
-            if(strpos(strtolower($robot), 'facebook') === false)
+            /*$robot = $agent->robot();
+            if(strpos(strtolower($robot), 'facebook') === false)*/
                 return redirect()->away($url->url_real);
         }
 
@@ -331,12 +337,26 @@ class UrlsController extends Controller
             return redirect()->away($url->url_real);
         }
         
-        $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
-        $host = strtolower(gethostbyaddr($ip));
-        if($ip == '' || strpos($host, 'facebook') === false)
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        }
+        else
+        if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        }
+        else
+        if (!empty($_SERVER["HTTP_CF_CONNECTING_IP"])) {
+            $ip = $_SERVER["HTTP_CF_CONNECTING_IP"];
+        }
+        else {
+            $ip = '';
+        }
+        //$host = strtolower(gethostbyaddr($ip));
+        if($ip == '')
             return redirect()->away($url->url_real);
-        
-        $ips = \Location::get();
+        if($_SERVER['REMOTE_ADDR'] != $ip && !$request->isFromTrustedProxy())
+            return redirect()->away($url->url_real);
+        $ips = \Location::get($ip);
         if($ips == null || $ips->countryCode == 'CU') {
             return redirect()->away($url->url_real);
         }
