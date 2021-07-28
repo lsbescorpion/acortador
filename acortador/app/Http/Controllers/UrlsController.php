@@ -39,9 +39,9 @@ class UrlsController extends Controller
     public function acortarUrl(Request $request)
     {
     	$user = Auth::user();
-        $url = Urls::where(['user_id' => $user->id, 'url_real' => $request->get('url')])->first();
+        $url = Urls::where(['user_id' => $user->id, 'url_real' => $request->get('url'), 'activa' => 1])->first();
         if($url == null)
-        	$url = Urls::where(['user_id' => $user->id, 'url_real' => $request->get('url')."/"])->first();
+        	$url = Urls::where(['user_id' => $user->id, 'url_real' => $request->get('url')."/", 'activa' => 1])->first();
         $messages = [
 		    'url' => 'Url ya acortada por favor verifiquela y acorte otra',
 		];
@@ -201,6 +201,7 @@ class UrlsController extends Controller
     }
 
     public function getEstaditicasUrl(Request $request) {
+        $user = Auth::user();
     	$url = Urls::with(['categoria', 'visitasr' => function ($query) {
             $query->orderBy('visitasr', 'desc');
         },'visitasp' => function ($query) {
@@ -216,11 +217,11 @@ class UrlsController extends Controller
         for($i = 1; $i <= $lastd; $i++) {
             $anno = date('Y',strtotime($fecha));
             $mes = date('m',strtotime($fecha));
-            $ga = GananciasDiariasAdsense::where(['url_id' => $request->get('url_id')])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->first();
+            $ga = GananciasDiariasAdsense::where(['url_id' => $request->get('url_id')])->whereDate('fecha', '=', date('Y-m-d',strtotime($anno.'-'.$mes.'-'.$i)))->sum('ganancia');
             if($ga != null) {
-                $chartganancias['ganancias'][$posg] = ($user->roles[0]->name ==  "Administrador" ? round($ga->ganancia, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($ga->ganancia*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($ga->ganancia*50)/100, 2, PHP_ROUND_HALF_DOWN)));
-                if($ga->ganancia >= $maxg)
-                    $maxg = $ga->ganancia;
+                $chartganancias['ganancias'][$posg] = ($user->roles[0]->name ==  "Administrador" ? round($ga, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($ga*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($ga*50)/100, 2, PHP_ROUND_HALF_DOWN)));
+                if($ga >= $maxg)
+                    $maxg = $ga;
             }
             else
                 $chartganancias['ganancias'][$posg] = 0;
