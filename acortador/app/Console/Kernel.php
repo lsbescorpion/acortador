@@ -90,7 +90,7 @@ class Kernel extends ConsoleKernel
                 }
             }
         })
-        ->everyThirtyMinutes()
+        ->everyTenMinutes()
         ->runInBackground();
         //everyTwoMinutes()
         $schedule->call(function () {

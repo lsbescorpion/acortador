@@ -370,11 +370,11 @@ class UsersController extends Controller{
 
         $cpm = CPM::find(1);
 
-        $users = User::with('roles')->withCount(['ganancias as gan' => function ($query) use($start, $end) {
+        $users = User::with('roles')->withCount(['adsense as gan' => function ($query) use($start, $end) {
             $query->select(\DB::raw('sum(ganancia) as gmensual'))->whereBetween('fecha', [$start, $end])->orderby('gmensual', 'DESC');
         }])->get();
 
-        $urls = Urls::with(['categoria', 'users'])->withCount(['ganancias as gan' => function ($query) {
+        $urls = Urls::with(['categoria', 'users'])->withCount(['gananciasadsense as gan' => function ($query) {
             $query->select(\DB::raw('sum(ganancia) as gtotal'))->orderby('gtotal', 'DESC')->orderby('fecha', 'DESC');
         }])->get();//return $users;
 

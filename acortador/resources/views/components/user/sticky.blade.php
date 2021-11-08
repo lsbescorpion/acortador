@@ -1,6 +1,6 @@
 <ul class="sticky-toolbar nav flex-column pl-2 pr-2 pt-2" id="sticky-toolbar">
 	<li class="nav-item mb-2" id="actualizar_estad" data-toggle="tooltip" title="" data-placement="left" data-original-title="Actualizar Estadisticas">
-		<a href="{{route('getAnalytic')}}" class="btn btn-sm btn-icon btn-bg-light btn-icon-primary btn-hover-primary">
+		<a href="{{route('getAdsense')}}" class="btn btn-sm btn-icon btn-bg-light btn-icon-primary btn-hover-primary">
 			<span class="svg-icon svg-icon-2x menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Update.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 			    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 			        <rect x="0" y="0" width="24" height="24"/>
