@@ -98,6 +98,18 @@
                         <span class="menu-text">Estadísticas Admin</span>
                     </a>
                 </li>
+                <li class="{{ (Route::currentRouteName() == 'PagoMensual') ? 'menu-item menu-item-active' : 'menu-item' }}" aria-haspopup="true" >
+                    <a  href="{{route('PagoMensual')}}" class="menu-link">
+                        <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Shopping\Chart-pie.svg--><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <rect x="0" y="0" width="24" height="24"/>
+                                <path d="M4.00246329,12.2004927 L13,14 L13,4.06189375 C16.9463116,4.55399184 20,7.92038235 20,12 C20,16.418278 16.418278,20 12,20 C7.64874861,20 4.10886412,16.5261253 4.00246329,12.2004927 Z" fill="#000000" opacity="0.3"/>
+                                <path d="M3.0603968,10.0120794 C3.54712466,6.05992157 6.91622084,3 11,3 L11,11.6 L3.0603968,10.0120794 Z" fill="#000000"/>
+                            </g>
+                        </svg><!--end::Svg Icon--></span>
+                        <span class="menu-text">Realizar Pago</span>
+                    </a>
+                </li>
                 @endrole
                 <li class="menu-item menu-item-submenu {{(Route::currentRouteName() == 'addNoticia') ? 'menu-item-here menu-item-open' : '' }}" aria-haspopup="true" data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">

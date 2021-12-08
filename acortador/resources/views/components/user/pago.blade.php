@@ -193,6 +193,31 @@
                         @enderror
                     </div>
                     <div class="form-group row">
+                        <label class="col-md-3 col-form-label text-right">Provincia</label>
+                        <div class="col-md-9">
+                            <select title="Provincia" class="form-control form-control-lg form-control-solid selectpicker" name="provincia" id="provincia" data-style="form-control-lg form-control-solid text-muted" required>                                  
+                                @foreach($provs as $p)
+                                <option value="{{$p->id}}" {{($user->perfil != null && $user->perfil->municipio->provincia_id == $p->id ? "selected" : '')}}>{{$p->provincia}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        @error('provincia')
+                        <div class="col-md-3 col-form-label text-right"></div>
+                        <div class="text-danger col-md-9" style="width: 100%;margin-top: 0.25rem;font-size: 12px;color: #F64E60;">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label text-right">Municipio</label>
+                        <div class="col-md-9">
+                            <select title="Municipio" class="form-control form-control-lg form-control-solid selectpicker" name="municipio" id="municipio" data-style="form-control-lg form-control-solid text-muted" required>
+                            </select>
+                        </div>
+                        @error('municipio')
+                        <div class="col-md-3 col-form-label text-right"></div>
+                        <div class="text-danger col-md-9" style="width: 100%;margin-top: 0.25rem;font-size: 12px;color: #F64E60;">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group row">
                         <label class="col-md-3 col-form-label text-right">Método de Pago y Tipo de Moneda</label>
                         <div class="col-md-9">
                             <select title="Método de Pago y Tipo de Moneda" class="form-control form-control-lg form-control-solid selectpicker" name="metodo" id="metodo" data-style="form-control-lg form-control-solid text-muted" required>
@@ -296,9 +321,52 @@ Información de Pago
 <script type="text/javascript">
 var user = {!! $user !!};
 $('#metodo').selectpicker();
+$('#provincia').selectpicker();
+$('#municipio').selectpicker();
+$('#provincia').on('changed.bs.select', function (e, clickedIndex, isSelected, previousValue) {
+    var id = $(this).val();
+    $.ajax({
+        type:'post',
+        url: "{{route('GetStates')}}",
+        data: {id: id},
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success:function(data){
+            $('#municipio').find('option').remove();
+            $('#municipio').selectpicker('refresh');
+            for(var i = 0; i < data.length; i++) {
+                var newOption = new Option(data[i].municipio, data[i].id, false, false);
+                $('#municipio').append(newOption).selectpicker('refresh');
+            }
+        },
+        error:function(data){
+        }
+    });
+});
 if(user.perfil != null) {
-    $('#metodo').val(user.perfil.banco);
-    $('#metodo').selectpicker('refresh');
+    $.ajax({
+        type:'post',
+        url: "{{route('GetStates')}}",
+        data: {id: user.perfil.municipio.provincia_id},
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        success:function(data){
+            $('#municipio').find('option').remove();
+            $('#municipio').selectpicker('refresh');
+            for(var i = 0; i < data.length; i++) {
+                var newOption = new Option(data[i].municipio, data[i].id, false, false);
+                $('#municipio').append(newOption).selectpicker('refresh');
+            }
+            $('#metodo').val(user.perfil.banco);
+            $('#metodo').selectpicker('refresh');
+            $('#municipio').val(user.perfil.municipio_id);
+            $('#municipio').selectpicker('refresh');
+        },
+        error:function(data){
+        }
+    });
 }
 $(document).on('click','.btn-success',function(){
     $('#pago_form').submit();

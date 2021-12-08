@@ -72,6 +72,8 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth']], function () {
 	Route::post('updatepassword', 'UsersController@updatePassword')->name('updatePassword');
 	Route::get('gananciamenuales', 'UsersController@GananciaMenuales')->name('GananciaMenuales');
 	Route::get('ranking', 'UsersController@Ranking')->name('Ranking');
+	Route::post('getstates', 'UsersController@GetStates')->name('GetStates');
+	Route::get('pagomensual', 'UsersController@PagoMensual')->name('PagoMensual');
 });
 
 Route::group(['prefix' => 'urls', 'middleware' => ['auth']], function () {

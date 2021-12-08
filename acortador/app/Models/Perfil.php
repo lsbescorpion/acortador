@@ -16,4 +16,9 @@ class Perfil extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function municipio()
+    {
+        return $this->belongsTo(Municipios::class, 'municipio_id');
+    }
 }

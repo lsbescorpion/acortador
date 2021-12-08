@@ -87,7 +87,7 @@
 				<tbody>
 					@foreach($mensuales as $mensual)
 					<tr>
-						<td>{{$mensual->ganancia}}</td>
+						<td>{{(Auth::user()->roles[0]->name ==  "Administrador" ? round($mensual->ganancia, 2, PHP_ROUND_HALF_DOWN) : (Auth::user()->roles[0]->name ==  "Moderador" ? round(($mensual->ganancia*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($mensual->ganancia*50)/100, 2, PHP_ROUND_HALF_DOWN)))}}</td>
 						<td>{{\Carbon\Carbon::parse(date('Y', time())."-".$mensual->mes."-01")->locale('fr_FR')->monthName}}</td>
 						<td>{{$mensual->anno}}</td>
 						<td>{{$mensual->pagado}}</td>

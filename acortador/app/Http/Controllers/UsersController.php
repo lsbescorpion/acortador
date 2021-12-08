@@ -13,6 +13,10 @@ use App\Models\GananciasDiariasAdsense;
 use App\Models\GananciasMensuales;
 use App\Models\GananciasMensualesAdsense;
 use App\Models\CPM;
+use App\Models\UserTropipay;
+use App\Models\TokenTropipay;
+use App\Models\Provincias;
+use App\Models\Municipios;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -22,6 +26,33 @@ use Analytics;
 use Spatie\Analytics\Period;
 
 class UsersController extends Controller{
+
+    public function CurlExecute($url, $header, $metodo, $params = false) {
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $metodo);
+        if($params != false)
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
+        if($header != false)
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER,false);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+
+        $result = curl_exec($ch);
+
+        if($result == false)
+        {
+            $error = curl_error($ch);
+            return [0, $error];
+        }
+        else {
+            curl_close($ch);
+            return [1, $result];
+        }
+    }
 
 	public function getUsers() {
 		$users = User::with(['roles'])->orderby('id', 'ASC')->get();
@@ -236,8 +267,14 @@ class UsersController extends Controller{
 
 	public function infoPago() {
 		$user = Auth::user();
-		return view('components.user.pago', compact('user'));
+        $provs = Provincias::all();
+		return view('components.user.pago', compact('user', 'provs'));
 	}
+
+    public function GetStates(Request $request) {
+        $municipios = Municipios::where(['provincia_id' => $request->get('id')])->get();
+        return response()->json($municipios);
+    }
 
 	public function updatePago(Request $request) {
 		$user = Auth::user();
@@ -247,18 +284,25 @@ class UsersController extends Controller{
 		    'direccion.required' => 'La dirección es requerida',
 		    'metodo.required' => 'El método de pago es requerido',
 		    'tarjeta.required' => 'La tarjeta es requerida',
+            'municipio.required' => 'El municipio es requerido',
+            'provincia.required' => 'La provincia es requerido',
+            'telefono.required' => 'El teléfono es requerido',
 		];
 		Validator::make($request->all(), [
 		    'name' => 'required',
 		    'ci' => 'required',
 		    'direccion' => 'required',
+            'municipio' => 'required',
+            'provincia' => 'required',
 		    'metodo' => 'required',
 		    'tarjeta' => 'required',
+            'telefono' => 'required',
 		], $messages)->validate();
 
 		$perfil = ($user->perfil != null ? $user->perfil : new Perfil());
         $perfil->ci = $request->get('ci');
         $perfil->direccion = $request->get('direccion');
+        $perfil->municipio_id = $request->get('municipio');
         $perfil->user_id = $user->id;
         $perfil->banco = $request->get('metodo');
         $perfil->moneda = ($request->get('metodo') < 5 ? 1 : ($request->get('metodo') >= 5 && $request->get('metodo') < 9 ? 2 : 3));
@@ -267,7 +311,107 @@ class UsersController extends Controller{
         $perfil->paypal = $request->get('paypal');
         $perfil->name = $request->get('name');
         $perfil->save();
-		return redirect()->route('infoPago');
+        if($request->get('metodo') != 9) {
+            $token = TokenTropipay::all();
+            $url = config('app.tropipay_url').'access/token';
+            $header = array(
+                'Content-Type: application/json'
+            );
+            $bodyContent = '
+            {
+                "grant_type": "client_credentials",
+                "client_id": "'.config('app.client_id').'",
+                "client_secret": "'.config('app.client_secret').'"
+            }';
+            $result = $this->CurlExecute($url, $header, 'POST', $bodyContent);
+            $dn = json_decode($result[1], true);
+            $tok = (count($token) == 0 ? new TokenTropipay() : $token[0]);
+            $tok->access_token = $dn['access_token'];
+            $tok->refresh_token = $dn['refresh_token'];
+            $tok->expires_in = $dn['expires_in'];
+            $tok->save();
+            $token = TokenTropipay::all();
+
+            $usert = UserTropipay::where(['email' => $user->correo])->first();
+            if($usert == null) {
+                $url = config('app.tropipay_url').'deposit_accounts';
+                $header = array(
+                    'Content-Type: application/json',
+                    'Authorization: Bearer '.$token[0]->access_token
+                );
+                $name = explode(" ", $request->get('name'));
+                $prov = Provincias::find($request->get('provincia'));
+                $muni = Municipios::find($request->get('municipio'));
+                $bodyContent = '
+                {
+                    "alias":"'.$request->get('name').'",
+                    "beneficiaryType":2,
+                    "countryDestinationId":0,
+                    "paymentType":"'.($request->get('metodo') == 1 || $request->get('metodo') == 2 || $request->get('metodo') == 4 || $request->get('metodo') == 5 || $request->get('metodo') == 6 || $request->get('metodo') == 8 ? 2 : 4).'",
+                    "type":'.($request->get('metodo') == 4 || $request->get('metodo') == 8 ? 3 : ($request->get('metodo') == 1 || $request->get('metodo') == 5 ? 4 : ($request->get('metodo') == 2 || $request->get('metodo') == 6 ? 8 : ($request->get('metodo') == 3 ? 6 : 5)))).',
+                    "currency":"USD",
+                    "accountNumber":"'.$request->get('tarjeta').'",
+                    "userRelationTypeId":2,
+                    "firstName":"'.(count($name) == 4 ? $name[0]." ".$name[1] : $name[0]).'",
+                    "lastName":"'.(count($name) == 4 ? $name[2] : $name[1]).'",
+                    "secondLastName":"'.(count($name) == 4 ? $name[3] : $name[2]).'",
+                    "documentNumber":"'.$request->get('ci').'",  
+                    "address":"'.$request->get('direccion').'", 
+                    "postalCode":"14900",                 
+                    "city":"'.$muni->municipio.'",
+                    "province":"'.$prov->provincia.'",
+                    "phone":"'.$request->get('telefono').'",
+                    "swift":"BDCRCUHHXXX"
+                }';
+                $result = $this->CurlExecute($url, $header, 'POST', $bodyContent);
+                $dn = json_decode($result[1], true);
+                $usert = new UserTropipay();
+                $usert->email = $user->correo;
+                $usert->userid = $dn['id'];
+                $usert->save();
+            }
+            else {
+                $url = config('app.tropipay_url').'deposit_accounts/'.$usert->userid;
+                $header = array(
+                    'Content-Type: application/json',
+                    'Authorization: Bearer '.$token[0]->access_token
+                );
+                $result = $this->CurlExecute($url, $header, 'DELETE', null);
+                $usert->delete();
+                $url = config('app.tropipay_url').'deposit_accounts';
+                $name = explode(" ", $request->get('name'));
+                $prov = Provincias::find($request->get('provincia'));
+                $muni = Municipios::find($request->get('municipio'));
+                $bodyContent = '
+                {
+                    "alias":"'.$request->get('name').'",
+                    "beneficiaryType":2,
+                    "countryDestinationId":0,
+                    "paymentType":"'.($request->get('metodo') == 1 || $request->get('metodo') == 2 || $request->get('metodo') == 4 || $request->get('metodo') == 5 || $request->get('metodo') == 6 || $request->get('metodo') == 8 ? 2 : 4).'",
+                    "type":'.($request->get('metodo') == 4 || $request->get('metodo') == 8 ? 3 : ($request->get('metodo') == 1 || $request->get('metodo') == 5 ? 4 : ($request->get('metodo') == 2 || $request->get('metodo') == 6 ? 8 : ($request->get('metodo') == 3 ? 6 : 5)))).',
+                    "currency":"USD",
+                    "accountNumber":"'.$request->get('tarjeta').'",
+                    "userRelationTypeId":2,
+                    "firstName":"'.(count($name) == 4 ? $name[0]." ".$name[1] : $name[0]).'",
+                    "lastName":"'.(count($name) == 4 ? $name[2] : $name[1]).'",
+                    "secondLastName":"'.(count($name) == 4 ? $name[3] : $name[2]).'",
+                    "documentNumber":"'.$request->get('ci').'",  
+                    "address":"'.$request->get('direccion').'", 
+                    "postalCode":"14900",                 
+                    "city":"'.$muni->municipio.'",
+                    "province":"'.$prov->provincia.'",
+                    "phone":"'.$request->get('telefono').'",
+                    "swift":"BDCRCUHHXXX"
+                }';
+                $result = $this->CurlExecute($url, $header, 'POST', $bodyContent);
+                $dn = json_decode($result[1], true);
+                $usert = new UserTropipay();
+                $usert->email = $user->correo;
+                $usert->userid = $dn['id'];
+                $usert->save();
+            }
+        }
+        return redirect()->route('infoPago');
 	}
 
 	public function passwordUser() {
@@ -454,6 +598,7 @@ class UsersController extends Controller{
                 }
             }
         }
+        return redirect()->route('estadisticasAdmin');
     }
 
     public function deleteUrl(Request $request) {
@@ -478,6 +623,13 @@ class UsersController extends Controller{
             $mensual->ganancia = round($gmensual[$i]->sum, 2, PHP_ROUND_HALF_DOWN);
             $mensual->save();
         }  
+    }
+
+    public function PagoMensual() {
+        $user = Auth::user();
+        $mensuales = GananciasMensualesAdsense::where(['user_id' => $user->id])->orderBy('anno', 'desc')->orderBy('mes', 'desc')->get();
+        $annomin = GananciasMensualesAdsense::where(['user_id' => $user->id])->min('anno');
+        return view('components.user.pagomensual', compact('mensuales', 'annomin'));
     }
 
 }

@@ -108,6 +108,12 @@ return [
 
     'faker_locale' => 'es_ES.utf8',
 
+    /***************** tropipay api *****************/
+
+    'client_id' => '3ed468c870cfe23b4e02736794465841',
+    'client_secret' => '1123152d3b91398abe665de2e62fb212',
+    'tropipay_url' => 'https://tropipay-dev.herokuapp.com/api/v2/',
+
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
