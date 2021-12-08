@@ -91,25 +91,6 @@ class AuthController extends Controller
     }
 
     public function DashBoard() {
-        $token = TokenTropipay::all();
-        /*$url = config('app.tropipay_url').'access/token';
-            $header = array(
-                'Content-Type: application/json'
-            );
-            $bodyContent = '
-            {
-                "grant_type": "client_credentials",
-                "client_id": "'.config('app.client_id').'",
-                "client_secret": "'.config('app.client_secret').'"
-            }';
-            $result = $this->CurlExecute($url, $header, 'POST', $bodyContent);
-            $dn = json_decode($result[1], true);
-            $tok = (count($token) == 0 ? new TokenTropipay() : $token[0]);
-            $tok->access_token = $dn['access_token'];
-            $tok->refresh_token = $dn['refresh_token'];
-            $tok->expires_in = $dn['expires_in'];
-            $tok->save();
-            $token = TokenTropipay::all();*/
         $user = Auth::user();
         $estadisticas = [];
         $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');//

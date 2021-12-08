@@ -626,9 +626,7 @@ class UsersController extends Controller{
     }
 
     public function PagoMensual() {
-        $user = Auth::user();
-        $mensuales = GananciasMensualesAdsense::where(['user_id' => $user->id])->orderBy('anno', 'desc')->orderBy('mes', 'desc')->get();
-        $annomin = GananciasMensualesAdsense::where(['user_id' => $user->id])->min('anno');
+        
         return view('components.user.pagomensual', compact('mensuales', 'annomin'));
     }
 
