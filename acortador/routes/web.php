@@ -74,9 +74,6 @@ Route::group(['prefix' => 'client', 'middleware' => ['auth']], function () {
 	Route::get('ranking', 'UsersController@Ranking')->name('Ranking');
 	Route::post('getstates', 'UsersController@GetStates')->name('GetStates');
 	Route::get('pagomensual', 'UsersController@PagoMensual')->name('PagoMensual');
-	Route::get('paymentok', 'UsersController@PaymentOk')->name('PaymentOk');
-	Route::get('paymentfail', 'UsersController@PaymentFail')->name('PaymentFail');
-	Route::get('paymentnoti', 'UsersController@PaymentNoti')->name('PaymentNoti');
 });
 
 Route::group(['prefix' => 'urls', 'middleware' => ['auth']], function () {
@@ -104,4 +101,8 @@ Route::get('/img/{fileName}', 'UsersController@showImageUrl')
 
 Route::get('/systemblog/{fileName}', 'BlogController@showImageBlog')
  		->where(['fileName' => '.*'])->name('showImageBlog');
+
+Route::get('/client/paymentok', 'UsersController@PaymentOk')->name('PaymentOk');
+Route::get('/client/paymentfail', 'UsersController@PaymentFail')->name('PaymentFail');
+Route::get('/client/paymentnoti', 'UsersController@PaymentNoti')->name('PaymentNoti');
 
