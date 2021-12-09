@@ -276,6 +276,18 @@ class UsersController extends Controller{
         return response()->json($municipios);
     }
 
+    public function PaymentOk(Request $request) {
+        return $request->all();
+    }
+
+    public function PaymentFail(Request $request) {
+        return $request->all();
+    }
+
+    public function PaymentFail(Request $request) {
+        return $request->all();
+    }
+
 	public function updatePago(Request $request) {
 		$user = Auth::user();
 		$messages = [

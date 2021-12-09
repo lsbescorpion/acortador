@@ -91,6 +91,60 @@ class AuthController extends Controller
     }
 
     public function DashBoard() {
+        $token = TokenTropipay::all();
+        $url = config('app.tropipay_url').'access/token';
+        $header = array(
+            'Content-Type: application/json'
+        );
+        $bodyContent = '
+        {
+            "grant_type": "client_credentials",
+            "client_id": "'.config('app.client_id').'",
+            "client_secret": "'.config('app.client_secret').'"
+        }';
+        $result = $this->CurlExecute($url, $header, 'POST', $bodyContent);
+        $dn = json_decode($result[1], true);
+        $tok = (count($token) == 0 ? new TokenTropipay() : $token[0]);
+        $tok->access_token = $dn['access_token'];
+        $tok->refresh_token = $dn['refresh_token'];
+        $tok->expires_in = $dn['expires_in'];
+        $tok->save();
+        $token = TokenTropipay::all();
+        $url = config('app.tropipay_url').'paymentcards';
+        $header = array(
+            'Content-Type: application/json',
+            'Authorization: Bearer '.$token[0]->access_token
+        );
+        $bodyContent = '
+        {
+            "reference": "my-reference",
+            "concept": "Bicycle",
+            "favorite": true,
+            "description": "Two wheels",
+            "amount": 10000,
+            "currency": "EUR",
+            "singleUse": true,
+            "reasonId": 1,
+            "expirationDays": 1,
+            "lang": "es",
+            "urlSuccess": "'.config('app.url').'/client/paymentok'.'",
+            "urlFailed": "'.config('app.url').'/client/paymentfail'.'",
+            "urlNotification": "'.config('app.url').'/client/paymentnoti'.'",
+            "serviceDate": "2021-12-10",
+            "client": {
+                "name": "John",
+                "lastName": "McClane",
+                "address": "Ave. Guadí 232, Barcelona, Barcelona",
+                "phone": "+34645553333",
+                "email": "client@email.com",
+                "countryId": 0,
+                "termsAndConditions": "true"
+            },
+            "directPayment": true
+        }';
+        $result = $this->CurlExecute($url, $header, 'POST', $bodyContent);
+        $dn = json_decode($result[1], true);
+        return $dn;
         $user = Auth::user();
         $estadisticas = [];
         $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');//
