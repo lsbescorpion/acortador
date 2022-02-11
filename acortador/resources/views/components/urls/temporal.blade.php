@@ -45,9 +45,6 @@
                 <div class="col-md-12 ml-auto mr-auto">
                     <div class="card card-signup">
                         <div class="card-body">
-                            <div class="col-md-12 mb-2" id="M656852ScriptRootC1131960">
-                            </div>
-                            <script src="https://jsc.mgid.com/e/l/elchago.com.1131960.js" async></script>
                             <div class="col-md-12 mb-3" id="adsense1">
                                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                 <!-- arriba -->
@@ -83,9 +80,6 @@
                                    (adsbygoogle = window.adsbygoogle || []).push({});
                               </script>
                             </div>
-                            <div class="col-md-12 mb-2" id="M656852ScriptRootC1095691">
-                            </div>
-                            <script src="https://jsc.mgid.com/e/l/elchago.com.1095691.js" async></script>
                         </div>
                     </div>
                 </div>
@@ -118,7 +112,7 @@
             $('#btn-submit').attr('disabled', false);
             $('#btn-submit').attr('href', url.url_real);
         });
-        var minuto = new Date().getTime() + 90000;
+        var minuto = new Date().getTime() + 45000;
         $('#redirect').countdown(minuto, function(event) {
         }).on('finish.countdown', function(event) {
             window.location = url.url_real;
