@@ -36,6 +36,19 @@ class UrlsController extends Controller
     	return view('components.urls.page', compact('urls'));
     }
 
+    public function urlsPrevias() {
+        $user = Auth::user();
+        $fecha = Carbon::now()->setTimezone('America/Havana')->format('Y-m-d');
+        $urls = VisitasDiariasUrl::with(['url.categoria', 'url' => function($q) {
+            $q->addSelect([
+                'gananciasadsense' => GananciasDiariasAdsense::selectRaw('sum(ganancia) as total')
+                ->whereColumn('url_id', 'urls.id')
+                ->groupBy('url_id')
+            ]);
+        }])->where(['user_id' => $user->id])->whereDate('fecha', '=', $fecha)->orderby('visitas', 'DESC')->get();
+        return view('components.urls.previas', compact('urls'));
+    }
+
     public function acortarUrl(Request $request)
     {
     	$user = Auth::user();

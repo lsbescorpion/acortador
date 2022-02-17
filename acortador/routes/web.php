@@ -82,6 +82,7 @@ Route::group(['prefix' => 'urls', 'middleware' => ['auth']], function () {
 	Route::post('disableurl', 'UrlsController@disableUrl')->name('disableUrl');
 	Route::post('getestaditicas', 'UrlsController@getEstaditicasUrl')->name('getEstaditicasUrl');
 	Route::post('searchurls', 'UrlsController@searchUrls')->name('searchUrls');
+	Route::get('urlsprevias', 'UrlsController@urlsPrevias')->name('urlsPrevias');
 });
 
 Route::group(['prefix' => 'publica'], function () {
