@@ -328,7 +328,7 @@
 						<td>{{$user->roles[0]->name}}</td>
 						<td>{{$user->activo}}</td>
 						<td>{{$user->gan}}</td>
-						<td>{{($user->gan == null || $user->gan == '' ? 0 : $user->gan)}},{{$user->roles[0]->name}}</td>
+						<td>{{($user->gan == null || $user->gan == '' ? 0 : ($user->roles[0]->name ==  "Administrador" ? round($user->gan, 2, PHP_ROUND_HALF_DOWN) : ($user->roles[0]->name ==  "Moderador" ? round(($user->gan*60)/100, 2, PHP_ROUND_HALF_DOWN) : round(($user->gan*50)/100, 2, PHP_ROUND_HALF_DOWN))))}}</td>
 					</tr>
 					@endforeach
 				</tbody>
@@ -733,9 +733,7 @@ jQuery(document).ready(function() {
                	textAlign: 'left',
                	width: 50,
                	template: function(row) {
-               		var arr = row.Pagar.split(',');
-               		var gan = (arr[0] == null || arr[0] == '' ? 0 : arr[0]);
-					return (arr[1] == 'Administrador' ? arr[0] : (arr[1] == 'Moderador' ? (arr[0]*60/100).toFixed(2) : (arr[0]*50/100).toFixed(2)));
+					return row.Pagar;
 				},
            	}
 		],
